@@ -1,0 +1,1523 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<title>中東  鸟清单 - Avibase - 世界鸟类名录</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="expires" content="0">
+<meta http-equiv="pragma" content="no-cache">
+<meta name="Description" content="Avibase是关于世界鸟类的详细数据库。它包含了关于约10,000种和22,000个亚种鸟类的超过一百万条记录，涵盖了分布信息、分类学信息、不同语言中的异名等。">
+<meta name="KeyWords" content="鸟，鸟，观鸟，观鸟者，观鸟者，观鸟，观鸟者，观鸟者，链接，鸟类链接，鸟类链接，鸟类学，鸟种记录，鸟种记录，世界，鸟类，鸟类，鸟纲，亚种，科，分类">
+<meta http-equiv="Content-Language" content="zh">
+
+
+
+<link rel="apple-touch-icon" sizes="76x76" href="images/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+<link rel="mask-icon" href="images/safari-pinned-tab.svg" color="#5bbad5">
+
+<link rel="stylesheet" href="css/bootstrap.min.4.2.1.css">
+<!-- link rel="stylesheet" href="css/bootstrap-select.css" -->
+<link rel="stylesheet" href="css/avibase.css?v=20220326">
+<link rel="stylesheet" href="css/fontawesome.all.5.6.3.css">
+<link rel="stylesheet" href="css/jquery.alerts.css" media="screen" />
+<link rel="stylesheet" href="css/jquery-ui.min.1.12.1.css" type="text/css" media="screen" charset="utf-8" />
+<link rel="search" type="application/opensearchdescription+xml" title="Avibase" href="opensearchplugin.xml">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WXPFW3Y1F5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-WXPFW3Y1F5');
+</script>
+
+<script src="scripts/jquery.min.3.3.1.js"></script>
+<!-- script src="scripts/popper.min.1.14.6.js"></script -->
+<script src="scripts/bootstrap.min.4.2.1.js"></script> 
+<!-- script src="scripts/bootstrap-select.js"></script --> 
+<script src="scripts/avibase_script.jsp"></script> 
+<script src="scripts/jquery.json-2.4.min.js"></script>
+<script src="scripts/jquery-ui.1.12.1.min.js"></script>
+<script src="scripts/jquery.alerts.js"></script>
+<script src="scripts/bscutil.js"></script>
+
+</head>
+<body>
+
+<div class="container-fluid">
+	<div class="row banner">
+	<div class="col-lg-7">
+		<div style="padding: 0.3em;">
+			<img src="images/fairywren_133.png" height="92px" width="133px" style="float: left;" />
+			<span class="banner-title">Avibase -</span> <span class="banner-subtitle">世界鸟类数据库</span>
+			<div style="font-size: 0.45em; color: #ffffd0;">鸟种记录 - 分类 - 分布 - 地图 - 链接</div>
+		</div>
+
+	</div>
+	<div class="col-lg-5 d-none d-xl-block">
+		<div class="float-right"><img src="images/banner_img1.jpg"></div>
+	</div>
+	</div>
+
+	<div class="row avbmenu">
+    <div class="col-12">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="avibase.jsp" alt="Main page">
+                <i class="fas fa-home" title="Main page"></i>
+              </a>
+            </li>
+            
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle dropdown-toggle-no-show" href="" id="navbarDropdown" role="button" data-toggle='dropdown' aria-haspopup="true" aria-expanded="false">
+                      Avibase
+                    </a>
+                    
+                      <div class="dropdown-menu dropdown-menu-left" aria-labelledby="navbarDropdown" style="border-top:3px solid #2F8894;">
+
+						<a class="dropdown-item" href="avibase.jsp">Avibase回家</a>
+						<a class="dropdown-item" href="about.jsp">关于 Avibase</a>
+						<a class="dropdown-item" rel="me" href="https://birds.town/@avibase">Mastodon</a>
+						<a class="dropdown-item" href="webcams.jsp">Birding网络摄像头</a>
+						<a class="dropdown-item" href="compare.jsp">比较分类法</a>
+						<a class="dropdown-item" target="_blank" href="https://flickr.com/groups/avibase/">Avibase Flickr集团</a> 
+						<a class="dropdown-item" href="botd.jsp">鸟类档案</a> 
+						<a class="dropdown-item" href="peterschecklist.jsp">彼得的清单数据库</a>
+						<a class="dropdown-item" href="citations.jsp">Avibase引用</a>
+						<a class="dropdown-item" href="/links/links.jsp">Birdlinks</a>
+						<a class="dropdown-item" href="/links/links.jsp?page=g_reports">旅行报告</a>
+                      
+                      </div>
+				  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle dropdown-toggle-no-show" href="" id="navbarDropdown" role="button" data-toggle='dropdown' aria-haspopup="true" aria-expanded="false">
+                      myAvibase
+                    </a>
+                    
+                      <div class="dropdown-menu dropdown-menu-left" aria-labelledby="navbarDropdown" style="border-top:3px solid #2F8894;">
+						   <div class="small" style="color: #fff; padding: 4px !important;">MyAvibase允许您创建和管理您的个人鸟种记录，并为您的下一次观鸟旅行提供有用的报告。</div>
+						   <a class="dropdown-item" href="myavibase.jsp">myAvibase主页</a>
+						   <a class="dropdown-item" href="myavb_lists.jsp">管理个人鸟种记录</a>
+						   <a class="dropdown-item" href="myavb_observ.jsp">管理观鸟记录</a>
+						   <a class="dropdown-item" href="myavb_reports.jsp">myAvibase报告</a>
+                      </div>
+				  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle dropdown-toggle-no-show" href="" id="navbarDropdown" role="button" data-toggle='dropdown' aria-haspopup="true" aria-expanded="false">
+						名录
+                    </a>
+		
+                      <div class="dropdown-menu dropdown-menu-left" aria-labelledby="navbarDropdown" style="border-top:3px solid #2F8894;">
+					  
+							<div class="small" style="color: #fff; padding: 4px !important;">Avibase中包含了超过20,000个地区名录，并以9种分类系统展示，包括超过175种语言的异名。每个名录都可以显示观鸟者分享的图片，并可以以PDF格式打印用于野外观察。</div>
+					  
+							<a class="dropdown-item" href="checklist.jsp?lang=ZH">Avibase名录</a>
+							<a class="dropdown-item" href="compare_regions.jsp?lang=ZH">比较地区</a>
+                      </div>
+				  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle dropdown-toggle-no-show" href="" id="navbarDropdown" role="button" data-toggle='dropdown' aria-haspopup="true" aria-expanded="false">
+                      搜索
+                    </a>
+                    
+                      <div class="dropdown-menu dropdown-menu-left" aria-labelledby="navbarDropdown" style="border-top:3px solid #2F8894;">
+						   <a class="dropdown-item" href="search.jsp?lang=ZH&isadv=yes">Avibase搜索</a>
+						   <a class="dropdown-item" href="search.jsp?lang=ZH&pg=families">按科浏览</a>
+						   <a class="dropdown-item" href="authors.jsp?lang=ZH">按作者浏览 </a>
+						   <a class="dropdown-item" href="publications.jsp?lang=ZH">按出版物浏览 </a>
+						   <a class="dropdown-item" href="familytree.jsp?lang=ZH">Avibase 分类概念</a>
+                      </div>
+				  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle dropdown-toggle-no-show" href="" id="navbarDropdown" role="button" data-toggle='dropdown' aria-haspopup="true" aria-expanded="false">
+                      贡献
+                    </a>
+                    
+                      <div class="dropdown-menu dropdown-menu-left" aria-labelledby="navbarDropdown" style="border-top:3px solid #2F8894;">
+						   <div class="small" style="color: #fff; padding: 4px !important;">您可以通过以下几种方式帮助本页面的开发，如加入拍摄照片的Flickr群组或为本站提供其它语言的翻译。</div>
+						   <a class="dropdown-item" href="contrib.jsp?lang=ZH">为Avibase提供帮助</a>
+						   <a class="dropdown-item" href="contrib.jsp?lang=ZH">致谢</a>
+						   <a class="dropdown-item" target="_blank" href="https://flickr.com/groups/avibase/">Flickr群组</a> 
+						   <a class="dropdown-item" href="flickr_stats.jsp?lang=ZH">媒体统计</a>
+						   <a class="dropdown-item" href="flickr_stats.jsp?action=flickr&lang=ZH">Flickr群组成员</a>
+						   <a class="dropdown-item" href="flickr_stats.jsp?action=missing&lang=ZH">所需媒体</a>
+						   <a class="dropdown-item" href="translate.jsp?lang=ZH">提供更好的翻译</a>
+                      </div>
+				  </li>
+				  
+        
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle dropdown-toggle-no-show" href="" id="navbarDropdown" role="button" data-toggle='dropdown' aria-haspopup="true" aria-expanded="false">
+					  漢語
+					</a>
+
+					<div class="dropdown-menu dropdown-menu-left" aria-labelledby="navbarDropdown" style="border-top:3px solid #2F8894;">
+						<a class="dropdown-item" href="languages.jsp">更改语言</a>
+					</div>
+				</li>
+
+				  
+          </ul>
+        </div>
+        
+          <ul class="navbar-nav float-right">
+			<li class="nav-item active" id="signup">
+              <a class="nav-link" href="myavb_signup.jsp" id="signuplnk">报名</a>
+            </li>
+		  </ul>
+          <ul class="navbar-nav float-right">
+            <li class="nav-item active" id="credlogout">
+              <a class="nav-link" href="javascript:void(0)" id="logoutlnk">注销</a>
+            </li>
+		  </ul>
+          <ul class="navbar-nav float-right">
+            <li class="nav-item active" id="credlogin">
+              <a class="nav-link" href="javascript:void(0)" id="modalLogin2">登入</a>
+            </li>
+		  </ul>
+          <ul class="navbar-nav float-right">
+            <li class="nav-item active d-none d-xl-block">
+				<form action="search.jsp" name='avbsmall'>
+				<input id="searchboxsm" placeholder="搜索avibase" name="qstr" type="text" style="width: 150px;" class="form-control">
+				</form>
+            </li>
+          </ul>
+		
+      </nav>
+    </div>
+	</div>
+
+	<div id="loginbox" title="登录myAvibase" style="display: none;">
+		<span id="loginmsg" style="color: #939300; font-weight: bold;"></span>
+		<p>您的登录:<br>
+		<input type="text" class="form-control" size="40" id="loginname" name="loginname" value=""/>
+		<br />
+		密码:<br>
+		<input type="password" class="form-control" size="40" id="password" name="password"  value=""/>
+		</p>
+		<input type="checkbox" id="remember" checked> 保持登录
+	</div>
+
+	<div id="reminderbox" title="请求提醒" style="display: none;">
+		<span id="remindermsg" style="color: #939300; font-weight: bold;"></span>
+		<p>输入您的用户名或电子邮箱地址并按发送提醒，即可收到电子邮件提醒</p>
+		<input type="text" size="50" id="loginreminder" name="loginreminder" value=""/>
+		<br />
+	</div>
+
+	<div id="credentials" class="row">
+		<div class="col-lg-12 text-right">
+			欢迎 <span id="fullname">游客</span>
+		</div>
+	</div>
+	
+	<div class="row main-body">
+
+<div class="col-lg-12">
+
+<script type="text/javascript" src="scripts/jplayer_script.js"></script>
+<link rel="stylesheet" href="css/jplayer.css" />
+<link rel="stylesheet" href="css/checklist.css">
+ 
+
+<style>
+.highlight1 {background-color: #ffffff;}
+.highlight2 {background-color: #ffffff;}
+</style>
+
+<div class="row" style="text-align: center; margin-bottom: 30px;">
+<div class="col-lg-3">
+	<a target="_blank" href="https://www.birdscanada.org/"><img src="images/BirdsCan_SQ.png" title=" Avibase的服务器提供者为 Birds Canada - Oiseaux Canada" border=0
+		alt="Hosted by Birds Canada - Oiseaux Canada" style="width: 180px; padding: 20px;"></a>
+</div>
+<div class="col-lg-6">
+	<h2 align="center">Avibase - 世界鸟类名录</h2>
+	<h3 style="color: red;">中東 </h3>
+</div>
+<div class="col-lg-3">
+	<a target="_blank" href="https://www.birdlife.org/"><img src="images/birdlife2013.png" border=0 alt="Birdlife Logo" title="Birdlife International"></a>
+</div>
+</div>
+
+
+     <P>该名录包含发现于以下地区的全部鸟种 <b>中東 </b> 基于目前所知的全部信息. 这些信息是我多年来从各种不同渠道收集来的，我很荣幸的向观鸟者提供这一名录。如果您发现任何错误，欢迎您随时 <script language=javascript>var linktext = "指正。";var e1 = "dlepage";var e2 = "bsc-eoc.org";document.write("<a hr" + "ef=" + "ma" + "il"+ "to:" + e1 + "@" + e2 + ">" + linktext + "</" + "a>")</script>.
+     <P>分类学习惯和术语依据 <b>Clements, version 2024</b>. 如果您希望查看该鸟种记录在其他分类系统下的结果，请点击下面列表中所示的项目。全球受威胁物种（以红色标记）由国际鸟盟提供。 <a target="_blank" href="https://datazone.birdlife.org/species/search">Birdlife Data Zone (species)</a>.
+     <P>世界鸟类名录是Avibase与世界鸟类链接的一部分。该名录是由Denis Lepage设计并维护的，并由国际鸟盟的合作伙伴加拿大鸟类研究提供服务器。
+     <P>&copy; Denis Lepage 2025
+     <P><a href="checklist.jsp?region=index&lang=ZH&list=clements">返回世界鸟类名录</a>
+     <BR><a target="_top" href="/links/links.jsp?page=l_mid&lang=ZH">返回世界鸟类链接</a>
+
+
+
+
+
+
+
+<script>
+
+$( document ).ready( function() {
+   $( "input[name='highlight']" ).bind( "click", changeHighlight );
+   $("#mapextent").on("click", function() {
+      window.open('mapextent.jsp?region=mid', 'mapextent', 'menubar=yes;').focus();
+   });
+	$(".AVBlistnavbutton").on("click", function() {
+		$("#chkversion").val($(this).data("version"));
+		sendForm();
+	});
+
+});
+
+function sendForm() {
+     var v = $("#chkversion").val();
+     if ($('#ckregion').val() == '') return;
+     if ($('#cklist').val() == '') return;
+
+     if (v.substring(0,3) == "pdf")
+       $("#ckoptions").attr("action", "checklistpdf.jsp");
+     else
+       $("#ckoptions").attr("action", "checklist.jsp");
+
+     $("#ckoptions").submit();
+}
+
+function changeHighlight() {
+   var t = $("input:radio[name='highlight']:checked").val();
+   $(".highlight1").css('background-color',(t == 1?'#ffffc9':'#ffffff'));
+   $(".highlight2").css('background-color',(t == 2?'#ffffc9':'#ffffff'));
+}
+
+function changePage(p2) {
+   $("#p2").val(p2);
+   $("#ckoptions").submit();
+}
+
+
+</script>
+
+<form action="checklist.jsp" id="ckoptions" method="get">
+<input type="hidden" name="lang" value="ZH">
+<input type="hidden" name="p2" id="p2" value="1">
+
+<div style="background-color: #EEE;">
+
+    <p><b>更改显示选项:</b></p>
+	<div class="row">
+		<label for="cklist" class="col-lg-2 control-label">选择另一分类系统:</label>
+		<div class="col-lg-10"><select id="cklist" name="list" class="form-control"><option value="avibase" >Avibase taxonomic concepts (current)</option><option value="avilist" >Avilist 2025</option><option value="birdlife" >HBW and BirdLife Taxonomic Checklist v9 (Oct 2024)</option><option value="clements" selected>Clements, version 2024</option><option value="clements5" >Clements 5th edition (incl. 2005 revisions)</option><option value="ebird" >eBird version 2024</option><option value="hbw" >Handbook of the Birds of the World and Birdlife (Dec 2018)</option><option value="howardmoore" >Howard and Moore 4th edition (incl. corrigenda vol.1-2)</option><option value="ioc" >IOC World Bird Names, version 15.1</option><option value="sibleymonroe" >Sibley and Monroe, Birds of the World Version 2.0</option>
+   </select></div>
+	</div>
+
+	<div class="row">
+		<label for="cksynlang" class="col-lg-2 control-label">选择另一个第二语言:</label>
+		<div class="col-lg-10"><select id="cksynlang" name="synlang" class="form-control">
+		<option value="" >无异名</option>
+<option value="ZHTR" > Chinese (Traditional)</option><option value="PTPT" > Portuguese (Portugal)</option><option value="ESES" > Spanish (Spain)</option><option value="DA" > 丹麦语</option><option value="UK" > 乌克兰语</option><option value="RU" > 俄语</option><option value="HR" > 克罗地亚语</option><option value="IS" > 冰岛语</option><option value="CA" > 加泰罗尼亚语</option><option value="HU" > 匈牙利语</option><option value="SR" > 塞尔维亚语</option><option value="PTBR" > 巴西葡萄牙文</option><option value="DE" > 德语</option><option value="IT" > 意大利语</option><option value="NN" > 挪威文（Nynorsk）</option><option value="NO" > 挪威语</option><option value="CS" > 捷克语</option><option value="SK" > 斯洛伐克语</option><option value="JP" > 日语</option><option value="FR" > 法语</option><option value="PL" > 波兰语</option><option value="ZH" selected> 漢語</option><option value="SV" > 瑞典语</option><option value="LT" > 立陶宛语</option><option value="FI" > 芬兰语</option><option value="NL" > 荷兰语</option><option value="PT" > 葡萄牙语</option><option value="ES" > 西班牙语</option><option value="AR" > 阿拉伯语</option>
+
+ </select></div>
+	 </div>
+
+
+	  	<div class="row">
+		<label for="ckregion" class="col-lg-2 control-label">选择另一个地区:</label>
+		<div class="col-lg-10"><select id="ckregion" name="region" class="form-control"><option value="MID" selected>Middle East</option><option value="TR" >--Turkey</option><option value="CY" >--Cyprus</option><option value="SY" >--Syria</option><option value="LB" >--Lebanon</option><option value="IL" >--Israel</option><option value="PS" >--Palestine</option><option value="JO" >--Jordan</option><option value="ARA" >-Arabian Peninsula</option><option value="SA" >--Saudi Arabia</option><option value="YE" >--Yemen</option><option value="OM" >--Oman</option><option value="AE" >--United Arab Emirates</option><option value="QA" >--Qatar</option><option value="BH" >--Bahrain</option><option value="KW" >--Kuwait</option><option value="IQ" >--Iraq</option><option value="IR" >--Iran</option><option value="AM" >--Armenia</option><option value="AZ" >--Azerbaijan</option><option value="GE" >--Georgia</option></select></div>
+	  </div>
+
+<input type="hidden" id="chkversion" name="version" value="text">
+<input type="hidden" id="formtype" value="checklist">
+
+<div id="isloggedin" style="display: none">
+	  	<div class="row">
+		<label for="lifelist" class="col-lg-2 control-label">显示个人鸟种记录的更多信息:</label>
+		<div class="col-lg-10"><select id="lifelist" name="lifelist" class="form-control" data-lifelist="">
+			<option value=""> 没有选中 </option>
+		</select></div>
+		</div>
+<p><input type="radio" name="highlight" value="0" checked> 无高亮标记
+<input type="radio" name="highlight" value="1" > 高亮标记目标种
+<input type="radio" name="highlight" value="2" > 高亮标记已经见过的种</p>
+</div>
+
+<div id="notloggedin">您必须<a href="javascript:login()">登录</a>才能看到您的详细鸟种记录。<a href="myavibase.jsp">点击此处</a>注册<b>myAvibase</b> 。</div>
+
+<p align="center"><input type="button" value="刷新名录" class="btn btn-primary" onClick="sendForm()"></p>
+
+     </div>
+
+</form>
+
+<div style="background-color: #EEE;">
+
+	<p><b>收听来自<a target="_blank" href="https://xeno-canto.org"> Xeno-Canto </a>的针对该地区的随机鸟类歌曲：</b>
+	<input type="hidden" class="btn btn-primary" id="audiopreloadreg" value="mid" data-num="4">
+	<input type="button" class="btn btn-primary" id="audioloop4" data-region="mid" data-play="开始" data-next="下一个" value="开始" style="font-size: 9pt">
+	<input type="button" class="btn btn-primary stoprecording" id="stop4" value="停止" style="font-size: 9pt">
+	<input type="checkbox" id="exclrare4"> <label for="exclrare4"> 排除稀有物种 </label>
+	<input type="checkbox" id="limitreg4"> <label for="limitreg4"> 限制在该地区进行录制 </label>
+	</p>
+	<p>录音没有自动开始？ 尝试在浏览器中启用自动播放功能，或点击下面的播放按钮。</p>
+	
+	<div id="sndmetadata4" style="font-size: 9pt"></div>
+	<div id="sndspeciesname4" style="font-size: 9pt"></div>
+
+	<audio controls id="audioPlayer4" preload="none">
+		<source src="downloads/blank.mp3" id="audioSource4" type="audio/mpeg">
+		您的浏览器不支持音频元素。
+	</audio> 
+
+</div>
+
+<div>
+
+<div class="AVBlist AVBlisthead">
+     <p><b>国家或地区： 中東 </b>  [<a href="javascript:void(0)" id="mapextent">地图</a>]</p>
+     
+     
+     
+     
+	<div>
+种数: 957<br>特有种的数量: 1<br>仅在当地繁育种数量: 1<br>全球受威胁种数量: 69<br>外来种数量: 27<br>上一次更改: 2024-12-25<br>
+	</div>
+</div>
+
+ <div class="AVBlistnav">
+  <div data-version="text" class="AVBlistnavbutton AVBlistsel">仅文本</div>
+  <div data-version="images" class="AVBlistnavbutton ">照片和声音</div>
+  <div data-version="pdf" class="AVBlistnavbutton ">PDF（宽）</div>
+  <div data-version="pdf2" class="AVBlistnavbutton ">PDF（紧凑）</div>
+  <div data-version="recent" class="AVBlistnavbutton ">最近的补充</div>
+  <div data-version="hypoth" class="AVBlistnavbutton ">假想</div>
+</div> 
+
+
+<div class="table-responsive">
+<table class="table">
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>STRUTHIONIFORMES: Struthionidae </b></P></td></tr>
+<tr class='highlight1'><td>Common Ostrich</td><td><a href="species.jsp?avibaseid=2247CB050A76CF8E"><i>Struthio camelus</i></a></td><td>非洲鸵鸟</td><td></td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>ANSERIFORMES: Anatidae </b></P></td></tr>
+<tr class='highlight1'><td>White-faced Whistling-Duck</td><td><a href="species.jsp?avibaseid=A534AFEA126DBD62"><i>Dendrocygna viduata</i></a></td><td>白脸树鸭</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Fulvous Whistling-Duck</td><td><a href="species.jsp?avibaseid=9A60617EE376ABE9"><i>Dendrocygna bicolor</i></a></td><td>茶色树鸭</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Lesser Whistling-Duck</td><td><a href="species.jsp?avibaseid=BD683E6E9F6B03A4"><i>Dendrocygna javanica</i></a></td><td>栗树鸭</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Bar-headed Goose</td><td><a href="species.jsp?avibaseid=B7159EF0DE54C384"><i>Anser indicus</i></a></td><td>斑头雁</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Snow Goose</td><td><a href="species.jsp?avibaseid=D3A260BCA65503C6"><i>Anser caerulescens</i></a></td><td>雪雁</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Graylag Goose</td><td><a href="species.jsp?avibaseid=4AED44E819A43204"><i>Anser anser</i></a></td><td>灰雁</td><td></td></tr>
+<tr class='highlight1'><td>Greater White-fronted Goose</td><td><a href="species.jsp?avibaseid=466E9077BE220EBE"><i>Anser albifrons</i></a></td><td>白额雁</td><td></td></tr>
+<tr class='highlight1'><td>Lesser White-fronted Goose</td><td><a href="species.jsp?avibaseid=184D232983E7AD10"><i>Anser erythropus</i></a></td><td>小白额雁</td><td><font color=red>易危</font></td></tr>
+<tr class='highlight1'><td>Taiga Bean-Goose</td><td><a href="species.jsp?avibaseid=BDB497A352D152DB"><i>Anser fabalis</i></a></td><td>豆雁</td><td></td></tr>
+<tr class='highlight1'><td>Tundra Bean-Goose</td><td><a href="species.jsp?avibaseid=AD849FCBCC68A520"><i>Anser serrirostris</i></a></td><td>短嘴豆雁</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Pink-footed Goose</td><td><a href="species.jsp?avibaseid=AFA7EE7470F000E9"><i>Anser brachyrhynchus</i></a></td><td>粉脚雁</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Brant</td><td><a href="species.jsp?avibaseid=3E04020B54C14FCC"><i>Branta bernicla</i></a></td><td>黑雁</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Barnacle Goose</td><td><a href="species.jsp?avibaseid=3163ED86A508BB83"><i>Branta leucopsis</i></a></td><td>白颊黑雁</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Cackling Goose</td><td><a href="species.jsp?avibaseid=60214D4970BA4158"><i>Branta hutchinsii</i></a></td><td>小美洲黑雁</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Canada Goose</td><td><a href="species.jsp?avibaseid=B59E18633E2EFD25"><i>Branta canadensis</i></a></td><td>加拿大黑雁</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Red-breasted Goose</td><td><a href="species.jsp?avibaseid=0D280B3F11B099B2"><i>Branta ruficollis</i></a></td><td>红胸黑雁</td><td><font color=red>易危</font></td></tr>
+<tr class='highlight1'><td>Mute Swan</td><td><a href="species.jsp?avibaseid=694C127A5D849FFE"><i>Cygnus olor</i></a></td><td>疣鼻天鹅</td><td></td></tr>
+<tr class='highlight1'><td>Black Swan</td><td><a href="species.jsp?avibaseid=46B54DB1D4CF50D3"><i>Cygnus atratus</i></a></td><td>黑天鹅</td><td><font color=blue>来源不明</font> </td></tr>
+<tr class='highlight1'><td>Tundra Swan</td><td><a href="species.jsp?avibaseid=0BCBA6B9CC19E7BA"><i>Cygnus columbianus</i></a></td><td>小天鹅</td><td></td></tr>
+<tr class='highlight1'><td>Whooper Swan</td><td><a href="species.jsp?avibaseid=BDDB5670D2D20A55"><i>Cygnus cygnus</i></a></td><td>大天鹅</td><td></td></tr>
+<tr class='highlight1'><td>Knob-billed Duck</td><td><a href="species.jsp?avibaseid=3948131B5C866873"><i>Sarkidiornis melanotos</i></a></td><td>瘤鸭</td><td></td></tr>
+<tr class='highlight1'><td>Egyptian Goose</td><td><a href="species.jsp?avibaseid=DA2F24E310CF72A6"><i>Alopochen aegyptiaca</i></a></td><td>埃及雁</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Ruddy Shelduck</td><td><a href="species.jsp?avibaseid=1F9D883EB44DEFD6"><i>Tadorna ferruginea</i></a></td><td>赤麻鸭</td><td></td></tr>
+<tr class='highlight1'><td>Common Shelduck</td><td><a href="species.jsp?avibaseid=5EAB32D3007896F3"><i>Tadorna tadorna</i></a></td><td>翘鼻麻鸭</td><td></td></tr>
+<tr class='highlight1'><td>Spur-winged Goose</td><td><a href="species.jsp?avibaseid=EB01B24C6C4CDD54"><i>Plectropterus gambensis</i></a></td><td>距翅雁</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Muscovy Duck</td><td><a href="species.jsp?avibaseid=8DE140468464FA45"><i>Cairina moschata</i></a></td><td>疣鼻栖鸭</td><td>外来物种  </td></tr>
+<tr class='highlight1'><td>Cotton Pygmy-Goose</td><td><a href="species.jsp?avibaseid=90AAE188290B503E"><i>Nettapus coromandelianus</i></a></td><td>棉凫</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Ringed Teal</td><td><a href="species.jsp?avibaseid=45C1096F9E2AFD6D"><i>Callonetta leucophrys</i></a></td><td>环颈鸭</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Mandarin Duck</td><td><a href="species.jsp?avibaseid=E1714A09EA1DFD1D"><i>Aix galericulata</i></a></td><td>鸳鸯</td><td><font color=blue>来源不明</font> </td></tr>
+<tr class='highlight1'><td>Baikal Teal</td><td><a href="species.jsp?avibaseid=63EABB42903040B4"><i>Sibirionetta formosa</i></a></td><td>花脸鸭</td><td></td></tr>
+<tr class='highlight1'><td>Garganey</td><td><a href="species.jsp?avibaseid=F577BA0F5BB7BD3F"><i>Spatula querquedula</i></a></td><td>白眉鸭</td><td></td></tr>
+<tr class='highlight1'><td>Northern Shoveler</td><td><a href="species.jsp?avibaseid=ED4CE8E7CFF43696"><i>Spatula clypeata</i></a></td><td>琵嘴鸭</td><td></td></tr>
+<tr class='highlight1'><td>Gadwall</td><td><a href="species.jsp?avibaseid=C235A4D712BB8855"><i>Mareca strepera</i></a></td><td>赤膀鸭</td><td></td></tr>
+<tr class='highlight1'><td>Falcated Duck</td><td><a href="species.jsp?avibaseid=978D448531E03998"><i>Mareca falcata</i></a></td><td>罗纹鸭</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Eurasian Wigeon</td><td><a href="species.jsp?avibaseid=15EE0D3685082E13"><i>Mareca penelope</i></a></td><td>赤颈鸭</td><td></td></tr>
+<tr class='highlight1'><td>Indian Spot-billed Duck</td><td><a href="species.jsp?avibaseid=759C5EB8F2513E96"><i>Anas poecilorhyncha</i></a></td><td>印缅斑嘴鸭</td><td>外来物种  </td></tr>
+<tr class='highlight1'><td>Eastern Spot-billed Duck</td><td><a href="species.jsp?avibaseid=E21470F9073AC877"><i>Anas zonorhyncha</i></a></td><td>斑嘴鸭</td><td><font color=blue>来源不明</font> </td></tr>
+<tr class='highlight1'><td>Mallard</td><td><a href="species.jsp?avibaseid=85625D75F2524457"><i>Anas platyrhynchos</i></a></td><td>绿头鸭</td><td></td></tr>
+<tr class='highlight1'><td>Cape Teal</td><td><a href="species.jsp?avibaseid=25DA0F41467279DF"><i>Anas capensis</i></a></td><td>绿翅灰斑鸭</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Red-billed Duck</td><td><a href="species.jsp?avibaseid=8F6876AC4DDE3CB7"><i>Anas erythrorhyncha</i></a></td><td>赤嘴鸭</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Northern Pintail</td><td><a href="species.jsp?avibaseid=56CCA7179C9FA71D"><i>Anas acuta</i></a></td><td>针尾鸭</td><td></td></tr>
+<tr class='highlight1'><td>Green-winged Teal</td><td><a href="species.jsp?avibaseid=BC6C3CCE5C1B5D9B"><i>Anas crecca</i></a></td><td>绿翅鸭/美洲绿翅鸭</td><td></td></tr>
+<tr class='highlight1'><td>Marbled Duck</td><td><a href="species.jsp?avibaseid=6362936EA12874F1"><i>Marmaronetta angustirostris</i></a></td><td>云石斑鸭</td><td><font color=red>近危</font></td></tr>
+<tr class='highlight1'><td>Red-crested Pochard</td><td><a href="species.jsp?avibaseid=3EC2CDA952B4A18C"><i>Netta rufina</i></a></td><td>赤嘴潜鸭</td><td></td></tr>
+<tr class='highlight1'><td>Southern Pochard</td><td><a href="species.jsp?avibaseid=36C0242EAEB3388E"><i>Netta erythrophthalma</i></a></td><td>灰嘴潜鸭</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Canvasback</td><td><a href="species.jsp?avibaseid=1929E1E16E073570"><i>Aythya valisineria</i></a></td><td>帆背潜鸭</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Common Pochard</td><td><a href="species.jsp?avibaseid=A96692E0C9F7508B"><i>Aythya ferina</i></a></td><td>红头潜鸭</td><td><font color=red>易危</font></td></tr>
+<tr class='highlight1'><td>Ferruginous Duck</td><td><a href="species.jsp?avibaseid=7CF91527F5832F30"><i>Aythya nyroca</i></a></td><td>白眼潜鸭</td><td><font color=red>近危</font></td></tr>
+<tr class='highlight1'><td>Tufted Duck</td><td><a href="species.jsp?avibaseid=67CEA1C1FC88F1DB"><i>Aythya fuligula</i></a></td><td>凤头潜鸭</td><td></td></tr>
+<tr class='highlight1'><td>Greater Scaup</td><td><a href="species.jsp?avibaseid=25C94A8F90A829F7"><i>Aythya marila</i></a></td><td>斑背潜鸭</td><td></td></tr>
+<tr class='highlight1'><td>Common Eider</td><td><a href="species.jsp?avibaseid=B77377EEB852D0AF"><i>Somateria mollissima</i></a></td><td>欧绒鸭</td><td>稀见/偶见 <font color=red>近危</font></td></tr>
+<tr class='highlight1'><td>Velvet Scoter</td><td><a href="species.jsp?avibaseid=BAF44E36E8D647CB"><i>Melanitta fusca</i></a></td><td>丝绒海番鸭</td><td><font color=red>易危</font></td></tr>
+<tr class='highlight1'><td>White-winged Scoter</td><td><a href="species.jsp?avibaseid=4800D6B673F13A48"><i>Melanitta deglandi</i></a></td><td>北美斑脸海番鸭</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Common Scoter</td><td><a href="species.jsp?avibaseid=246981996A4998ED"><i>Melanitta nigra</i></a></td><td>普通海番鸭</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Long-tailed Duck</td><td><a href="species.jsp?avibaseid=AF0C7BDEC7CEBAAC"><i>Clangula hyemalis</i></a></td><td>长尾鸭</td><td>稀见/偶见 <font color=red>易危</font></td></tr>
+<tr class='highlight1'><td>Common Goldeneye</td><td><a href="species.jsp?avibaseid=68EA281AF74846D2"><i>Bucephala clangula</i></a></td><td>鹊鸭</td><td></td></tr>
+<tr class='highlight1'><td>Smew</td><td><a href="species.jsp?avibaseid=F1F520368CC95F88"><i>Mergellus albellus</i></a></td><td>白秋沙鸭</td><td></td></tr>
+<tr class='highlight1'><td>Common Merganser</td><td><a href="species.jsp?avibaseid=407E2CA886367DBB"><i>Mergus merganser</i></a></td><td>普通秋沙鸭</td><td></td></tr>
+<tr class='highlight1'><td>Red-breasted Merganser</td><td><a href="species.jsp?avibaseid=8DB64266A42FC19B"><i>Mergus serrator</i></a></td><td>红胸秋沙鸭</td><td></td></tr>
+<tr class='highlight1'><td>Ruddy Duck</td><td><a href="species.jsp?avibaseid=675EEA7FBD490CED"><i>Oxyura jamaicensis</i></a></td><td>棕硬尾鸭</td><td>外来物种  </td></tr>
+<tr class='highlight1'><td>White-headed Duck</td><td><a href="species.jsp?avibaseid=2E40EF2C53646E30"><i>Oxyura leucocephala</i></a></td><td>白头硬尾鸭</td><td><font color=red>濒危</font></td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>GALLIFORMES: Numididae </b></P></td></tr>
+<tr class='highlight1'><td>Helmeted Guineafowl</td><td><a href="species.jsp?avibaseid=1044B438EE7556BB"><i>Numida meleagris</i></a></td><td>珠鸡</td><td></td></tr>
+<tr class='highlight1'><td>Vulturine Guineafowl</td><td><a href="species.jsp?avibaseid=F7A3FA3513EB4FB0"><i>Acryllium vulturinum</i></a></td><td>鹫珠鸡</td><td>稀见/偶见 </td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>GALLIFORMES: Phasianidae </b></P></td></tr>
+<tr class='highlight1'><td>Black Grouse</td><td><a href="species.jsp?avibaseid=D4441CD6E9C993EF"><i>Lyrurus tetrix</i></a></td><td>黑琴鸡</td><td></td></tr>
+<tr class='highlight1'><td>Caucasian Grouse</td><td><a href="species.jsp?avibaseid=4ACE5613FF666F16"><i>Lyrurus mlokosiewiczi</i></a></td><td>高加索黑琴鸡</td><td><font color=red>近危</font></td></tr>
+<tr class='highlight1'><td>Gray Partridge</td><td><a href="species.jsp?avibaseid=C013A20E7F91419D"><i>Perdix perdix</i></a></td><td>灰山鹑</td><td></td></tr>
+<tr class='highlight1'><td>Ring-necked Pheasant</td><td><a href="species.jsp?avibaseid=2FA39DCD42F80BC9"><i>Phasianus colchicus</i></a></td><td>雉鸡</td><td></td></tr>
+<tr class='highlight1'><td>Cheer Pheasant</td><td><a href="species.jsp?avibaseid=BCF98F51812DA4B4"><i>Catreus wallichii</i></a></td><td>彩雉</td><td><font color=red>易危</font></td></tr>
+<tr class='highlight1'><td>Gray Francolin</td><td><a href="species.jsp?avibaseid=B1C204EC88892CBE"><i>Ortygornis pondicerianus</i></a></td><td>灰鹧鸪</td><td></td></tr>
+<tr class='highlight1'><td>Chinese Francolin</td><td><a href="species.jsp?avibaseid=8DC52868B277C89B"><i>Francolinus pintadeanus</i></a></td><td>中华鹧鸪</td><td>外来物种  </td></tr>
+<tr class='highlight1'><td>Black Francolin</td><td><a href="species.jsp?avibaseid=50658B225BD16740"><i>Francolinus francolinus</i></a></td><td>黑鹧鸪</td><td></td></tr>
+<tr class='highlight1'><td>Caucasian Snowcock</td><td><a href="species.jsp?avibaseid=1596C37C32DED526"><i>Tetraogallus caucasicus</i></a></td><td>高加索雪鸡</td><td></td></tr>
+<tr class='highlight1'><td>Caspian Snowcock</td><td><a href="species.jsp?avibaseid=039BF484C6E832D0"><i>Tetraogallus caspius</i></a></td><td>里海雪鸡</td><td></td></tr>
+<tr class='highlight1'><td>Himalayan Snowcock</td><td><a href="species.jsp?avibaseid=AC2DD69D25CC9211"><i>Tetraogallus himalayensis</i></a></td><td>暗腹雪鸡</td><td></td></tr>
+<tr class='highlight1'><td>See-see Partridge</td><td><a href="species.jsp?avibaseid=439AFD40508D453F"><i>Ammoperdix griseogularis</i></a></td><td>漠鹑</td><td></td></tr>
+<tr class='highlight1'><td>Sand Partridge</td><td><a href="species.jsp?avibaseid=CD83E49E5C1FB3F8"><i>Ammoperdix heyi</i></a></td><td>沙鹑</td><td></td></tr>
+<tr class='highlight1'><td>Common Quail</td><td><a href="species.jsp?avibaseid=CAFE345DCABD8BF8"><i>Coturnix coturnix</i></a></td><td>西鹌鹑</td><td></td></tr>
+<tr class='highlight1'><td>Harlequin Quail</td><td><a href="species.jsp?avibaseid=0CA903BB0A69F510"><i>Coturnix delegorguei</i></a></td><td>花脸鹌鹑</td><td></td></tr>
+<tr class='highlight1'><td>Barbary Partridge</td><td><a href="species.jsp?avibaseid=D44B2846BB2436A7"><i>Alectoris barbara</i></a></td><td>北非石鸡</td><td></td></tr>
+<tr class='highlight1'><td>Arabian Partridge</td><td><a href="species.jsp?avibaseid=083811EB77D46EB7"><i>Alectoris melanocephala</i></a></td><td>阿拉伯石鸡</td><td></td></tr>
+<tr class='highlight1'><td>Chukar</td><td><a href="species.jsp?avibaseid=87CBEBF7C53AF64C"><i>Alectoris chukar</i></a></td><td>石鸡</td><td></td></tr>
+<tr class='highlight1'><td>Rock Partridge</td><td><a href="species.jsp?avibaseid=44437074E18EB422"><i>Alectoris graeca</i></a></td><td>欧石鸡</td><td><font color=red>近危</font></td></tr>
+<tr class='highlight1'><td>Philby's Partridge</td><td><a href="species.jsp?avibaseid=123F394154AE19F7"><i>Alectoris philbyi</i></a></td><td>黑脸石鸡</td><td></td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>COLUMBIFORMES: Columbidae </b></P></td></tr>
+<tr class='highlight1'><td>Rock Pigeon</td><td><a href="species.jsp?avibaseid=BBA263C235B15B88"><i>Columba livia</i></a></td><td>原鸽</td><td></td></tr>
+<tr class='highlight1'><td>Speckled Pigeon</td><td><a href="species.jsp?avibaseid=A6EA9F02884DCAC3"><i>Columba guinea</i></a></td><td>斑鸽</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Stock Dove</td><td><a href="species.jsp?avibaseid=68E4C0D1404A46D8"><i>Columba oenas</i></a></td><td>欧鸽</td><td></td></tr>
+<tr class='highlight1'><td>Yellow-eyed Pigeon</td><td><a href="species.jsp?avibaseid=38AA824BEABC9F9C"><i>Columba eversmanni</i></a></td><td>中亚鸽</td><td><font color=red>易危</font></td></tr>
+<tr class='highlight1'><td>Common Wood-Pigeon</td><td><a href="species.jsp?avibaseid=760F307A30689D66"><i>Columba palumbus</i></a></td><td>斑尾林鸽</td><td></td></tr>
+<tr class='highlight1'><td>Rameron Pigeon</td><td><a href="species.jsp?avibaseid=EEDB8253146102E4"><i>Columba arquatrix</i></a></td><td>黄眼鸽</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>European Turtle-Dove</td><td><a href="species.jsp?avibaseid=5788552B694ED7B5"><i>Streptopelia turtur</i></a></td><td>欧斑鸠</td><td><font color=red>易危</font></td></tr>
+<tr class='highlight1'><td>Dusky Turtle-Dove</td><td><a href="species.jsp?avibaseid=8770C6A77E1F4EC5"><i>Streptopelia lugens</i></a></td><td>粉胸斑鸠</td><td></td></tr>
+<tr class='highlight1'><td>Oriental Turtle-Dove</td><td><a href="species.jsp?avibaseid=6658BAC574088183"><i>Streptopelia orientalis</i></a></td><td>山斑鸠</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Eurasian Collared-Dove</td><td><a href="species.jsp?avibaseid=0C1EFC9B44C459D3"><i>Streptopelia decaocto</i></a></td><td>灰斑鸠</td><td></td></tr>
+<tr class='highlight1'><td>African Collared-Dove</td><td><a href="species.jsp?avibaseid=273A4A2F793BFFA1"><i>Streptopelia roseogrisea</i></a></td><td>粉头斑鸠</td><td></td></tr>
+<tr class='highlight1'><td>Red-eyed Dove</td><td><a href="species.jsp?avibaseid=9888B3AE7B0B41EE"><i>Streptopelia semitorquata</i></a></td><td>红眼斑鸠</td><td></td></tr>
+<tr class='highlight1'><td>Red Collared-Dove</td><td><a href="species.jsp?avibaseid=BC1407780F9EC377"><i>Streptopelia tranquebarica</i></a></td><td>火斑鸠</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Spotted Dove</td><td><a href="species.jsp?avibaseid=C8EF4F36C6C77DE0"><i>Spilopelia chinensis</i></a></td><td>珠颈斑鸠</td><td>外来物种  </td></tr>
+<tr class='highlight1'><td>Laughing Dove</td><td><a href="species.jsp?avibaseid=B2D6AB06AA0628A7"><i>Spilopelia senegalensis</i></a></td><td>棕斑鸠</td><td></td></tr>
+<tr class='highlight1'><td>Black-billed Wood-Dove</td><td><a href="species.jsp?avibaseid=72B71F11642389C6"><i>Turtur abyssinicus</i></a></td><td>黑嘴森鸠</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Tambourine Dove</td><td><a href="species.jsp?avibaseid=7308278F0D6F820F"><i>Turtur tympanistria</i></a></td><td>白胸森鸠</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Namaqua Dove</td><td><a href="species.jsp?avibaseid=DDC2CC929B5547C5"><i>Oena capensis</i></a></td><td>小长尾鸠</td><td></td></tr>
+<tr class='highlight1'><td>Zebra Dove</td><td><a href="species.jsp?avibaseid=91C3A5E9262EB61E"><i>Geopelia striata</i></a></td><td>斑姬地鸠</td><td>外来物种  </td></tr>
+<tr class='highlight1'><td>Bruce's Green-Pigeon</td><td><a href="species.jsp?avibaseid=46C9094410A753DB"><i>Treron waalia</i></a></td><td>黄腹绿鸠</td><td></td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>PTEROCLIFORMES: Pteroclidae </b></P></td></tr>
+<tr class='highlight1'><td>Pallas's Sandgrouse</td><td><a href="species.jsp?avibaseid=BDCB55F1196CAC6A"><i>Syrrhaptes paradoxus</i></a></td><td>毛腿沙鸡</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Pin-tailed Sandgrouse</td><td><a href="species.jsp?avibaseid=493C4CF8D0200AB4"><i>Pterocles alchata</i></a></td><td>白腹沙鸡</td><td></td></tr>
+<tr class='highlight1'><td>Chestnut-bellied Sandgrouse</td><td><a href="species.jsp?avibaseid=F5DE9155D65FAB81"><i>Pterocles exustus</i></a></td><td>栗腹沙鸡</td><td></td></tr>
+<tr class='highlight1'><td>Spotted Sandgrouse</td><td><a href="species.jsp?avibaseid=942BC61855ED501E"><i>Pterocles senegallus</i></a></td><td>斑沙鸡</td><td></td></tr>
+<tr class='highlight1'><td>Black-bellied Sandgrouse</td><td><a href="species.jsp?avibaseid=06B41945B9E57EC4"><i>Pterocles orientalis</i></a></td><td>黑腹沙鸡</td><td></td></tr>
+<tr class='highlight1'><td>Crowned Sandgrouse</td><td><a href="species.jsp?avibaseid=90194DA5CBF312EC"><i>Pterocles coronatus</i></a></td><td>花头沙鸡</td><td></td></tr>
+<tr class='highlight1'><td>Lichtenstein's Sandgrouse</td><td><a href="species.jsp?avibaseid=F3715F7BC58BC842"><i>Pterocles lichtensteinii</i></a></td><td>里氏沙鸡</td><td></td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>OTIDIFORMES: Otididae </b></P></td></tr>
+<tr class='highlight1'><td>Great Bustard</td><td><a href="species.jsp?avibaseid=C6F33176724AC933"><i>Otis tarda</i></a></td><td>大鸨</td><td><font color=red>濒危</font></td></tr>
+<tr class='highlight1'><td>Arabian Bustard</td><td><a href="species.jsp?avibaseid=6A39447923373997"><i>Ardeotis arabs</i></a></td><td>阿拉伯鸨</td><td><font color=red>近危</font></td></tr>
+<tr class='highlight1'><td>African Houbara</td><td><a href="species.jsp?avibaseid=5714C710ACE4DA8B"><i>Chlamydotis undulata</i></a></td><td>翎颌鸨</td><td><font color=red>易危</font></td></tr>
+<tr class='highlight1'><td>Asian Houbara</td><td><a href="species.jsp?avibaseid=1BCEB0FD7CDFB06A"><i>Chlamydotis macqueenii</i></a></td><td>波斑鸨</td><td><font color=red>易危</font></td></tr>
+<tr class='highlight1'><td>Little Bustard</td><td><a href="species.jsp?avibaseid=56E3016D3370A6D5"><i>Tetrax tetrax</i></a></td><td>小鸨</td><td><font color=red>近危</font></td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>CUCULIFORMES: Cuculidae </b></P></td></tr>
+<tr class='highlight1'><td>Senegal Coucal</td><td><a href="species.jsp?avibaseid=4A83155BA1B18139"><i>Centropus senegalensis</i></a></td><td>塞内加尔鸦鹃</td><td></td></tr>
+<tr class='highlight1'><td>White-browed Coucal</td><td><a href="species.jsp?avibaseid=4B2A7A3523901768"><i>Centropus superciliosus</i></a></td><td>白眉鸦鹃</td><td></td></tr>
+<tr class='highlight1'><td>Chestnut-winged Cuckoo</td><td><a href="species.jsp?avibaseid=575C66D270818507"><i>Clamator coromandus</i></a></td><td>红翅凤头鹃</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Great Spotted Cuckoo</td><td><a href="species.jsp?avibaseid=3D67C56A490A60AE"><i>Clamator glandarius</i></a></td><td>大斑凤头鹃</td><td></td></tr>
+<tr class='highlight1'><td>Pied Cuckoo</td><td><a href="species.jsp?avibaseid=BF0A09546401D245"><i>Clamator jacobinus</i></a></td><td>斑翅凤头鹃</td><td></td></tr>
+<tr class='highlight1'><td>Asian Koel</td><td><a href="species.jsp?avibaseid=6150358815172A12"><i>Eudynamys scolopaceus</i></a></td><td>噪鹃</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Dideric Cuckoo</td><td><a href="species.jsp?avibaseid=0482FA7E6D2B02F4"><i>Chrysococcyx caprius</i></a></td><td>白眉金鹃</td><td></td></tr>
+<tr class='highlight1'><td>Klaas's Cuckoo</td><td><a href="species.jsp?avibaseid=1FACD21062D63FCB"><i>Chrysococcyx klaas</i></a></td><td>白腹金鹃</td><td></td></tr>
+<tr class='highlight1'><td>Plaintive Cuckoo</td><td><a href="species.jsp?avibaseid=54089C784D4DFF4A"><i>Cacomantis merulinus</i></a></td><td>八声杜鹃</td><td></td></tr>
+<tr class='highlight1'><td>Gray-bellied Cuckoo</td><td><a href="species.jsp?avibaseid=84D36C76BC08134A"><i>Cacomantis passerinus</i></a></td><td>灰腹杜鹃</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Common Hawk-Cuckoo</td><td><a href="species.jsp?avibaseid=0880DDC8B805D57B"><i>Hierococcyx varius</i></a></td><td>普通鹰鹃</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Lesser Cuckoo</td><td><a href="species.jsp?avibaseid=FF41B79FB9A5403D"><i>Cuculus poliocephalus</i></a></td><td>小杜鹃</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Himalayan Cuckoo</td><td><a href="species.jsp?avibaseid=66812DE278F9AD07"><i>Cuculus saturatus</i></a></td><td>中杜鹃</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Common Cuckoo</td><td><a href="species.jsp?avibaseid=B3D2C3C5B73EC8E8"><i>Cuculus canorus</i></a></td><td>大杜鹃</td><td></td></tr>
+<tr class='highlight1'><td>Oriental Cuckoo</td><td><a href="species.jsp?avibaseid=6A735030417F672E"><i>Cuculus optatus</i></a></td><td>北方中杜鹃</td><td>稀见/偶见 </td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>CAPRIMULGIFORMES: Caprimulgidae </b></P></td></tr>
+<tr class='highlight1'><td>Red-necked Nightjar</td><td><a href="species.jsp?avibaseid=6CC3D04BF479A2A2"><i>Caprimulgus ruficollis</i></a></td><td>红颈夜鹰</td><td><font color=red>近危</font></td></tr>
+<tr class='highlight1'><td>Eurasian Nightjar</td><td><a href="species.jsp?avibaseid=80D4B0FE7FF1D735"><i>Caprimulgus europaeus</i></a></td><td>欧夜鹰</td><td></td></tr>
+<tr class='highlight1'><td>Egyptian Nightjar</td><td><a href="species.jsp?avibaseid=2F7F024457A842B1"><i>Caprimulgus aegyptius</i></a></td><td>埃及夜鹰</td><td></td></tr>
+<tr class='highlight1'><td>Nubian Nightjar</td><td><a href="species.jsp?avibaseid=626D56E43FDB7848"><i>Caprimulgus nubicus</i></a></td><td>努比亚夜鹰</td><td></td></tr>
+<tr class='highlight1'><td>Sykes's Nightjar</td><td><a href="species.jsp?avibaseid=C727BD310962B283"><i>Caprimulgus mahrattensis</i></a></td><td>塞氏夜鹰</td><td></td></tr>
+<tr class='highlight1'><td>Montane Nightjar</td><td><a href="species.jsp?avibaseid=FB96690D625A7515"><i>Caprimulgus poliocephalus</i></a></td><td>灰头夜鹰</td><td></td></tr>
+<tr class='highlight1'><td>Indian Nightjar</td><td><a href="species.jsp?avibaseid=65D4C83B7790076A"><i>Caprimulgus asiaticus</i></a></td><td>印度夜鹰</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Plain Nightjar</td><td><a href="species.jsp?avibaseid=7C3959D678F5AA3C"><i>Caprimulgus inornatus</i></a></td><td>纯色夜鹰</td><td></td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>APODIFORMES: Apodidae </b></P></td></tr>
+<tr class='highlight1'><td>Himalayan Swiftlet</td><td><a href="species.jsp?avibaseid=2F1D27B4A7C81285"><i>Aerodramus brevirostris</i></a></td><td>短嘴金丝燕</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Alpine Swift</td><td><a href="species.jsp?avibaseid=FA1CAD2906F7C845"><i>Tachymarptis melba</i></a></td><td>高山雨燕</td><td></td></tr>
+<tr class='highlight1'><td>Common Swift</td><td><a href="species.jsp?avibaseid=4E6EF3F983079D73"><i>Apus apus</i></a></td><td>普通楼燕</td><td></td></tr>
+<tr class='highlight1'><td>Plain Swift</td><td><a href="species.jsp?avibaseid=59A5A24E0F334354"><i>Apus unicolor</i></a></td><td>纯色雨燕</td><td></td></tr>
+<tr class='highlight1'><td>Pallid Swift</td><td><a href="species.jsp?avibaseid=332BC664DFABB965"><i>Apus pallidus</i></a></td><td>苍雨燕</td><td></td></tr>
+<tr class='highlight1'><td>Forbes-Watson's Swift</td><td><a href="species.jsp?avibaseid=45D3FD5A5FFCAFC1"><i>Apus berliozi</i></a></td><td>伯氏雨燕</td><td></td></tr>
+<tr class='highlight1'><td>Pacific Swift</td><td><a href="species.jsp?avibaseid=E23EBEFB47EB1EB0"><i>Apus pacificus</i></a></td><td>白腰雨燕</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Little Swift</td><td><a href="species.jsp?avibaseid=D209A90C8A90DA51"><i>Apus affinis</i></a></td><td>小雨燕</td><td></td></tr>
+<tr class='highlight1'><td>White-rumped Swift</td><td><a href="species.jsp?avibaseid=FA9F60196383DBA2"><i>Apus caffer</i></a></td><td>非洲白腰雨燕</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>African Palm Swift</td><td><a href="species.jsp?avibaseid=DA106373934D9148"><i>Cypsiurus parvus</i></a></td><td>非洲棕雨燕</td><td></td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>GRUIFORMES: Rallidae </b></P></td></tr>
+<tr class='highlight1'><td>Water Rail</td><td><a href="species.jsp?avibaseid=DE1D2DF4456931FF"><i>Rallus aquaticus</i></a></td><td>西方秧鸡</td><td></td></tr>
+<tr class='highlight1'><td>Corn Crake</td><td><a href="species.jsp?avibaseid=7E2572426E200D08"><i>Crex crex</i></a></td><td>长脚秧鸡</td><td></td></tr>
+<tr class='highlight1'><td>African Crake</td><td><a href="species.jsp?avibaseid=09A0F2EBC063CF30"><i>Crecopsis egregia</i></a></td><td>非洲秧鸡</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Spotted Crake</td><td><a href="species.jsp?avibaseid=460708F99737A6A2"><i>Porzana porzana</i></a></td><td>斑胸田鸡</td><td></td></tr>
+<tr class='highlight1'><td>Lesser Moorhen</td><td><a href="species.jsp?avibaseid=A927C1AE78492E6B"><i>Paragallinula angulata</i></a></td><td>小黑水鸡</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Eurasian Moorhen</td><td><a href="species.jsp?avibaseid=8F82FF8C30667D90"><i>Gallinula chloropus</i></a></td><td>黑水鸡</td><td></td></tr>
+<tr class='highlight1'><td>Eurasian Coot</td><td><a href="species.jsp?avibaseid=B682B2A9C922D4C4"><i>Fulica atra</i></a></td><td>骨顶鸡</td><td></td></tr>
+<tr class='highlight1'><td>Red-knobbed Coot</td><td><a href="species.jsp?avibaseid=53235FDC4FC130F5"><i>Fulica cristata</i></a></td><td>红瘤白骨顶</td><td></td></tr>
+<tr class='highlight1'><td>Allen's Gallinule</td><td><a href="species.jsp?avibaseid=53288666B2C70F88"><i>Porphyrio alleni</i></a></td><td>辉青水鸡</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Purple Gallinule</td><td><a href="species.jsp?avibaseid=72A4F8EBF168E80D"><i>Porphyrio martinica</i></a></td><td>紫青水鸡</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>African Swamphen</td><td><a href="species.jsp?avibaseid=865C039E4B8BE80A"><i>Porphyrio madagascariensis</i></a></td><td>非洲紫水鸡</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Gray-headed Swamphen</td><td><a href="species.jsp?avibaseid=BFAE9B0403627027"><i>Porphyrio poliocephalus</i></a></td><td>紫水鸡</td><td></td></tr>
+<tr class='highlight1'><td>Watercock</td><td><a href="species.jsp?avibaseid=39B7A3C7FA75E312"><i>Gallicrex cinerea</i></a></td><td>董鸡</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>White-breasted Waterhen</td><td><a href="species.jsp?avibaseid=F53518E3D78616E7"><i>Amaurornis phoenicurus</i></a></td><td>白胸苦恶鸟</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Striped Crake</td><td><a href="species.jsp?avibaseid=13967506FE307148"><i>Aenigmatolimnas marginalis</i></a></td><td>斑纹田鸡</td><td></td></tr>
+<tr class='highlight1'><td>Ruddy-breasted Crake</td><td><a href="species.jsp?avibaseid=14C2B730F81CDF26"><i>Zapornia fusca</i></a></td><td>红胸田鸡</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Little Crake</td><td><a href="species.jsp?avibaseid=9106EBE6C0914933"><i>Zapornia parva</i></a></td><td>姬田鸡</td><td></td></tr>
+<tr class='highlight1'><td>Baillon's Crake</td><td><a href="species.jsp?avibaseid=34D5B04DE53894FF"><i>Zapornia pusilla</i></a></td><td>小田鸡</td><td></td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>GRUIFORMES: Gruidae </b></P></td></tr>
+<tr class='highlight1'><td>Demoiselle Crane</td><td><a href="species.jsp?avibaseid=64DDD14DF2EB9B39"><i>Anthropoides virgo</i></a></td><td>蓑羽鹤</td><td></td></tr>
+<tr class='highlight1'><td>Siberian Crane</td><td><a href="species.jsp?avibaseid=77845DAD1C49E8F1"><i>Leucogeranus leucogeranus</i></a></td><td>白鹤</td><td><font color=red>极危</font></td></tr>
+<tr class='highlight1'><td>Common Crane</td><td><a href="species.jsp?avibaseid=99B8841E764117B1"><i>Grus grus</i></a></td><td>灰鹤</td><td></td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>CHARADRIIFORMES: Burhinidae </b></P></td></tr>
+<tr class='highlight1'><td>Great Thick-knee</td><td><a href="species.jsp?avibaseid=C2178ACC949372FC"><i>Esacus recurvirostris</i></a></td><td>大石鸻</td><td><font color=red>近危</font></td></tr>
+<tr class='highlight1'><td>Spotted Thick-knee</td><td><a href="species.jsp?avibaseid=862F6F04186871A8"><i>Burhinus capensis</i></a></td><td>斑石鸻</td><td></td></tr>
+<tr class='highlight1'><td>Eurasian Thick-knee</td><td><a href="species.jsp?avibaseid=C7DB323E37CEDBE6"><i>Burhinus oedicnemus</i></a></td><td>欧石鸻</td><td></td></tr>
+<tr class='highlight1'><td>Senegal Thick-knee</td><td><a href="species.jsp?avibaseid=85DF723B9BCC152F"><i>Burhinus senegalensis</i></a></td><td>小石鸻</td><td></td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>CHARADRIIFORMES: Pluvianidae </b></P></td></tr>
+<tr class='highlight1'><td>Egyptian Plover</td><td><a href="species.jsp?avibaseid=1B28A4B6389473D3"><i>Pluvianus aegyptius</i></a></td><td>埃及燕鸻</td><td>稀见/偶见 </td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>CHARADRIIFORMES: Recurvirostridae </b></P></td></tr>
+<tr class='highlight1'><td>Black-winged Stilt</td><td><a href="species.jsp?avibaseid=3CAEB7CEEC7FFF50"><i>Himantopus himantopus</i></a></td><td>黑翅长脚鹬</td><td></td></tr>
+<tr class='highlight1'><td>Pied Avocet</td><td><a href="species.jsp?avibaseid=C73ED2F5D88625BA"><i>Recurvirostra avosetta</i></a></td><td>反嘴鹬</td><td></td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>CHARADRIIFORMES: Haematopodidae </b></P></td></tr>
+<tr class='highlight1'><td>Eurasian Oystercatcher</td><td><a href="species.jsp?avibaseid=ED66316522B99A30"><i>Haematopus ostralegus</i></a></td><td>蛎鹬</td><td><font color=red>近危</font></td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>CHARADRIIFORMES: Charadriidae </b></P></td></tr>
+<tr class='highlight1'><td>Black-bellied Plover</td><td><a href="species.jsp?avibaseid=27903EF7E618A6A2"><i>Pluvialis squatarola</i></a></td><td>灰斑鸻</td><td><font color=red>易危</font></td></tr>
+<tr class='highlight1'><td>European Golden-Plover</td><td><a href="species.jsp?avibaseid=25A20BA6F7EA9D9A"><i>Pluvialis apricaria</i></a></td><td>欧金鸻</td><td></td></tr>
+<tr class='highlight1'><td>American Golden-Plover</td><td><a href="species.jsp?avibaseid=2143A8526CA7C809"><i>Pluvialis dominica</i></a></td><td>美洲金鸻</td><td></td></tr>
+<tr class='highlight1'><td>Pacific Golden-Plover</td><td><a href="species.jsp?avibaseid=07C11CF340D2017A"><i>Pluvialis fulva</i></a></td><td>金斑鸻</td><td></td></tr>
+<tr class='highlight1'><td>Eurasian Dotterel</td><td><a href="species.jsp?avibaseid=20BE9DF14579BD4A"><i>Eudromias morinellus</i></a></td><td>小嘴鸻</td><td></td></tr>
+<tr class='highlight1'><td>Common Ringed Plover</td><td><a href="species.jsp?avibaseid=EDA37B7C5D4A25ED"><i>Charadrius hiaticula</i></a></td><td>剑鸻</td><td></td></tr>
+<tr class='highlight1'><td>Three-banded Plover</td><td><a href="species.jsp?avibaseid=8DAF86A1D8B83199"><i>Thinornis tricollaris</i></a></td><td>三色鸻</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Little Ringed Plover</td><td><a href="species.jsp?avibaseid=35EC3BBF166AB032"><i>Thinornis dubius</i></a></td><td>金眶鸻</td><td></td></tr>
+<tr class='highlight1'><td>Northern Lapwing</td><td><a href="species.jsp?avibaseid=F029489ABD9D1334"><i>Vanellus vanellus</i></a></td><td>凤头麦鸡</td><td><font color=red>近危</font></td></tr>
+<tr class='highlight1'><td>Blacksmith Lapwing</td><td><a href="species.jsp?avibaseid=2F23EDC6558D31B3"><i>Vanellus armatus</i></a></td><td>黑背麦鸡</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Spur-winged Lapwing</td><td><a href="species.jsp?avibaseid=F5E92B225F648330"><i>Vanellus spinosus</i></a></td><td>黑胸麦鸡</td><td></td></tr>
+<tr class='highlight1'><td>River Lapwing</td><td><a href="species.jsp?avibaseid=DDE5A01E9FC65B0A"><i>Vanellus duvaucelii</i></a></td><td>距翅麦鸡</td><td><font color=red>近危</font></td></tr>
+<tr class='highlight1'><td>Black-headed Lapwing</td><td><a href="species.jsp?avibaseid=D531B5D3CC41D25A"><i>Vanellus tectus</i></a></td><td>非洲麦鸡</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Black-winged Lapwing</td><td><a href="species.jsp?avibaseid=83D95620FFD41D19"><i>Vanellus melanopterus</i></a></td><td>黑翅麦鸡</td><td></td></tr>
+<tr class='highlight1'><td>Gray-headed Lapwing</td><td><a href="species.jsp?avibaseid=8F8F0CF04F2CB9F8"><i>Vanellus cinereus</i></a></td><td>灰头麦鸡</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Red-wattled Lapwing</td><td><a href="species.jsp?avibaseid=4A30C57258175715"><i>Vanellus indicus</i></a></td><td>肉垂麦鸡</td><td></td></tr>
+<tr class='highlight1'><td>Sociable Lapwing</td><td><a href="species.jsp?avibaseid=D348C2D65FA2DF83"><i>Vanellus gregarius</i></a></td><td>黄颊麦鸡</td><td><font color=red>极危</font></td></tr>
+<tr class='highlight1'><td>White-tailed Lapwing</td><td><a href="species.jsp?avibaseid=A480FDDF8BBC5443"><i>Vanellus leucurus</i></a></td><td>白尾麦鸡</td><td></td></tr>
+<tr class='highlight1'><td>Caspian Plover</td><td><a href="species.jsp?avibaseid=264D03516760D706"><i>Anarhynchus asiaticus</i></a></td><td>红胸鸻</td><td></td></tr>
+<tr class='highlight1'><td>Siberian Sand-Plover</td><td><a href="species.jsp?avibaseid=66DA1FB3162F3239"><i>Anarhynchus mongolus</i></a></td><td>蒙古沙鸻</td><td><font color=red>濒危</font></td></tr>
+<tr class='highlight1'><td>Tibetan Sand-Plover</td><td><a href="species.jsp?avibaseid=828D3D5A6AFE2F26"><i>Anarhynchus atrifrons</i></a></td><td>青藏沙鸻</td><td></td></tr>
+<tr class='highlight1'><td>Greater Sand-Plover</td><td><a href="species.jsp?avibaseid=98B9C10B606A4FF1"><i>Anarhynchus leschenaultii</i></a></td><td>铁嘴沙鸻</td><td></td></tr>
+<tr class='highlight1'><td>Kittlitz's Plover</td><td><a href="species.jsp?avibaseid=0F0DCC2F28E4E83B"><i>Anarhynchus pecuarius</i></a></td><td>基氏沙鸻</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Kentish Plover</td><td><a href="species.jsp?avibaseid=AA4385A283B9A81E"><i>Anarhynchus alexandrinus</i></a></td><td>环颈鸻</td><td></td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>CHARADRIIFORMES: Rostratulidae </b></P></td></tr>
+<tr class='highlight1'><td>Greater Painted-Snipe</td><td><a href="species.jsp?avibaseid=7516E6872967C181"><i>Rostratula benghalensis</i></a></td><td>彩鹬</td><td>稀见/偶见 </td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>CHARADRIIFORMES: Jacanidae </b></P></td></tr>
+<tr class='highlight1'><td>Pheasant-tailed Jacana</td><td><a href="species.jsp?avibaseid=6F672FA3A724EC9F"><i>Hydrophasianus chirurgus</i></a></td><td>水雉</td><td>稀见/偶见 </td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>CHARADRIIFORMES: Scolopacidae </b></P></td></tr>
+<tr class='highlight1'><td>Whimbrel</td><td><a href="species.jsp?avibaseid=F9305BAA638BAEFC"><i>Numenius phaeopus</i></a></td><td>中杓鹬</td><td></td></tr>
+<tr class='highlight1'><td>Little Curlew</td><td><a href="species.jsp?avibaseid=C00E1EB8C00BCC31"><i>Numenius minutus</i></a></td><td>小杓鹬</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Far Eastern Curlew</td><td><a href="species.jsp?avibaseid=DAF8F22BD6A6C662"><i>Numenius madagascariensis</i></a></td><td>大杓鹬</td><td>稀见/偶见 <font color=red>濒危</font></td></tr>
+<tr class='highlight1'><td>Slender-billed Curlew</td><td><a href="species.jsp?avibaseid=7A35DE8186E4DF43"><i>Numenius tenuirostris</i></a></td><td>细嘴杓鹬</td><td>稀见/偶见 <font color=red>极危</font></td></tr>
+<tr class='highlight1'><td>Eurasian Curlew</td><td><a href="species.jsp?avibaseid=3BB5CBA66CF48884"><i>Numenius arquata</i></a></td><td>白腰杓鹬</td><td><font color=red>近危</font></td></tr>
+<tr class='highlight1'><td>Bar-tailed Godwit</td><td><a href="species.jsp?avibaseid=9A684C997C1AF1BA"><i>Limosa lapponica</i></a></td><td>斑尾塍鹬</td><td><font color=red>近危</font></td></tr>
+<tr class='highlight1'><td>Black-tailed Godwit</td><td><a href="species.jsp?avibaseid=454B5CD5F5285B77"><i>Limosa limosa</i></a></td><td>黑尾塍鹬</td><td><font color=red>近危</font></td></tr>
+<tr class='highlight1'><td>Asian Dowitcher</td><td><a href="species.jsp?avibaseid=B7E68EC8AB117F6C"><i>Limnodromus semipalmatus</i></a></td><td>半蹼鹬</td><td>稀见/偶见 <font color=red>近危</font></td></tr>
+<tr class='highlight1'><td>Long-billed Dowitcher</td><td><a href="species.jsp?avibaseid=CB343E43E8CAF303"><i>Limnodromus scolopaceus</i></a></td><td>长嘴鹬</td><td>稀见/偶见 <font color=red>近危</font></td></tr>
+<tr class='highlight1'><td>Jack Snipe</td><td><a href="species.jsp?avibaseid=1A15F0C6B4948C52"><i>Lymnocryptes minimus</i></a></td><td>姬鹬</td><td></td></tr>
+<tr class='highlight1'><td>Eurasian Woodcock</td><td><a href="species.jsp?avibaseid=BFE14290EA4326FA"><i>Scolopax rusticola</i></a></td><td>丘鹬</td><td></td></tr>
+<tr class='highlight1'><td>Solitary Snipe</td><td><a href="species.jsp?avibaseid=F6B72EAFCB98A437"><i>Gallinago solitaria</i></a></td><td>孤沙锥</td><td></td></tr>
+<tr class='highlight1'><td>Great Snipe</td><td><a href="species.jsp?avibaseid=BCCD5840C7A6D538"><i>Gallinago media</i></a></td><td>斑腹沙锥</td><td><font color=red>近危</font></td></tr>
+<tr class='highlight1'><td>Swinhoe's Snipe</td><td><a href="species.jsp?avibaseid=9E66B47A3044536F"><i>Gallinago megala</i></a></td><td>大沙锥</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Pin-tailed Snipe</td><td><a href="species.jsp?avibaseid=EE61E2CACBEC4856"><i>Gallinago stenura</i></a></td><td>针尾沙锥</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Common Snipe</td><td><a href="species.jsp?avibaseid=9151E0BA75761647"><i>Gallinago gallinago</i></a></td><td>扇尾沙锥</td><td></td></tr>
+<tr class='highlight1'><td>Wilson's Phalarope</td><td><a href="species.jsp?avibaseid=667C6969D7874433"><i>Phalaropus tricolor</i></a></td><td>细嘴瓣蹼鹬</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Red Phalarope</td><td><a href="species.jsp?avibaseid=18A1938091EEEA73"><i>Phalaropus fulicarius</i></a></td><td>灰瓣蹼鹬</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Red-necked Phalarope</td><td><a href="species.jsp?avibaseid=E6F3BA54577746FB"><i>Phalaropus lobatus</i></a></td><td>红颈瓣蹼鹬</td><td></td></tr>
+<tr class='highlight1'><td>Terek Sandpiper</td><td><a href="species.jsp?avibaseid=6D5992EEE12070E8"><i>Xenus cinereus</i></a></td><td>翘嘴鹬</td><td></td></tr>
+<tr class='highlight1'><td>Common Sandpiper</td><td><a href="species.jsp?avibaseid=8548B07ECA48773F"><i>Actitis hypoleucos</i></a></td><td>矶鹬</td><td></td></tr>
+<tr class='highlight1'><td>Spotted Sandpiper</td><td><a href="species.jsp?avibaseid=0D88C072E71FE4B8"><i>Actitis macularius</i></a></td><td>斑腹矶鹬</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Green Sandpiper</td><td><a href="species.jsp?avibaseid=A7B17EFC92B53D29"><i>Tringa ochropus</i></a></td><td>白腰草鹬</td><td></td></tr>
+<tr class='highlight1'><td>Gray-tailed Tattler</td><td><a href="species.jsp?avibaseid=29256A389375B43E"><i>Tringa brevipes</i></a></td><td>灰尾漂鹬</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Marsh Sandpiper</td><td><a href="species.jsp?avibaseid=15CF9352AD0E92DF"><i>Tringa stagnatilis</i></a></td><td>泽鹬</td><td></td></tr>
+<tr class='highlight1'><td>Wood Sandpiper</td><td><a href="species.jsp?avibaseid=8E67DC5F68BDF62C"><i>Tringa glareola</i></a></td><td>林鹬</td><td></td></tr>
+<tr class='highlight1'><td>Common Redshank</td><td><a href="species.jsp?avibaseid=D6BFC73A3E067711"><i>Tringa totanus</i></a></td><td>红脚鹬</td><td></td></tr>
+<tr class='highlight1'><td>Lesser Yellowlegs</td><td><a href="species.jsp?avibaseid=2C7A2673444BECF0"><i>Tringa flavipes</i></a></td><td>小黄脚鹬</td><td>稀见/偶见 <font color=red>易危</font></td></tr>
+<tr class='highlight1'><td>Spotted Redshank</td><td><a href="species.jsp?avibaseid=0895DD84DB3A45D1"><i>Tringa erythropus</i></a></td><td>鹤鹬</td><td></td></tr>
+<tr class='highlight1'><td>Common Greenshank</td><td><a href="species.jsp?avibaseid=18B415D28BBF934C"><i>Tringa nebularia</i></a></td><td>青脚鹬</td><td></td></tr>
+<tr class='highlight1'><td>Ruddy Turnstone</td><td><a href="species.jsp?avibaseid=DC3050A9771F2CE9"><i>Arenaria interpres</i></a></td><td>翻石鹬</td><td><font color=red>近危</font></td></tr>
+<tr class='highlight1'><td>Great Knot</td><td><a href="species.jsp?avibaseid=09C51FA9A4E5C3E8"><i>Calidris tenuirostris</i></a></td><td>大滨鹬</td><td><font color=red>濒危</font></td></tr>
+<tr class='highlight1'><td>Red Knot</td><td><a href="species.jsp?avibaseid=B5CE8FAD18923A94"><i>Calidris canutus</i></a></td><td>红腹滨鹬</td><td><font color=red>近危</font></td></tr>
+<tr class='highlight1'><td>Ruff</td><td><a href="species.jsp?avibaseid=2DABF98FBEEAB7BB"><i>Calidris pugnax</i></a></td><td>流苏鹬</td><td></td></tr>
+<tr class='highlight1'><td>Broad-billed Sandpiper</td><td><a href="species.jsp?avibaseid=0A14882F5F9F64E6"><i>Calidris falcinellus</i></a></td><td>阔嘴鹬</td><td><font color=red>易危</font></td></tr>
+<tr class='highlight1'><td>Sharp-tailed Sandpiper</td><td><a href="species.jsp?avibaseid=A0A67A811E53D89F"><i>Calidris acuminata</i></a></td><td>尖尾滨鹬</td><td>稀见/偶见 <font color=red>易危</font></td></tr>
+<tr class='highlight1'><td>Curlew Sandpiper</td><td><a href="species.jsp?avibaseid=143A681C9BCE9A20"><i>Calidris ferruginea</i></a></td><td>弯嘴滨鹬</td><td><font color=red>易危</font></td></tr>
+<tr class='highlight1'><td>Temminck's Stint</td><td><a href="species.jsp?avibaseid=5ACF7FB313BEF9EA"><i>Calidris temminckii</i></a></td><td>青脚滨鹬</td><td></td></tr>
+<tr class='highlight1'><td>Long-toed Stint</td><td><a href="species.jsp?avibaseid=7D629288C753814E"><i>Calidris subminuta</i></a></td><td>长趾滨鹬</td><td></td></tr>
+<tr class='highlight1'><td>Red-necked Stint</td><td><a href="species.jsp?avibaseid=BBDF2F1BAC640E4D"><i>Calidris ruficollis</i></a></td><td>红颈滨鹬</td><td>稀见/偶见 <font color=red>近危</font></td></tr>
+<tr class='highlight1'><td>Buff-breasted Sandpiper</td><td><a href="species.jsp?avibaseid=3A3C62BC935BDA72"><i>Calidris subruficollis</i></a></td><td>饰胸鹬</td><td>稀见/偶见 <font color=red>易危</font></td></tr>
+<tr class='highlight1'><td>Sanderling</td><td><a href="species.jsp?avibaseid=06B9BD243A756B28"><i>Calidris alba</i></a></td><td>三趾滨鹬</td><td></td></tr>
+<tr class='highlight1'><td>Dunlin</td><td><a href="species.jsp?avibaseid=15369E8EB4CBD064"><i>Calidris alpina</i></a></td><td>黑腹滨鹬</td><td><font color=red>近危</font></td></tr>
+<tr class='highlight1'><td>Purple Sandpiper</td><td><a href="species.jsp?avibaseid=0A0B84313ACFFB2F"><i>Calidris maritima</i></a></td><td>紫滨鹬</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Baird's Sandpiper</td><td><a href="species.jsp?avibaseid=1F1AD154DAE2E070"><i>Calidris bairdii</i></a></td><td>黑腰滨鹬</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Little Stint</td><td><a href="species.jsp?avibaseid=9936FF4AFB430504"><i>Calidris minuta</i></a></td><td>小滨鹬</td><td></td></tr>
+<tr class='highlight1'><td>White-rumped Sandpiper</td><td><a href="species.jsp?avibaseid=153BA3069DFCDDCA"><i>Calidris fuscicollis</i></a></td><td>白腰滨鹬</td><td>稀见/偶见 <font color=red>易危</font></td></tr>
+<tr class='highlight1'><td>Pectoral Sandpiper</td><td><a href="species.jsp?avibaseid=ACC99F35F0E8F7EB"><i>Calidris melanotos</i></a></td><td>斑胸滨鹬</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Semipalmated Sandpiper</td><td><a href="species.jsp?avibaseid=F35821AAC21FFF20"><i>Calidris pusilla</i></a></td><td>半蹼滨鹬</td><td>稀见/偶见 <font color=red>近危</font></td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>CHARADRIIFORMES: Turnicidae </b></P></td></tr>
+<tr class='highlight1'><td>Small Buttonquail</td><td><a href="species.jsp?avibaseid=0DA8BB90D5401FDB"><i>Turnix sylvaticus</i></a></td><td>林三趾鹑</td><td>稀见/偶见 </td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>CHARADRIIFORMES: Dromadidae </b></P></td></tr>
+<tr class='highlight1'><td>Crab-Plover</td><td><a href="species.jsp?avibaseid=C3E33FEBDE75219B"><i>Dromas ardeola</i></a></td><td>蟹鸻</td><td></td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>CHARADRIIFORMES: Glareolidae </b></P></td></tr>
+<tr class='highlight1'><td>Bronze-winged Courser</td><td><a href="species.jsp?avibaseid=F5145338630C717F"><i>Rhinoptilus chalcopterus</i></a></td><td>铜翅走鸻</td><td></td></tr>
+<tr class='highlight1'><td>Cream-colored Courser</td><td><a href="species.jsp?avibaseid=DE0A72A7FA1E6DB7"><i>Cursorius cursor</i></a></td><td>乳色走鸻</td><td></td></tr>
+<tr class='highlight1'><td>Small Pratincole</td><td><a href="species.jsp?avibaseid=D9A310F122B86A22"><i>Glareola lactea</i></a></td><td>灰燕鸻</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Collared Pratincole</td><td><a href="species.jsp?avibaseid=D56ABB4EE468E9EF"><i>Glareola pratincola</i></a></td><td>领燕鸻</td><td></td></tr>
+<tr class='highlight1'><td>Black-winged Pratincole</td><td><a href="species.jsp?avibaseid=E1F6A875C32C042D"><i>Glareola nordmanni</i></a></td><td>黑翅燕鸻</td><td><font color=red>近危</font></td></tr>
+<tr class='highlight1'><td>Oriental Pratincole</td><td><a href="species.jsp?avibaseid=3222F80FA99A55A7"><i>Glareola maldivarum</i></a></td><td>普通燕鸻</td><td>稀见/偶见 </td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>CHARADRIIFORMES: Stercorariidae </b></P></td></tr>
+<tr class='highlight1'><td>Long-tailed Jaeger</td><td><a href="species.jsp?avibaseid=1D4464402EC9FD21"><i>Stercorarius longicaudus</i></a></td><td>长尾贼鸥</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Parasitic Jaeger</td><td><a href="species.jsp?avibaseid=39086887E9EAFEB3"><i>Stercorarius parasiticus</i></a></td><td>短尾贼鸥</td><td></td></tr>
+<tr class='highlight1'><td>Pomarine Jaeger</td><td><a href="species.jsp?avibaseid=7CB8F5B711DE64D0"><i>Stercorarius pomarinus</i></a></td><td>中贼鸥</td><td></td></tr>
+<tr class='highlight1'><td>Great Skua</td><td><a href="species.jsp?avibaseid=BB041C6E5DB73FC7"><i>Stercorarius skua</i></a></td><td>北贼鸥</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Brown Skua</td><td><a href="species.jsp?avibaseid=4D5D2BC3F80BD645"><i>Stercorarius antarcticus</i></a></td><td>大贼鸥</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>South Polar Skua</td><td><a href="species.jsp?avibaseid=7D1A9D5CCCDC597C"><i>Stercorarius maccormicki</i></a></td><td>南极贼鸥</td><td>稀见/偶见 </td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>CHARADRIIFORMES: Alcidae </b></P></td></tr>
+<tr class='highlight1'><td>Atlantic Puffin</td><td><a href="species.jsp?avibaseid=2771624B64AD7F2C"><i>Fratercula arctica</i></a></td><td>北极海鹦</td><td>稀见/偶见 <font color=red>易危</font></td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>CHARADRIIFORMES: Laridae </b></P></td></tr>
+<tr class='highlight1'><td>Little Gull</td><td><a href="species.jsp?avibaseid=F89FD6E3A367C008"><i>Hydrocoloeus minutus</i></a></td><td>小鸥</td><td></td></tr>
+<tr class='highlight1'><td>Black-legged Kittiwake</td><td><a href="species.jsp?avibaseid=FB4D08F0837D4683"><i>Rissa tridactyla</i></a></td><td>三趾鸥</td><td>稀见/偶见 <font color=red>易危</font></td></tr>
+<tr class='highlight1'><td>Sabine's Gull</td><td><a href="species.jsp?avibaseid=86182656472B476B"><i>Xema sabini</i></a></td><td>叉尾鸥</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Slender-billed Gull</td><td><a href="species.jsp?avibaseid=27CE7132A1848BCD"><i>Chroicocephalus genei</i></a></td><td>细嘴鸥</td><td></td></tr>
+<tr class='highlight1'><td>Bonaparte's Gull</td><td><a href="species.jsp?avibaseid=0337440E2A88E638"><i>Chroicocephalus philadelphia</i></a></td><td>博氏鸥</td><td></td></tr>
+<tr class='highlight1'><td>Black-headed Gull</td><td><a href="species.jsp?avibaseid=FB02DD9658CC1EC6"><i>Chroicocephalus ridibundus</i></a></td><td>红嘴鸥</td><td></td></tr>
+<tr class='highlight1'><td>Brown-headed Gull</td><td><a href="species.jsp?avibaseid=C2868E7AA8A8778F"><i>Chroicocephalus brunnicephalus</i></a></td><td>棕头鸥</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Gray-hooded Gull</td><td><a href="species.jsp?avibaseid=6EB497FA1859864B"><i>Chroicocephalus cirrocephalus</i></a></td><td>灰头鸥</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Laughing Gull</td><td><a href="species.jsp?avibaseid=6CDC3C9C8B50EA71"><i>Leucophaeus atricilla</i></a></td><td>笑鸥</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Franklin's Gull</td><td><a href="species.jsp?avibaseid=57C93A74CBC9863F"><i>Leucophaeus pipixcan</i></a></td><td>弗氏鸥</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Pallas's Gull</td><td><a href="species.jsp?avibaseid=EF930CDC7CE618F7"><i>Ichthyaetus ichthyaetus</i></a></td><td>渔鸥</td><td></td></tr>
+<tr class='highlight1'><td>Relict Gull</td><td><a href="species.jsp?avibaseid=166CE0D70D663FCC"><i>Ichthyaetus relictus</i></a></td><td>遗鸥</td><td>稀见/偶见 <font color=red>易危</font></td></tr>
+<tr class='highlight1'><td>Audouin's Gull</td><td><a href="species.jsp?avibaseid=F7B9355E42C3F987"><i>Ichthyaetus audouinii</i></a></td><td>地中海鸥</td><td><font color=red>易危</font></td></tr>
+<tr class='highlight1'><td>Mediterranean Gull</td><td><a href="species.jsp?avibaseid=052BFA8A77EED5AF"><i>Ichthyaetus melanocephalus</i></a></td><td>黑头鸥</td><td></td></tr>
+<tr class='highlight1'><td>Sooty Gull</td><td><a href="species.jsp?avibaseid=67D43542E9EBE903"><i>Ichthyaetus hemprichii</i></a></td><td>白领鸥</td><td></td></tr>
+<tr class='highlight1'><td>White-eyed Gull</td><td><a href="species.jsp?avibaseid=A7F240E39F0AD5F9"><i>Ichthyaetus leucophthalmus</i></a></td><td>白眼鸥</td><td></td></tr>
+<tr class='highlight1'><td>Common Gull</td><td><a href="species.jsp?avibaseid=00DA9D9151189271"><i>Larus canus</i></a></td><td>海鸥</td><td></td></tr>
+<tr class='highlight1'><td>Caspian Gull</td><td><a href="species.jsp?avibaseid=93CA037F6FFE9FDB"><i>Larus cachinnans</i></a></td><td>黄脚银鸥</td><td></td></tr>
+<tr class='highlight1'><td>Mongolian Gull</td><td><a href="species.jsp?avibaseid=E1325FAB8AD8AF75"><i>Larus mongolicus</i></a></td><td>蒙古银鸥</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>European Herring Gull</td><td><a href="species.jsp?avibaseid=F002188E226DF09C"><i>Larus argentatus</i></a></td><td>银鸥</td><td></td></tr>
+<tr class='highlight1'><td>Yellow-legged Gull</td><td><a href="species.jsp?avibaseid=E074D7069AE1303C"><i>Larus michahellis</i></a></td><td>黄腿银鸥</td><td></td></tr>
+<tr class='highlight1'><td>Armenian Gull</td><td><a href="species.jsp?avibaseid=F6951FF7E28D37AC"><i>Larus armenicus</i></a></td><td>亚美尼亚鸥</td><td></td></tr>
+<tr class='highlight1'><td>Great Black-backed Gull</td><td><a href="species.jsp?avibaseid=E826E9F3FBAED223"><i>Larus marinus</i></a></td><td>大黑背鸥</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Glaucous Gull</td><td><a href="species.jsp?avibaseid=A59FA446D6B40057"><i>Larus hyperboreus</i></a></td><td>北极鸥</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Lesser Black-backed Gull</td><td><a href="species.jsp?avibaseid=2D52E3A509137804"><i>Larus fuscus</i></a></td><td>小黑背银鸥</td><td></td></tr>
+<tr class='highlight1'><td>African Skimmer</td><td><a href="species.jsp?avibaseid=907B1140134453B4"><i>Rynchops flavirostris</i></a></td><td>非洲剪嘴鸥</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Indian Skimmer</td><td><a href="species.jsp?avibaseid=88151F23B9BD5964"><i>Rynchops albicollis</i></a></td><td>剪嘴鸥</td><td>稀见/偶见 <font color=red>濒危</font></td></tr>
+<tr class='highlight1'><td>Brown Noddy</td><td><a href="species.jsp?avibaseid=A070171E774B95B5"><i>Anous stolidus</i></a></td><td>白顶玄燕鸥</td><td></td></tr>
+<tr class='highlight1'><td>Lesser Noddy</td><td><a href="species.jsp?avibaseid=03F9EB153E1DD50C"><i>Anous tenuirostris</i></a></td><td>小玄燕鸥</td><td></td></tr>
+<tr class='highlight1'><td>Sooty Tern</td><td><a href="species.jsp?avibaseid=3E7F825D03C0DC3E"><i>Onychoprion fuscatus</i></a></td><td>乌燕鸥</td><td></td></tr>
+<tr class='highlight1'><td>Bridled Tern</td><td><a href="species.jsp?avibaseid=E6518B9D5C802F2A"><i>Onychoprion anaethetus</i></a></td><td>褐翅燕鸥</td><td></td></tr>
+<tr class='highlight1'><td>Little Tern</td><td><a href="species.jsp?avibaseid=17310BF0FE9BAC8A"><i>Sternula albifrons</i></a></td><td>白额燕鸥</td><td></td></tr>
+<tr class='highlight1'><td>Saunders's Tern</td><td><a href="species.jsp?avibaseid=4B21F4D8DBD4F42D"><i>Sternula saundersi</i></a></td><td>桑氏白额燕鸥</td><td></td></tr>
+<tr class='highlight1'><td>Gull-billed Tern</td><td><a href="species.jsp?avibaseid=87168739C37AC427"><i>Gelochelidon nilotica</i></a></td><td>鸥嘴噪鸥</td><td></td></tr>
+<tr class='highlight1'><td>Caspian Tern</td><td><a href="species.jsp?avibaseid=BC06BC0D1056BC7B"><i>Hydroprogne caspia</i></a></td><td>红嘴巨鸥</td><td></td></tr>
+<tr class='highlight1'><td>Whiskered Tern</td><td><a href="species.jsp?avibaseid=7AB4E42B260B5954"><i>Chlidonias hybrida</i></a></td><td>须浮鸥</td><td></td></tr>
+<tr class='highlight1'><td>Black Tern</td><td><a href="species.jsp?avibaseid=115AF02DD58018FB"><i>Chlidonias niger</i></a></td><td>黑浮鸥</td><td></td></tr>
+<tr class='highlight1'><td>White-winged Tern</td><td><a href="species.jsp?avibaseid=43CAAEE3B0D305D9"><i>Chlidonias leucopterus</i></a></td><td>白翅浮鸥</td><td></td></tr>
+<tr class='highlight1'><td>River Tern</td><td><a href="species.jsp?avibaseid=A874F3344E9FE3C3"><i>Sterna aurantia</i></a></td><td>黄嘴河燕鸥</td><td>稀见/偶见 <font color=red>易危</font></td></tr>
+<tr class='highlight1'><td>Arctic Tern</td><td><a href="species.jsp?avibaseid=BDC5CF80BE6CFC21"><i>Sterna paradisaea</i></a></td><td>北极燕鸥</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Common Tern</td><td><a href="species.jsp?avibaseid=4D2FF6F13790ED7E"><i>Sterna hirundo</i></a></td><td>普通燕鸥</td><td></td></tr>
+<tr class='highlight1'><td>White-cheeked Tern</td><td><a href="species.jsp?avibaseid=CF5C013D4B3FE57D"><i>Sterna repressa</i></a></td><td>白颊燕鸥</td><td></td></tr>
+<tr class='highlight1'><td>Roseate Tern</td><td><a href="species.jsp?avibaseid=74236837A4AFD042"><i>Sterna dougallii</i></a></td><td>粉红燕鸥</td><td></td></tr>
+<tr class='highlight1'><td>Sandwich Tern</td><td><a href="species.jsp?avibaseid=F7504353640C1055"><i>Thalasseus sandvicensis</i></a></td><td>白嘴端凤头燕鸥</td><td></td></tr>
+<tr class='highlight1'><td>Lesser Crested Tern</td><td><a href="species.jsp?avibaseid=D01CDECDCA736E26"><i>Thalasseus bengalensis</i></a></td><td>小凤头燕鸥</td><td></td></tr>
+<tr class='highlight1'><td>West African Crested Tern</td><td><a href="species.jsp?avibaseid=CF8461BFDAE5E751"><i>Thalasseus albididorsalis</i></a></td><td>西非凤头燕鸥</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Great Crested Tern</td><td><a href="species.jsp?avibaseid=526978C4A16D3750"><i>Thalasseus bergii</i></a></td><td>大凤头燕鸥</td><td></td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>PHOENICOPTERIFORMES: Phoenicopteridae </b></P></td></tr>
+<tr class='highlight1'><td>Greater Flamingo</td><td><a href="species.jsp?avibaseid=0F9B5174A8ACF737"><i>Phoenicopterus roseus</i></a></td><td>大红鹳</td><td></td></tr>
+<tr class='highlight1'><td>Lesser Flamingo</td><td><a href="species.jsp?avibaseid=B06A9079584A8D53"><i>Phoeniconaias minor</i></a></td><td>小红鹳 </td><td><font color=red>近危</font></td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>PODICIPEDIFORMES: Podicipedidae </b></P></td></tr>
+<tr class='highlight1'><td>Little Grebe</td><td><a href="species.jsp?avibaseid=215FEA89A0F19F5C"><i>Tachybaptus ruficollis</i></a></td><td>小䴙䴘</td><td></td></tr>
+<tr class='highlight1'><td>Horned Grebe</td><td><a href="species.jsp?avibaseid=018B316959E84738"><i>Podiceps auritus</i></a></td><td>角䴙䴘</td><td><font color=red>易危</font></td></tr>
+<tr class='highlight1'><td>Red-necked Grebe</td><td><a href="species.jsp?avibaseid=1CBD2CED48B674A4"><i>Podiceps grisegena</i></a></td><td>赤颈䴙䴘</td><td></td></tr>
+<tr class='highlight1'><td>Great Crested Grebe</td><td><a href="species.jsp?avibaseid=8F269702DC208010"><i>Podiceps cristatus</i></a></td><td>凤头䴙䴘</td><td></td></tr>
+<tr class='highlight1'><td>Eared Grebe</td><td><a href="species.jsp?avibaseid=32DCEC14D7AE129B"><i>Podiceps nigricollis</i></a></td><td>黑颈䴙䴘</td><td></td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>PHAETHONTIFORMES: Phaethontidae </b></P></td></tr>
+<tr class='highlight1'><td>White-tailed Tropicbird</td><td><a href="species.jsp?avibaseid=1D07B501FEAF0840"><i>Phaethon lepturus</i></a></td><td>白尾鹲</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Red-billed Tropicbird</td><td><a href="species.jsp?avibaseid=7EE005BD2701D129"><i>Phaethon aethereus</i></a></td><td>红嘴鹲</td><td></td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>GAVIIFORMES: Gaviidae </b></P></td></tr>
+<tr class='highlight1'><td>Red-throated Loon</td><td><a href="species.jsp?avibaseid=6C50988A5445ED76"><i>Gavia stellata</i></a></td><td>红喉潜鸟</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Arctic Loon</td><td><a href="species.jsp?avibaseid=CA5852BE6E617DBD"><i>Gavia arctica</i></a></td><td>黑喉潜鸟</td><td></td></tr>
+<tr class='highlight1'><td>Pacific Loon</td><td><a href="species.jsp?avibaseid=B7D7EF2398F42295"><i>Gavia pacifica</i></a></td><td>太平洋潜鸟</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Common Loon</td><td><a href="species.jsp?avibaseid=7E02237895784E9A"><i>Gavia immer</i></a></td><td>普通潜鸟</td><td></td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>PROCELLARIIFORMES: Diomedeidae </b></P></td></tr>
+<tr class='highlight1'><td>White-capped Albatross</td><td><a href="species.jsp?avibaseid=87797B4724F5DC9E"><i>Thalassarche cauta</i></a></td><td>白顶信天翁</td><td>稀见/偶见 </td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>PROCELLARIIFORMES: Oceanitidae </b></P></td></tr>
+<tr class='highlight1'><td>Wilson's Storm-Petrel</td><td><a href="species.jsp?avibaseid=D295D249BDB7E046"><i>Oceanites oceanicus</i></a></td><td>黄蹼洋海燕（烟黑叉尾海燕）</td><td></td></tr>
+<tr class='highlight1'><td>White-faced Storm-Petrel</td><td><a href="species.jsp?avibaseid=E9DF118ED56564A9"><i>Pelagodroma marina</i></a></td><td>白脸海燕</td><td></td></tr>
+<tr class='highlight1'><td>White-bellied Storm-Petrel</td><td><a href="species.jsp?avibaseid=224E1093DDF013E4"><i>Fregetta grallaria</i></a></td><td>白腹舰海燕</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Black-bellied Storm-Petrel</td><td><a href="species.jsp?avibaseid=ACE8EADE6CE42400"><i>Fregetta tropica</i></a></td><td>黑腹舰海燕</td><td></td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>PROCELLARIIFORMES: Hydrobatidae </b></P></td></tr>
+<tr class='highlight1'><td>European Storm-Petrel</td><td><a href="species.jsp?avibaseid=E1638A370D09095C"><i>Hydrobates pelagicus</i></a></td><td>暴风海燕</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Leach's Storm-Petrel</td><td><a href="species.jsp?avibaseid=C5FB15C6D112FE91"><i>Hydrobates leucorhous</i></a></td><td>白腰叉尾海燕</td><td>稀见/偶见 <font color=red>易危</font></td></tr>
+<tr class='highlight1'><td>Swinhoe's Storm-Petrel</td><td><a href="species.jsp?avibaseid=80DE86705CC16A9A"><i>Hydrobates monorhis</i></a></td><td>黑叉尾海燕</td><td>稀见/偶见 <font color=red>近危</font></td></tr>
+<tr class='highlight1'><td>Band-rumped Storm-Petrel</td><td><a href="species.jsp?avibaseid=D3FAE385D584B014"><i>Hydrobates castro</i></a></td><td>斑腰叉尾海燕</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Matsudaira's Storm-Petrel</td><td><a href="species.jsp?avibaseid=6AA236DD9E0781A7"><i>Hydrobates matsudairae</i></a></td><td>日本叉尾海燕</td><td>稀见/偶见 <font color=red>易危</font></td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>PROCELLARIIFORMES: Procellariidae </b></P></td></tr>
+<tr class='highlight1'><td>Northern Giant-Petrel</td><td><a href="species.jsp?avibaseid=F504C8DE4D185454"><i>Macronectes halli</i></a></td><td>霍氏巨鹱</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Pintado Petrel</td><td><a href="species.jsp?avibaseid=AAC2D6136C46A743"><i>Daption capense</i></a></td><td>花斑鹱</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Trindade Petrel</td><td><a href="species.jsp?avibaseid=8116523B40EF3745"><i>Pterodroma arminjoniana</i></a></td><td>特岛圆尾鹱</td><td>稀见/偶见 <font color=red>易危</font></td></tr>
+<tr class='highlight1'><td>Fea's Petrel</td><td><a href="species.jsp?avibaseid=26B5280F0A46A17E"><i>Pterodroma feae</i></a></td><td>佛得角圆尾鹱</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Soft-plumaged Petrel</td><td><a href="species.jsp?avibaseid=12286A1E6662F54C"><i>Pterodroma mollis</i></a></td><td>柔羽圆尾鹱</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Atlantic Petrel</td><td><a href="species.jsp?avibaseid=23865D2512972A80"><i>Pterodroma incerta</i></a></td><td>大西洋圆尾鹱</td><td>稀见/偶见 <font color=red>濒危</font></td></tr>
+<tr class='highlight1'><td>Bulwer's Petrel</td><td><a href="species.jsp?avibaseid=058773E4925D5D2E"><i>Bulweria bulwerii</i></a></td><td>褐燕鹱</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Jouanin's Petrel</td><td><a href="species.jsp?avibaseid=F501ED18B26262B3"><i>Bulweria fallax</i></a></td><td>厚嘴燕鹱</td><td><font color=red>近危</font></td></tr>
+<tr class='highlight1'><td>Tahiti Petrel</td><td><a href="species.jsp?avibaseid=FCFBB7D9A628EF5D"><i>Pseudobulweria rostrata</i></a></td><td>钩嘴圆尾鹱</td><td>稀见/偶见 <font color=red>近危</font></td></tr>
+<tr class='highlight1'><td>Streaked Shearwater</td><td><a href="species.jsp?avibaseid=13B165A3056EF798"><i>Calonectris leucomelas</i></a></td><td>白额鹱</td><td>稀见/偶见 <font color=red>近危</font></td></tr>
+<tr class='highlight1'><td>Cory's Shearwater</td><td><a href="species.jsp?avibaseid=710BB4E6D1B2E7FF"><i>Calonectris borealis</i></a></td><td>猛鹱</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Scopoli's Shearwater</td><td><a href="species.jsp?avibaseid=CA4D268D439B2832"><i>Calonectris diomedea</i></a></td><td>斯氏鹱</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Flesh-footed Shearwater</td><td><a href="species.jsp?avibaseid=08F22F8404DCC0D2"><i>Ardenna carneipes</i></a></td><td>淡足鹱</td><td>稀见/偶见 <font color=red>近危</font></td></tr>
+<tr class='highlight1'><td>Great Shearwater</td><td><a href="species.jsp?avibaseid=8B879DFA2AFB1481"><i>Ardenna gravis</i></a></td><td>大鹱</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Wedge-tailed Shearwater</td><td><a href="species.jsp?avibaseid=E94A7272C71031C6"><i>Ardenna pacifica</i></a></td><td>楔尾鹱</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Sooty Shearwater</td><td><a href="species.jsp?avibaseid=1725B07D51A40D6A"><i>Ardenna grisea</i></a></td><td>灰鹱</td><td>稀见/偶见 <font color=red>近危</font></td></tr>
+<tr class='highlight1'><td>Short-tailed Shearwater</td><td><a href="species.jsp?avibaseid=60825BF601060350"><i>Ardenna tenuirostris</i></a></td><td>短尾鹱</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Manx Shearwater</td><td><a href="species.jsp?avibaseid=5AEDC00231A5201C"><i>Puffinus puffinus</i></a></td><td>大西洋鹱</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Yelkouan Shearwater</td><td><a href="species.jsp?avibaseid=FD97EC1E6EB57033"><i>Puffinus yelkouan</i></a></td><td>地中海鹱</td><td><font color=red>易危</font></td></tr>
+<tr class='highlight1'><td>Balearic Shearwater</td><td><a href="species.jsp?avibaseid=42F573C742DA4333"><i>Puffinus mauretanicus</i></a></td><td>巴利阿里鹱</td><td><font color=red>极危</font></td></tr>
+<tr class='highlight1'><td>Subantarctic Shearwater</td><td><a href="species.jsp?avibaseid=6F4BBFE2ABA8D391"><i>Puffinus elegans</i></a></td><td>亚南极鹱</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Barolo Shearwater</td><td><a href="species.jsp?avibaseid=5F555FDD48DEAC1C"><i>Puffinus baroli</i></a></td><td>北大西洋小鹱</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Tropical Shearwater</td><td><a href="species.jsp?avibaseid=6DA05B66DC30A0D9"><i>Puffinus bailloni</i></a></td><td>热带鹱</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Persian Shearwater</td><td><a href="species.jsp?avibaseid=198120BB773A3C38"><i>Puffinus persicus</i></a></td><td>波斯鹱</td><td><font color=blue>仅在当地繁育的</font> </td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>CICONIIFORMES: Ciconiidae </b></P></td></tr>
+<tr class='highlight1'><td>African Openbill</td><td><a href="species.jsp?avibaseid=0F14ECE44F616F74"><i>Anastomus lamelligerus</i></a></td><td>非洲钳嘴鹳</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Black Stork</td><td><a href="species.jsp?avibaseid=E2817DAE1B24B31E"><i>Ciconia nigra</i></a></td><td>黑鹳</td><td></td></tr>
+<tr class='highlight1'><td>Abdim's Stork</td><td><a href="species.jsp?avibaseid=26CD03193C89F18B"><i>Ciconia abdimii</i></a></td><td>白腹鹳</td><td></td></tr>
+<tr class='highlight1'><td>African Woolly-necked Stork</td><td><a href="species.jsp?avibaseid=5157C558FE47A6C9"><i>Ciconia microscelis</i></a></td><td>非洲白颈鹳</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Asian Woolly-necked Stork</td><td><a href="species.jsp?avibaseid=F76E7B80A669BE58"><i>Ciconia episcopus</i></a></td><td>白颈鹳</td><td>稀见/偶见 <font color=red>近危</font></td></tr>
+<tr class='highlight1'><td>White Stork</td><td><a href="species.jsp?avibaseid=28825494A08AFE5A"><i>Ciconia ciconia</i></a></td><td>白鹳</td><td></td></tr>
+<tr class='highlight1'><td>Marabou Stork</td><td><a href="species.jsp?avibaseid=03C0F97C496962D8"><i>Leptoptilos crumenifer</i></a></td><td>非洲秃鹳</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Yellow-billed Stork</td><td><a href="species.jsp?avibaseid=4F92C8924C9382AA"><i>Mycteria ibis</i></a></td><td>黄嘴鹮鹳</td><td>稀见/偶见 </td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>SULIFORMES: Fregatidae </b></P></td></tr>
+<tr class='highlight1'><td>Magnificent Frigatebird</td><td><a href="species.jsp?avibaseid=8AA3B42E976C7B2A"><i>Fregata magnificens</i></a></td><td>华丽军舰鸟</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Lesser Frigatebird</td><td><a href="species.jsp?avibaseid=09ED7E926715445E"><i>Fregata ariel</i></a></td><td>白斑军舰鸟</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Great Frigatebird</td><td><a href="species.jsp?avibaseid=788EBCAB63213E04"><i>Fregata minor</i></a></td><td>大军舰鸟</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Christmas Island Frigatebird</td><td><a href="species.jsp?avibaseid=67200E8E10682E29"><i>Fregata andrewsi</i></a></td><td>白腹军舰鸟</td><td>稀见/偶见 <font color=red>易危</font></td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>SULIFORMES: Sulidae </b></P></td></tr>
+<tr class='highlight1'><td>Northern Gannet</td><td><a href="species.jsp?avibaseid=534FB490884C6D33"><i>Morus bassanus</i></a></td><td>北鲣鸟</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Cape Gannet</td><td><a href="species.jsp?avibaseid=775E93D7FC5685AC"><i>Morus capensis</i></a></td><td>南非鲣鸟</td><td>稀见/偶见 <font color=red>濒危</font></td></tr>
+<tr class='highlight1'><td>Red-footed Booby</td><td><a href="species.jsp?avibaseid=0A4609D14FC148DF"><i>Sula sula</i></a></td><td>红脚鲣鸟</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Brown Booby</td><td><a href="species.jsp?avibaseid=05520B42BE95E3ED"><i>Sula leucogaster</i></a></td><td>褐鲣鸟</td><td></td></tr>
+<tr class='highlight1'><td>Masked Booby</td><td><a href="species.jsp?avibaseid=22D1B4A2F0911712"><i>Sula dactylatra</i></a></td><td>蓝脸鲣鸟</td><td></td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>SULIFORMES: Anhingidae </b></P></td></tr>
+<tr class='highlight1'><td>African Darter</td><td><a href="species.jsp?avibaseid=5C7936A7E5949CE8"><i>Anhinga rufa</i></a></td><td>红蛇鹈</td><td></td></tr>
+<tr class='highlight1'><td>Oriental Darter</td><td><a href="species.jsp?avibaseid=CA0C901AF6DA9284"><i>Anhinga melanogaster</i></a></td><td>黑腹蛇鹈</td><td></td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>SULIFORMES: Phalacrocoracidae </b></P></td></tr>
+<tr class='highlight1'><td>Reed Cormorant</td><td><a href="species.jsp?avibaseid=E255DCE15494936B"><i>Microcarbo africanus</i></a></td><td>长尾鸬鹚</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Pygmy Cormorant</td><td><a href="species.jsp?avibaseid=AFF49475BDB69B4E"><i>Microcarbo pygmaeus</i></a></td><td>侏鸬鹚</td><td></td></tr>
+<tr class='highlight1'><td>Great Cormorant</td><td><a href="species.jsp?avibaseid=3DF5C587CE3CF1E1"><i>Phalacrocorax carbo</i></a></td><td>普通鸬鹚</td><td></td></tr>
+<tr class='highlight1'><td>Socotra Cormorant</td><td><a href="species.jsp?avibaseid=7947E6036EA2F549"><i>Phalacrocorax nigrogularis</i></a></td><td>黑喉鸬鹚</td><td><font color=red>易危</font></td></tr>
+<tr class='highlight1'><td>European Shag</td><td><a href="species.jsp?avibaseid=CECC7B264A61BD22"><i>Gulosus aristotelis</i></a></td><td>欧鸬鹚</td><td></td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>PELECANIFORMES: Threskiornithidae </b></P></td></tr>
+<tr class='highlight1'><td>Scarlet Ibis</td><td><a href="species.jsp?avibaseid=45039A43F7F8A9CF"><i>Eudocimus ruber</i></a></td><td>美洲红鹮</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Glossy Ibis</td><td><a href="species.jsp?avibaseid=D4540F880A3EC3BB"><i>Plegadis falcinellus</i></a></td><td>彩鹮</td><td></td></tr>
+<tr class='highlight1'><td>African Sacred Ibis</td><td><a href="species.jsp?avibaseid=550DE745B77C8079"><i>Threskiornis aethiopicus</i></a></td><td>埃及圣鹮</td><td></td></tr>
+<tr class='highlight1'><td>Northern Bald Ibis</td><td><a href="species.jsp?avibaseid=B20FECE2231097F4"><i>Geronticus eremita</i></a></td><td>隐鹮</td><td><font color=red>濒危</font></td></tr>
+<tr class='highlight1'><td>Eurasian Spoonbill</td><td><a href="species.jsp?avibaseid=A0A584C1E7D786FE"><i>Platalea leucorodia</i></a></td><td>白琵鹭</td><td></td></tr>
+<tr class='highlight1'><td>African Spoonbill</td><td><a href="species.jsp?avibaseid=F86BB1D3818BDB03"><i>Platalea alba</i></a></td><td>非洲琵鹭</td><td>稀见/偶见 </td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>PELECANIFORMES: Pelecanidae </b></P></td></tr>
+<tr class='highlight1'><td>Great White Pelican</td><td><a href="species.jsp?avibaseid=8BAFB01E85D7AF4B"><i>Pelecanus onocrotalus</i></a></td><td>白鹈鹕</td><td></td></tr>
+<tr class='highlight1'><td>Pink-backed Pelican</td><td><a href="species.jsp?avibaseid=8D24E93CF5DAD3FA"><i>Pelecanus rufescens</i></a></td><td>粉红背鹈鹕</td><td></td></tr>
+<tr class='highlight1'><td>Dalmatian Pelican</td><td><a href="species.jsp?avibaseid=7C6D8BA2AC91D368"><i>Pelecanus crispus</i></a></td><td>卷羽鹈鹕</td><td><font color=red>近危</font></td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>PELECANIFORMES: Scopidae </b></P></td></tr>
+<tr class='highlight1'><td>Hamerkop</td><td><a href="species.jsp?avibaseid=FC10F6ED31D29188"><i>Scopus umbretta</i></a></td><td>锤头鹳</td><td></td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>PELECANIFORMES: Ardeidae </b></P></td></tr>
+<tr class='highlight1'><td>Eurasian Bittern</td><td><a href="species.jsp?avibaseid=0F42F11AC607C758"><i>Botaurus stellaris</i></a></td><td>大麻鳽</td><td></td></tr>
+<tr class='highlight1'><td>Cinnamon Bittern</td><td><a href="species.jsp?avibaseid=CBDC8AA362969C5F"><i>Botaurus cinnamomeus</i></a></td><td>栗苇鳽</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Dwarf Bittern</td><td><a href="species.jsp?avibaseid=87EEBD3E5FE01CA2"><i>Botaurus sturmii</i></a></td><td>蓝苇鳽</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Little Bittern</td><td><a href="species.jsp?avibaseid=7AAD57ACA1C4ECA9"><i>Botaurus minutus</i></a></td><td>小苇鳽</td><td></td></tr>
+<tr class='highlight1'><td>Yellow Bittern</td><td><a href="species.jsp?avibaseid=1BFBF5D5663468B1"><i>Botaurus sinensis</i></a></td><td>黄苇鳽</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Black-crowned Night Heron</td><td><a href="species.jsp?avibaseid=6BB94D7EA4D041A8"><i>Nycticorax nycticorax</i></a></td><td>夜鹭</td><td></td></tr>
+<tr class='highlight1'><td>Black Heron</td><td><a href="species.jsp?avibaseid=74853F898557A8BD"><i>Egretta ardesiaca</i></a></td><td>黑鹭</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Little Egret</td><td><a href="species.jsp?avibaseid=F2858F9FFB9DFDCF"><i>Egretta garzetta</i></a></td><td>白鹭</td><td></td></tr>
+<tr class='highlight1'><td>Western Reef-Heron</td><td><a href="species.jsp?avibaseid=DF32B1F9C576957F"><i>Egretta gularis</i></a></td><td>黄喉岩鹭</td><td></td></tr>
+<tr class='highlight1'><td>Striated Heron</td><td><a href="species.jsp?avibaseid=36DF115BD3E2C1C1"><i>Butorides striata</i></a></td><td>绿鹭</td><td></td></tr>
+<tr class='highlight1'><td>Squacco Heron</td><td><a href="species.jsp?avibaseid=CE73EBD7A90E9FCF"><i>Ardeola ralloides</i></a></td><td>白翅黄池鹭</td><td></td></tr>
+<tr class='highlight1'><td>Malagasy Pond-Heron</td><td><a href="species.jsp?avibaseid=EA2C460AEFF0DF58"><i>Ardeola idae</i></a></td><td>马岛池鹭</td><td>稀见/偶见 <font color=red>濒危</font></td></tr>
+<tr class='highlight1'><td>Indian Pond-Heron</td><td><a href="species.jsp?avibaseid=E5E0B92FC2C26D6E"><i>Ardeola grayii</i></a></td><td>印度池鹭</td><td></td></tr>
+<tr class='highlight1'><td>Chinese Pond-Heron</td><td><a href="species.jsp?avibaseid=56292AA80E2251F0"><i>Ardeola bacchus</i></a></td><td>池鹭</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Western Cattle-Egret</td><td><a href="species.jsp?avibaseid=AB1CB2161CDC177A"><i>Ardea ibis</i></a></td><td>西方牛背鹭</td><td></td></tr>
+<tr class='highlight1'><td>Eastern Cattle-Egret</td><td><a href="species.jsp?avibaseid=0653A8ADF672E188"><i>Ardea coromanda</i></a></td><td>牛背鹭</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Great Egret</td><td><a href="species.jsp?avibaseid=49D9148A171E7F2E"><i>Ardea alba</i></a></td><td>大白鹭</td><td></td></tr>
+<tr class='highlight1'><td>Yellow-billed Egret</td><td><a href="species.jsp?avibaseid=C3ABF8633819B2E7"><i>Ardea brachyrhyncha</i></a></td><td>非洲中白鹭</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Medium Egret</td><td><a href="species.jsp?avibaseid=30785911C6334086"><i>Ardea intermedia</i></a></td><td>中白鹭</td><td></td></tr>
+<tr class='highlight1'><td>Gray Heron</td><td><a href="species.jsp?avibaseid=6429024DBA7AB672"><i>Ardea cinerea</i></a></td><td>苍鹭</td><td></td></tr>
+<tr class='highlight1'><td>Purple Heron</td><td><a href="species.jsp?avibaseid=3395DCF1CE3A8C91"><i>Ardea purpurea</i></a></td><td>草鹭</td><td></td></tr>
+<tr class='highlight1'><td>Black-headed Heron</td><td><a href="species.jsp?avibaseid=25A648FE397BB822"><i>Ardea melanocephala</i></a></td><td>黑头鹭</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Goliath Heron</td><td><a href="species.jsp?avibaseid=C7888A152F4A837D"><i>Ardea goliath</i></a></td><td>巨鹭</td><td></td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>ACCIPITRIFORMES: Pandionidae </b></P></td></tr>
+<tr class='highlight1'><td>Osprey</td><td><a href="species.jsp?avibaseid=1327AC55AA9D579B"><i>Pandion haliaetus</i></a></td><td>鹗</td><td></td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>ACCIPITRIFORMES: Accipitridae </b></P></td></tr>
+<tr class='highlight1'><td>Scissor-tailed Kite</td><td><a href="species.jsp?avibaseid=22832FF4C1180B06"><i>Chelictinia riocourii</i></a></td><td>剪尾鸢</td><td>稀见/偶见 <font color=red>易危</font></td></tr>
+<tr class='highlight1'><td>Black-winged Kite</td><td><a href="species.jsp?avibaseid=97C47F3E1BA4129A"><i>Elanus caeruleus</i></a></td><td>黑翅鸢</td><td></td></tr>
+<tr class='highlight1'><td>Bearded Vulture</td><td><a href="species.jsp?avibaseid=81DB7410BE70406B"><i>Gypaetus barbatus</i></a></td><td>胡兀鹫</td><td><font color=red>近危</font></td></tr>
+<tr class='highlight1'><td>Egyptian Vulture</td><td><a href="species.jsp?avibaseid=6D3480A64B4953CE"><i>Neophron percnopterus</i></a></td><td>白兀鹫</td><td><font color=red>濒危</font></td></tr>
+<tr class='highlight1'><td>European Honey-buzzard</td><td><a href="species.jsp?avibaseid=ED5A7E8F6EDBB78E"><i>Pernis apivorus</i></a></td><td>鹃头蜂鹰</td><td></td></tr>
+<tr class='highlight1'><td>Oriental Honey-buzzard</td><td><a href="species.jsp?avibaseid=1192205BDCBB11D2"><i>Pernis ptilorhynchus</i></a></td><td>凤头蜂鹰</td><td></td></tr>
+<tr class='highlight1'><td>Cinereous Vulture</td><td><a href="species.jsp?avibaseid=158BDC90F07DF1D2"><i>Aegypius monachus</i></a></td><td>秃鹫</td><td><font color=red>近危</font></td></tr>
+<tr class='highlight1'><td>Lappet-faced Vulture</td><td><a href="species.jsp?avibaseid=672EA454429EA6BC"><i>Torgos tracheliotos</i></a></td><td>皱脸秃鹫</td><td><font color=red>濒危</font></td></tr>
+<tr class='highlight1'><td>Hooded Vulture</td><td><a href="species.jsp?avibaseid=131038ADDA3373B0"><i>Necrosyrtes monachus</i></a></td><td>冠兀鹫</td><td>稀见/偶见 <font color=red>极危</font></td></tr>
+<tr class='highlight1'><td>Himalayan Griffon</td><td><a href="species.jsp?avibaseid=9BB5551EA97A0A1C"><i>Gyps himalayensis</i></a></td><td>高山兀鹫</td><td>稀见/偶见 <font color=red>近危</font></td></tr>
+<tr class='highlight1'><td>White-rumped Vulture</td><td><a href="species.jsp?avibaseid=FC2346E6EF324F85"><i>Gyps bengalensis</i></a></td><td>白背兀鹫</td><td><font color=red>极危</font></td></tr>
+<tr class='highlight1'><td>White-backed Vulture</td><td><a href="species.jsp?avibaseid=0419DDC2F668EEE5"><i>Gyps africanus</i></a></td><td>非洲白背兀鹫</td><td>稀见/偶见 <font color=red>极危</font></td></tr>
+<tr class='highlight1'><td>Rüppell's Griffon</td><td><a href="species.jsp?avibaseid=76B512B1EE9B10EC"><i>Gyps rueppelli</i></a></td><td>黑白兀鹫</td><td>稀见/偶见 <font color=red>极危</font></td></tr>
+<tr class='highlight1'><td>Eurasian Griffon</td><td><a href="species.jsp?avibaseid=5D1987CEE4005AA2"><i>Gyps fulvus</i></a></td><td>兀鹫</td><td></td></tr>
+<tr class='highlight1'><td>Bateleur</td><td><a href="species.jsp?avibaseid=6CBD872456996F41"><i>Terathopius ecaudatus</i></a></td><td>短尾雕</td><td><font color=red>濒危</font></td></tr>
+<tr class='highlight1'><td>Short-toed Snake-Eagle</td><td><a href="species.jsp?avibaseid=8372FFBAA4080FBB"><i>Circaetus gallicus</i></a></td><td>短趾雕</td><td></td></tr>
+<tr class='highlight1'><td>Lesser Spotted Eagle</td><td><a href="species.jsp?avibaseid=C2565B6526591E9A"><i>Clanga pomarina</i></a></td><td>小乌雕</td><td></td></tr>
+<tr class='highlight1'><td>Greater Spotted Eagle</td><td><a href="species.jsp?avibaseid=BAC4CA22EDCC74E7"><i>Clanga clanga</i></a></td><td>乌雕</td><td><font color=red>易危</font></td></tr>
+<tr class='highlight1'><td>Booted Eagle</td><td><a href="species.jsp?avibaseid=4B8CC2853542FFED"><i>Hieraaetus pennatus</i></a></td><td>靴隼雕</td><td></td></tr>
+<tr class='highlight1'><td>Steppe Eagle</td><td><a href="species.jsp?avibaseid=A635F56542EE0C16"><i>Aquila nipalensis</i></a></td><td>草原雕</td><td><font color=red>濒危</font></td></tr>
+<tr class='highlight1'><td>Imperial Eagle</td><td><a href="species.jsp?avibaseid=469DCF57248A1C69"><i>Aquila heliaca</i></a></td><td>白肩雕</td><td><font color=red>易危</font></td></tr>
+<tr class='highlight1'><td>Tawny Eagle</td><td><a href="species.jsp?avibaseid=F6D547B28875698E"><i>Aquila rapax</i></a></td><td>茶色雕</td><td><font color=red>易危</font></td></tr>
+<tr class='highlight1'><td>Golden Eagle</td><td><a href="species.jsp?avibaseid=5F8E7CA845BD413F"><i>Aquila chrysaetos</i></a></td><td>金雕</td><td></td></tr>
+<tr class='highlight1'><td>Verreaux's Eagle</td><td><a href="species.jsp?avibaseid=14F13C32872CBA1C"><i>Aquila verreauxii</i></a></td><td>黑雕</td><td></td></tr>
+<tr class='highlight1'><td>Bonelli's Eagle</td><td><a href="species.jsp?avibaseid=05F1144132A7E4FF"><i>Aquila fasciata</i></a></td><td>白腹隼雕</td><td></td></tr>
+<tr class='highlight1'><td>Gabar Goshawk</td><td><a href="species.jsp?avibaseid=922DE9C1DF8597F0"><i>Micronisus gabar</i></a></td><td>红脸歌鹰</td><td></td></tr>
+<tr class='highlight1'><td>Dark Chanting-Goshawk</td><td><a href="species.jsp?avibaseid=D2AFD39BFB907C05"><i>Melierax metabates</i></a></td><td>歌鹰</td><td></td></tr>
+<tr class='highlight1'><td>Eastern Chanting-Goshawk</td><td><a href="species.jsp?avibaseid=FA3A1F20C3A632BB"><i>Melierax poliopterus</i></a></td><td>灰歌鹰</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Shikra</td><td><a href="species.jsp?avibaseid=1A0ECB6EDF6DB4B2"><i>Tachyspiza badia</i></a></td><td>褐耳鹰</td><td></td></tr>
+<tr class='highlight1'><td>Levant Sparrowhawk</td><td><a href="species.jsp?avibaseid=8492E4B70A95DC74"><i>Tachyspiza brevipes</i></a></td><td>东雀鹰</td><td></td></tr>
+<tr class='highlight1'><td>Eurasian Sparrowhawk</td><td><a href="species.jsp?avibaseid=DB376A66278ED21E"><i>Accipiter nisus</i></a></td><td>雀鹰</td><td></td></tr>
+<tr class='highlight1'><td>Eurasian Goshawk</td><td><a href="species.jsp?avibaseid=95DD1855EC896B90"><i>Astur gentilis</i></a></td><td>苍鹰</td><td></td></tr>
+<tr class='highlight1'><td>Western Marsh Harrier</td><td><a href="species.jsp?avibaseid=E2A19474E62F83E1"><i>Circus aeruginosus</i></a></td><td>白头鹞</td><td></td></tr>
+<tr class='highlight1'><td>Eastern Marsh Harrier</td><td><a href="species.jsp?avibaseid=A2F048C081950697"><i>Circus spilonotus</i></a></td><td>白腹鹞</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Hen Harrier</td><td><a href="species.jsp?avibaseid=F558C7F96E40C134"><i>Circus cyaneus</i></a></td><td>白尾鹞</td><td></td></tr>
+<tr class='highlight1'><td>Pallid Harrier</td><td><a href="species.jsp?avibaseid=22647E26E5C80F2E"><i>Circus macrourus</i></a></td><td>草原鹞</td><td><font color=red>近危</font></td></tr>
+<tr class='highlight1'><td>Montagu's Harrier</td><td><a href="species.jsp?avibaseid=63B6412E23CC0D93"><i>Circus pygargus</i></a></td><td>乌灰鹞</td><td></td></tr>
+<tr class='highlight1'><td>Red Kite</td><td><a href="species.jsp?avibaseid=451D6FC8A169D726"><i>Milvus milvus</i></a></td><td>赤鸢</td><td></td></tr>
+<tr class='highlight1'><td>Black Kite</td><td><a href="species.jsp?avibaseid=06D9A2C8D1E3678A"><i>Milvus migrans</i></a></td><td>黑鸢</td><td></td></tr>
+<tr class='highlight1'><td>Brahminy Kite</td><td><a href="species.jsp?avibaseid=D89A9DC9963D5DDC"><i>Haliastur indus</i></a></td><td>栗鸢</td><td></td></tr>
+<tr class='highlight1'><td>White-tailed Eagle</td><td><a href="species.jsp?avibaseid=5A3D91D3254A568D"><i>Haliaeetus albicilla</i></a></td><td>白尾海雕</td><td></td></tr>
+<tr class='highlight1'><td>Pallas's Fish-Eagle</td><td><a href="species.jsp?avibaseid=F3CCFC1881D339F6"><i>Haliaeetus leucoryphus</i></a></td><td>玉带海雕</td><td>稀见/偶见 <font color=red>濒危</font></td></tr>
+<tr class='highlight1'><td>White-eyed Buzzard</td><td><a href="species.jsp?avibaseid=868CD2468530F5FC"><i>Butastur teesa</i></a></td><td>白眼鵟鹰</td><td></td></tr>
+<tr class='highlight1'><td>Rough-legged Hawk</td><td><a href="species.jsp?avibaseid=90B13ACF984D0DDF"><i>Buteo lagopus</i></a></td><td>毛脚鵟</td><td></td></tr>
+<tr class='highlight1'><td>Common Buzzard</td><td><a href="species.jsp?avibaseid=3C0C325D1141B36B"><i>Buteo buteo</i></a></td><td>普通</td><td></td></tr>
+<tr class='highlight1'><td>Socotra Buzzard</td><td><a href="species.jsp?avibaseid=9081D32C45CF4E0A"><i>Buteo socotraensis</i></a></td><td>索岛鵟</td><td><font color=red>易危</font></td></tr>
+<tr class='highlight1'><td>Long-legged Buzzard</td><td><a href="species.jsp?avibaseid=CC65921FEBE1BB96"><i>Buteo rufinus</i></a></td><td>棕尾鵟</td><td></td></tr>
+<tr class='highlight1'><td>Upland Buzzard</td><td><a href="species.jsp?avibaseid=92FFE8FF7EC12945"><i>Buteo hemilasius</i></a></td><td>大鵟</td><td>稀见/偶见 </td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>STRIGIFORMES: Tytonidae </b></P></td></tr>
+<tr class='highlight1'><td>Western Barn Owl</td><td><a href="species.jsp?avibaseid=CFD6F2750CBB4D94"><i>Tyto alba</i></a></td><td>西方仓鸮</td><td></td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>STRIGIFORMES: Strigidae </b></P></td></tr>
+<tr class='highlight1'><td>Indian Scops-Owl</td><td><a href="species.jsp?avibaseid=489F3A6AE9786396"><i>Otus bakkamoena</i></a></td><td>印度领角鸮</td><td></td></tr>
+<tr class='highlight1'><td>Arabian Scops-Owl</td><td><a href="species.jsp?avibaseid=FB19E2854842C43B"><i>Otus pamelae</i></a></td><td>阿拉伯角鸮</td><td></td></tr>
+<tr class='highlight1'><td>Eurasian Scops-Owl</td><td><a href="species.jsp?avibaseid=2C7AA1546D80617E"><i>Otus scops</i></a></td><td>西红角鸮</td><td></td></tr>
+<tr class='highlight1'><td>Cyprus Scops-Owl</td><td><a href="species.jsp?avibaseid=616A1359C42319B3"><i>Otus cyprius</i></a></td><td>塞普路斯角鸮</td><td><font color=blue>特有的</font> </td></tr>
+<tr class='highlight1'><td>African Scops-Owl</td><td><a href="species.jsp?avibaseid=F0AA4FE4EE5F5395"><i>Otus senegalensis</i></a></td><td>非洲角鸮</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Pallid Scops-Owl</td><td><a href="species.jsp?avibaseid=08C90B0FEAD6B9AF"><i>Otus brucei</i></a></td><td>纵纹角鸮</td><td></td></tr>
+<tr class='highlight1'><td>Oriental Scops-Owl</td><td><a href="species.jsp?avibaseid=DD855E67383228E3"><i>Otus sunia</i></a></td><td>红角鸮（东方角鸮）</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Socotra Scops-Owl</td><td><a href="species.jsp?avibaseid=82846EEBD5B0A1E3"><i>Otus socotranus</i></a></td><td>索岛角鸮</td><td></td></tr>
+<tr class='highlight1'><td>Snowy Owl</td><td><a href="species.jsp?avibaseid=5B23B360E7DEC4A9"><i>Bubo scandiacus</i></a></td><td>雪鸮</td><td>稀见/偶见 <font color=red>易危</font></td></tr>
+<tr class='highlight1'><td>Arabian Eagle-Owl</td><td><a href="species.jsp?avibaseid=A22349871F008E6E"><i>Bubo milesi</i></a></td><td>阿拉伯雕鸮</td><td></td></tr>
+<tr class='highlight1'><td>Pharaoh Eagle-Owl</td><td><a href="species.jsp?avibaseid=9FD4D3D96813BCD3"><i>Bubo ascalaphus</i></a></td><td>荒漠雕鸮</td><td></td></tr>
+<tr class='highlight1'><td>Eurasian Eagle-Owl</td><td><a href="species.jsp?avibaseid=5516AEB347441B72"><i>Bubo bubo</i></a></td><td>雕鸮</td><td></td></tr>
+<tr class='highlight1'><td>Brown Fish-Owl</td><td><a href="species.jsp?avibaseid=CFDF9E89DD4CE1D4"><i>Ketupa zeylonensis</i></a></td><td>褐渔鸮</td><td></td></tr>
+<tr class='highlight1'><td>Spotted Owlet</td><td><a href="species.jsp?avibaseid=DDE6A35290A28441"><i>Athene brama</i></a></td><td>横斑腹小鸮</td><td></td></tr>
+<tr class='highlight1'><td>Little Owl</td><td><a href="species.jsp?avibaseid=9A7B268C4EF6F803"><i>Athene noctua</i></a></td><td>纵纹腹小鸮</td><td></td></tr>
+<tr class='highlight1'><td>Tawny Owl</td><td><a href="species.jsp?avibaseid=37A121744F77C1DB"><i>Strix aluco</i></a></td><td>西灰林鸮</td><td></td></tr>
+<tr class='highlight1'><td>Maghreb Owl</td><td><a href="species.jsp?avibaseid=939BB04556DB2424"><i>Strix mauritanica</i></a></td><td>马格里布林鸮</td><td></td></tr>
+<tr class='highlight1'><td>Desert Owl</td><td><a href="species.jsp?avibaseid=F6F873494FC088BD"><i>Strix hadorami</i></a></td><td>漠鸮</td><td></td></tr>
+<tr class='highlight1'><td>Omani Owl</td><td><a href="species.jsp?avibaseid=6590EFD471E175D2"><i>Strix butleri</i></a></td><td>漠林鸮</td><td></td></tr>
+<tr class='highlight1'><td>Long-eared Owl</td><td><a href="species.jsp?avibaseid=FC4D40D2D5CEA6BE"><i>Asio otus</i></a></td><td>长耳鸮</td><td></td></tr>
+<tr class='highlight1'><td>Short-eared Owl</td><td><a href="species.jsp?avibaseid=8F123A11E5DADFDD"><i>Asio flammeus</i></a></td><td>短耳鸮</td><td></td></tr>
+<tr class='highlight1'><td>Marsh Owl</td><td><a href="species.jsp?avibaseid=83E21A8422006EB7"><i>Asio capensis</i></a></td><td>沼泽耳鸮</td><td></td></tr>
+<tr class='highlight1'><td>Boreal Owl</td><td><a href="species.jsp?avibaseid=8AB4EAF6DBFA02CE"><i>Aegolius funereus</i></a></td><td>鬼鸮</td><td></td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>BUCEROTIFORMES: Upupidae </b></P></td></tr>
+<tr class='highlight1'><td>Eurasian Hoopoe</td><td><a href="species.jsp?avibaseid=FA2F91259125A6FA"><i>Upupa epops</i></a></td><td>戴胜</td><td></td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>BUCEROTIFORMES: Bucerotidae </b></P></td></tr>
+<tr class='highlight1'><td>African Gray Hornbill</td><td><a href="species.jsp?avibaseid=0CCD664DDD5E664B"><i>Lophoceros nasutus</i></a></td><td>黑嘴弯嘴犀鸟</td><td></td></tr>
+<tr class='highlight1'><td>Northern Red-billed Hornbill</td><td><a href="species.jsp?avibaseid=AF75AC323F4200D5"><i>Tockus erythrorhynchus</i></a></td><td>红嘴弯嘴犀鸟</td><td><font color=blue>来源不明</font> </td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>CORACIIFORMES: Meropidae </b></P></td></tr>
+<tr class='highlight1'><td>Somali Bee-eater</td><td><a href="species.jsp?avibaseid=AFA39D5A6C60B48D"><i>Merops revoilii</i></a></td><td>索马里蜂虎</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>White-throated Bee-eater</td><td><a href="species.jsp?avibaseid=03C4A0C92560EB26"><i>Merops albicollis</i></a></td><td>白喉蜂虎</td><td></td></tr>
+<tr class='highlight1'><td>African Green Bee-eater</td><td><a href="species.jsp?avibaseid=0AAA530E40F8F610"><i>Merops viridissimus</i></a></td><td>非洲绿喉蜂虎</td><td></td></tr>
+<tr class='highlight1'><td>Arabian Green Bee-eater</td><td><a href="species.jsp?avibaseid=681DC9138022A816"><i>Merops cyanophrys</i></a></td><td>阿拉伯绿喉蜂虎</td><td></td></tr>
+<tr class='highlight1'><td>Asian Green Bee-eater</td><td><a href="species.jsp?avibaseid=759AD1FB7E4EDF8C"><i>Merops orientalis</i></a></td><td>绿喉蜂虎</td><td></td></tr>
+<tr class='highlight1'><td>Blue-cheeked Bee-eater</td><td><a href="species.jsp?avibaseid=6EE4511347F342C4"><i>Merops persicus</i></a></td><td>蓝颊蜂虎</td><td></td></tr>
+<tr class='highlight1'><td>European Bee-eater</td><td><a href="species.jsp?avibaseid=66AA3934DBAD18BC"><i>Merops apiaster</i></a></td><td>黄喉蜂虎</td><td></td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>CORACIIFORMES: Alcedinidae </b></P></td></tr>
+<tr class='highlight1'><td>Common Kingfisher</td><td><a href="species.jsp?avibaseid=9505E03D7416B365"><i>Alcedo atthis</i></a></td><td>普通翠鸟</td><td></td></tr>
+<tr class='highlight1'><td>Malachite Kingfisher</td><td><a href="species.jsp?avibaseid=7149F93DEDDD66EE"><i>Corythornis cristatus</i></a></td><td>冠翠鸟</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>White-throated Kingfisher</td><td><a href="species.jsp?avibaseid=B30B6781677CE7D4"><i>Halcyon smyrnensis</i></a></td><td>白胸翡翠</td><td></td></tr>
+<tr class='highlight1'><td>Gray-headed Kingfisher</td><td><a href="species.jsp?avibaseid=178B6892F59B71D3"><i>Halcyon leucocephala</i></a></td><td>灰头翡翠</td><td></td></tr>
+<tr class='highlight1'><td>Collared Kingfisher</td><td><a href="species.jsp?avibaseid=5DA28D375F27F00A"><i>Todiramphus chloris</i></a></td><td>白领翡翠</td><td></td></tr>
+<tr class='highlight1'><td>Pied Kingfisher</td><td><a href="species.jsp?avibaseid=8205077FA2E98715"><i>Ceryle rudis</i></a></td><td>斑鱼狗</td><td></td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>CORACIIFORMES: Coraciidae </b></P></td></tr>
+<tr class='highlight1'><td>European Roller</td><td><a href="species.jsp?avibaseid=7451A628C39538C5"><i>Coracias garrulus</i></a></td><td>蓝胸佛法僧</td><td></td></tr>
+<tr class='highlight1'><td>Abyssinian Roller</td><td><a href="species.jsp?avibaseid=E7C7EE3AC6A45C81"><i>Coracias abyssinicus</i></a></td><td>蓝头佛法僧</td><td></td></tr>
+<tr class='highlight1'><td>Lilac-breasted Roller</td><td><a href="species.jsp?avibaseid=9E9B6EF9A888678F"><i>Coracias caudatus</i></a></td><td>燕尾佛法僧</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Purple Roller</td><td><a href="species.jsp?avibaseid=2624054ED644AABB"><i>Coracias naevius</i></a></td><td>棕顶佛法僧</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Indian Roller</td><td><a href="species.jsp?avibaseid=4F404CB97EC589F3"><i>Coracias benghalensis</i></a></td><td>印度佛法僧</td><td></td></tr>
+<tr class='highlight1'><td>Broad-billed Roller</td><td><a href="species.jsp?avibaseid=4F01F4165EC3954E"><i>Eurystomus glaucurus</i></a></td><td>阔嘴三宝鸟</td><td>稀见/偶见 </td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>PICIFORMES: Picidae </b></P></td></tr>
+<tr class='highlight1'><td>Eurasian Wryneck</td><td><a href="species.jsp?avibaseid=B2E6AB9FC2608DFA"><i>Jynx torquilla</i></a></td><td>蚁䴕</td><td></td></tr>
+<tr class='highlight1'><td>Middle Spotted Woodpecker</td><td><a href="species.jsp?avibaseid=504B2FD466B8E1D8"><i>Dendrocoptes medius</i></a></td><td>中斑啄木鸟</td><td></td></tr>
+<tr class='highlight1'><td>Arabian Woodpecker</td><td><a href="species.jsp?avibaseid=0093A624297D7EE5"><i>Dendrocoptes dorae</i></a></td><td>阿拉伯啄木鸟</td><td><font color=red>近危</font></td></tr>
+<tr class='highlight1'><td>White-backed Woodpecker</td><td><a href="species.jsp?avibaseid=4507ACD713D16392"><i>Dendrocopos leucotos</i></a></td><td>白背啄木鸟</td><td></td></tr>
+<tr class='highlight1'><td>Great Spotted Woodpecker</td><td><a href="species.jsp?avibaseid=D754DB8552A7AA42"><i>Dendrocopos major</i></a></td><td>大斑啄木鸟</td><td></td></tr>
+<tr class='highlight1'><td>White-winged Woodpecker</td><td><a href="species.jsp?avibaseid=E8AFCFD1BB08591C"><i>Dendrocopos leucopterus</i></a></td><td>白翅啄木鸟</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Syrian Woodpecker</td><td><a href="species.jsp?avibaseid=3F54E5FDCF8CFA47"><i>Dendrocopos syriacus</i></a></td><td>叙利亚啄木鸟</td><td></td></tr>
+<tr class='highlight1'><td>Sind Woodpecker</td><td><a href="species.jsp?avibaseid=36520374D06999E1"><i>Dendrocopos assimilis</i></a></td><td>信德啄木鸟</td><td></td></tr>
+<tr class='highlight1'><td>Lesser Spotted Woodpecker</td><td><a href="species.jsp?avibaseid=AB2F4BC0659B6630"><i>Dryobates minor</i></a></td><td>小斑啄木鸟</td><td></td></tr>
+<tr class='highlight1'><td>Scaly-bellied Woodpecker</td><td><a href="species.jsp?avibaseid=886871E9C53B6D33"><i>Picus squamatus</i></a></td><td>鳞腹绿啄木鸟</td><td>消失 </td></tr>
+<tr class='highlight1'><td>Gray-headed Woodpecker</td><td><a href="species.jsp?avibaseid=BC863B3AC0DB9AAA"><i>Picus canus</i></a></td><td>灰头绿啄木鸟</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Levaillant's Woodpecker</td><td><a href="species.jsp?avibaseid=42CF31E91ED562E1"><i>Picus vaillantii</i></a></td><td>利氏绿啄木鸟</td><td></td></tr>
+<tr class='highlight1'><td>Eurasian Green Woodpecker</td><td><a href="species.jsp?avibaseid=A01014FF0A909DD8"><i>Picus viridis</i></a></td><td>绿啄木鸟</td><td></td></tr>
+<tr class='highlight1'><td>Black Woodpecker</td><td><a href="species.jsp?avibaseid=EDB4BBA6E765E593"><i>Dryocopus martius</i></a></td><td>黑啄木鸟</td><td></td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>FALCONIFORMES: Falconidae </b></P></td></tr>
+<tr class='highlight1'><td>Lesser Kestrel</td><td><a href="species.jsp?avibaseid=BECA271F14F77BEE"><i>Falco naumanni</i></a></td><td>黄爪隼</td><td></td></tr>
+<tr class='highlight1'><td>Eurasian Kestrel</td><td><a href="species.jsp?avibaseid=2DAB45B833D396A3"><i>Falco tinnunculus</i></a></td><td>红隼</td><td></td></tr>
+<tr class='highlight1'><td>Red-necked Falcon</td><td><a href="species.jsp?avibaseid=6A64EFCB88E3D2FC"><i>Falco chicquera</i></a></td><td>红头隼</td><td></td></tr>
+<tr class='highlight1'><td>Red-footed Falcon</td><td><a href="species.jsp?avibaseid=997A9437E564FCFE"><i>Falco vespertinus</i></a></td><td>西红脚隼</td><td><font color=red>易危</font></td></tr>
+<tr class='highlight1'><td>Amur Falcon</td><td><a href="species.jsp?avibaseid=E6137E65202F44F8"><i>Falco amurensis</i></a></td><td>红脚隼（阿穆尔隼）</td><td></td></tr>
+<tr class='highlight1'><td>Eleonora's Falcon</td><td><a href="species.jsp?avibaseid=9EA1F12D48EB0120"><i>Falco eleonorae</i></a></td><td>艾氏隼</td><td></td></tr>
+<tr class='highlight1'><td>Sooty Falcon</td><td><a href="species.jsp?avibaseid=BD34FDFDF01C246E"><i>Falco concolor</i></a></td><td>烟色隼</td><td><font color=red>易危</font></td></tr>
+<tr class='highlight1'><td>Merlin</td><td><a href="species.jsp?avibaseid=F3DA111CC8A6841B"><i>Falco columbarius</i></a></td><td>灰背隼</td><td></td></tr>
+<tr class='highlight1'><td>Eurasian Hobby</td><td><a href="species.jsp?avibaseid=E91E287A2946B0C9"><i>Falco subbuteo</i></a></td><td>燕隼</td><td></td></tr>
+<tr class='highlight1'><td>Lanner Falcon</td><td><a href="species.jsp?avibaseid=3D3808E38BB61165"><i>Falco biarmicus</i></a></td><td>地中海隼</td><td></td></tr>
+<tr class='highlight1'><td>Laggar Falcon</td><td><a href="species.jsp?avibaseid=9FB14C9047090AD1"><i>Falco jugger</i></a></td><td>印度猎隼</td><td><font color=red>近危</font></td></tr>
+<tr class='highlight1'><td>Saker Falcon</td><td><a href="species.jsp?avibaseid=A9F5149411AE52AD"><i>Falco cherrug</i></a></td><td>猎隼</td><td><font color=red>濒危</font></td></tr>
+<tr class='highlight1'><td>Gyrfalcon</td><td><a href="species.jsp?avibaseid=E19252A76FC7845B"><i>Falco rusticolus</i></a></td><td>矛隼</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Peregrine Falcon</td><td><a href="species.jsp?avibaseid=47E5840880DC9FA8"><i>Falco peregrinus</i></a></td><td>游隼</td><td></td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>PSITTACIFORMES: Psittaculidae </b></P></td></tr>
+<tr class='highlight1'><td>Alexandrine Parakeet</td><td><a href="species.jsp?avibaseid=1021FA920B6915F9"><i>Psittacula eupatria</i></a></td><td>亚历山大鹦鹉</td><td><font color=red>近危</font></td></tr>
+<tr class='highlight1'><td>Rose-ringed Parakeet</td><td><a href="species.jsp?avibaseid=6B1CFC3CFA400D78"><i>Psittacula krameri</i></a></td><td>红领绿鹦鹉</td><td>外来物种  </td></tr>
+<tr class='highlight1'><td>Yellow-collared Lovebird</td><td><a href="species.jsp?avibaseid=4396F4F1345FBE2C"><i>Agapornis personatus</i></a></td><td>黄领牡丹鹦鹉</td><td>外来物种  </td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>PSITTACIFORMES: Psittacidae </b></P></td></tr>
+<tr class='highlight1'><td>Monk Parakeet</td><td><a href="species.jsp?avibaseid=117830752D8204BC"><i>Myiopsitta monachus</i></a></td><td>灰胸鹦哥</td><td>外来物种  </td></tr>
+<tr class='highlight1'><td>Nanday Parakeet</td><td><a href="species.jsp?avibaseid=8B85CB2CE26DDCE4"><i>Aratinga nenday</i></a></td><td>黑头鹦哥</td><td>外来物种  </td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>PASSERIFORMES: Campephagidae </b></P></td></tr>
+<tr class='highlight1'><td>Black-headed Cuckooshrike</td><td><a href="species.jsp?avibaseid=58BC7F5D1AD730B3"><i>Lalage melanoptera</i></a></td><td>黑头鹃鵙</td><td>稀见/偶见 </td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>PASSERIFORMES: Oriolidae </b></P></td></tr>
+<tr class='highlight1'><td>Eurasian Golden Oriole</td><td><a href="species.jsp?avibaseid=92A772BBB88868CD"><i>Oriolus oriolus</i></a></td><td>金黄鹂</td><td></td></tr>
+<tr class='highlight1'><td>Indian Golden Oriole</td><td><a href="species.jsp?avibaseid=4C263A0E9863761B"><i>Oriolus kundoo</i></a></td><td>印度金黄鹂</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Black-naped Oriole</td><td><a href="species.jsp?avibaseid=CC216A71A3F24E79"><i>Oriolus chinensis</i></a></td><td>黑枕黄鹂</td><td>稀见/偶见 </td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>PASSERIFORMES: Malaconotidae </b></P></td></tr>
+<tr class='highlight1'><td>Black-crowned Tchagra</td><td><a href="species.jsp?avibaseid=022798AB098C2792"><i>Tchagra senegalus</i></a></td><td>黑头红翅伯劳</td><td></td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>PASSERIFORMES: Dicruridae </b></P></td></tr>
+<tr class='highlight1'><td>Fork-tailed Drongo</td><td><a href="species.jsp?avibaseid=11FE731367CF2483"><i>Dicrurus adsimilis</i></a></td><td>又尾卷尾</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Black Drongo</td><td><a href="species.jsp?avibaseid=D90F9B0BBDBA5E57"><i>Dicrurus macrocercus</i></a></td><td>黑卷尾</td><td></td></tr>
+<tr class='highlight1'><td>Ashy Drongo</td><td><a href="species.jsp?avibaseid=5FD53BB1BBFAE015"><i>Dicrurus leucophaeus</i></a></td><td>灰卷尾</td><td>稀见/偶见 </td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>PASSERIFORMES: Monarchidae </b></P></td></tr>
+<tr class='highlight1'><td>Black-naped Monarch</td><td><a href="species.jsp?avibaseid=0AC5BA0A3247344C"><i>Hypothymis azurea</i></a></td><td>黑枕王鹟</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Indian Paradise-Flycatcher</td><td><a href="species.jsp?avibaseid=71AE2656418D0375"><i>Terpsiphone paradisi</i></a></td><td>印缅寿带</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>African Paradise-Flycatcher</td><td><a href="species.jsp?avibaseid=75AAC17B33D1156A"><i>Terpsiphone viridis</i></a></td><td>非洲寿带</td><td></td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>PASSERIFORMES: Laniidae </b></P></td></tr>
+<tr class='highlight1'><td>Red-backed Shrike</td><td><a href="species.jsp?avibaseid=F2CEFD1A4EA5F608"><i>Lanius collurio</i></a></td><td>红背伯劳</td><td></td></tr>
+<tr class='highlight1'><td>Red-tailed Shrike</td><td><a href="species.jsp?avibaseid=EE7915A2B3EB856E"><i>Lanius phoenicuroides</i></a></td><td>棕尾伯劳</td><td></td></tr>
+<tr class='highlight1'><td>Isabelline Shrike</td><td><a href="species.jsp?avibaseid=97166F728A7D0E91"><i>Lanius isabellinus</i></a></td><td>荒漠伯劳</td><td></td></tr>
+<tr class='highlight1'><td>Brown Shrike</td><td><a href="species.jsp?avibaseid=E4968582E577D9D1"><i>Lanius cristatus</i></a></td><td>红尾伯劳</td><td></td></tr>
+<tr class='highlight1'><td>Bay-backed Shrike</td><td><a href="species.jsp?avibaseid=FED815713F56A965"><i>Lanius vittatus</i></a></td><td>褐背伯劳</td><td></td></tr>
+<tr class='highlight1'><td>Long-tailed Shrike</td><td><a href="species.jsp?avibaseid=69FC190BC179A4FD"><i>Lanius schach</i></a></td><td>棕背伯劳</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Great Gray Shrike</td><td><a href="species.jsp?avibaseid=DB2501EEBA3D38AA"><i>Lanius excubitor</i></a></td><td>西方灰伯劳</td><td></td></tr>
+<tr class='highlight1'><td>Lesser Gray Shrike</td><td><a href="species.jsp?avibaseid=8852337B06E8A14E"><i>Lanius minor</i></a></td><td>黑额伯劳</td><td></td></tr>
+<tr class='highlight1'><td>Somali Fiscal</td><td><a href="species.jsp?avibaseid=F79321856B22FEE2"><i>Lanius somalicus</i></a></td><td>索马里伯劳</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Masked Shrike</td><td><a href="species.jsp?avibaseid=E90CC64A3A32FE26"><i>Lanius nubicus</i></a></td><td>云斑伯劳</td><td></td></tr>
+<tr class='highlight1'><td>Woodchat Shrike</td><td><a href="species.jsp?avibaseid=7E70D490A6476D16"><i>Lanius senator</i></a></td><td>林䳭伯勞</td><td><font color=red>近危</font></td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>PASSERIFORMES: Corvidae </b></P></td></tr>
+<tr class='highlight1'><td>Eurasian Jay</td><td><a href="species.jsp?avibaseid=D8D10F2C5A9AA49F"><i>Garrulus glandarius</i></a></td><td>松鸦</td><td></td></tr>
+<tr class='highlight1'><td>Asir Magpie</td><td><a href="species.jsp?avibaseid=381534F5998662F2"><i>Pica asirensis</i></a></td><td>阿拉伯喜鹊</td><td><font color=red>濒危</font></td></tr>
+<tr class='highlight1'><td>Eurasian Magpie</td><td><a href="species.jsp?avibaseid=FBBBA943D3AB65E8"><i>Pica pica</i></a></td><td>欧亚喜鹊</td><td></td></tr>
+<tr class='highlight1'><td>Iranian Ground-Jay</td><td><a href="species.jsp?avibaseid=6F3A7C959CF3CF8B"><i>Podoces pleskei</i></a></td><td>波斯地鸦</td><td></td></tr>
+<tr class='highlight1'><td>Northern Nutcracker</td><td><a href="species.jsp?avibaseid=D9B001DFE77E8A73"><i>Nucifraga caryocatactes</i></a></td><td>星鸦</td><td></td></tr>
+<tr class='highlight1'><td>Red-billed Chough</td><td><a href="species.jsp?avibaseid=18D2C42A9AD30CD8"><i>Pyrrhocorax pyrrhocorax</i></a></td><td>红嘴山鸦</td><td></td></tr>
+<tr class='highlight1'><td>Yellow-billed Chough</td><td><a href="species.jsp?avibaseid=45B512E2ECC3DB1D"><i>Pyrrhocorax graculus</i></a></td><td>黄嘴山鸦</td><td></td></tr>
+<tr class='highlight1'><td>Eurasian Jackdaw</td><td><a href="species.jsp?avibaseid=D4C32F8E792B65BA"><i>Coloeus monedula</i></a></td><td>寒鸦</td><td></td></tr>
+<tr class='highlight1'><td>House Crow</td><td><a href="species.jsp?avibaseid=3986890399CA4859"><i>Corvus splendens</i></a></td><td>家鸦</td><td></td></tr>
+<tr class='highlight1'><td>Rook</td><td><a href="species.jsp?avibaseid=1078FFEA23D9DD25"><i>Corvus frugilegus</i></a></td><td>秃鼻乌鸦</td><td></td></tr>
+<tr class='highlight1'><td>Carrion Crow</td><td><a href="species.jsp?avibaseid=26FB62DAE4262583"><i>Corvus corone</i></a></td><td>小嘴乌鸦</td><td></td></tr>
+<tr class='highlight1'><td>Hooded Crow</td><td><a href="species.jsp?avibaseid=F13D8350405F3C10"><i>Corvus cornix</i></a></td><td>冠小嘴乌鸦</td><td></td></tr>
+<tr class='highlight1'><td>Large-billed Crow</td><td><a href="species.jsp?avibaseid=A9146F3B612602AC"><i>Corvus macrorhynchos</i></a></td><td>大嘴乌鸦</td><td></td></tr>
+<tr class='highlight1'><td>Pied Crow</td><td><a href="species.jsp?avibaseid=34D538E14AA16E13"><i>Corvus albus</i></a></td><td>非洲白颈鸦</td><td></td></tr>
+<tr class='highlight1'><td>Brown-necked Raven</td><td><a href="species.jsp?avibaseid=F202454550BD38CD"><i>Corvus ruficollis</i></a></td><td>褐颈渡鸦</td><td></td></tr>
+<tr class='highlight1'><td>Fan-tailed Raven</td><td><a href="species.jsp?avibaseid=32C216E28E856C3E"><i>Corvus rhipidurus</i></a></td><td>扇尾渡鸦</td><td></td></tr>
+<tr class='highlight1'><td>Common Raven</td><td><a href="species.jsp?avibaseid=B9B272F40EE1570F"><i>Corvus corax</i></a></td><td>渡鸦</td><td></td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>PASSERIFORMES: Paridae </b></P></td></tr>
+<tr class='highlight1'><td>Coal Tit</td><td><a href="species.jsp?avibaseid=166CD4402D4A416B"><i>Periparus ater</i></a></td><td>煤山雀</td><td></td></tr>
+<tr class='highlight1'><td>Crested Tit</td><td><a href="species.jsp?avibaseid=E553193354C74B21"><i>Lophophanes cristatus</i></a></td><td>凤头山雀</td><td></td></tr>
+<tr class='highlight1'><td>Sombre Tit</td><td><a href="species.jsp?avibaseid=CEC34DA4D6E4A0F1"><i>Poecile lugubris</i></a></td><td>暗山雀</td><td></td></tr>
+<tr class='highlight1'><td>Marsh Tit</td><td><a href="species.jsp?avibaseid=523763E55D4A8153"><i>Poecile palustris</i></a></td><td>沼泽山雀</td><td></td></tr>
+<tr class='highlight1'><td>Caspian Tit</td><td><a href="species.jsp?avibaseid=C3670DBEFAD457AF"><i>Poecile hyrcanus</i></a></td><td>伊朗山雀</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Willow Tit</td><td><a href="species.jsp?avibaseid=F963401E5AFA01DC"><i>Poecile montanus</i></a></td><td>褐头山雀</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Eurasian Blue Tit</td><td><a href="species.jsp?avibaseid=9BE53D340F9A4305"><i>Cyanistes caeruleus</i></a></td><td>青山雀</td><td></td></tr>
+<tr class='highlight1'><td>Azure Tit</td><td><a href="species.jsp?avibaseid=184A6A8E71DA133A"><i>Cyanistes cyanus</i></a></td><td>灰蓝山雀</td><td></td></tr>
+<tr class='highlight1'><td>Great Tit</td><td><a href="species.jsp?avibaseid=E15BC0CB3DEAA621"><i>Parus major</i></a></td><td>大山雀</td><td></td></tr>
+<tr class='highlight1'><td>Asian Tit</td><td><a href="species.jsp?avibaseid=414DC961B6C4F9A8"><i>Parus cinereus</i></a></td><td>苍背山雀</td><td></td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>PASSERIFORMES: Remizidae </b></P></td></tr>
+<tr class='highlight1'><td>Eurasian Penduline-Tit</td><td><a href="species.jsp?avibaseid=F81EB04951AA84BB"><i>Remiz pendulinus</i></a></td><td>欧亚攀雀</td><td></td></tr>
+<tr class='highlight1'><td>Black-headed Penduline-Tit</td><td><a href="species.jsp?avibaseid=64F9CBA76ACCC88E"><i>Remiz macronyx</i></a></td><td>黑头攀雀</td><td></td></tr>
+<tr class='highlight1'><td>White-crowned Penduline-Tit</td><td><a href="species.jsp?avibaseid=454B9078AA7E06B2"><i>Remiz coronatus</i></a></td><td>白冠攀雀</td><td></td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>PASSERIFORMES: Alaudidae </b></P></td></tr>
+<tr class='highlight1'><td>Greater Hoopoe-Lark</td><td><a href="species.jsp?avibaseid=3E4513D9B079B399"><i>Alaemon alaudipes</i></a></td><td>拟戴胜百灵</td><td></td></tr>
+<tr class='highlight1'><td>Thick-billed Lark</td><td><a href="species.jsp?avibaseid=9ADB6BA5B67E1B65"><i>Ramphocoris clotbey</i></a></td><td>厚嘴百灵</td><td></td></tr>
+<tr class='highlight1'><td>Bar-tailed Lark</td><td><a href="species.jsp?avibaseid=20A0844D8FB86C1F"><i>Ammomanes cinctura</i></a></td><td>斑尾漠百灵</td><td></td></tr>
+<tr class='highlight1'><td>Desert Lark</td><td><a href="species.jsp?avibaseid=A977348D32FB435E"><i>Ammomanes deserti</i></a></td><td>漠百灵</td><td></td></tr>
+<tr class='highlight1'><td>Black-crowned Sparrow-Lark</td><td><a href="species.jsp?avibaseid=8C3578224075119E"><i>Eremopterix nigriceps</i></a></td><td>黑顶雀百灵</td><td></td></tr>
+<tr class='highlight1'><td>Chestnut-headed Sparrow-Lark</td><td><a href="species.jsp?avibaseid=2F66131B58350563"><i>Eremopterix signatus</i></a></td><td>栗头雀百灵</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Singing Bushlark</td><td><a href="species.jsp?avibaseid=5BFC242DE6E8C7E6"><i>Mirafra javanica</i></a></td><td>歌百灵</td><td></td></tr>
+<tr class='highlight1'><td>Wood Lark</td><td><a href="species.jsp?avibaseid=742EC2F1CA97F56C"><i>Lullula arborea</i></a></td><td>林百灵</td><td></td></tr>
+<tr class='highlight1'><td>White-winged Lark</td><td><a href="species.jsp?avibaseid=400B3679BCB80EDB"><i>Alauda leucoptera</i></a></td><td>白翅百灵</td><td></td></tr>
+<tr class='highlight1'><td>Eurasian Skylark</td><td><a href="species.jsp?avibaseid=ED2AC04E888EF9CF"><i>Alauda arvensis</i></a></td><td>云雀</td><td></td></tr>
+<tr class='highlight1'><td>Oriental Skylark</td><td><a href="species.jsp?avibaseid=E988F1D549A6773D"><i>Alauda gulgula</i></a></td><td>小云雀</td><td></td></tr>
+<tr class='highlight1'><td>Thekla's Lark</td><td><a href="species.jsp?avibaseid=5351025CD2FE0285"><i>Galerida theklae</i></a></td><td>短嘴凤头百灵</td><td></td></tr>
+<tr class='highlight1'><td>Crested Lark</td><td><a href="species.jsp?avibaseid=21ADC3ED8E24C1C9"><i>Galerida cristata</i></a></td><td>凤头百灵</td><td></td></tr>
+<tr class='highlight1'><td>Horned Lark</td><td><a href="species.jsp?avibaseid=FC0A1D951186B019"><i>Eremophila alpestris</i></a></td><td>角百灵</td><td></td></tr>
+<tr class='highlight1'><td>Temminck's Lark</td><td><a href="species.jsp?avibaseid=89FCE277BC4898DD"><i>Eremophila bilopha</i></a></td><td>漠角百灵</td><td></td></tr>
+<tr class='highlight1'><td>Rufous-capped Lark</td><td><a href="species.jsp?avibaseid=16EB660F301C609E"><i>Calandrella eremica</i></a></td><td>棕顶百灵</td><td></td></tr>
+<tr class='highlight1'><td>Greater Short-toed Lark</td><td><a href="species.jsp?avibaseid=4091A51E0603BAF2"><i>Calandrella brachydactyla</i></a></td><td>大短趾百灵</td><td></td></tr>
+<tr class='highlight1'><td>Hume's Lark</td><td><a href="species.jsp?avibaseid=B50B0E476B14BB9E"><i>Calandrella acutirostris</i></a></td><td>细嘴短趾百灵</td><td></td></tr>
+<tr class='highlight1'><td>Mongolian Short-toed Lark</td><td><a href="species.jsp?avibaseid=B9808769F728450D"><i>Calandrella dukhunensis</i></a></td><td>蒙古短趾百灵</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Bimaculated Lark</td><td><a href="species.jsp?avibaseid=367807919B4EA167"><i>Melanocorypha bimaculata</i></a></td><td>二斑百灵</td><td></td></tr>
+<tr class='highlight1'><td>Calandra Lark</td><td><a href="species.jsp?avibaseid=BDC24A8AA8A51BF9"><i>Melanocorypha calandra</i></a></td><td>草原百灵</td><td></td></tr>
+<tr class='highlight1'><td>Black Lark</td><td><a href="species.jsp?avibaseid=811FC71929CD3B00"><i>Melanocorypha yeltoniensis</i></a></td><td>黑百灵</td><td></td></tr>
+<tr class='highlight1'><td>Dupont's Lark</td><td><a href="species.jsp?avibaseid=504B02182C6C63A9"><i>Chersophilus duponti</i></a></td><td>杜氏百灵</td><td><font color=red>易危</font></td></tr>
+<tr class='highlight1'><td>Dunn's Lark</td><td><a href="species.jsp?avibaseid=E75ECF62216FAB0D"><i>Eremalauda dunni</i></a></td><td>图氏沙百灵</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Arabian Lark</td><td><a href="species.jsp?avibaseid=3C6A0512276D4948"><i>Eremalauda eremodites</i></a></td><td>阿拉伯百灵</td><td></td></tr>
+<tr class='highlight1'><td>Asian Short-toed Lark</td><td><a href="species.jsp?avibaseid=399A4A3E8DAF2FC5"><i>Alaudala cheleensis</i></a></td><td>亚洲短趾百灵</td><td></td></tr>
+<tr class='highlight1'><td>Mediterranean Short-toed Lark</td><td><a href="species.jsp?avibaseid=FE1FE1852275CE88"><i>Alaudala rufescens</i></a></td><td>地中海短趾百灵</td><td></td></tr>
+<tr class='highlight1'><td>Turkestan Short-toed Lark</td><td><a href="species.jsp?avibaseid=238EC109773091F5"><i>Alaudala heinei</i></a></td><td>中亚短趾百灵</td><td></td></tr>
+<tr class='highlight1'><td>Sand Lark</td><td><a href="species.jsp?avibaseid=862C271E3E26EF82"><i>Alaudala raytal</i></a></td><td>恒河沙百灵</td><td></td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>PASSERIFORMES: Panuridae </b></P></td></tr>
+<tr class='highlight1'><td>Bearded Reedling</td><td><a href="species.jsp?avibaseid=7D59F91D9548DCE7"><i>Panurus biarmicus</i></a></td><td>文须雀</td><td></td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>PASSERIFORMES: Cisticolidae </b></P></td></tr>
+<tr class='highlight1'><td>Graceful Prinia</td><td><a href="species.jsp?avibaseid=0FB5894F2DB9DB04"><i>Prinia gracilis</i></a></td><td>优雅山鹪莺</td><td></td></tr>
+<tr class='highlight1'><td>Delicate Prinia</td><td><a href="species.jsp?avibaseid=8C3D3992B7B79E00"><i>Prinia lepida</i></a></td><td>娇美山鹪莺</td><td></td></tr>
+<tr class='highlight1'><td>Socotra Warbler</td><td><a href="species.jsp?avibaseid=ACD5DE47ACFE28DA"><i>Incana incana</i></a></td><td>索岛鹪莺</td><td></td></tr>
+<tr class='highlight1'><td>Zitting Cisticola</td><td><a href="species.jsp?avibaseid=AEE2063F66AE0C70"><i>Cisticola juncidis</i></a></td><td>棕扇尾莺</td><td></td></tr>
+<tr class='highlight1'><td>Socotra Cisticola</td><td><a href="species.jsp?avibaseid=C08493AF2176A83E"><i>Cisticola haesitatus</i></a></td><td>索岛扇尾莺</td><td></td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>PASSERIFORMES: Acrocephalidae </b></P></td></tr>
+<tr class='highlight1'><td>Thick-billed Warbler</td><td><a href="species.jsp?avibaseid=213C212A93364C7C"><i>Arundinax aedon</i></a></td><td>厚嘴苇莺</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Booted Warbler</td><td><a href="species.jsp?avibaseid=1A6C6F1718FEDB5D"><i>Iduna caligata</i></a></td><td>靴篱莺</td><td></td></tr>
+<tr class='highlight1'><td>Sykes's Warbler</td><td><a href="species.jsp?avibaseid=A8242804046F8F14"><i>Iduna rama</i></a></td><td>赛氏篱莺</td><td></td></tr>
+<tr class='highlight1'><td>Eastern Olivaceous Warbler</td><td><a href="species.jsp?avibaseid=BAE527A2F70F6241"><i>Iduna pallida</i></a></td><td>草绿篱莺</td><td></td></tr>
+<tr class='highlight1'><td>Western Olivaceous Warbler</td><td><a href="species.jsp?avibaseid=A7275096DD6A3692"><i>Iduna opaca</i></a></td><td>西草绿篱莺</td><td></td></tr>
+<tr class='highlight1'><td>Upcher's Warbler</td><td><a href="species.jsp?avibaseid=B10AD127C9D4DD7C"><i>Hippolais languida</i></a></td><td>淡色篱莺</td><td></td></tr>
+<tr class='highlight1'><td>Olive-tree Warbler</td><td><a href="species.jsp?avibaseid=791DED180041E350"><i>Hippolais olivetorum</i></a></td><td>橄榄篱莺</td><td></td></tr>
+<tr class='highlight1'><td>Melodious Warbler</td><td><a href="species.jsp?avibaseid=DCDD1BCA24E978F5"><i>Hippolais polyglotta</i></a></td><td>歌篱莺</td><td></td></tr>
+<tr class='highlight1'><td>Icterine Warbler</td><td><a href="species.jsp?avibaseid=869C978C8E5840C8"><i>Hippolais icterina</i></a></td><td>绿篱莺</td><td></td></tr>
+<tr class='highlight1'><td>Aquatic Warbler</td><td><a href="species.jsp?avibaseid=C15141A60961F8BC"><i>Acrocephalus paludicola</i></a></td><td>水栖苇莺</td><td>稀见/偶见 <font color=red>易危</font></td></tr>
+<tr class='highlight1'><td>Moustached Warbler</td><td><a href="species.jsp?avibaseid=E1559C49B1A6C31F"><i>Acrocephalus melanopogon</i></a></td><td>须苇莺</td><td></td></tr>
+<tr class='highlight1'><td>Sedge Warbler</td><td><a href="species.jsp?avibaseid=FED5AED5C59A00B6"><i>Acrocephalus schoenobaenus</i></a></td><td>水蒲苇莺</td><td></td></tr>
+<tr class='highlight1'><td>Paddyfield Warbler</td><td><a href="species.jsp?avibaseid=781FE53F2425B4C1"><i>Acrocephalus agricola</i></a></td><td>稻田苇莺</td><td></td></tr>
+<tr class='highlight1'><td>Blyth's Reed Warbler</td><td><a href="species.jsp?avibaseid=B22EAFC877C38967"><i>Acrocephalus dumetorum</i></a></td><td>布氏苇莺</td><td></td></tr>
+<tr class='highlight1'><td>Marsh Warbler</td><td><a href="species.jsp?avibaseid=B675E006C3745A12"><i>Acrocephalus palustris</i></a></td><td>湿地苇莺</td><td></td></tr>
+<tr class='highlight1'><td>Common Reed Warbler</td><td><a href="species.jsp?avibaseid=3F0EE4749050AA59"><i>Acrocephalus scirpaceus</i></a></td><td>芦莺</td><td></td></tr>
+<tr class='highlight1'><td>Basra Reed Warbler</td><td><a href="species.jsp?avibaseid=0D42A2536C5A929A"><i>Acrocephalus griseldis</i></a></td><td>巴士拉苇莺</td><td><font color=red>濒危</font></td></tr>
+<tr class='highlight1'><td>Great Reed Warbler</td><td><a href="species.jsp?avibaseid=B283E33243C17D97"><i>Acrocephalus arundinaceus</i></a></td><td>大苇莺</td><td></td></tr>
+<tr class='highlight1'><td>Oriental Reed Warbler</td><td><a href="species.jsp?avibaseid=9A6953ED532B99CF"><i>Acrocephalus orientalis</i></a></td><td>东方大苇莺</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Clamorous Reed Warbler</td><td><a href="species.jsp?avibaseid=D793DF5AB3748CB7"><i>Acrocephalus stentoreus</i></a></td><td>噪大苇莺</td><td></td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>PASSERIFORMES: Locustellidae </b></P></td></tr>
+<tr class='highlight1'><td>Pallas's Grasshopper Warbler</td><td><a href="species.jsp?avibaseid=4C3CF429E3FEFBA2"><i>Helopsaltes certhiola</i></a></td><td>小蝗莺</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Lanceolated Warbler</td><td><a href="species.jsp?avibaseid=10A37318BC10CA74"><i>Locustella lanceolata</i></a></td><td>矛斑蝗莺</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>River Warbler</td><td><a href="species.jsp?avibaseid=2B020CA0ACF13B19"><i>Locustella fluviatilis</i></a></td><td>河蝗莺</td><td></td></tr>
+<tr class='highlight1'><td>Savi's Warbler</td><td><a href="species.jsp?avibaseid=2D46BB9888C846D0"><i>Locustella luscinioides</i></a></td><td>鸲蝗莺</td><td></td></tr>
+<tr class='highlight1'><td>Common Grasshopper Warbler</td><td><a href="species.jsp?avibaseid=BC0E4C9F87721B1A"><i>Locustella naevia</i></a></td><td>黑斑蝗莺</td><td></td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>PASSERIFORMES: Hirundinidae </b></P></td></tr>
+<tr class='highlight1'><td>Banded Martin</td><td><a href="species.jsp?avibaseid=1AED683B35F63873"><i>Neophedina cincta</i></a></td><td>斑沙燕</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Plain Martin</td><td><a href="species.jsp?avibaseid=D285448987FF545B"><i>Riparia paludicola</i></a></td><td>非洲褐喉沙燕</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Gray-throated Martin</td><td><a href="species.jsp?avibaseid=D0222DB97DC5B9DE"><i>Riparia chinensis</i></a></td><td>褐喉沙燕</td><td></td></tr>
+<tr class='highlight1'><td>Bank Swallow</td><td><a href="species.jsp?avibaseid=94A1C447583CB6D2"><i>Riparia riparia</i></a></td><td>崖沙燕</td><td></td></tr>
+<tr class='highlight1'><td>Pale Martin</td><td><a href="species.jsp?avibaseid=A9A9E1D123B94E0A"><i>Riparia diluta</i></a></td><td>淡色沙燕</td><td></td></tr>
+<tr class='highlight1'><td>Eurasian Crag-Martin</td><td><a href="species.jsp?avibaseid=6F2AF9D09463566F"><i>Ptyonoprogne rupestris</i></a></td><td>岩燕</td><td></td></tr>
+<tr class='highlight1'><td>Pale Crag-Martin</td><td><a href="species.jsp?avibaseid=A97BDA8427A0F38E"><i>Ptyonoprogne obsoleta</i></a></td><td>灰喉燕</td><td></td></tr>
+<tr class='highlight1'><td>Red-throated Crag-Martin</td><td><a href="species.jsp?avibaseid=A85102D3C3B1152C"><i>Ptyonoprogne rufigula</i></a></td><td>红喉岩燕</td><td></td></tr>
+<tr class='highlight1'><td>Barn Swallow</td><td><a href="species.jsp?avibaseid=58C502EA7AF3E023"><i>Hirundo rustica</i></a></td><td>家燕</td><td></td></tr>
+<tr class='highlight1'><td>Ethiopian Swallow</td><td><a href="species.jsp?avibaseid=42E93B64D9C74D3F"><i>Hirundo aethiopica</i></a></td><td>红额燕</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>White-throated Swallow</td><td><a href="species.jsp?avibaseid=E7755BD19436D44C"><i>Hirundo albigularis</i></a></td><td>白喉燕</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Wire-tailed Swallow</td><td><a href="species.jsp?avibaseid=B79D6B3DD15ECB2B"><i>Hirundo smithii</i></a></td><td>线尾燕</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Western House-Martin</td><td><a href="species.jsp?avibaseid=30FEC6BE132E1224"><i>Delichon urbicum</i></a></td><td>西白腹毛脚燕</td><td></td></tr>
+<tr class='highlight1'><td>Siberian House-Martin</td><td><a href="species.jsp?avibaseid=535F7C54E6F11913"><i>Delichon lagopodum</i></a></td><td>白腹毛脚燕</td><td></td></tr>
+<tr class='highlight1'><td>Asian House-Martin</td><td><a href="species.jsp?avibaseid=15FD41232BC5127D"><i>Delichon dasypus</i></a></td><td>烟腹毛脚燕</td><td></td></tr>
+<tr class='highlight1'><td>European Red-rumped Swallow</td><td><a href="species.jsp?avibaseid=B4967714063AC2A2"><i>Cecropis rufula</i></a></td><td>欧金腰燕</td><td></td></tr>
+<tr class='highlight1'><td>Eastern Red-rumped Swallow</td><td><a href="species.jsp?avibaseid=6FE118C653CD4745"><i>Cecropis daurica</i></a></td><td>金腰燕</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Lesser Striped Swallow</td><td><a href="species.jsp?avibaseid=5ACC908DEB40DC38"><i>Cecropis abyssinica</i></a></td><td>小纹燕</td><td></td></tr>
+<tr class='highlight1'><td>Streak-throated Swallow</td><td><a href="species.jsp?avibaseid=A4062482E764937A"><i>Petrochelidon fluvicola</i></a></td><td>黄额燕</td><td></td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>PASSERIFORMES: Pycnonotidae </b></P></td></tr>
+<tr class='highlight1'><td>Common Bulbul</td><td><a href="species.jsp?avibaseid=6ABDB63537227774"><i>Pycnonotus barbatus</i></a></td><td>黑眼鹎</td><td></td></tr>
+<tr class='highlight1'><td>Red-whiskered Bulbul</td><td><a href="species.jsp?avibaseid=F9E375109E961EAC"><i>Pycnonotus jocosus</i></a></td><td>红耳鹎</td><td>外来物种  </td></tr>
+<tr class='highlight1'><td>Red-vented Bulbul</td><td><a href="species.jsp?avibaseid=95F3F1853896B1E0"><i>Pycnonotus cafer</i></a></td><td>黑喉红臀鹎</td><td>外来物种  </td></tr>
+<tr class='highlight1'><td>White-eared Bulbul</td><td><a href="species.jsp?avibaseid=4A85D701A5FE8012"><i>Pycnonotus leucotis</i></a></td><td>白耳鹎</td><td></td></tr>
+<tr class='highlight1'><td>White-spectacled Bulbul</td><td><a href="species.jsp?avibaseid=24B66475D906FD48"><i>Pycnonotus xanthopygos</i></a></td><td>白眶鹎</td><td></td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>PASSERIFORMES: Phylloscopidae </b></P></td></tr>
+<tr class='highlight1'><td>Wood Warbler</td><td><a href="species.jsp?avibaseid=572C4C7FD4322D14"><i>Phylloscopus sibilatrix</i></a></td><td>林柳莺</td><td></td></tr>
+<tr class='highlight1'><td>Eastern Bonelli's Warbler</td><td><a href="species.jsp?avibaseid=666F9FC9350991FD"><i>Phylloscopus orientalis</i></a></td><td>东柳莺</td><td></td></tr>
+<tr class='highlight1'><td>Yellow-browed Warbler</td><td><a href="species.jsp?avibaseid=0C120038E5CA37D7"><i>Phylloscopus inornatus</i></a></td><td>黄眉柳莺</td><td></td></tr>
+<tr class='highlight1'><td>Hume's Warbler</td><td><a href="species.jsp?avibaseid=BC391A830AD8EF0E"><i>Phylloscopus humei</i></a></td><td>淡眉柳莺</td><td></td></tr>
+<tr class='highlight1'><td>Brooks's Leaf Warbler</td><td><a href="species.jsp?avibaseid=3827F740FED968FE"><i>Phylloscopus subviridis</i></a></td><td>布氏柳莺</td><td></td></tr>
+<tr class='highlight1'><td>Pallas's Leaf Warbler</td><td><a href="species.jsp?avibaseid=943E36CADFE7551B"><i>Phylloscopus proregulus</i></a></td><td>黄腰柳莺</td><td></td></tr>
+<tr class='highlight1'><td>Radde's Warbler</td><td><a href="species.jsp?avibaseid=9A536399807238AF"><i>Phylloscopus schwarzi</i></a></td><td>巨嘴柳莺</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Sulphur-bellied Warbler</td><td><a href="species.jsp?avibaseid=37DD095F45E0F5CA"><i>Phylloscopus griseolus</i></a></td><td>灰柳莺</td><td></td></tr>
+<tr class='highlight1'><td>Dusky Warbler</td><td><a href="species.jsp?avibaseid=96819591FD94B905"><i>Phylloscopus fuscatus</i></a></td><td>褐柳莺</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Plain Leaf Warbler</td><td><a href="species.jsp?avibaseid=116192F7702A4406"><i>Phylloscopus neglectus</i></a></td><td>纯色柳莺</td><td></td></tr>
+<tr class='highlight1'><td>Willow Warbler</td><td><a href="species.jsp?avibaseid=88F4B969622B8268"><i>Phylloscopus trochilus</i></a></td><td>欧柳莺</td><td></td></tr>
+<tr class='highlight1'><td>Mountain Chiffchaff</td><td><a href="species.jsp?avibaseid=F05BA180726CE63C"><i>Phylloscopus sindianus</i></a></td><td>东方叽喳柳莺</td><td></td></tr>
+<tr class='highlight1'><td>Common Chiffchaff</td><td><a href="species.jsp?avibaseid=F9F4B04D08108B41"><i>Phylloscopus collybita</i></a></td><td>叽喳柳莺</td><td></td></tr>
+<tr class='highlight1'><td>Iberian Chiffchaff</td><td><a href="species.jsp?avibaseid=12EE678EE03BDFB2"><i>Phylloscopus ibericus</i></a></td><td>伊比利亚柳莺</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Brown Woodland-Warbler</td><td><a href="species.jsp?avibaseid=E22B84950977F4D9"><i>Phylloscopus umbrovirens</i></a></td><td>褐林柳莺</td><td></td></tr>
+<tr class='highlight1'><td>Green Warbler</td><td><a href="species.jsp?avibaseid=3542C46BC98FB367"><i>Phylloscopus nitidus</i></a></td><td>绿柳莺</td><td></td></tr>
+<tr class='highlight1'><td>Greenish Warbler</td><td><a href="species.jsp?avibaseid=23EF1BD9DE02E680"><i>Phylloscopus trochiloides</i></a></td><td>暗绿柳莺</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Large-billed Leaf Warbler</td><td><a href="species.jsp?avibaseid=C31573A5FBB80F9B"><i>Phylloscopus magnirostris</i></a></td><td>乌嘴柳莺</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Arctic Warbler</td><td><a href="species.jsp?avibaseid=ECFC7E6C1A57A7BE"><i>Phylloscopus borealis</i></a></td><td>极北柳莺</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Western Crowned Warbler</td><td><a href="species.jsp?avibaseid=9517BF8664E5E048"><i>Phylloscopus occipitalis</i></a></td><td>大冕柳莺</td><td></td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>PASSERIFORMES: Scotocercidae </b></P></td></tr>
+<tr class='highlight1'><td>Scrub Warbler</td><td><a href="species.jsp?avibaseid=FCF07F05EED54337"><i>Scotocerca inquieta</i></a></td><td>纹鹪莺</td><td></td></tr>
+<tr class='highlight1'><td>Cetti's Warbler</td><td><a href="species.jsp?avibaseid=F3E9CE954FAF5EF5"><i>Cettia cetti</i></a></td><td>宽尾树莺</td><td></td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>PASSERIFORMES: Aegithalidae </b></P></td></tr>
+<tr class='highlight1'><td>Long-tailed Tit</td><td><a href="species.jsp?avibaseid=547163C22167E31B"><i>Aegithalos caudatus</i></a></td><td>北长尾山雀</td><td></td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>PASSERIFORMES: Sylviidae </b></P></td></tr>
+<tr class='highlight1'><td>Eurasian Blackcap</td><td><a href="species.jsp?avibaseid=61F9065BE0965E1A"><i>Sylvia atricapilla</i></a></td><td>黑顶林莺</td><td></td></tr>
+<tr class='highlight1'><td>Garden Warbler</td><td><a href="species.jsp?avibaseid=A6A4FC63261EA8CD"><i>Sylvia borin</i></a></td><td>庭园林莺</td><td></td></tr>
+<tr class='highlight1'><td>Barred Warbler</td><td><a href="species.jsp?avibaseid=1EA60B94FAFE0C5C"><i>Curruca nisoria</i></a></td><td>横斑林莺</td><td></td></tr>
+<tr class='highlight1'><td>Lesser Whitethroat</td><td><a href="species.jsp?avibaseid=0DCD05BE8EE35C8D"><i>Curruca curruca</i></a></td><td>白喉林莺/沙白喉林莺/休氏白喉林莺</td><td></td></tr>
+<tr class='highlight1'><td>Yemen Warbler</td><td><a href="species.jsp?avibaseid=40A823952AEBA415"><i>Curruca buryi</i></a></td><td>也门林莺</td><td><font color=red>近危</font></td></tr>
+<tr class='highlight1'><td>Arabian Warbler</td><td><a href="species.jsp?avibaseid=51DD2ADA7D4CBDCD"><i>Curruca leucomelaena</i></a></td><td>红海林莺</td><td></td></tr>
+<tr class='highlight1'><td>Western Orphean Warbler</td><td><a href="species.jsp?avibaseid=95E7E0E5E3481A63"><i>Curruca hortensis</i></a></td><td>歌林莺</td><td></td></tr>
+<tr class='highlight1'><td>Eastern Orphean Warbler</td><td><a href="species.jsp?avibaseid=37015E6154731355"><i>Curruca crassirostris</i></a></td><td>东歌林莺</td><td></td></tr>
+<tr class='highlight1'><td>Asian Desert Warbler</td><td><a href="species.jsp?avibaseid=58F3D3E544D9755B"><i>Curruca nana</i></a></td><td>亚洲漠地林莺</td><td></td></tr>
+<tr class='highlight1'><td>Tristram's Warbler</td><td><a href="species.jsp?avibaseid=D1EF44026464C88E"><i>Curruca deserticola</i></a></td><td>沙林莺</td><td></td></tr>
+<tr class='highlight1'><td>Menetries's Warbler</td><td><a href="species.jsp?avibaseid=AA027706CFDB4C9A"><i>Curruca mystacea</i></a></td><td>门氏林莺</td><td></td></tr>
+<tr class='highlight1'><td>Rüppell's Warbler</td><td><a href="species.jsp?avibaseid=A1B09A861B190E01"><i>Curruca ruppeli</i></a></td><td>鲁氏林莺</td><td></td></tr>
+<tr class='highlight1'><td>Cyprus Warbler</td><td><a href="species.jsp?avibaseid=94E23F513701617A"><i>Curruca melanothorax</i></a></td><td>塞浦路斯林莺</td><td></td></tr>
+<tr class='highlight1'><td>Sardinian Warbler</td><td><a href="species.jsp?avibaseid=B0D094830E71F76A"><i>Curruca melanocephala</i></a></td><td>黑头林莺</td><td></td></tr>
+<tr class='highlight1'><td>Moltoni's Warbler</td><td><a href="species.jsp?avibaseid=3FC15B0694A20507"><i>Curruca subalpina</i></a></td><td>摩氏林莺</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Western Subalpine Warbler</td><td><a href="species.jsp?avibaseid=62A53820623A8F3E"><i>Curruca iberiae</i></a></td><td>西亚高山林莺</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Eastern Subalpine Warbler</td><td><a href="species.jsp?avibaseid=B13D68B156442119"><i>Curruca cantillans</i></a></td><td>亚高山林莺</td><td></td></tr>
+<tr class='highlight1'><td>Greater Whitethroat</td><td><a href="species.jsp?avibaseid=14AFBA82D556918C"><i>Curruca communis</i></a></td><td>灰白喉林莺</td><td></td></tr>
+<tr class='highlight1'><td>Spectacled Warbler</td><td><a href="species.jsp?avibaseid=BFECF5F8F49E2869"><i>Curruca conspicillata</i></a></td><td>白眶林莺</td><td></td></tr>
+<tr class='highlight1'><td>Marmora's Warbler</td><td><a href="species.jsp?avibaseid=6E1206E4FC70EB9E"><i>Curruca sarda</i></a></td><td>马氏林莺</td><td></td></tr>
+<tr class='highlight1'><td>Dartford Warbler</td><td><a href="species.jsp?avibaseid=85629EF4042C9DBB"><i>Curruca undata</i></a></td><td>波纹林莺</td><td><font color=red>近危</font></td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>PASSERIFORMES: Zosteropidae </b></P></td></tr>
+<tr class='highlight1'><td>Indian White-eye</td><td><a href="species.jsp?avibaseid=0BD6646B10D030B0"><i>Zosterops palpebrosus</i></a></td><td>灰腹绣眼鸟</td><td></td></tr>
+<tr class='highlight1'><td>Abyssinian White-eye</td><td><a href="species.jsp?avibaseid=8C2C2D5BE2DD1595"><i>Zosterops abyssinicus</i></a></td><td>白胸绣眼鸟</td><td></td></tr>
+<tr class='highlight1'><td>Socotra White-eye</td><td><a href="species.jsp?avibaseid=6190D8778096EE1E"><i>Zosterops socotranus</i></a></td><td>索岛绣眼鸟</td><td></td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>PASSERIFORMES: Leiothrichidae </b></P></td></tr>
+<tr class='highlight1'><td>Iraq Babbler</td><td><a href="species.jsp?avibaseid=FE13475EB5446CA0"><i>Argya altirostris</i></a></td><td>伊拉克鸫鹛</td><td></td></tr>
+<tr class='highlight1'><td>Afghan Babbler</td><td><a href="species.jsp?avibaseid=18B418AB7C92A5E3"><i>Argya huttoni</i></a></td><td>阿富汗鸫鹛</td><td></td></tr>
+<tr class='highlight1'><td>Fulvous Chatterer</td><td><a href="species.jsp?avibaseid=3EFD8DF050B8B1DA"><i>Argya fulva</i></a></td><td>棕褐鸫鹛</td><td></td></tr>
+<tr class='highlight1'><td>Arabian Babbler</td><td><a href="species.jsp?avibaseid=E99FE2FE9B88115E"><i>Argya squamiceps</i></a></td><td>阿拉伯鸫鹛</td><td></td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>PASSERIFORMES: Regulidae </b></P></td></tr>
+<tr class='highlight1'><td>Goldcrest</td><td><a href="species.jsp?avibaseid=1C51C1095E427BB8"><i>Regulus regulus</i></a></td><td>戴菊</td><td></td></tr>
+<tr class='highlight1'><td>Common Firecrest</td><td><a href="species.jsp?avibaseid=85B03849153146D8"><i>Regulus ignicapilla</i></a></td><td>火冠戴菊</td><td></td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>PASSERIFORMES: Tichodromidae </b></P></td></tr>
+<tr class='highlight1'><td>Wallcreeper</td><td><a href="species.jsp?avibaseid=89C425901C5B5343"><i>Tichodroma muraria</i></a></td><td>红翅旋壁雀</td><td></td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>PASSERIFORMES: Sittidae </b></P></td></tr>
+<tr class='highlight1'><td>Krüper's Nuthatch</td><td><a href="species.jsp?avibaseid=E29D7FB9381BFD3D"><i>Sitta krueperi</i></a></td><td>克氏䴓</td><td></td></tr>
+<tr class='highlight1'><td>Western Rock Nuthatch</td><td><a href="species.jsp?avibaseid=C37C527F47D94D1E"><i>Sitta neumayer</i></a></td><td>岩䴓</td><td></td></tr>
+<tr class='highlight1'><td>Eastern Rock Nuthatch</td><td><a href="species.jsp?avibaseid=102758DFEF40AFD2"><i>Sitta tephronota</i></a></td><td>岩䴓</td><td></td></tr>
+<tr class='highlight1'><td>Eurasian Nuthatch</td><td><a href="species.jsp?avibaseid=9C2B53A087F44E10"><i>Sitta europaea</i></a></td><td>普通䴓</td><td></td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>PASSERIFORMES: Certhiidae </b></P></td></tr>
+<tr class='highlight1'><td>Eurasian Treecreeper</td><td><a href="species.jsp?avibaseid=73BE9A87F6A32D6A"><i>Certhia familiaris</i></a></td><td>旋木雀</td><td></td></tr>
+<tr class='highlight1'><td>Short-toed Treecreeper</td><td><a href="species.jsp?avibaseid=552E2BA9FE43A2EE"><i>Certhia brachydactyla</i></a></td><td>短趾旋木雀</td><td></td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>PASSERIFORMES: Troglodytidae </b></P></td></tr>
+<tr class='highlight1'><td>Eurasian Wren</td><td><a href="species.jsp?avibaseid=AF700208E4339572"><i>Troglodytes troglodytes</i></a></td><td>鹪鹩</td><td></td></tr>
+<tr class='highlight1'><td>Winter Wren</td><td><a href="species.jsp?avibaseid=C757BD95E71493FF"><i>Troglodytes hiemalis</i></a></td><td>冬鹪鹩</td><td></td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>PASSERIFORMES: Cinclidae </b></P></td></tr>
+<tr class='highlight1'><td>White-throated Dipper</td><td><a href="species.jsp?avibaseid=FDECE3B9278A17EC"><i>Cinclus cinclus</i></a></td><td>河乌</td><td></td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>PASSERIFORMES: Buphagidae </b></P></td></tr>
+<tr class='highlight1'><td>Red-billed Oxpecker</td><td><a href="species.jsp?avibaseid=7471E71D4A122CE3"><i>Buphagus erythroryncha</i></a></td><td>红嘴牛椋鸟</td><td>稀见/偶见 </td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>PASSERIFORMES: Sturnidae </b></P></td></tr>
+<tr class='highlight1'><td>European Starling</td><td><a href="species.jsp?avibaseid=94A4403295E2D9BE"><i>Sturnus vulgaris</i></a></td><td>紫翅椋鸟</td><td></td></tr>
+<tr class='highlight1'><td>Spotless Starling</td><td><a href="species.jsp?avibaseid=B0D81671A5159DEB"><i>Sturnus unicolor</i></a></td><td>纯色椋鸟</td><td></td></tr>
+<tr class='highlight1'><td>Wattled Starling</td><td><a href="species.jsp?avibaseid=9D95139B2E871FE1"><i>Creatophora cinerea</i></a></td><td>肉垂椋鸟</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Rosy Starling</td><td><a href="species.jsp?avibaseid=24208346AD77666E"><i>Pastor roseus</i></a></td><td>粉红椋鸟</td><td></td></tr>
+<tr class='highlight1'><td>Daurian Starling</td><td><a href="species.jsp?avibaseid=2FC5C3978171719C"><i>Agropsar sturninus</i></a></td><td>北椋鸟</td><td></td></tr>
+<tr class='highlight1'><td>Brahminy Starling</td><td><a href="species.jsp?avibaseid=E44DFDFAE59FC2D7"><i>Sturnia pagodarum</i></a></td><td>黑冠椋鸟</td><td></td></tr>
+<tr class='highlight1'><td>Chestnut-tailed Starling</td><td><a href="species.jsp?avibaseid=52CE07EE1C1784DB"><i>Sturnia malabarica</i></a></td><td>灰头椋鸟</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Common Myna</td><td><a href="species.jsp?avibaseid=F23A2F3807A8145F"><i>Acridotheres tristis</i></a></td><td>家八哥</td><td></td></tr>
+<tr class='highlight1'><td>Bank Myna</td><td><a href="species.jsp?avibaseid=F8CFF92CB9DC09C6"><i>Acridotheres ginginianus</i></a></td><td>灰背岸八哥</td><td>外来物种  </td></tr>
+<tr class='highlight1'><td>Vinous-breasted Myna</td><td><a href="species.jsp?avibaseid=DDF650D1980B184D"><i>Acridotheres leucocephalus</i></a></td><td>红胸八哥</td><td>外来物种  </td></tr>
+<tr class='highlight1'><td>Javan Myna</td><td><a href="species.jsp?avibaseid=D70B61EE7870070D"><i>Acridotheres javanicus</i></a></td><td>爪哇八哥</td><td>外来物种  <font color=red>易危</font></td></tr>
+<tr class='highlight1'><td>Violet-backed Starling</td><td><a href="species.jsp?avibaseid=B1A3AF6C3BF7EDFF"><i>Cinnyricinclus leucogaster</i></a></td><td>白腹紫椋鸟</td><td></td></tr>
+<tr class='highlight1'><td>Tristram's Starling</td><td><a href="species.jsp?avibaseid=0EDF9145287CFDAC"><i>Onychognathus tristramii</i></a></td><td>红海栗翅椋鸟</td><td></td></tr>
+<tr class='highlight1'><td>Somali Starling</td><td><a href="species.jsp?avibaseid=9F79E839C992868D"><i>Onychognathus blythii</i></a></td><td>索马里栗翅椋鸟</td><td></td></tr>
+<tr class='highlight1'><td>Socotra Starling</td><td><a href="species.jsp?avibaseid=9AD060AA857910DA"><i>Onychognathus frater</i></a></td><td>索岛栗翅椋鸟</td><td></td></tr>
+<tr class='highlight1'><td>Superb Starling</td><td><a href="species.jsp?avibaseid=405CCAAE5A4CEA43"><i>Lamprotornis superbus</i></a></td><td>栗头丽椋鸟</td><td>外来物种  </td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>PASSERIFORMES: Turdidae </b></P></td></tr>
+<tr class='highlight1'><td>White's Thrush</td><td><a href="species.jsp?avibaseid=8E267A2656A555F5"><i>Zoothera aurea</i></a></td><td>怀氏虎鸫</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Siberian Thrush</td><td><a href="species.jsp?avibaseid=E7163B81013F6CCC"><i>Geokichla sibirica</i></a></td><td>白眉地鸫</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Mistle Thrush</td><td><a href="species.jsp?avibaseid=A95B43F1E9D10296"><i>Turdus viscivorus</i></a></td><td>槲鸫</td><td></td></tr>
+<tr class='highlight1'><td>Song Thrush</td><td><a href="species.jsp?avibaseid=D929EB214A698282"><i>Turdus philomelos</i></a></td><td>欧歌鸫</td><td></td></tr>
+<tr class='highlight1'><td>Yemen Thrush</td><td><a href="species.jsp?avibaseid=F1E0AFD453B12C58"><i>Turdus menachensis</i></a></td><td>也门鸫</td><td><font color=red>近危</font></td></tr>
+<tr class='highlight1'><td>Redwing</td><td><a href="species.jsp?avibaseid=A8A85BCF1AFB7BBD"><i>Turdus iliacus</i></a></td><td>白眉歌鸫</td><td><font color=red>近危</font></td></tr>
+<tr class='highlight1'><td>Eurasian Blackbird</td><td><a href="species.jsp?avibaseid=88BB4F2A0C8492A5"><i>Turdus merula</i></a></td><td>欧乌鸫</td><td></td></tr>
+<tr class='highlight1'><td>Eyebrowed Thrush</td><td><a href="species.jsp?avibaseid=6E24CCD187765B9A"><i>Turdus obscurus</i></a></td><td>白眉鸫</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Fieldfare</td><td><a href="species.jsp?avibaseid=D120D5A070E8123C"><i>Turdus pilaris</i></a></td><td>田鸫</td><td></td></tr>
+<tr class='highlight1'><td>Ring Ouzel</td><td><a href="species.jsp?avibaseid=CE71B4FF837F276A"><i>Turdus torquatus</i></a></td><td>环颈鸫</td><td></td></tr>
+<tr class='highlight1'><td>Black-throated Thrush</td><td><a href="species.jsp?avibaseid=AECDBFFA55C87E24"><i>Turdus atrogularis</i></a></td><td>黑颈鸫</td><td></td></tr>
+<tr class='highlight1'><td>Red-throated Thrush</td><td><a href="species.jsp?avibaseid=77B6BACB4F619FBB"><i>Turdus ruficollis</i></a></td><td>赤颈鸫</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Dusky Thrush</td><td><a href="species.jsp?avibaseid=E3B6927817B7ABB4"><i>Turdus eunomus</i></a></td><td>斑鸫</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Naumann's Thrush</td><td><a href="species.jsp?avibaseid=22761AD4A981E2F6"><i>Turdus naumanni</i></a></td><td>红尾鸫</td><td>稀见/偶见 </td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>PASSERIFORMES: Muscicapidae </b></P></td></tr>
+<tr class='highlight1'><td>Asian Brown Flycatcher</td><td><a href="species.jsp?avibaseid=585D0B1ACD00B47F"><i>Muscicapa dauurica</i></a></td><td>北灰鹟</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Spotted Flycatcher</td><td><a href="species.jsp?avibaseid=EE8206E703914D22"><i>Muscicapa striata</i></a></td><td>斑鹟</td><td></td></tr>
+<tr class='highlight1'><td>Gambaga Flycatcher</td><td><a href="species.jsp?avibaseid=7387E8286F20E05E"><i>Muscicapa gambagae</i></a></td><td>岗巴斑鹟</td><td></td></tr>
+<tr class='highlight1'><td>Black Scrub-Robin</td><td><a href="species.jsp?avibaseid=6D92499B9F639202"><i>Cercotrichas podobe</i></a></td><td>黑薮鸲</td><td></td></tr>
+<tr class='highlight1'><td>Rufous-tailed Scrub-Robin</td><td><a href="species.jsp?avibaseid=B68BD0D25647A5D2"><i>Cercotrichas galactotes</i></a></td><td>棕薮鸲</td><td></td></tr>
+<tr class='highlight1'><td>Blue-and-white Flycatcher</td><td><a href="species.jsp?avibaseid=B7679B3FBF987992"><i>Cyanoptila cyanomelana</i></a></td><td>白腹蓝鹟</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Verditer Flycatcher</td><td><a href="species.jsp?avibaseid=1DF0E8560D738BB9"><i>Eumyias thalassinus</i></a></td><td>铜蓝鹟</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>European Robin</td><td><a href="species.jsp?avibaseid=C809B2B90399A43D"><i>Erithacus rubecula</i></a></td><td>欧亚鸲</td><td></td></tr>
+<tr class='highlight1'><td>White-throated Robin</td><td><a href="species.jsp?avibaseid=73BD4B293448BBD5"><i>Irania gutturalis</i></a></td><td>白喉鸲</td><td></td></tr>
+<tr class='highlight1'><td>Thrush Nightingale</td><td><a href="species.jsp?avibaseid=6EC667529FB53E43"><i>Luscinia luscinia</i></a></td><td>欧歌鸲</td><td></td></tr>
+<tr class='highlight1'><td>Common Nightingale</td><td><a href="species.jsp?avibaseid=7C7F0DEE5B364038"><i>Luscinia megarhynchos</i></a></td><td>新疆歌鸲</td><td></td></tr>
+<tr class='highlight1'><td>Bluethroat</td><td><a href="species.jsp?avibaseid=AFD6FD811AA7D6A7"><i>Luscinia svecica</i></a></td><td>蓝喉歌鸲</td><td></td></tr>
+<tr class='highlight1'><td>Blue Whistling-Thrush</td><td><a href="species.jsp?avibaseid=DE6C227DB24CCC29"><i>Myophonus caeruleus</i></a></td><td>紫啸鸫</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Red-flanked Bluetail</td><td><a href="species.jsp?avibaseid=E54B8DEE06ACE380"><i>Tarsiger cyanurus</i></a></td><td>红胁蓝尾鸲</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Ultramarine Flycatcher</td><td><a href="species.jsp?avibaseid=808001B1A1E7CC7D"><i>Ficedula superciliaris</i></a></td><td>白眉蓝姬鹟</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Taiga Flycatcher</td><td><a href="species.jsp?avibaseid=99985173A619C8F2"><i>Ficedula albicilla</i></a></td><td>红喉姬鹟</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Red-breasted Flycatcher</td><td><a href="species.jsp?avibaseid=6A3CA06B2496B003"><i>Ficedula parva</i></a></td><td>红胸姬鹟</td><td></td></tr>
+<tr class='highlight1'><td>Semicollared Flycatcher</td><td><a href="species.jsp?avibaseid=BE56C141DDCFDA2E"><i>Ficedula semitorquata</i></a></td><td>半领姬鹟</td><td></td></tr>
+<tr class='highlight1'><td>European Pied Flycatcher</td><td><a href="species.jsp?avibaseid=6E352E1870A195B7"><i>Ficedula hypoleuca</i></a></td><td>斑姬鹟</td><td></td></tr>
+<tr class='highlight1'><td>Collared Flycatcher</td><td><a href="species.jsp?avibaseid=0B2F80584ED0F07E"><i>Ficedula albicollis</i></a></td><td>白领姬鹟</td><td></td></tr>
+<tr class='highlight1'><td>Rufous-backed Redstart</td><td><a href="species.jsp?avibaseid=03E448A1E6FA7895"><i>Phoenicurus erythronotus</i></a></td><td>红背红尾鸲</td><td></td></tr>
+<tr class='highlight1'><td>Moussier's Redstart</td><td><a href="species.jsp?avibaseid=7A8D10C08494138B"><i>Phoenicurus moussieri</i></a></td><td>摩氏红尾鸲</td><td></td></tr>
+<tr class='highlight1'><td>Common Redstart</td><td><a href="species.jsp?avibaseid=06DD9D954313582E"><i>Phoenicurus phoenicurus</i></a></td><td>欧亚红尾鸲</td><td></td></tr>
+<tr class='highlight1'><td>White-winged Redstart</td><td><a href="species.jsp?avibaseid=3B01E1715D1738E2"><i>Phoenicurus erythrogastrus</i></a></td><td>红腹红尾鸲</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Black Redstart</td><td><a href="species.jsp?avibaseid=612B5C244E272075"><i>Phoenicurus ochruros</i></a></td><td>赭红尾鸲</td><td></td></tr>
+<tr class='highlight1'><td>Little Rock-Thrush</td><td><a href="species.jsp?avibaseid=566669CC2E4F0776"><i>Monticola rufocinereus</i></a></td><td>棕灰矶鸫</td><td></td></tr>
+<tr class='highlight1'><td>Rufous-tailed Rock-Thrush</td><td><a href="species.jsp?avibaseid=736D38E7F9967842"><i>Monticola saxatilis</i></a></td><td>白背矶鸫</td><td></td></tr>
+<tr class='highlight1'><td>Blue Rock-Thrush</td><td><a href="species.jsp?avibaseid=41D76F4B19ACB4BD"><i>Monticola solitarius</i></a></td><td>蓝矶鸫</td><td></td></tr>
+<tr class='highlight1'><td>Whinchat</td><td><a href="species.jsp?avibaseid=A0EDAEA2E89A9A96"><i>Saxicola rubetra</i></a></td><td>草原石䳭</td><td></td></tr>
+<tr class='highlight1'><td>European Stonechat</td><td><a href="species.jsp?avibaseid=0EA8F8B905405FB3"><i>Saxicola rubicola</i></a></td><td>欧黑喉石䳭</td><td></td></tr>
+<tr class='highlight1'><td>Siberian Stonechat</td><td><a href="species.jsp?avibaseid=DB645AF550561B05"><i>Saxicola maurus</i></a></td><td>黑喉石䳭</td><td></td></tr>
+<tr class='highlight1'><td>Amur Stonechat</td><td><a href="species.jsp?avibaseid=80216E854A9890D8"><i>Saxicola stejnegeri</i></a></td><td>东亚石䳭</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>African Stonechat</td><td><a href="species.jsp?avibaseid=CF2E967489666AEA"><i>Saxicola torquatus</i></a></td><td>非洲石即鸟</td><td></td></tr>
+<tr class='highlight1'><td>Pied Bushchat</td><td><a href="species.jsp?avibaseid=A64A1FA22261FA10"><i>Saxicola caprata</i></a></td><td>白斑黑石䳭</td><td></td></tr>
+<tr class='highlight1'><td>Northern Wheatear</td><td><a href="species.jsp?avibaseid=DF526047637004DD"><i>Oenanthe oenanthe</i></a></td><td>穗䳭</td><td></td></tr>
+<tr class='highlight1'><td>Atlas Wheatear</td><td><a href="species.jsp?avibaseid=3983013B8ABF7894"><i>Oenanthe seebohmi</i></a></td><td>黑喉穗䳭</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Buff-breasted Wheatear</td><td><a href="species.jsp?avibaseid=DB59BA9EBBAFF0E4"><i>Oenanthe bottae</i></a></td><td>红胸䳭</td><td></td></tr>
+<tr class='highlight1'><td>Isabelline Wheatear</td><td><a href="species.jsp?avibaseid=E6C6F74630B2257B"><i>Oenanthe isabellina</i></a></td><td>沙䳭</td><td></td></tr>
+<tr class='highlight1'><td>Heuglin's Wheatear</td><td><a href="species.jsp?avibaseid=6ADB636CF487379E"><i>Oenanthe heuglinii</i></a></td><td>休氏䳭</td><td></td></tr>
+<tr class='highlight1'><td>Hooded Wheatear</td><td><a href="species.jsp?avibaseid=17F2D08C6E241F98"><i>Oenanthe monacha</i></a></td><td>冠䳭</td><td></td></tr>
+<tr class='highlight1'><td>Desert Wheatear</td><td><a href="species.jsp?avibaseid=078BC0ED34F512AE"><i>Oenanthe deserti</i></a></td><td>漠䳭</td><td></td></tr>
+<tr class='highlight1'><td>Cyprus Wheatear</td><td><a href="species.jsp?avibaseid=A3148129CFD0450B"><i>Oenanthe cypriaca</i></a></td><td>塞浦路斯䳭</td><td></td></tr>
+<tr class='highlight1'><td>Eastern Black-eared Wheatear</td><td><a href="species.jsp?avibaseid=DF26171F72EF3655"><i>Oenanthe melanoleuca</i></a></td><td>东黑耳䳭</td><td></td></tr>
+<tr class='highlight1'><td>Pied Wheatear</td><td><a href="species.jsp?avibaseid=2FB34D83F74FCEAB"><i>Oenanthe pleschanka</i></a></td><td>白顶䳭</td><td></td></tr>
+<tr class='highlight1'><td>Red-rumped Wheatear</td><td><a href="species.jsp?avibaseid=A9ADB78D5D6B570C"><i>Oenanthe moesta</i></a></td><td>红腰䳭</td><td></td></tr>
+<tr class='highlight1'><td>Blackstart</td><td><a href="species.jsp?avibaseid=10E5B18EA1A828A4"><i>Oenanthe melanura</i></a></td><td>黑尾岩䳭</td><td></td></tr>
+<tr class='highlight1'><td>Familiar Chat</td><td><a href="species.jsp?avibaseid=CD8DEBE3BEA126E7"><i>Oenanthe familiaris</i></a></td><td>红尾岩䳭</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Variable Wheatear</td><td><a href="species.jsp?avibaseid=F0CB79C0AA81DF96"><i>Oenanthe picata</i></a></td><td>东方斑䳭</td><td></td></tr>
+<tr class='highlight1'><td>Black Wheatear</td><td><a href="species.jsp?avibaseid=1C98EA2F8CD4DD15"><i>Oenanthe leucura</i></a></td><td>白尾䳭</td><td></td></tr>
+<tr class='highlight1'><td>Hume's Wheatear</td><td><a href="species.jsp?avibaseid=95C1E7159E6E1642"><i>Oenanthe albonigra</i></a></td><td>黑白䳭</td><td></td></tr>
+<tr class='highlight1'><td>White-crowned Wheatear</td><td><a href="species.jsp?avibaseid=CAFA98EEE7F9CD86"><i>Oenanthe leucopyga</i></a></td><td>黑䳭</td><td></td></tr>
+<tr class='highlight1'><td>Arabian Wheatear</td><td><a href="species.jsp?avibaseid=3CA06BE398C205AD"><i>Oenanthe lugentoides</i></a></td><td>阿拉伯䳭</td><td></td></tr>
+<tr class='highlight1'><td>Abyssinian Wheatear</td><td><a href="species.jsp?avibaseid=5396F9FB1C10FD83"><i>Oenanthe lugubris</i></a></td><td>阿比西尼亚䳭</td><td></td></tr>
+<tr class='highlight1'><td>Finsch's Wheatear</td><td><a href="species.jsp?avibaseid=3A712A25A08E7F15"><i>Oenanthe finschii</i></a></td><td>芬氏䳭</td><td></td></tr>
+<tr class='highlight1'><td>Mourning Wheatear</td><td><a href="species.jsp?avibaseid=9EE7BF1C22CD5A7B"><i>Oenanthe lugens</i></a></td><td>悲(即鸟)</td><td></td></tr>
+<tr class='highlight1'><td>Kurdish Wheatear</td><td><a href="species.jsp?avibaseid=FB7193205A928668"><i>Oenanthe xanthoprymna</i></a></td><td>库尔德䳭</td><td></td></tr>
+<tr class='highlight1'><td>Persian Wheatear</td><td><a href="species.jsp?avibaseid=E749750AA9A121CC"><i>Oenanthe chrysopygia</i></a></td><td>波斯䳭</td><td></td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>PASSERIFORMES: Bombycillidae </b></P></td></tr>
+<tr class='highlight1'><td>Bohemian Waxwing</td><td><a href="species.jsp?avibaseid=AEF821EC4625150E"><i>Bombycilla garrulus</i></a></td><td>太平鸟</td><td>稀见/偶见 </td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>PASSERIFORMES: Hypocoliidae </b></P></td></tr>
+<tr class='highlight1'><td>Hypocolius</td><td><a href="species.jsp?avibaseid=D08193E075F2ED0A"><i>Hypocolius ampelinus</i></a></td><td>灰连雀</td><td></td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>PASSERIFORMES: Nectariniidae </b></P></td></tr>
+<tr class='highlight1'><td>Pygmy Sunbird</td><td><a href="species.jsp?avibaseid=B0E7740F312E814D"><i>Hedydipna platura</i></a></td><td>小直嘴太阳鸟</td><td></td></tr>
+<tr class='highlight1'><td>Nile Valley Sunbird</td><td><a href="species.jsp?avibaseid=8333D907947AF1C3"><i>Hedydipna metallica</i></a></td><td>尼罗直嘴太阳鸟</td><td></td></tr>
+<tr class='highlight1'><td>Socotra Sunbird</td><td><a href="species.jsp?avibaseid=98E4ABFFE1956D88"><i>Chalcomitra balfouri</i></a></td><td>索科花蜜鸟</td><td></td></tr>
+<tr class='highlight1'><td>Palestine Sunbird</td><td><a href="species.jsp?avibaseid=783E492C70851B12"><i>Cinnyris osea</i></a></td><td>北非橙簇花蜜鸟</td><td></td></tr>
+<tr class='highlight1'><td>Abyssinian Sunbird</td><td><a href="species.jsp?avibaseid=688582BF6188DAB4"><i>Cinnyris habessinicus</i></a></td><td>辉花蜜鸟</td><td></td></tr>
+<tr class='highlight1'><td>Arabian Sunbird</td><td><a href="species.jsp?avibaseid=36D2C0CDD46F9A12"><i>Cinnyris hellmayri</i></a></td><td>阿拉伯花蜜鸟</td><td></td></tr>
+<tr class='highlight1'><td>Purple Sunbird</td><td><a href="species.jsp?avibaseid=E9BCF7640544FC7C"><i>Cinnyris asiaticus</i></a></td><td>紫色花蜜鸟</td><td></td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>PASSERIFORMES: Ploceidae </b></P></td></tr>
+<tr class='highlight1'><td>Lesser Masked-Weaver</td><td><a href="species.jsp?avibaseid=E069A0BB844E9636"><i>Ploceus intermedius</i></a></td><td>黑脸织雀</td><td></td></tr>
+<tr class='highlight1'><td>Southern Masked-Weaver</td><td><a href="species.jsp?avibaseid=A36C50499FFCA11D"><i>Ploceus velatus</i></a></td><td>黑额织雀</td><td>外来物种  </td></tr>
+<tr class='highlight1'><td>Rüppell's Weaver</td><td><a href="species.jsp?avibaseid=9F7489D0D6496D60"><i>Ploceus galbula</i></a></td><td>栗脸织雀</td><td></td></tr>
+<tr class='highlight1'><td>Village Weaver</td><td><a href="species.jsp?avibaseid=E8AA9E1CBACD66A4"><i>Ploceus cucullatus</i></a></td><td>黑头织巢鸟</td><td>外来物种  </td></tr>
+<tr class='highlight1'><td>Golden-backed Weaver</td><td><a href="species.jsp?avibaseid=DF0759C05410EDEE"><i>Ploceus jacksoni</i></a></td><td>苏丹金背织雀</td><td>外来物种  </td></tr>
+<tr class='highlight1'><td>Streaked Weaver</td><td><a href="species.jsp?avibaseid=29FF745B090A7283"><i>Ploceus manyar</i></a></td><td>纹胸织雀</td><td>外来物种  </td></tr>
+<tr class='highlight1'><td>Baya Weaver</td><td><a href="species.jsp?avibaseid=03DE2091738BBC16"><i>Ploceus philippinus</i></a></td><td>黄胸织雀</td><td>外来物种  </td></tr>
+<tr class='highlight1'><td>Black-breasted Weaver</td><td><a href="species.jsp?avibaseid=AE1F2524D6355707"><i>Ploceus benghalensis</i></a></td><td>黑胸织雀</td><td>外来物种  </td></tr>
+<tr class='highlight1'><td>Red-billed Quelea</td><td><a href="species.jsp?avibaseid=2B6DE1366B1D557C"><i>Quelea quelea</i></a></td><td>红嘴奎利亚雀</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Red Fody</td><td><a href="species.jsp?avibaseid=F7DFA41B81518AC0"><i>Foudia madagascariensis</i></a></td><td>红织雀</td><td>外来物种  </td></tr>
+<tr class='highlight1'><td>Southern Red Bishop</td><td><a href="species.jsp?avibaseid=95F08BC3D30A9869"><i>Euplectes orix</i></a></td><td>红巧织雀</td><td>外来物种  </td></tr>
+<tr class='highlight1'><td>Yellow-crowned Bishop</td><td><a href="species.jsp?avibaseid=4A58452BCE614FD1"><i>Euplectes afer</i></a></td><td>黄顶巧织雀</td><td>外来物种  </td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>PASSERIFORMES: Estrildidae </b></P></td></tr>
+<tr class='highlight1'><td>Black-and-white Mannikin</td><td><a href="species.jsp?avibaseid=E358EC8A2D20DC4F"><i>Spermestes bicolor</i></a></td><td>黑白文鸟</td><td></td></tr>
+<tr class='highlight1'><td>African Silverbill</td><td><a href="species.jsp?avibaseid=FC6A9CD0979A6DE8"><i>Euodice cantans</i></a></td><td>银嘴文鸟</td><td></td></tr>
+<tr class='highlight1'><td>Indian Silverbill</td><td><a href="species.jsp?avibaseid=C03E353AFBA1FB74"><i>Euodice malabarica</i></a></td><td>白喉文鸟</td><td></td></tr>
+<tr class='highlight1'><td>Scaly-breasted Munia</td><td><a href="species.jsp?avibaseid=6D4F72B157D99627"><i>Lonchura punctulata</i></a></td><td>斑文鸟</td><td>外来物种  </td></tr>
+<tr class='highlight1'><td>Tricolored Munia</td><td><a href="species.jsp?avibaseid=937B5409A423667F"><i>Lonchura malacca</i></a></td><td>黑头文鸟</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Lavender Waxbill</td><td><a href="species.jsp?avibaseid=174BFAB6C9B2C486"><i>Glaucestrilda caerulescens</i></a></td><td>淡蓝梅花雀</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Arabian Waxbill</td><td><a href="species.jsp?avibaseid=5E163A46279C4C21"><i>Estrilda rufibarba</i></a></td><td>阿拉伯梅花雀</td><td></td></tr>
+<tr class='highlight1'><td>Zebra Waxbill</td><td><a href="species.jsp?avibaseid=ECC40D44CF305866"><i>Amandava subflava</i></a></td><td>橙腹梅花雀</td><td></td></tr>
+<tr class='highlight1'><td>Red Avadavat</td><td><a href="species.jsp?avibaseid=F30FC757798C8A9B"><i>Amandava amandava</i></a></td><td>红梅花雀</td><td>外来物种  </td></tr>
+<tr class='highlight1'><td>Green-winged Pytilia</td><td><a href="species.jsp?avibaseid=01A3BE3CBE9C7B39"><i>Pytilia melba</i></a></td><td>绿翅斑腹雀</td><td></td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>PASSERIFORMES: Viduidae </b></P></td></tr>
+<tr class='highlight1'><td>Pin-tailed Whydah</td><td><a href="species.jsp?avibaseid=673E66F0FA0E3817"><i>Vidua macroura</i></a></td><td>针尾维达雀</td><td>稀见/偶见 </td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>PASSERIFORMES: Prunellidae </b></P></td></tr>
+<tr class='highlight1'><td>Alpine Accentor</td><td><a href="species.jsp?avibaseid=A783468FC167312E"><i>Prunella collaris</i></a></td><td>领岩鹨</td><td></td></tr>
+<tr class='highlight1'><td>Siberian Accentor</td><td><a href="species.jsp?avibaseid=D32200407D81F285"><i>Prunella montanella</i></a></td><td>棕眉山岩鹨</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Radde's Accentor</td><td><a href="species.jsp?avibaseid=1518EDFA6B806B2A"><i>Prunella ocularis</i></a></td><td>眼斑岩鹨</td><td></td></tr>
+<tr class='highlight1'><td>Black-throated Accentor</td><td><a href="species.jsp?avibaseid=C68A31C1D11E7B5D"><i>Prunella atrogularis</i></a></td><td>黑喉岩鹨</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Dunnock</td><td><a href="species.jsp?avibaseid=26530C865C4A655C"><i>Prunella modularis</i></a></td><td>林岩鹨</td><td></td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>PASSERIFORMES: Passeridae </b></P></td></tr>
+<tr class='highlight1'><td>Saxaul Sparrow</td><td><a href="species.jsp?avibaseid=17AC96E0F13D7B43"><i>Passer ammodendri</i></a></td><td>黑顶麻雀</td><td></td></tr>
+<tr class='highlight1'><td>House Sparrow</td><td><a href="species.jsp?avibaseid=240E33900CE34D44"><i>Passer domesticus</i></a></td><td>家麻雀</td><td></td></tr>
+<tr class='highlight1'><td>Spanish Sparrow</td><td><a href="species.jsp?avibaseid=5A8E09A18B86D140"><i>Passer hispaniolensis</i></a></td><td>黑胸麻雀</td><td></td></tr>
+<tr class='highlight1'><td>Sind Sparrow</td><td><a href="species.jsp?avibaseid=E60EFA61C43FB8B6"><i>Passer pyrrhonotus</i></a></td><td>丛林麻雀</td><td></td></tr>
+<tr class='highlight1'><td>Dead Sea Sparrow</td><td><a href="species.jsp?avibaseid=7D19D9ED74569128"><i>Passer moabiticus</i></a></td><td>死海麻雀</td><td></td></tr>
+<tr class='highlight1'><td>Abd al Kuri Sparrow</td><td><a href="species.jsp?avibaseid=BE0105525CBA5480"><i>Passer hemileucus</i></a></td><td>阿布德库里麻雀</td><td><font color=red>易危</font></td></tr>
+<tr class='highlight1'><td>Socotra Sparrow</td><td><a href="species.jsp?avibaseid=E2E3F3F4F0C90913"><i>Passer insularis</i></a></td><td>索岛麻雀</td><td></td></tr>
+<tr class='highlight1'><td>Zarudny's Sparrow</td><td><a href="species.jsp?avibaseid=246789A2B51A70F4"><i>Passer zarudnyi</i></a></td><td>扎氏麻雀</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Eurasian Tree Sparrow</td><td><a href="species.jsp?avibaseid=C22FBF8D36F91BCA"><i>Passer montanus</i></a></td><td>麻雀（树麻雀）</td><td></td></tr>
+<tr class='highlight1'><td>Sudan Golden Sparrow</td><td><a href="species.jsp?avibaseid=4C373DA183E36E41"><i>Passer luteus</i></a></td><td>金麻雀</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Arabian Golden Sparrow</td><td><a href="species.jsp?avibaseid=24E0C8A6950DE899"><i>Passer euchlorus</i></a></td><td>阿拉伯金麻雀</td><td></td></tr>
+<tr class='highlight1'><td>Yellow-throated Sparrow</td><td><a href="species.jsp?avibaseid=77CBF484A2A2E7D2"><i>Gymnoris xanthocollis</i></a></td><td>栗肩石雀</td><td></td></tr>
+<tr class='highlight1'><td>Yellow-throated Bush Sparrow</td><td><a href="species.jsp?avibaseid=E323BF95AE00D374"><i>Gymnoris superciliaris</i></a></td><td>黄喉石雀</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Sahel Bush Sparrow</td><td><a href="species.jsp?avibaseid=969A369C6D24E26B"><i>Gymnoris dentata</i></a></td><td>小石雀</td><td></td></tr>
+<tr class='highlight1'><td>Rock Sparrow</td><td><a href="species.jsp?avibaseid=F8748F12A35515B1"><i>Petronia petronia</i></a></td><td>石雀</td><td></td></tr>
+<tr class='highlight1'><td>Pale Rockfinch</td><td><a href="species.jsp?avibaseid=B1A5B22C2BFBE48E"><i>Carpospiza brachydactyla</i></a></td><td>淡色石雀</td><td></td></tr>
+<tr class='highlight1'><td>White-winged Snowfinch</td><td><a href="species.jsp?avibaseid=3E389D037AA10A4C"><i>Montifringilla nivalis</i></a></td><td>白斑翅雪雀</td><td></td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>PASSERIFORMES: Motacillidae </b></P></td></tr>
+<tr class='highlight1'><td>Forest Wagtail</td><td><a href="species.jsp?avibaseid=8E872FAA9B847CEE"><i>Dendronanthus indicus</i></a></td><td>山鹡鸰</td><td></td></tr>
+<tr class='highlight1'><td>Gray Wagtail</td><td><a href="species.jsp?avibaseid=AE073221679039C2"><i>Motacilla cinerea</i></a></td><td>灰鹡鸰</td><td></td></tr>
+<tr class='highlight1'><td>Western Yellow Wagtail</td><td><a href="species.jsp?avibaseid=5983D6776C4C4F85"><i>Motacilla flava</i></a></td><td>西黄鹡鸰</td><td></td></tr>
+<tr class='highlight1'><td>Eastern Yellow Wagtail</td><td><a href="species.jsp?avibaseid=5487B6500F6BCF90"><i>Motacilla tschutschensis</i></a></td><td>黄鹡鸰</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Citrine Wagtail</td><td><a href="species.jsp?avibaseid=5B0295C122B63ED3"><i>Motacilla citreola</i></a></td><td>黄头鹡鸰</td><td></td></tr>
+<tr class='highlight1'><td>African Pied Wagtail</td><td><a href="species.jsp?avibaseid=CE7D41A6447BCC86"><i>Motacilla aguimp</i></a></td><td>非洲斑鹡鸰</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>White Wagtail</td><td><a href="species.jsp?avibaseid=400E032C4624AA36"><i>Motacilla alba</i></a></td><td>白鹡鸰</td><td></td></tr>
+<tr class='highlight1'><td>Richard's Pipit</td><td><a href="species.jsp?avibaseid=41ECD10E24E8772D"><i>Anthus richardi</i></a></td><td>理氏鹨</td><td></td></tr>
+<tr class='highlight1'><td>Paddyfield Pipit</td><td><a href="species.jsp?avibaseid=57A0C80B2C7FBDE1"><i>Anthus rufulus</i></a></td><td>田鹨</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>African Pipit</td><td><a href="species.jsp?avibaseid=0D7CC717D80839FA"><i>Anthus cinnamomeus</i></a></td><td>非洲鹨</td><td></td></tr>
+<tr class='highlight1'><td>Long-billed Pipit</td><td><a href="species.jsp?avibaseid=ECFF22D2B80C55EA"><i>Anthus similis</i></a></td><td>长嘴鹨</td><td></td></tr>
+<tr class='highlight1'><td>Blyth's Pipit</td><td><a href="species.jsp?avibaseid=9F65782F19136F06"><i>Anthus godlewskii</i></a></td><td>布氏鹨</td><td></td></tr>
+<tr class='highlight1'><td>Tawny Pipit</td><td><a href="species.jsp?avibaseid=250CDA5828B68D0A"><i>Anthus campestris</i></a></td><td>平原鹨</td><td></td></tr>
+<tr class='highlight1'><td>Buffy Pipit</td><td><a href="species.jsp?avibaseid=3BC778CE7FA76718"><i>Anthus vaalensis</i></a></td><td>沙黄鹨</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Meadow Pipit</td><td><a href="species.jsp?avibaseid=14873249B607CEB1"><i>Anthus pratensis</i></a></td><td>草地鹨</td><td></td></tr>
+<tr class='highlight1'><td>Tree Pipit</td><td><a href="species.jsp?avibaseid=365F5E975B414FE6"><i>Anthus trivialis</i></a></td><td>林鹨</td><td></td></tr>
+<tr class='highlight1'><td>Olive-backed Pipit</td><td><a href="species.jsp?avibaseid=25F7AF6531AEED37"><i>Anthus hodgsoni</i></a></td><td>树鹨</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Pechora Pipit</td><td><a href="species.jsp?avibaseid=9DC4CC5470034A96"><i>Anthus gustavi</i></a></td><td>北鹨</td><td></td></tr>
+<tr class='highlight1'><td>Red-throated Pipit</td><td><a href="species.jsp?avibaseid=319D044A667563CD"><i>Anthus cervinus</i></a></td><td>红喉鹨</td><td></td></tr>
+<tr class='highlight1'><td>Water Pipit</td><td><a href="species.jsp?avibaseid=0A3FA18502F4FC70"><i>Anthus spinoletta</i></a></td><td>水鹨</td><td></td></tr>
+<tr class='highlight1'><td>Siberian Pipit</td><td><a href="species.jsp?avibaseid=CEF9CA9DCD341FC4"><i>Anthus japonicus</i></a></td><td>西伯利亚鹨</td><td></td></tr>
+<tr class='highlight1'><td>American Pipit</td><td><a href="species.jsp?avibaseid=CDA2E56B1B283EA8"><i>Anthus rubescens</i></a></td><td>黄腹鹨</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Golden Pipit</td><td><a href="species.jsp?avibaseid=B9104F62AA0DF5B2"><i>Tmetothylacus tenellus</i></a></td><td>金鹨</td><td>稀见/偶见 </td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>PASSERIFORMES: Fringillidae </b></P></td></tr>
+<tr class='highlight1'><td>Common Chaffinch</td><td><a href="species.jsp?avibaseid=6364E4A53B9D5D99"><i>Fringilla coelebs</i></a></td><td>苍头燕雀</td><td></td></tr>
+<tr class='highlight1'><td>Brambling</td><td><a href="species.jsp?avibaseid=E16B2C0328E05DC5"><i>Fringilla montifringilla</i></a></td><td>燕雀</td><td></td></tr>
+<tr class='highlight1'><td>White-winged Grosbeak</td><td><a href="species.jsp?avibaseid=E3BD8022A6A41536"><i>Mycerobas carnipes</i></a></td><td>白斑翅拟蜡嘴雀</td><td></td></tr>
+<tr class='highlight1'><td>Hawfinch</td><td><a href="species.jsp?avibaseid=84E1F1149261F19E"><i>Coccothraustes coccothraustes</i></a></td><td>锡嘴雀</td><td></td></tr>
+<tr class='highlight1'><td>Common Rosefinch</td><td><a href="species.jsp?avibaseid=3A713345F43AFFA6"><i>Carpodacus erythrinus</i></a></td><td>普通朱雀</td><td></td></tr>
+<tr class='highlight1'><td>Sinai Rosefinch</td><td><a href="species.jsp?avibaseid=8F36D66332487994"><i>Carpodacus synoicus</i></a></td><td>西奈淡色朱雀</td><td></td></tr>
+<tr class='highlight1'><td>Great Rosefinch</td><td><a href="species.jsp?avibaseid=7621E1A6BFDF4D92"><i>Carpodacus rubicilla</i></a></td><td>大朱雀</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Long-tailed Rosefinch</td><td><a href="species.jsp?avibaseid=463680BF69BE372A"><i>Carpodacus sibiricus</i></a></td><td>长尾雀</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Red-fronted Rosefinch</td><td><a href="species.jsp?avibaseid=261F5C1692C466C1"><i>Carpodacus puniceus</i></a></td><td>红胸朱雀</td><td></td></tr>
+<tr class='highlight1'><td>Eurasian Bullfinch</td><td><a href="species.jsp?avibaseid=24764DC7AD26E5F7"><i>Pyrrhula pyrrhula</i></a></td><td>红腹灰雀</td><td></td></tr>
+<tr class='highlight1'><td>Crimson-winged Finch</td><td><a href="species.jsp?avibaseid=B345F82B20482443"><i>Rhodopechys sanguineus</i></a></td><td>红翅沙雀</td><td></td></tr>
+<tr class='highlight1'><td>Trumpeter Finch</td><td><a href="species.jsp?avibaseid=8049F70788740F8F"><i>Bucanetes githagineus</i></a></td><td>沙雀</td><td></td></tr>
+<tr class='highlight1'><td>Mongolian Finch</td><td><a href="species.jsp?avibaseid=B8FE90ACDA36B34C"><i>Bucanetes mongolicus</i></a></td><td>蒙古沙雀</td><td></td></tr>
+<tr class='highlight1'><td>Desert Finch</td><td><a href="species.jsp?avibaseid=FA26991188EAE8EC"><i>Rhodospiza obsoleta</i></a></td><td>巨嘴沙雀</td><td></td></tr>
+<tr class='highlight1'><td>Arabian Grosbeak</td><td><a href="species.jsp?avibaseid=078921E845C1E9E9"><i>Rhynchostruthus percivali</i></a></td><td>阿拉伯金翅蜡嘴雀</td><td><font color=red>近危</font></td></tr>
+<tr class='highlight1'><td>Socotra Grosbeak</td><td><a href="species.jsp?avibaseid=BE193EC5917C3681"><i>Rhynchostruthus socotranus</i></a></td><td>金翅蜡嘴雀</td><td></td></tr>
+<tr class='highlight1'><td>European Greenfinch</td><td><a href="species.jsp?avibaseid=65BD2033E2A722C8"><i>Chloris chloris</i></a></td><td>欧金翅雀</td><td></td></tr>
+<tr class='highlight1'><td>Arabian Serin</td><td><a href="species.jsp?avibaseid=C121E62032EFFBAE"><i>Crithagra rothschildi</i></a></td><td>绿腰丝雀</td><td></td></tr>
+<tr class='highlight1'><td>Yemen Serin</td><td><a href="species.jsp?avibaseid=5C0BF88F7BD81EBF"><i>Crithagra menachensis</i></a></td><td>也门丝雀</td><td></td></tr>
+<tr class='highlight1'><td>Twite</td><td><a href="species.jsp?avibaseid=6CD4E38EB75CA3A0"><i>Linaria flavirostris</i></a></td><td>黄嘴朱顶雀</td><td></td></tr>
+<tr class='highlight1'><td>Eurasian Linnet</td><td><a href="species.jsp?avibaseid=32635892A4EB874F"><i>Linaria cannabina</i></a></td><td>赤胸朱顶雀</td><td></td></tr>
+<tr class='highlight1'><td>Yemen Linnet</td><td><a href="species.jsp?avibaseid=FFC7716203F9EA7A"><i>Linaria yemenensis</i></a></td><td>也门朱顶雀</td><td></td></tr>
+<tr class='highlight1'><td>Redpoll</td><td><a href="species.jsp?avibaseid=B6C8DDB2812B061A"><i>Acanthis flammea</i></a></td><td>白腰朱顶雀</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Red Crossbill</td><td><a href="species.jsp?avibaseid=135564AAF6B01DA2"><i>Loxia curvirostra</i></a></td><td>红交嘴雀</td><td></td></tr>
+<tr class='highlight1'><td>European Goldfinch</td><td><a href="species.jsp?avibaseid=59353A055941B20B"><i>Carduelis carduelis</i></a></td><td>红额金翅雀</td><td></td></tr>
+<tr class='highlight1'><td>Gray-crowned Goldfinch</td><td><a href="species.jsp?avibaseid=9BDBCD7F018CB026"><i>Carduelis caniceps</i></a></td><td>灰冠金翅雀</td><td></td></tr>
+<tr class='highlight1'><td>European Serin</td><td><a href="species.jsp?avibaseid=C3227709455B9AFF"><i>Serinus serinus</i></a></td><td>欧洲丝雀</td><td></td></tr>
+<tr class='highlight1'><td>Fire-fronted Serin</td><td><a href="species.jsp?avibaseid=FB1C44D5E600E5ED"><i>Serinus pusillus</i></a></td><td>金额丝雀</td><td></td></tr>
+<tr class='highlight1'><td>Syrian Serin</td><td><a href="species.jsp?avibaseid=95594E16AFA2F782"><i>Serinus syriacus</i></a></td><td>叙利亚丝雀</td><td><font color=red>易危</font></td></tr>
+<tr class='highlight1'><td>Eurasian Siskin</td><td><a href="species.jsp?avibaseid=9820CECA12EC737D"><i>Spinus spinus</i></a></td><td>黄雀</td><td></td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>PASSERIFORMES: Calcariidae </b></P></td></tr>
+<tr class='highlight1'><td>Lapland Longspur</td><td><a href="species.jsp?avibaseid=3534E4CEBACCB166"><i>Calcarius lapponicus</i></a></td><td>铁爪鹀</td><td></td></tr>
+<tr class='highlight1'><td>Snow Bunting</td><td><a href="species.jsp?avibaseid=9BEBC02505B416EE"><i>Plectrophenax nivalis</i></a></td><td>雪鹀</td><td>稀见/偶见 </td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>PASSERIFORMES: Emberizidae </b></P></td></tr>
+<tr class='highlight1'><td>Black-headed Bunting</td><td><a href="species.jsp?avibaseid=E2D2CB88A9D95E42"><i>Emberiza melanocephala</i></a></td><td>黑头鹀</td><td></td></tr>
+<tr class='highlight1'><td>Red-headed Bunting</td><td><a href="species.jsp?avibaseid=DBF8D184AA08A548"><i>Emberiza bruniceps</i></a></td><td>褐头鹀</td><td></td></tr>
+<tr class='highlight1'><td>Corn Bunting</td><td><a href="species.jsp?avibaseid=9A87EBB0B75C410B"><i>Emberiza calandra</i></a></td><td>黍鹀</td><td></td></tr>
+<tr class='highlight1'><td>Rock Bunting</td><td><a href="species.jsp?avibaseid=4836E64E80D5A372"><i>Emberiza cia</i></a></td><td>灰眉岩鹀</td><td></td></tr>
+<tr class='highlight1'><td>Cirl Bunting</td><td><a href="species.jsp?avibaseid=9AAB8C2174EFDF60"><i>Emberiza cirlus</i></a></td><td>黄道眉鹀</td><td></td></tr>
+<tr class='highlight1'><td>White-capped Bunting</td><td><a href="species.jsp?avibaseid=E272C456B471EBF1"><i>Emberiza stewarti</i></a></td><td>白顶鹀</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Yellowhammer</td><td><a href="species.jsp?avibaseid=56FB47C05CB7275F"><i>Emberiza citrinella</i></a></td><td>黄鹀</td><td></td></tr>
+<tr class='highlight1'><td>Pine Bunting</td><td><a href="species.jsp?avibaseid=43EF3EA79A531279"><i>Emberiza leucocephalos</i></a></td><td>白头鹀</td><td></td></tr>
+<tr class='highlight1'><td>Gray-necked Bunting</td><td><a href="species.jsp?avibaseid=CF70007E92F2A30B"><i>Emberiza buchanani</i></a></td><td>灰颈鹀</td><td></td></tr>
+<tr class='highlight1'><td>Cinereous Bunting</td><td><a href="species.jsp?avibaseid=7C5AC3003495A54C"><i>Emberiza cineracea</i></a></td><td>苍头鹀</td><td><font color=red>近危</font></td></tr>
+<tr class='highlight1'><td>Ortolan Bunting</td><td><a href="species.jsp?avibaseid=4721056132879EB7"><i>Emberiza hortulana</i></a></td><td>圃鹀</td><td></td></tr>
+<tr class='highlight1'><td>Cretzschmar's Bunting</td><td><a href="species.jsp?avibaseid=A7F3E6AE9A1929F9"><i>Emberiza caesia</i></a></td><td>蓝头圃鹀</td><td></td></tr>
+<tr class='highlight1'><td>Socotra Bunting</td><td><a href="species.jsp?avibaseid=3C33A7C5E9A55C88"><i>Emberiza socotrana</i></a></td><td>索岛鹀</td><td><font color=red>近危</font></td></tr>
+<tr class='highlight1'><td>Cinnamon-breasted Bunting</td><td><a href="species.jsp?avibaseid=0C571D9937B110C8"><i>Emberiza tahapisi</i></a></td><td>朱胸鹀</td><td></td></tr>
+<tr class='highlight1'><td>Striolated Bunting</td><td><a href="species.jsp?avibaseid=CDF4A1064841FF43"><i>Emberiza striolata</i></a></td><td>黑纹鹀</td><td></td></tr>
+<tr class='highlight1'><td>Reed Bunting</td><td><a href="species.jsp?avibaseid=C0B9787440316E20"><i>Emberiza schoeniclus</i></a></td><td>芦鹀</td><td></td></tr>
+<tr class='highlight1'><td>Yellow-breasted Bunting</td><td><a href="species.jsp?avibaseid=7574C0E53A34CCFD"><i>Emberiza aureola</i></a></td><td>黄胸鹀</td><td>稀见/偶见 <font color=red>极危</font></td></tr>
+<tr class='highlight1'><td>Little Bunting</td><td><a href="species.jsp?avibaseid=1866F80E52F4075F"><i>Emberiza pusilla</i></a></td><td>小鹀</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Rustic Bunting</td><td><a href="species.jsp?avibaseid=DA9746CEC82D30A3"><i>Emberiza rustica</i></a></td><td>田鹀</td><td>稀见/偶见 <font color=red>易危</font></td></tr>
+<tr class='highlight1'><td>Black-faced Bunting</td><td><a href="species.jsp?avibaseid=9787BE57A273F64A"><i>Emberiza spodocephala</i></a></td><td>灰头鹀</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Chestnut Bunting</td><td><a href="species.jsp?avibaseid=ACDCF3CC14945335"><i>Emberiza rutila</i></a></td><td>栗鹀</td><td>稀见/偶见 </td></tr>
+
+     </table>
+	 </div>
+
+
+</div>
+
+<P>&nbsp;</P>
+
+<script>
+   $(document).ready(function() {
+     $("#references").load("references_json.jsp", {"region": "mid", "synlang": "ZH", "lang": "ZH", "list": "clements"} );
+   });
+</script>
+
+<div style="font-weight: bold; font-size: 12pt">参考（部分列表）
+<div style="width: 100%; height: 1px; background-color: #000; margin-top: 0px;"></div>
+</div>
+
+<div id="references"></div>
+
+
+
+
+</div>
+	</div>
+
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="text-center" style="padding: 20px;">
+				<P>Avibase已被访问 <b>442,675,810</b> 自2003年6月24日以来. &copy; Denis Lepage |
+				<a href="privacy.jsp">隐私条款</a>
+				提供本页中文翻译的是</P>
+				<center><a target="_blank" href="https://www.birdingtop500.com/"><img id="birdingtop500" src="images/birdingtop500blank.png" border=0></a></center>
+			</div>			
+		</div>
+	</div>
+	
+</div>
+
+</body>
+</html>
+

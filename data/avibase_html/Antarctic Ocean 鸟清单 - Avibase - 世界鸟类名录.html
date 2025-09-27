@@ -1,0 +1,467 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<title>Antarctic Ocean 鸟清单 - Avibase - 世界鸟类名录</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="expires" content="0">
+<meta http-equiv="pragma" content="no-cache">
+<meta name="Description" content="Avibase是关于世界鸟类的详细数据库。它包含了关于约10,000种和22,000个亚种鸟类的超过一百万条记录，涵盖了分布信息、分类学信息、不同语言中的异名等。">
+<meta name="KeyWords" content="鸟，鸟，观鸟，观鸟者，观鸟者，观鸟，观鸟者，观鸟者，链接，鸟类链接，鸟类链接，鸟类学，鸟种记录，鸟种记录，世界，鸟类，鸟类，鸟纲，亚种，科，分类">
+<meta http-equiv="Content-Language" content="zh">
+
+
+
+<link rel="apple-touch-icon" sizes="76x76" href="images/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+<link rel="mask-icon" href="images/safari-pinned-tab.svg" color="#5bbad5">
+
+<link rel="stylesheet" href="css/bootstrap.min.4.2.1.css">
+<!-- link rel="stylesheet" href="css/bootstrap-select.css" -->
+<link rel="stylesheet" href="css/avibase.css?v=20220326">
+<link rel="stylesheet" href="css/fontawesome.all.5.6.3.css">
+<link rel="stylesheet" href="css/jquery.alerts.css" media="screen" />
+<link rel="stylesheet" href="css/jquery-ui.min.1.12.1.css" type="text/css" media="screen" charset="utf-8" />
+<link rel="search" type="application/opensearchdescription+xml" title="Avibase" href="opensearchplugin.xml">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WXPFW3Y1F5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-WXPFW3Y1F5');
+</script>
+
+<script src="scripts/jquery.min.3.3.1.js"></script>
+<!-- script src="scripts/popper.min.1.14.6.js"></script -->
+<script src="scripts/bootstrap.min.4.2.1.js"></script> 
+<!-- script src="scripts/bootstrap-select.js"></script --> 
+<script src="scripts/avibase_script.jsp"></script> 
+<script src="scripts/jquery.json-2.4.min.js"></script>
+<script src="scripts/jquery-ui.1.12.1.min.js"></script>
+<script src="scripts/jquery.alerts.js"></script>
+<script src="scripts/bscutil.js"></script>
+
+</head>
+<body>
+
+<div class="container-fluid">
+	<div class="row banner">
+	<div class="col-lg-7">
+		<div style="padding: 0.3em;">
+			<img src="images/fairywren_133.png" height="92px" width="133px" style="float: left;" />
+			<span class="banner-title">Avibase -</span> <span class="banner-subtitle">世界鸟类数据库</span>
+			<div style="font-size: 0.45em; color: #ffffd0;">鸟种记录 - 分类 - 分布 - 地图 - 链接</div>
+		</div>
+
+	</div>
+	<div class="col-lg-5 d-none d-xl-block">
+		<div class="float-right"><img src="images/banner_img1.jpg"></div>
+	</div>
+	</div>
+
+	<div class="row avbmenu">
+    <div class="col-12">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="avibase.jsp" alt="Main page">
+                <i class="fas fa-home" title="Main page"></i>
+              </a>
+            </li>
+            
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle dropdown-toggle-no-show" href="" id="navbarDropdown" role="button" data-toggle='dropdown' aria-haspopup="true" aria-expanded="false">
+                      Avibase
+                    </a>
+                    
+                      <div class="dropdown-menu dropdown-menu-left" aria-labelledby="navbarDropdown" style="border-top:3px solid #2F8894;">
+
+						<a class="dropdown-item" href="avibase.jsp">Avibase回家</a>
+						<a class="dropdown-item" href="about.jsp">关于 Avibase</a>
+						<a class="dropdown-item" rel="me" href="https://birds.town/@avibase">Mastodon</a>
+						<a class="dropdown-item" href="webcams.jsp">Birding网络摄像头</a>
+						<a class="dropdown-item" href="compare.jsp">比较分类法</a>
+						<a class="dropdown-item" target="_blank" href="https://flickr.com/groups/avibase/">Avibase Flickr集团</a> 
+						<a class="dropdown-item" href="botd.jsp">鸟类档案</a> 
+						<a class="dropdown-item" href="peterschecklist.jsp">彼得的清单数据库</a>
+						<a class="dropdown-item" href="citations.jsp">Avibase引用</a>
+						<a class="dropdown-item" href="/links/links.jsp">Birdlinks</a>
+						<a class="dropdown-item" href="/links/links.jsp?page=g_reports">旅行报告</a>
+                      
+                      </div>
+				  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle dropdown-toggle-no-show" href="" id="navbarDropdown" role="button" data-toggle='dropdown' aria-haspopup="true" aria-expanded="false">
+                      myAvibase
+                    </a>
+                    
+                      <div class="dropdown-menu dropdown-menu-left" aria-labelledby="navbarDropdown" style="border-top:3px solid #2F8894;">
+						   <div class="small" style="color: #fff; padding: 4px !important;">MyAvibase允许您创建和管理您的个人鸟种记录，并为您的下一次观鸟旅行提供有用的报告。</div>
+						   <a class="dropdown-item" href="myavibase.jsp">myAvibase主页</a>
+						   <a class="dropdown-item" href="myavb_lists.jsp">管理个人鸟种记录</a>
+						   <a class="dropdown-item" href="myavb_observ.jsp">管理观鸟记录</a>
+						   <a class="dropdown-item" href="myavb_reports.jsp">myAvibase报告</a>
+                      </div>
+				  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle dropdown-toggle-no-show" href="" id="navbarDropdown" role="button" data-toggle='dropdown' aria-haspopup="true" aria-expanded="false">
+						名录
+                    </a>
+		
+                      <div class="dropdown-menu dropdown-menu-left" aria-labelledby="navbarDropdown" style="border-top:3px solid #2F8894;">
+					  
+							<div class="small" style="color: #fff; padding: 4px !important;">Avibase中包含了超过20,000个地区名录，并以9种分类系统展示，包括超过175种语言的异名。每个名录都可以显示观鸟者分享的图片，并可以以PDF格式打印用于野外观察。</div>
+					  
+							<a class="dropdown-item" href="checklist.jsp?lang=ZH">Avibase名录</a>
+							<a class="dropdown-item" href="compare_regions.jsp?lang=ZH">比较地区</a>
+                      </div>
+				  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle dropdown-toggle-no-show" href="" id="navbarDropdown" role="button" data-toggle='dropdown' aria-haspopup="true" aria-expanded="false">
+                      搜索
+                    </a>
+                    
+                      <div class="dropdown-menu dropdown-menu-left" aria-labelledby="navbarDropdown" style="border-top:3px solid #2F8894;">
+						   <a class="dropdown-item" href="search.jsp?lang=ZH&isadv=yes">Avibase搜索</a>
+						   <a class="dropdown-item" href="search.jsp?lang=ZH&pg=families">按科浏览</a>
+						   <a class="dropdown-item" href="authors.jsp?lang=ZH">按作者浏览 </a>
+						   <a class="dropdown-item" href="publications.jsp?lang=ZH">按出版物浏览 </a>
+						   <a class="dropdown-item" href="familytree.jsp?lang=ZH">Avibase 分类概念</a>
+                      </div>
+				  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle dropdown-toggle-no-show" href="" id="navbarDropdown" role="button" data-toggle='dropdown' aria-haspopup="true" aria-expanded="false">
+                      贡献
+                    </a>
+                    
+                      <div class="dropdown-menu dropdown-menu-left" aria-labelledby="navbarDropdown" style="border-top:3px solid #2F8894;">
+						   <div class="small" style="color: #fff; padding: 4px !important;">您可以通过以下几种方式帮助本页面的开发，如加入拍摄照片的Flickr群组或为本站提供其它语言的翻译。</div>
+						   <a class="dropdown-item" href="contrib.jsp?lang=ZH">为Avibase提供帮助</a>
+						   <a class="dropdown-item" href="contrib.jsp?lang=ZH">致谢</a>
+						   <a class="dropdown-item" target="_blank" href="https://flickr.com/groups/avibase/">Flickr群组</a> 
+						   <a class="dropdown-item" href="flickr_stats.jsp?lang=ZH">媒体统计</a>
+						   <a class="dropdown-item" href="flickr_stats.jsp?action=flickr&lang=ZH">Flickr群组成员</a>
+						   <a class="dropdown-item" href="flickr_stats.jsp?action=missing&lang=ZH">所需媒体</a>
+						   <a class="dropdown-item" href="translate.jsp?lang=ZH">提供更好的翻译</a>
+                      </div>
+				  </li>
+				  
+        
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle dropdown-toggle-no-show" href="" id="navbarDropdown" role="button" data-toggle='dropdown' aria-haspopup="true" aria-expanded="false">
+					  漢語
+					</a>
+
+					<div class="dropdown-menu dropdown-menu-left" aria-labelledby="navbarDropdown" style="border-top:3px solid #2F8894;">
+						<a class="dropdown-item" href="languages.jsp">更改语言</a>
+					</div>
+				</li>
+
+				  
+          </ul>
+        </div>
+        
+          <ul class="navbar-nav float-right">
+			<li class="nav-item active" id="signup">
+              <a class="nav-link" href="myavb_signup.jsp" id="signuplnk">报名</a>
+            </li>
+		  </ul>
+          <ul class="navbar-nav float-right">
+            <li class="nav-item active" id="credlogout">
+              <a class="nav-link" href="javascript:void(0)" id="logoutlnk">注销</a>
+            </li>
+		  </ul>
+          <ul class="navbar-nav float-right">
+            <li class="nav-item active" id="credlogin">
+              <a class="nav-link" href="javascript:void(0)" id="modalLogin2">登入</a>
+            </li>
+		  </ul>
+          <ul class="navbar-nav float-right">
+            <li class="nav-item active d-none d-xl-block">
+				<form action="search.jsp" name='avbsmall'>
+				<input id="searchboxsm" placeholder="搜索avibase" name="qstr" type="text" style="width: 150px;" class="form-control">
+				</form>
+            </li>
+          </ul>
+		
+      </nav>
+    </div>
+	</div>
+
+	<div id="loginbox" title="登录myAvibase" style="display: none;">
+		<span id="loginmsg" style="color: #939300; font-weight: bold;"></span>
+		<p>您的登录:<br>
+		<input type="text" class="form-control" size="40" id="loginname" name="loginname" value=""/>
+		<br />
+		密码:<br>
+		<input type="password" class="form-control" size="40" id="password" name="password"  value=""/>
+		</p>
+		<input type="checkbox" id="remember" checked> 保持登录
+	</div>
+
+	<div id="reminderbox" title="请求提醒" style="display: none;">
+		<span id="remindermsg" style="color: #939300; font-weight: bold;"></span>
+		<p>输入您的用户名或电子邮箱地址并按发送提醒，即可收到电子邮件提醒</p>
+		<input type="text" size="50" id="loginreminder" name="loginreminder" value=""/>
+		<br />
+	</div>
+
+	<div id="credentials" class="row">
+		<div class="col-lg-12 text-right">
+			欢迎 <span id="fullname">游客</span>
+		</div>
+	</div>
+	
+	<div class="row main-body">
+
+<div class="col-lg-12">
+
+<script type="text/javascript" src="scripts/jplayer_script.js"></script>
+<link rel="stylesheet" href="css/jplayer.css" />
+<link rel="stylesheet" href="css/checklist.css">
+ 
+
+<style>
+.highlight1 {background-color: #ffffff;}
+.highlight2 {background-color: #ffffff;}
+</style>
+
+<div class="row" style="text-align: center; margin-bottom: 30px;">
+<div class="col-lg-3">
+	<a target="_blank" href="https://www.birdscanada.org/"><img src="images/BirdsCan_SQ.png" title=" Avibase的服务器提供者为 Birds Canada - Oiseaux Canada" border=0
+		alt="Hosted by Birds Canada - Oiseaux Canada" style="width: 180px; padding: 20px;"></a>
+</div>
+<div class="col-lg-6">
+	<h2 align="center">Avibase - 世界鸟类名录</h2>
+	<h3 style="color: red;">Antarctic Ocean</h3>
+</div>
+<div class="col-lg-3">
+	<a target="_blank" href="https://www.birdlife.org/"><img src="images/birdlife2013.png" border=0 alt="Birdlife Logo" title="Birdlife International"></a>
+</div>
+</div>
+
+
+     <P>该名录包含发现于以下地区的全部鸟种 <b>Antarctic Ocean</b> 基于目前所知的全部信息. 这些信息是我多年来从各种不同渠道收集来的，我很荣幸的向观鸟者提供这一名录。如果您发现任何错误，欢迎您随时 <script language=javascript>var linktext = "指正。";var e1 = "dlepage";var e2 = "bsc-eoc.org";document.write("<a hr" + "ef=" + "ma" + "il"+ "to:" + e1 + "@" + e2 + ">" + linktext + "</" + "a>")</script>.
+     <P>分类学习惯和术语依据 <b>Clements, version 2024</b>. 如果您希望查看该鸟种记录在其他分类系统下的结果，请点击下面列表中所示的项目。全球受威胁物种（以红色标记）由国际鸟盟提供。 <a target="_blank" href="https://datazone.birdlife.org/species/search">Birdlife Data Zone (species)</a>.
+     <P>世界鸟类名录是Avibase与世界鸟类链接的一部分。该名录是由Denis Lepage设计并维护的，并由国际鸟盟的合作伙伴加拿大鸟类研究提供服务器。
+     <P>&copy; Denis Lepage 2025
+     <P><a href="checklist.jsp?region=index&lang=ZH&list=clements">返回世界鸟类名录</a>
+     <BR><a target="_top" href="/links/links.jsp?&lang=ZH">返回世界鸟类链接</a>
+
+
+
+
+
+
+
+<script>
+
+$( document ).ready( function() {
+   $( "input[name='highlight']" ).bind( "click", changeHighlight );
+   $("#mapextent").on("click", function() {
+      window.open('mapextent.jsp?region=oaq', 'mapextent', 'menubar=yes;').focus();
+   });
+	$(".AVBlistnavbutton").on("click", function() {
+		$("#chkversion").val($(this).data("version"));
+		sendForm();
+	});
+
+});
+
+function sendForm() {
+     var v = $("#chkversion").val();
+     if ($('#ckregion').val() == '') return;
+     if ($('#cklist').val() == '') return;
+
+     if (v.substring(0,3) == "pdf")
+       $("#ckoptions").attr("action", "checklistpdf.jsp");
+     else
+       $("#ckoptions").attr("action", "checklist.jsp");
+
+     $("#ckoptions").submit();
+}
+
+function changeHighlight() {
+   var t = $("input:radio[name='highlight']:checked").val();
+   $(".highlight1").css('background-color',(t == 1?'#ffffc9':'#ffffff'));
+   $(".highlight2").css('background-color',(t == 2?'#ffffc9':'#ffffff'));
+}
+
+function changePage(p2) {
+   $("#p2").val(p2);
+   $("#ckoptions").submit();
+}
+
+
+</script>
+
+<form action="checklist.jsp" id="ckoptions" method="get">
+<input type="hidden" name="lang" value="ZH">
+<input type="hidden" name="p2" id="p2" value="1">
+
+<div style="background-color: #EEE;">
+
+    <p><b>更改显示选项:</b></p>
+	<div class="row">
+		<label for="cklist" class="col-lg-2 control-label">选择另一分类系统:</label>
+		<div class="col-lg-10"><select id="cklist" name="list" class="form-control"><option value="avibase" >Avibase taxonomic concepts (current)</option><option value="avilist" >Avilist 2025</option><option value="birdlife" >HBW and BirdLife Taxonomic Checklist v9 (Oct 2024)</option><option value="clements" selected>Clements, version 2024</option><option value="clements5" >Clements 5th edition (incl. 2005 revisions)</option><option value="ebird" >eBird version 2024</option><option value="hbw" >Handbook of the Birds of the World and Birdlife (Dec 2018)</option><option value="howardmoore" >Howard and Moore 4th edition (incl. corrigenda vol.1-2)</option><option value="ioc" >IOC World Bird Names, version 15.1</option><option value="sibleymonroe" >Sibley and Monroe, Birds of the World Version 2.0</option>
+   </select></div>
+	</div>
+
+	<div class="row">
+		<label for="cksynlang" class="col-lg-2 control-label">选择另一个第二语言:</label>
+		<div class="col-lg-10"><select id="cksynlang" name="synlang" class="form-control">
+		<option value="" >无异名</option>
+<option value="ZHTR" > Chinese (Traditional)</option><option value="PTPT" > Portuguese (Portugal)</option><option value="ESES" > Spanish (Spain)</option><option value="DA" > 丹麦语</option><option value="UK" > 乌克兰语</option><option value="RU" > 俄语</option><option value="HR" > 克罗地亚语</option><option value="IS" > 冰岛语</option><option value="CA" > 加泰罗尼亚语</option><option value="HU" > 匈牙利语</option><option value="SR" > 塞尔维亚语</option><option value="PTBR" > 巴西葡萄牙文</option><option value="DE" > 德语</option><option value="IT" > 意大利语</option><option value="NN" > 挪威文（Nynorsk）</option><option value="NO" > 挪威语</option><option value="CS" > 捷克语</option><option value="SK" > 斯洛伐克语</option><option value="JP" > 日语</option><option value="FR" > 法语</option><option value="PL" > 波兰语</option><option value="ZH" selected> 漢語</option><option value="SV" > 瑞典语</option><option value="LT" > 立陶宛语</option><option value="FI" > 芬兰语</option><option value="NL" > 荷兰语</option><option value="PT" > 葡萄牙语</option><option value="ES" > 西班牙语</option>
+
+ </select></div>
+	 </div>
+
+
+		<input type="hidden" name="region" value="oaq">
+
+
+<input type="hidden" id="chkversion" name="version" value="text">
+<input type="hidden" id="formtype" value="checklist">
+
+<div id="isloggedin" style="display: none">
+	  	<div class="row">
+		<label for="lifelist" class="col-lg-2 control-label">显示个人鸟种记录的更多信息:</label>
+		<div class="col-lg-10"><select id="lifelist" name="lifelist" class="form-control" data-lifelist="">
+			<option value=""> 没有选中 </option>
+		</select></div>
+		</div>
+<p><input type="radio" name="highlight" value="0" checked> 无高亮标记
+<input type="radio" name="highlight" value="1" > 高亮标记目标种
+<input type="radio" name="highlight" value="2" > 高亮标记已经见过的种</p>
+</div>
+
+<div id="notloggedin">您必须<a href="javascript:login()">登录</a>才能看到您的详细鸟种记录。<a href="myavibase.jsp">点击此处</a>注册<b>myAvibase</b> 。</div>
+
+<p align="center"><input type="button" value="刷新名录" class="btn btn-primary" onClick="sendForm()"></p>
+
+     </div>
+
+</form>
+
+<div style="background-color: #EEE;">
+
+	<p><b>收听来自<a target="_blank" href="https://xeno-canto.org"> Xeno-Canto </a>的针对该地区的随机鸟类歌曲：</b>
+	<input type="hidden" class="btn btn-primary" id="audiopreloadreg" value="oaq" data-num="4">
+	<input type="button" class="btn btn-primary" id="audioloop4" data-region="oaq" data-play="开始" data-next="下一个" value="开始" style="font-size: 9pt">
+	<input type="button" class="btn btn-primary stoprecording" id="stop4" value="停止" style="font-size: 9pt">
+	<input type="checkbox" id="exclrare4"> <label for="exclrare4"> 排除稀有物种 </label>
+	<input type="checkbox" id="limitreg4"> <label for="limitreg4"> 限制在该地区进行录制 </label>
+	</p>
+	<p>录音没有自动开始？ 尝试在浏览器中启用自动播放功能，或点击下面的播放按钮。</p>
+	
+	<div id="sndmetadata4" style="font-size: 9pt"></div>
+	<div id="sndspeciesname4" style="font-size: 9pt"></div>
+
+	<audio controls id="audioPlayer4" preload="none">
+		<source src="downloads/blank.mp3" id="audioSource4" type="audio/mpeg">
+		您的浏览器不支持音频元素。
+	</audio> 
+
+</div>
+
+<div>
+
+<div class="AVBlist AVBlisthead">
+     <p><b>国家或地区： Antarctic Ocean</b>  [<a href="javascript:void(0)" id="mapextent">地图</a>]</p>
+     
+     
+     
+     
+	<div>
+种数: 7<br>全球受威胁种数量: 1<br>上一次更改: 2024-12-25<br>
+	</div>
+</div>
+
+ <div class="AVBlistnav">
+  <div data-version="text" class="AVBlistnavbutton AVBlistsel">仅文本</div>
+  <div data-version="images" class="AVBlistnavbutton ">照片和声音</div>
+  <div data-version="pdf" class="AVBlistnavbutton ">PDF（宽）</div>
+  <div data-version="pdf2" class="AVBlistnavbutton ">PDF（紧凑）</div>
+  <div data-version="recent" class="AVBlistnavbutton ">最近的补充</div>
+  <div data-version="hypoth" class="AVBlistnavbutton ">假想</div>
+</div> 
+
+
+<div class="table-responsive">
+<table class="table">
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>CHARADRIIFORMES: Stercorariidae </b></P></td></tr>
+<tr class='highlight1'><td>Brown Skua</td><td><a href="species.jsp?avibaseid=4D5D2BC3F80BD645"><i>Stercorarius antarcticus</i></a></td><td>大贼鸥</td><td></td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>SPHENISCIFORMES: Spheniscidae </b></P></td></tr>
+<tr class='highlight1'><td>Chinstrap Penguin</td><td><a href="species.jsp?avibaseid=75B943A302F2CC67"><i>Pygoscelis antarcticus</i></a></td><td>纹颊企鹅</td><td></td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>PROCELLARIIFORMES: Procellariidae </b></P></td></tr>
+<tr class='highlight1'><td>Antarctic Petrel</td><td><a href="species.jsp?avibaseid=535186178E86447B"><i>Thalassoica antarctica</i></a></td><td>南极鹱</td><td></td></tr>
+<tr class='highlight1'><td>Pintado Petrel</td><td><a href="species.jsp?avibaseid=AAC2D6136C46A743"><i>Daption capense</i></a></td><td>花斑鹱</td><td></td></tr>
+<tr class='highlight1'><td>Westland Petrel</td><td><a href="species.jsp?avibaseid=9057992B4DEB406A"><i>Procellaria westlandica</i></a></td><td>大黑风鹱</td><td><font color=red>濒危</font></td></tr>
+<tr class='highlight1'><td>South Georgia Diving-Petrel</td><td><a href="species.jsp?avibaseid=1838EC86AC1F328C"><i>Pelecanoides georgicus</i></a></td><td>南乔治亚鹈燕</td><td></td></tr>
+<tr class='highlight1'><td>Magellanic Diving-Petrel</td><td><a href="species.jsp?avibaseid=C849C7144BC8F30D"><i>Pelecanoides magellani</i></a></td><td>麦哲伦鹈燕</td><td></td></tr>
+
+     </table>
+	 </div>
+
+
+</div>
+
+<P>&nbsp;</P>
+
+<script>
+   $(document).ready(function() {
+     $("#references").load("references_json.jsp", {"region": "oaq", "synlang": "ZH", "lang": "ZH", "list": "clements"} );
+   });
+</script>
+
+<div style="font-weight: bold; font-size: 12pt">参考（部分列表）
+<div style="width: 100%; height: 1px; background-color: #000; margin-top: 0px;"></div>
+</div>
+
+<div id="references"></div>
+
+
+
+
+</div>
+	</div>
+
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="text-center" style="padding: 20px;">
+				<P>Avibase已被访问 <b>442,676,119</b> 自2003年6月24日以来. &copy; Denis Lepage |
+				<a href="privacy.jsp">隐私条款</a>
+				提供本页中文翻译的是</P>
+				<center><a target="_blank" href="https://www.birdingtop500.com/"><img id="birdingtop500" src="images/birdingtop500blank.png" border=0></a></center>
+			</div>			
+		</div>
+	</div>
+	
+</div>
+
+</body>
+</html>
+

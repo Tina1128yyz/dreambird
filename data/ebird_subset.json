@@ -1,0 +1,802 @@
+[
+  {
+    "comName": "Common Ostrich",
+    "sciName": "Struthio camelus"
+  },
+  {
+    "comName": "Somali Ostrich",
+    "sciName": "Struthio molybdophanes"
+  },
+  {
+    "comName": "Common/Somali Ostrich",
+    "sciName": "Struthio camelus/molybdophanes"
+  },
+  {
+    "comName": "Southern Cassowary",
+    "sciName": "Casuarius casuarius"
+  },
+  {
+    "comName": "Dwarf Cassowary",
+    "sciName": "Casuarius bennetti"
+  },
+  {
+    "comName": "Northern Cassowary",
+    "sciName": "Casuarius unappendiculatus"
+  },
+  {
+    "comName": "Emu",
+    "sciName": "Dromaius novaehollandiae"
+  },
+  {
+    "comName": "Southern Brown Kiwi",
+    "sciName": "Apteryx australis"
+  },
+  {
+    "comName": "Southern Brown Kiwi (South I.)",
+    "sciName": "Apteryx australis australis"
+  },
+  {
+    "comName": "Southern Brown Kiwi (Stewart I.)",
+    "sciName": "Apteryx australis lawryi"
+  },
+  {
+    "comName": "Okarito Brown Kiwi",
+    "sciName": "Apteryx rowi"
+  },
+  {
+    "comName": "North Island Brown Kiwi",
+    "sciName": "Apteryx mantelli"
+  },
+  {
+    "comName": "Little Spotted Kiwi",
+    "sciName": "Apteryx owenii"
+  },
+  {
+    "comName": "Okarito Brown x Little Spotted Kiwi (hybrid)",
+    "sciName": "Apteryx rowi x owenii"
+  },
+  {
+    "comName": "Great Spotted Kiwi",
+    "sciName": "Apteryx maxima"
+  },
+  {
+    "comName": "kiwi sp.",
+    "sciName": "Apteryx sp."
+  },
+  {
+    "comName": "Greater Rhea",
+    "sciName": "Rhea americana"
+  },
+  {
+    "comName": "Lesser Rhea",
+    "sciName": "Rhea pennata"
+  },
+  {
+    "comName": "Lesser Rhea (Puna)",
+    "sciName": "Rhea pennata tarapacensis/garleppi"
+  },
+  {
+    "comName": "Lesser Rhea (Darwin's)",
+    "sciName": "Rhea pennata pennata"
+  },
+  {
+    "comName": "Tawny-breasted Tinamou",
+    "sciName": "Nothocercus julius"
+  },
+  {
+    "comName": "Highland Tinamou",
+    "sciName": "Nothocercus bonapartei"
+  },
+  {
+    "comName": "Highland Tinamou (South American)",
+    "sciName": "Nothocercus bonapartei [bonapartei Group]"
+  },
+  {
+    "comName": "Highland Tinamou (Costa Rican)",
+    "sciName": "Nothocercus bonapartei frantzii"
+  },
+  {
+    "comName": "Hooded Tinamou",
+    "sciName": "Nothocercus nigrocapillus"
+  },
+  {
+    "comName": "Gray Tinamou",
+    "sciName": "Tinamus tao"
+  },
+  {
+    "comName": "Solitary Tinamou",
+    "sciName": "Tinamus solitarius"
+  },
+  {
+    "comName": "Black Tinamou",
+    "sciName": "Tinamus osgoodi"
+  },
+  {
+    "comName": "Great Tinamou",
+    "sciName": "Tinamus major"
+  },
+  {
+    "comName": "White-throated Tinamou",
+    "sciName": "Tinamus guttatus"
+  },
+  {
+    "comName": "Tinamus sp.",
+    "sciName": "Tinamus sp."
+  },
+  {
+    "comName": "Cinereous Tinamou",
+    "sciName": "Crypturellus cinereus"
+  },
+  {
+    "comName": "Berlepsch's Tinamou",
+    "sciName": "Crypturellus berlepschi"
+  },
+  {
+    "comName": "Little Tinamou",
+    "sciName": "Crypturellus soui"
+  },
+  {
+    "comName": "Tepui Tinamou",
+    "sciName": "Crypturellus ptaritepui"
+  },
+  {
+    "comName": "Brown Tinamou",
+    "sciName": "Crypturellus obsoletus"
+  },
+  {
+    "comName": "Brown Tinamou (castaneus)",
+    "sciName": "Crypturellus obsoletus castaneus"
+  },
+  {
+    "comName": "Brown Tinamou (Brown)",
+    "sciName": "Crypturellus obsoletus [obsoletus Group]"
+  },
+  {
+    "comName": "Undulated Tinamou",
+    "sciName": "Crypturellus undulatus"
+  },
+  {
+    "comName": "Pale-browed Tinamou",
+    "sciName": "Crypturellus transfasciatus"
+  },
+  {
+    "comName": "Brazilian Tinamou",
+    "sciName": "Crypturellus strigulosus"
+  },
+  {
+    "comName": "Gray-legged Tinamou",
+    "sciName": "Crypturellus duidae"
+  },
+  {
+    "comName": "Red-legged Tinamou",
+    "sciName": "Crypturellus erythropus"
+  },
+  {
+    "comName": "Yellow-legged Tinamou",
+    "sciName": "Crypturellus noctivagus"
+  },
+  {
+    "comName": "Yellow-legged Tinamou (zabele)",
+    "sciName": "Crypturellus noctivagus zabele"
+  },
+  {
+    "comName": "Yellow-legged Tinamou (noctivagus)",
+    "sciName": "Crypturellus noctivagus noctivagus"
+  },
+  {
+    "comName": "Black-capped Tinamou",
+    "sciName": "Crypturellus atrocapillus"
+  },
+  {
+    "comName": "Slaty-breasted Tinamou",
+    "sciName": "Crypturellus boucardi"
+  },
+  {
+    "comName": "Choco Tinamou",
+    "sciName": "Crypturellus kerriae"
+  },
+  {
+    "comName": "Variegated Tinamou",
+    "sciName": "Crypturellus variegatus"
+  },
+  {
+    "comName": "Thicket Tinamou",
+    "sciName": "Crypturellus cinnamomeus"
+  },
+  {
+    "comName": "Thicket Tinamou (occidentalis)",
+    "sciName": "Crypturellus cinnamomeus occidentalis"
+  },
+  {
+    "comName": "Thicket Tinamou (cinnamomeus Group)",
+    "sciName": "Crypturellus cinnamomeus [cinnamomeus Group]"
+  },
+  {
+    "comName": "Rusty Tinamou",
+    "sciName": "Crypturellus brevirostris"
+  },
+  {
+    "comName": "Bartlett's Tinamou",
+    "sciName": "Crypturellus bartletti"
+  },
+  {
+    "comName": "Small-billed Tinamou",
+    "sciName": "Crypturellus parvirostris"
+  },
+  {
+    "comName": "Barred Tinamou",
+    "sciName": "Crypturellus casiquiare"
+  },
+  {
+    "comName": "Tataupa Tinamou",
+    "sciName": "Crypturellus tataupa"
+  },
+  {
+    "comName": "Crypturellus sp.",
+    "sciName": "Crypturellus sp."
+  },
+  {
+    "comName": "Red-winged Tinamou",
+    "sciName": "Rhynchotus rufescens"
+  },
+  {
+    "comName": "Huayco Tinamou",
+    "sciName": "Rhynchotus maculicollis"
+  },
+  {
+    "comName": "Taczanowski's Tinamou",
+    "sciName": "Nothoprocta taczanowskii"
+  },
+  {
+    "comName": "Ornate Tinamou",
+    "sciName": "Nothoprocta ornata"
+  },
+  {
+    "comName": "Chilean Tinamou",
+    "sciName": "Nothoprocta perdicaria"
+  },
+  {
+    "comName": "Brushland Tinamou",
+    "sciName": "Nothoprocta cinerascens"
+  },
+  {
+    "comName": "Andean Tinamou",
+    "sciName": "Nothoprocta pentlandii"
+  },
+  {
+    "comName": "Curve-billed Tinamou",
+    "sciName": "Nothoprocta curvirostris"
+  },
+  {
+    "comName": "Nothoprocta sp.",
+    "sciName": "Nothoprocta sp."
+  },
+  {
+    "comName": "White-bellied Nothura",
+    "sciName": "Nothura boraquira"
+  },
+  {
+    "comName": "Lesser Nothura",
+    "sciName": "Nothura minor"
+  },
+  {
+    "comName": "Darwin's Nothura",
+    "sciName": "Nothura darwinii"
+  },
+  {
+    "comName": "Spotted Nothura",
+    "sciName": "Nothura maculosa"
+  },
+  {
+    "comName": "White-bellied/Spotted Nothura",
+    "sciName": "Nothura boraquira/maculosa"
+  },
+  {
+    "comName": "Lesser/Spotted Nothura",
+    "sciName": "Nothura minor/maculosa"
+  },
+  {
+    "comName": "Dwarf Tinamou",
+    "sciName": "Taoniscus nanus"
+  },
+  {
+    "comName": "Elegant Crested-Tinamou",
+    "sciName": "Eudromia elegans"
+  },
+  {
+    "comName": "Quebracho Crested-Tinamou",
+    "sciName": "Eudromia formosa"
+  },
+  {
+    "comName": "Puna Tinamou",
+    "sciName": "Tinamotis pentlandii"
+  },
+  {
+    "comName": "Patagonian Tinamou",
+    "sciName": "Tinamotis ingoufi"
+  },
+  {
+    "comName": "tinamou sp.",
+    "sciName": "Tinamidae sp."
+  },
+  {
+    "comName": "Horned Screamer",
+    "sciName": "Anhima cornuta"
+  },
+  {
+    "comName": "Southern Screamer",
+    "sciName": "Chauna torquata"
+  },
+  {
+    "comName": "Northern Screamer",
+    "sciName": "Chauna chavaria"
+  },
+  {
+    "comName": "Magpie Goose",
+    "sciName": "Anseranas semipalmata"
+  },
+  {
+    "comName": "Spotted Whistling-Duck",
+    "sciName": "Dendrocygna guttata"
+  },
+  {
+    "comName": "Plumed Whistling-Duck",
+    "sciName": "Dendrocygna eytoni"
+  },
+  {
+    "comName": "White-faced Whistling-Duck",
+    "sciName": "Dendrocygna viduata"
+  },
+  {
+    "comName": "Spotted x White-faced Whistling-Duck (hybrid)",
+    "sciName": "Dendrocygna guttata x viduata"
+  },
+  {
+    "comName": "Black-bellied Whistling-Duck",
+    "sciName": "Dendrocygna autumnalis"
+  },
+  {
+    "comName": "Black-bellied Whistling-Duck (fulgens)",
+    "sciName": "Dendrocygna autumnalis fulgens"
+  },
+  {
+    "comName": "Black-bellied Whistling-Duck (autumnalis)",
+    "sciName": "Dendrocygna autumnalis autumnalis"
+  },
+  {
+    "comName": "White-faced x Black-bellied Whistling-Duck (hybrid)",
+    "sciName": "Dendrocygna viduata x autumnalis"
+  },
+  {
+    "comName": "West Indian Whistling-Duck",
+    "sciName": "Dendrocygna arborea"
+  },
+  {
+    "comName": "Black-bellied x West Indian Whistling-Duck (hybrid)",
+    "sciName": "Dendrocygna autumnalis x arborea"
+  },
+  {
+    "comName": "Fulvous Whistling-Duck",
+    "sciName": "Dendrocygna bicolor"
+  },
+  {
+    "comName": "White-faced x Fulvous Whistling-Duck (hybrid)",
+    "sciName": "Dendrocygna viduata x bicolor"
+  },
+  {
+    "comName": "Black-bellied x Fulvous Whistling-Duck (hybrid)",
+    "sciName": "Dendrocygna autumnalis x bicolor"
+  },
+  {
+    "comName": "Wandering Whistling-Duck",
+    "sciName": "Dendrocygna arcuata"
+  },
+  {
+    "comName": "Plumed x Wandering Whistling-Duck (hybrid)",
+    "sciName": "Dendrocygna eytoni x arcuata"
+  },
+  {
+    "comName": "Plumed/Wandering Whistling-Duck",
+    "sciName": "Dendrocygna eytoni/arcuata"
+  },
+  {
+    "comName": "Lesser Whistling-Duck",
+    "sciName": "Dendrocygna javanica"
+  },
+  {
+    "comName": "Fulvous/Lesser Whistling-Duck",
+    "sciName": "Dendrocygna bicolor/javanica"
+  },
+  {
+    "comName": "Wandering x Lesser Whistling-Duck (hybrid)",
+    "sciName": "Dendrocygna arcuata x javanica"
+  },
+  {
+    "comName": "whistling-duck sp.",
+    "sciName": "Dendrocygna sp."
+  },
+  {
+    "comName": "White-backed Duck",
+    "sciName": "Thalassornis leuconotus"
+  },
+  {
+    "comName": "Bar-headed Goose",
+    "sciName": "Anser indicus"
+  },
+  {
+    "comName": "Emperor Goose",
+    "sciName": "Anser canagicus"
+  },
+  {
+    "comName": "Snow Goose",
+    "sciName": "Anser caerulescens"
+  },
+  {
+    "comName": "Bar-headed x Snow Goose (hybrid)",
+    "sciName": "Anser indicus x caerulescens"
+  },
+  {
+    "comName": "Ross's Goose",
+    "sciName": "Anser rossii"
+  },
+  {
+    "comName": "Snow x Ross's Goose (hybrid)",
+    "sciName": "Anser caerulescens x rossii"
+  },
+  {
+    "comName": "Snow/Ross's Goose",
+    "sciName": "Anser caerulescens/rossii"
+  },
+  {
+    "comName": "Graylag Goose",
+    "sciName": "Anser anser"
+  },
+  {
+    "comName": "Graylag Goose (European)",
+    "sciName": "Anser anser anser"
+  },
+  {
+    "comName": "Graylag Goose (Siberian)",
+    "sciName": "Anser anser rubrirostris"
+  },
+  {
+    "comName": "Graylag Goose (Domestic type)",
+    "sciName": "Anser anser (Domestic type)"
+  },
+  {
+    "comName": "Bar-headed x Graylag Goose (hybrid)",
+    "sciName": "Anser indicus x anser"
+  },
+  {
+    "comName": "Emperor x Graylag Goose (hybrid)",
+    "sciName": "Anser canagicus x anser"
+  },
+  {
+    "comName": "Swan Goose",
+    "sciName": "Anser cygnoides"
+  },
+  {
+    "comName": "Swan Goose (Domestic type)",
+    "sciName": "Anser cygnoides (Domestic type)"
+  },
+  {
+    "comName": "Bar-headed x Swan Goose (hybrid)",
+    "sciName": "Anser indicus x cygnoides"
+  },
+  {
+    "comName": "Snow x Swan Goose (hybrid)",
+    "sciName": "Anser caerulescens x cygnoides"
+  },
+  {
+    "comName": "Bar-headed x Snow x Swan Goose (hybrid)",
+    "sciName": "Anser indicus x caerulescens x cygnoides"
+  },
+  {
+    "comName": "Graylag x Swan Goose (hybrid)",
+    "sciName": "Anser anser x cygnoides"
+  },
+  {
+    "comName": "Greater White-fronted Goose",
+    "sciName": "Anser albifrons"
+  },
+  {
+    "comName": "Greater White-fronted Goose (Greenland)",
+    "sciName": "Anser albifrons flavirostris"
+  },
+  {
+    "comName": "Greater White-fronted Goose (Eurasian)",
+    "sciName": "Anser albifrons albifrons"
+  },
+  {
+    "comName": "Greater White-fronted Goose (Western)",
+    "sciName": "Anser albifrons gambelli/sponsa"
+  },
+  {
+    "comName": "Greater White-fronted Goose (Tule)",
+    "sciName": "Anser albifrons elgasi"
+  },
+  {
+    "comName": "Bar-headed x Greater White-fronted Goose (hybrid)",
+    "sciName": "Anser indicus x albifrons"
+  },
+  {
+    "comName": "Emperor x Greater White-fronted Goose (hybrid)",
+    "sciName": "Anser canagicus x albifrons"
+  },
+  {
+    "comName": "Snow x Greater White-fronted Goose (hybrid)",
+    "sciName": "Anser caerulescens x albifrons"
+  },
+  {
+    "comName": "Ross's x Greater White-fronted Goose (hybrid)",
+    "sciName": "Anser rossii x albifrons"
+  },
+  {
+    "comName": "Graylag x Greater White-fronted Goose (hybrid)",
+    "sciName": "Anser anser x albifrons"
+  },
+  {
+    "comName": "Lesser White-fronted Goose",
+    "sciName": "Anser erythropus"
+  },
+  {
+    "comName": "Greater/Lesser White-fronted Goose",
+    "sciName": "Anser albifrons/erythropus"
+  },
+  {
+    "comName": "Taiga Bean-Goose",
+    "sciName": "Anser fabalis"
+  },
+  {
+    "comName": "Tundra Bean-Goose",
+    "sciName": "Anser serrirostris"
+  },
+  {
+    "comName": "Greater White-fronted Goose x Tundra Bean-Goose (hybrid)",
+    "sciName": "Anser albifrons x serrirostris"
+  },
+  {
+    "comName": "Taiga/Tundra Bean-Goose",
+    "sciName": "Anser fabalis/serrirostris"
+  },
+  {
+    "comName": "Pink-footed Goose",
+    "sciName": "Anser brachyrhynchus"
+  },
+  {
+    "comName": "Domestic goose sp. (Domestic type)",
+    "sciName": "Anser sp. (Domestic type)"
+  },
+  {
+    "comName": "Anser sp.",
+    "sciName": "Anser sp."
+  },
+  {
+    "comName": "Brant",
+    "sciName": "Branta bernicla"
+  },
+  {
+    "comName": "Brant (Dark-bellied)",
+    "sciName": "Branta bernicla bernicla"
+  },
+  {
+    "comName": "Brant (Atlantic)",
+    "sciName": "Branta bernicla hrota"
+  },
+  {
+    "comName": "Brant (Black)",
+    "sciName": "Branta bernicla nigricans"
+  },
+  {
+    "comName": "Brant (Gray-bellied)",
+    "sciName": "Branta bernicla (Gray-bellied)"
+  },
+  {
+    "comName": "Brant (Dark-bellied x Black)",
+    "sciName": "Branta bernicla bernicla x nigricans"
+  },
+  {
+    "comName": "Brant (Atlantic x Black)",
+    "sciName": "Branta bernicla hrota x nigricans"
+  },
+  {
+    "comName": "Snow Goose x Brant (hybrid)",
+    "sciName": "Anser caerulescens x Branta bernicla"
+  },
+  {
+    "comName": "Barnacle Goose",
+    "sciName": "Branta leucopsis"
+  },
+  {
+    "comName": "Bar-headed x Barnacle Goose (hybrid)",
+    "sciName": "Anser indicus x Branta leucopsis"
+  },
+  {
+    "comName": "Emperor x Barnacle Goose (hybrid)",
+    "sciName": "Anser canagicus x Branta leucopsis"
+  },
+  {
+    "comName": "Snow x Barnacle Goose (hybrid)",
+    "sciName": "Anser caerulescens x Branta leucopsis"
+  },
+  {
+    "comName": "Ross's x Barnacle Goose (hybrid)",
+    "sciName": "Anser rossii x Branta leucopsis"
+  },
+  {
+    "comName": "Graylag x Barnacle Goose (hybrid)",
+    "sciName": "Anser anser x Branta leucopsis"
+  },
+  {
+    "comName": "Greater White-fronted x Barnacle Goose (hybrid)",
+    "sciName": "Anser albifrons x Branta leucopsis"
+  },
+  {
+    "comName": "Lesser White-fronted x Barnacle Goose (hybrid)",
+    "sciName": "Anser erythropus x Branta leucopsis"
+  },
+  {
+    "comName": "Pink-footed x Barnacle Goose (hybrid)",
+    "sciName": "Anser brachyrhynchus x Branta leucopsis"
+  },
+  {
+    "comName": "Cackling Goose",
+    "sciName": "Branta hutchinsii"
+  },
+  {
+    "comName": "Cackling Goose (Aleutian)",
+    "sciName": "Branta hutchinsii leucopareia"
+  },
+  {
+    "comName": "Cackling Goose (Richardson's)",
+    "sciName": "Branta hutchinsii hutchinsii"
+  },
+  {
+    "comName": "Cackling Goose (minima)",
+    "sciName": "Branta hutchinsii minima"
+  },
+  {
+    "comName": "Cackling Goose (Taverner's)",
+    "sciName": "Branta hutchinsii taverneri"
+  },
+  {
+    "comName": "Emperor x Cackling Goose (hybrid)",
+    "sciName": "Anser canagicus x Branta hutchinsii"
+  },
+  {
+    "comName": "Snow x Cackling Goose (hybrid)",
+    "sciName": "Anser caerulescens x Branta hutchinsii"
+  },
+  {
+    "comName": "Ross's x Cackling Goose (hybrid)",
+    "sciName": "Anser rossii x Branta hutchinsii"
+  },
+  {
+    "comName": "Brant x Cackling Goose (hybrid)",
+    "sciName": "Branta bernicla x hutchinsii"
+  },
+  {
+    "comName": "Greater White-fronted x Cackling Goose (hybrid)",
+    "sciName": "Anser albifrons x Branta hutchinsii"
+  },
+  {
+    "comName": "Barnacle x Cackling Goose (hybrid)",
+    "sciName": "Branta leucopsis x hutchinsii"
+  },
+  {
+    "comName": "Canada Goose",
+    "sciName": "Branta canadensis"
+  },
+  {
+    "comName": "Canada Goose (moffitti/maxima)",
+    "sciName": "Branta canadensis moffitti/maxima"
+  },
+  {
+    "comName": "Canada Goose (occidentalis/fulva)",
+    "sciName": "Branta canadensis occidentalis/fulva"
+  },
+  {
+    "comName": "Canada Goose (canadensis Group)",
+    "sciName": "Branta canadensis [canadensis Group]"
+  },
+  {
+    "comName": "Bar-headed x Canada Goose (hybrid)",
+    "sciName": "Anser indicus x Branta canadensis"
+  },
+  {
+    "comName": "Swan Goose x Canada Goose (hybrid)",
+    "sciName": "Anser cygnoides x Branta canadensis"
+  },
+  {
+    "comName": "Pink-footed x Canada Goose (hybrid)",
+    "sciName": "Anser brachyrhynchus x Branta canadensis"
+  },
+  {
+    "comName": "Greater White-fronted x Canada Goose (hybrid)",
+    "sciName": "Anser albifrons x Branta canadensis"
+  },
+  {
+    "comName": "Greater White-fronted x Cackling/Canada Goose (hybrid)",
+    "sciName": "Anser albifrons x Branta hutchinsii/canadensis"
+  },
+  {
+    "comName": "Graylag x Canada Goose (hybrid)",
+    "sciName": "Anser anser x Branta canadensis"
+  },
+  {
+    "comName": "Domestic goose sp. x Canada Goose (hybrid)",
+    "sciName": "Anser sp. (Domestic type) x Branta canadensis"
+  },
+  {
+    "comName": "Snow x Canada Goose (hybrid)",
+    "sciName": "Anser caerulescens x Branta canadensis"
+  },
+  {
+    "comName": "Ross's x Canada Goose (hybrid)",
+    "sciName": "Anser rossii x Branta canadensis"
+  },
+  {
+    "comName": "Barnacle x Canada Goose (hybrid)",
+    "sciName": "Branta leucopsis x canadensis"
+  },
+  {
+    "comName": "Cackling/Canada Goose",
+    "sciName": "Branta hutchinsii/canadensis"
+  },
+  {
+    "comName": "Snow/Ross's x Cackling/Canada Goose (hybrid)",
+    "sciName": "Anser caerulescens/rossii x Branta hutchinsii/canadensis"
+  },
+  {
+    "comName": "Hawaiian Goose",
+    "sciName": "Branta sandvicensis"
+  },
+  {
+    "comName": "Barnacle x Hawaiian Goose (hybrid)",
+    "sciName": "Branta leucopsis x sandvicensis"
+  },
+  {
+    "comName": "Red-breasted Goose",
+    "sciName": "Branta ruficollis"
+  },
+  {
+    "comName": "Greater White-fronted x Red-breasted Goose (hybrid)",
+    "sciName": "Anser albifrons x Branta ruficollis"
+  },
+  {
+    "comName": "Brant x Red-breasted Goose (hybrid)",
+    "sciName": "Branta bernicla x ruficollis"
+  },
+  {
+    "comName": "Barnacle x Red-breasted Goose (hybrid)",
+    "sciName": "Branta leucopsis x ruficollis"
+  },
+  {
+    "comName": "Branta sp.",
+    "sciName": "Branta sp."
+  },
+  {
+    "comName": "Cape Barren Goose",
+    "sciName": "Cereopsis novaehollandiae"
+  },
+  {
+    "comName": "Freckled Duck",
+    "sciName": "Stictonetta naevosa"
+  },
+  {
+    "comName": "Blue-winged Goose",
+    "sciName": "Cyanochen cyanoptera"
+  },
+  {
+    "comName": "Mute Swan",
+    "sciName": "Cygnus olor"
+  },
+  {
+    "comName": "Graylag Goose x Mute Swan (hybrid)",
+    "sciName": "Anser anser x Cygnus olor"
+  },
+  {
+    "comName": "Black Swan",
+    "sciName": "Cygnus atratus"
+  }
+]

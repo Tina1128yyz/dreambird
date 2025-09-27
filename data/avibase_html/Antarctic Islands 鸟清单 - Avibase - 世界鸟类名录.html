@@ -1,0 +1,688 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<title>Antarctic Islands 鸟清单 - Avibase - 世界鸟类名录</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="expires" content="0">
+<meta http-equiv="pragma" content="no-cache">
+<meta name="Description" content="Avibase是关于世界鸟类的详细数据库。它包含了关于约10,000种和22,000个亚种鸟类的超过一百万条记录，涵盖了分布信息、分类学信息、不同语言中的异名等。">
+<meta name="KeyWords" content="鸟，鸟，观鸟，观鸟者，观鸟者，观鸟，观鸟者，观鸟者，链接，鸟类链接，鸟类链接，鸟类学，鸟种记录，鸟种记录，世界，鸟类，鸟类，鸟纲，亚种，科，分类">
+<meta http-equiv="Content-Language" content="zh">
+
+
+
+<link rel="apple-touch-icon" sizes="76x76" href="images/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+<link rel="mask-icon" href="images/safari-pinned-tab.svg" color="#5bbad5">
+
+<link rel="stylesheet" href="css/bootstrap.min.4.2.1.css">
+<!-- link rel="stylesheet" href="css/bootstrap-select.css" -->
+<link rel="stylesheet" href="css/avibase.css?v=20220326">
+<link rel="stylesheet" href="css/fontawesome.all.5.6.3.css">
+<link rel="stylesheet" href="css/jquery.alerts.css" media="screen" />
+<link rel="stylesheet" href="css/jquery-ui.min.1.12.1.css" type="text/css" media="screen" charset="utf-8" />
+<link rel="search" type="application/opensearchdescription+xml" title="Avibase" href="opensearchplugin.xml">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WXPFW3Y1F5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-WXPFW3Y1F5');
+</script>
+
+<script src="scripts/jquery.min.3.3.1.js"></script>
+<!-- script src="scripts/popper.min.1.14.6.js"></script -->
+<script src="scripts/bootstrap.min.4.2.1.js"></script> 
+<!-- script src="scripts/bootstrap-select.js"></script --> 
+<script src="scripts/avibase_script.jsp"></script> 
+<script src="scripts/jquery.json-2.4.min.js"></script>
+<script src="scripts/jquery-ui.1.12.1.min.js"></script>
+<script src="scripts/jquery.alerts.js"></script>
+<script src="scripts/bscutil.js"></script>
+
+</head>
+<body>
+
+<div class="container-fluid">
+	<div class="row banner">
+	<div class="col-lg-7">
+		<div style="padding: 0.3em;">
+			<img src="images/fairywren_133.png" height="92px" width="133px" style="float: left;" />
+			<span class="banner-title">Avibase -</span> <span class="banner-subtitle">世界鸟类数据库</span>
+			<div style="font-size: 0.45em; color: #ffffd0;">鸟种记录 - 分类 - 分布 - 地图 - 链接</div>
+		</div>
+
+	</div>
+	<div class="col-lg-5 d-none d-xl-block">
+		<div class="float-right"><img src="images/banner_img1.jpg"></div>
+	</div>
+	</div>
+
+	<div class="row avbmenu">
+    <div class="col-12">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="avibase.jsp" alt="Main page">
+                <i class="fas fa-home" title="Main page"></i>
+              </a>
+            </li>
+            
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle dropdown-toggle-no-show" href="" id="navbarDropdown" role="button" data-toggle='dropdown' aria-haspopup="true" aria-expanded="false">
+                      Avibase
+                    </a>
+                    
+                      <div class="dropdown-menu dropdown-menu-left" aria-labelledby="navbarDropdown" style="border-top:3px solid #2F8894;">
+
+						<a class="dropdown-item" href="avibase.jsp">Avibase回家</a>
+						<a class="dropdown-item" href="about.jsp">关于 Avibase</a>
+						<a class="dropdown-item" rel="me" href="https://birds.town/@avibase">Mastodon</a>
+						<a class="dropdown-item" href="webcams.jsp">Birding网络摄像头</a>
+						<a class="dropdown-item" href="compare.jsp">比较分类法</a>
+						<a class="dropdown-item" target="_blank" href="https://flickr.com/groups/avibase/">Avibase Flickr集团</a> 
+						<a class="dropdown-item" href="botd.jsp">鸟类档案</a> 
+						<a class="dropdown-item" href="peterschecklist.jsp">彼得的清单数据库</a>
+						<a class="dropdown-item" href="citations.jsp">Avibase引用</a>
+						<a class="dropdown-item" href="/links/links.jsp">Birdlinks</a>
+						<a class="dropdown-item" href="/links/links.jsp?page=g_reports">旅行报告</a>
+                      
+                      </div>
+				  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle dropdown-toggle-no-show" href="" id="navbarDropdown" role="button" data-toggle='dropdown' aria-haspopup="true" aria-expanded="false">
+                      myAvibase
+                    </a>
+                    
+                      <div class="dropdown-menu dropdown-menu-left" aria-labelledby="navbarDropdown" style="border-top:3px solid #2F8894;">
+						   <div class="small" style="color: #fff; padding: 4px !important;">MyAvibase允许您创建和管理您的个人鸟种记录，并为您的下一次观鸟旅行提供有用的报告。</div>
+						   <a class="dropdown-item" href="myavibase.jsp">myAvibase主页</a>
+						   <a class="dropdown-item" href="myavb_lists.jsp">管理个人鸟种记录</a>
+						   <a class="dropdown-item" href="myavb_observ.jsp">管理观鸟记录</a>
+						   <a class="dropdown-item" href="myavb_reports.jsp">myAvibase报告</a>
+                      </div>
+				  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle dropdown-toggle-no-show" href="" id="navbarDropdown" role="button" data-toggle='dropdown' aria-haspopup="true" aria-expanded="false">
+						名录
+                    </a>
+		
+                      <div class="dropdown-menu dropdown-menu-left" aria-labelledby="navbarDropdown" style="border-top:3px solid #2F8894;">
+					  
+							<div class="small" style="color: #fff; padding: 4px !important;">Avibase中包含了超过20,000个地区名录，并以9种分类系统展示，包括超过175种语言的异名。每个名录都可以显示观鸟者分享的图片，并可以以PDF格式打印用于野外观察。</div>
+					  
+							<a class="dropdown-item" href="checklist.jsp?lang=ZH">Avibase名录</a>
+							<a class="dropdown-item" href="compare_regions.jsp?lang=ZH">比较地区</a>
+                      </div>
+				  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle dropdown-toggle-no-show" href="" id="navbarDropdown" role="button" data-toggle='dropdown' aria-haspopup="true" aria-expanded="false">
+                      搜索
+                    </a>
+                    
+                      <div class="dropdown-menu dropdown-menu-left" aria-labelledby="navbarDropdown" style="border-top:3px solid #2F8894;">
+						   <a class="dropdown-item" href="search.jsp?lang=ZH&isadv=yes">Avibase搜索</a>
+						   <a class="dropdown-item" href="search.jsp?lang=ZH&pg=families">按科浏览</a>
+						   <a class="dropdown-item" href="authors.jsp?lang=ZH">按作者浏览 </a>
+						   <a class="dropdown-item" href="publications.jsp?lang=ZH">按出版物浏览 </a>
+						   <a class="dropdown-item" href="familytree.jsp?lang=ZH">Avibase 分类概念</a>
+                      </div>
+				  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle dropdown-toggle-no-show" href="" id="navbarDropdown" role="button" data-toggle='dropdown' aria-haspopup="true" aria-expanded="false">
+                      贡献
+                    </a>
+                    
+                      <div class="dropdown-menu dropdown-menu-left" aria-labelledby="navbarDropdown" style="border-top:3px solid #2F8894;">
+						   <div class="small" style="color: #fff; padding: 4px !important;">您可以通过以下几种方式帮助本页面的开发，如加入拍摄照片的Flickr群组或为本站提供其它语言的翻译。</div>
+						   <a class="dropdown-item" href="contrib.jsp?lang=ZH">为Avibase提供帮助</a>
+						   <a class="dropdown-item" href="contrib.jsp?lang=ZH">致谢</a>
+						   <a class="dropdown-item" target="_blank" href="https://flickr.com/groups/avibase/">Flickr群组</a> 
+						   <a class="dropdown-item" href="flickr_stats.jsp?lang=ZH">媒体统计</a>
+						   <a class="dropdown-item" href="flickr_stats.jsp?action=flickr&lang=ZH">Flickr群组成员</a>
+						   <a class="dropdown-item" href="flickr_stats.jsp?action=missing&lang=ZH">所需媒体</a>
+						   <a class="dropdown-item" href="translate.jsp?lang=ZH">提供更好的翻译</a>
+                      </div>
+				  </li>
+				  
+        
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle dropdown-toggle-no-show" href="" id="navbarDropdown" role="button" data-toggle='dropdown' aria-haspopup="true" aria-expanded="false">
+					  漢語
+					</a>
+
+					<div class="dropdown-menu dropdown-menu-left" aria-labelledby="navbarDropdown" style="border-top:3px solid #2F8894;">
+						<a class="dropdown-item" href="languages.jsp">更改语言</a>
+					</div>
+				</li>
+
+				  
+          </ul>
+        </div>
+        
+          <ul class="navbar-nav float-right">
+			<li class="nav-item active" id="signup">
+              <a class="nav-link" href="myavb_signup.jsp" id="signuplnk">报名</a>
+            </li>
+		  </ul>
+          <ul class="navbar-nav float-right">
+            <li class="nav-item active" id="credlogout">
+              <a class="nav-link" href="javascript:void(0)" id="logoutlnk">注销</a>
+            </li>
+		  </ul>
+          <ul class="navbar-nav float-right">
+            <li class="nav-item active" id="credlogin">
+              <a class="nav-link" href="javascript:void(0)" id="modalLogin2">登入</a>
+            </li>
+		  </ul>
+          <ul class="navbar-nav float-right">
+            <li class="nav-item active d-none d-xl-block">
+				<form action="search.jsp" name='avbsmall'>
+				<input id="searchboxsm" placeholder="搜索avibase" name="qstr" type="text" style="width: 150px;" class="form-control">
+				</form>
+            </li>
+          </ul>
+		
+      </nav>
+    </div>
+	</div>
+
+	<div id="loginbox" title="登录myAvibase" style="display: none;">
+		<span id="loginmsg" style="color: #939300; font-weight: bold;"></span>
+		<p>您的登录:<br>
+		<input type="text" class="form-control" size="40" id="loginname" name="loginname" value=""/>
+		<br />
+		密码:<br>
+		<input type="password" class="form-control" size="40" id="password" name="password"  value=""/>
+		</p>
+		<input type="checkbox" id="remember" checked> 保持登录
+	</div>
+
+	<div id="reminderbox" title="请求提醒" style="display: none;">
+		<span id="remindermsg" style="color: #939300; font-weight: bold;"></span>
+		<p>输入您的用户名或电子邮箱地址并按发送提醒，即可收到电子邮件提醒</p>
+		<input type="text" size="50" id="loginreminder" name="loginreminder" value=""/>
+		<br />
+	</div>
+
+	<div id="credentials" class="row">
+		<div class="col-lg-12 text-right">
+			欢迎 <span id="fullname">游客</span>
+		</div>
+	</div>
+	
+	<div class="row main-body">
+
+<div class="col-lg-12">
+
+<script type="text/javascript" src="scripts/jplayer_script.js"></script>
+<link rel="stylesheet" href="css/jplayer.css" />
+<link rel="stylesheet" href="css/checklist.css">
+ 
+
+<style>
+.highlight1 {background-color: #ffffff;}
+.highlight2 {background-color: #ffffff;}
+</style>
+
+<div class="row" style="text-align: center; margin-bottom: 30px;">
+<div class="col-lg-3">
+	<a target="_blank" href="https://www.birdscanada.org/"><img src="images/BirdsCan_SQ.png" title=" Avibase的服务器提供者为 Birds Canada - Oiseaux Canada" border=0
+		alt="Hosted by Birds Canada - Oiseaux Canada" style="width: 180px; padding: 20px;"></a>
+</div>
+<div class="col-lg-6">
+	<h2 align="center">Avibase - 世界鸟类名录</h2>
+	<h3 style="color: red;">Antarctic Islands</h3>
+</div>
+<div class="col-lg-3">
+	<a target="_blank" href="https://www.birdlife.org/"><img src="images/birdlife2013.png" border=0 alt="Birdlife Logo" title="Birdlife International"></a>
+</div>
+</div>
+
+
+     <P>该名录包含发现于以下地区的全部鸟种 <b>Antarctic Islands</b> 基于目前所知的全部信息. 这些信息是我多年来从各种不同渠道收集来的，我很荣幸的向观鸟者提供这一名录。如果您发现任何错误，欢迎您随时 <script language=javascript>var linktext = "指正。";var e1 = "dlepage";var e2 = "bsc-eoc.org";document.write("<a hr" + "ef=" + "ma" + "il"+ "to:" + e1 + "@" + e2 + ">" + linktext + "</" + "a>")</script>.
+     <P>分类学习惯和术语依据 <b>Clements, version 2024</b>. 如果您希望查看该鸟种记录在其他分类系统下的结果，请点击下面列表中所示的项目。全球受威胁物种（以红色标记）由国际鸟盟提供。 <a target="_blank" href="https://datazone.birdlife.org/species/search">Birdlife Data Zone (species)</a>.
+     <P>世界鸟类名录是Avibase与世界鸟类链接的一部分。该名录是由Denis Lepage设计并维护的，并由国际鸟盟的合作伙伴加拿大鸟类研究提供服务器。
+     <P>&copy; Denis Lepage 2025
+     <P><a href="checklist.jsp?region=index&lang=ZH&list=clements">返回世界鸟类名录</a>
+     <BR><a target="_top" href="/links/links.jsp?page=l_oce_aq&lang=ZH">返回世界鸟类链接</a>
+
+
+
+
+
+
+
+<script>
+
+$( document ).ready( function() {
+   $( "input[name='highlight']" ).bind( "click", changeHighlight );
+   $("#mapextent").on("click", function() {
+      window.open('mapextent.jsp?region=ant', 'mapextent', 'menubar=yes;').focus();
+   });
+	$(".AVBlistnavbutton").on("click", function() {
+		$("#chkversion").val($(this).data("version"));
+		sendForm();
+	});
+
+});
+
+function sendForm() {
+     var v = $("#chkversion").val();
+     if ($('#ckregion').val() == '') return;
+     if ($('#cklist').val() == '') return;
+
+     if (v.substring(0,3) == "pdf")
+       $("#ckoptions").attr("action", "checklistpdf.jsp");
+     else
+       $("#ckoptions").attr("action", "checklist.jsp");
+
+     $("#ckoptions").submit();
+}
+
+function changeHighlight() {
+   var t = $("input:radio[name='highlight']:checked").val();
+   $(".highlight1").css('background-color',(t == 1?'#ffffc9':'#ffffff'));
+   $(".highlight2").css('background-color',(t == 2?'#ffffc9':'#ffffff'));
+}
+
+function changePage(p2) {
+   $("#p2").val(p2);
+   $("#ckoptions").submit();
+}
+
+
+</script>
+
+<form action="checklist.jsp" id="ckoptions" method="get">
+<input type="hidden" name="lang" value="ZH">
+<input type="hidden" name="p2" id="p2" value="1">
+
+<div style="background-color: #EEE;">
+
+    <p><b>更改显示选项:</b></p>
+	<div class="row">
+		<label for="cklist" class="col-lg-2 control-label">选择另一分类系统:</label>
+		<div class="col-lg-10"><select id="cklist" name="list" class="form-control"><option value="avibase" >Avibase taxonomic concepts (current)</option><option value="avilist" >Avilist 2025</option><option value="birdlife" >HBW and BirdLife Taxonomic Checklist v9 (Oct 2024)</option><option value="clements" selected>Clements, version 2024</option><option value="clements5" >Clements 5th edition (incl. 2005 revisions)</option><option value="ebird" >eBird version 2024</option><option value="hbw" >Handbook of the Birds of the World and Birdlife (Dec 2018)</option><option value="howardmoore" >Howard and Moore 4th edition (incl. corrigenda vol.1-2)</option><option value="ioc" >IOC World Bird Names, version 15.1</option><option value="sibleymonroe" >Sibley and Monroe, Birds of the World Version 2.0</option>
+   </select></div>
+	</div>
+
+	<div class="row">
+		<label for="cksynlang" class="col-lg-2 control-label">选择另一个第二语言:</label>
+		<div class="col-lg-10"><select id="cksynlang" name="synlang" class="form-control">
+		<option value="" >无异名</option>
+<option value="ZHTR" > Chinese (Traditional)</option><option value="PTPT" > Portuguese (Portugal)</option><option value="ESES" > Spanish (Spain)</option><option value="DA" > 丹麦语</option><option value="UK" > 乌克兰语</option><option value="RU" > 俄语</option><option value="HR" > 克罗地亚语</option><option value="IS" > 冰岛语</option><option value="CA" > 加泰罗尼亚语</option><option value="HU" > 匈牙利语</option><option value="SR" > 塞尔维亚语</option><option value="PTBR" > 巴西葡萄牙文</option><option value="DE" > 德语</option><option value="IT" > 意大利语</option><option value="NN" > 挪威文（Nynorsk）</option><option value="NO" > 挪威语</option><option value="CS" > 捷克语</option><option value="SK" > 斯洛伐克语</option><option value="JP" > 日语</option><option value="FR" > 法语</option><option value="PL" > 波兰语</option><option value="ZH" selected> 漢語</option><option value="SV" > 瑞典语</option><option value="LT" > 立陶宛语</option><option value="FI" > 芬兰语</option><option value="NL" > 荷兰语</option><option value="PT" > 葡萄牙语</option><option value="ES" > 西班牙语</option>
+
+ </select></div>
+	 </div>
+
+
+	  	<div class="row">
+		<label for="ckregion" class="col-lg-2 control-label">选择另一个地区:</label>
+		<div class="col-lg-10"><select id="ckregion" name="region" class="form-control"><option value="ANT" selected>-Antarctic Islands</option><option value="AQ" >--Antarctica</option><option value="AB" >--British Antarctic Territory</option><option value="BV" >--Bouvet Island</option><option value="TF" >--French Southern Territory</option><option value="HM" >--Heard and McDonald Islands</option></select></div>
+	  </div>
+
+<input type="hidden" id="chkversion" name="version" value="text">
+<input type="hidden" id="formtype" value="checklist">
+
+<div id="isloggedin" style="display: none">
+	  	<div class="row">
+		<label for="lifelist" class="col-lg-2 control-label">显示个人鸟种记录的更多信息:</label>
+		<div class="col-lg-10"><select id="lifelist" name="lifelist" class="form-control" data-lifelist="">
+			<option value=""> 没有选中 </option>
+		</select></div>
+		</div>
+<p><input type="radio" name="highlight" value="0" checked> 无高亮标记
+<input type="radio" name="highlight" value="1" > 高亮标记目标种
+<input type="radio" name="highlight" value="2" > 高亮标记已经见过的种</p>
+</div>
+
+<div id="notloggedin">您必须<a href="javascript:login()">登录</a>才能看到您的详细鸟种记录。<a href="myavibase.jsp">点击此处</a>注册<b>myAvibase</b> 。</div>
+
+<p align="center"><input type="button" value="刷新名录" class="btn btn-primary" onClick="sendForm()"></p>
+
+     </div>
+
+</form>
+
+<div style="background-color: #EEE;">
+
+	<p><b>收听来自<a target="_blank" href="https://xeno-canto.org"> Xeno-Canto </a>的针对该地区的随机鸟类歌曲：</b>
+	<input type="hidden" class="btn btn-primary" id="audiopreloadreg" value="ant" data-num="4">
+	<input type="button" class="btn btn-primary" id="audioloop4" data-region="ant" data-play="开始" data-next="下一个" value="开始" style="font-size: 9pt">
+	<input type="button" class="btn btn-primary stoprecording" id="stop4" value="停止" style="font-size: 9pt">
+	<input type="checkbox" id="exclrare4"> <label for="exclrare4"> 排除稀有物种 </label>
+	<input type="checkbox" id="limitreg4"> <label for="limitreg4"> 限制在该地区进行录制 </label>
+	</p>
+	<p>录音没有自动开始？ 尝试在浏览器中启用自动播放功能，或点击下面的播放按钮。</p>
+	
+	<div id="sndmetadata4" style="font-size: 9pt"></div>
+	<div id="sndspeciesname4" style="font-size: 9pt"></div>
+
+	<audio controls id="audioPlayer4" preload="none">
+		<source src="downloads/blank.mp3" id="audioSource4" type="audio/mpeg">
+		您的浏览器不支持音频元素。
+	</audio> 
+
+</div>
+
+<div>
+
+<div class="AVBlist AVBlisthead">
+     <p><b>国家或地区： Antarctic Islands</b>  [<a href="javascript:void(0)" id="mapextent">地图</a>]</p>
+     <p>其他名称: South Polar, Antarctica</p>
+     <p><b>描述:</b> includes Antarctica, Antarctic British Islands, Tristan da Cunha Islands, Goudh, Bouvet, Prince Edward Islands, French Southern Territory, Heard & McDonald</p>
+     
+     
+	<div>
+种数: 191<br>特有种的数量: 4<br>仅在当地繁育种数量: 1<br>全球受威胁种数量: 37<br>灭绝种数量: 2<br>外来种数量: 3<br>上一次更改: 2024-12-25<br>
+	</div>
+</div>
+
+ <div class="AVBlistnav">
+  <div data-version="text" class="AVBlistnavbutton AVBlistsel">仅文本</div>
+  <div data-version="images" class="AVBlistnavbutton ">照片和声音</div>
+  <div data-version="pdf" class="AVBlistnavbutton ">PDF（宽）</div>
+  <div data-version="pdf2" class="AVBlistnavbutton ">PDF（紧凑）</div>
+  <div data-version="recent" class="AVBlistnavbutton ">最近的补充</div>
+  <div data-version="hypoth" class="AVBlistnavbutton ">假想</div>
+</div> 
+
+
+<div class="table-responsive">
+<table class="table">
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>ANSERIFORMES: Anatidae </b></P></td></tr>
+<tr class='highlight1'><td>Upland Goose</td><td><a href="species.jsp?avibaseid=74FC5DAB02BDF076"><i>Chloephaga picta</i></a></td><td>斑胁草雁</td><td>外来物种  </td></tr>
+<tr class='highlight1'><td>Blue-winged Teal</td><td><a href="species.jsp?avibaseid=90E2543E9A4ABA0A"><i>Spatula discors</i></a></td><td>蓝翅鸭</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Chiloe Wigeon</td><td><a href="species.jsp?avibaseid=0B8AF41FA861ED30"><i>Mareca sibilatrix</i></a></td><td>黑白斑胸鸭</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Amsterdam Duck</td><td><a href="species.jsp?avibaseid=B52611C138061588"><i>Mareca marecula</i></a></td><td>阿岛鸭</td><td><font color=blue>特有的</font> <font color=red><b>已灭绝</b></font></td></tr>
+<tr class='highlight1'><td>Northern Pintail</td><td><a href="species.jsp?avibaseid=56CCA7179C9FA71D"><i>Anas acuta</i></a></td><td>针尾鸭</td><td></td></tr>
+<tr class='highlight1'><td>Eaton's Pintail</td><td><a href="species.jsp?avibaseid=8899CF64B9E9D801"><i>Anas eatoni</i></a></td><td>凯岛针尾鸭</td><td><font color=red>易危</font></td></tr>
+<tr class='highlight1'><td>Yellow-billed Pintail</td><td><a href="species.jsp?avibaseid=B940CCD55F94CFD4"><i>Anas georgica</i></a></td><td>黄嘴针尾鸭</td><td></td></tr>
+<tr class='highlight1'><td>Yellow-billed Teal</td><td><a href="species.jsp?avibaseid=D4263C69651CFF46"><i>Anas flavirostris</i></a></td><td>黄嘴鸭</td><td></td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>COLUMBIFORMES: Columbidae </b></P></td></tr>
+<tr class='highlight1'><td>Ring-necked Dove</td><td><a href="species.jsp?avibaseid=AB937AEB3B9F3DC1"><i>Streptopelia capicola</i></a></td><td>环颈斑鸠</td><td></td></tr>
+<tr class='highlight1'><td>Laughing Dove</td><td><a href="species.jsp?avibaseid=B2D6AB06AA0628A7"><i>Spilopelia senegalensis</i></a></td><td>棕斑鸠</td><td></td></tr>
+<tr class='highlight1'><td>Eared Dove</td><td><a href="species.jsp?avibaseid=71958FA9547209D0"><i>Zenaida auriculata</i></a></td><td>斑颊哀鸽</td><td>稀见/偶见 </td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>CUCULIFORMES: Cuculidae </b></P></td></tr>
+<tr class='highlight1'><td>Dark-billed Cuckoo</td><td><a href="species.jsp?avibaseid=5426F64E9FDF41DE"><i>Coccyzus melacoryphus</i></a></td><td>暗嘴美洲鹃</td><td></td></tr>
+<tr class='highlight1'><td>Yellow-billed Cuckoo</td><td><a href="species.jsp?avibaseid=0CF12F8155708DC8"><i>Coccyzus americanus</i></a></td><td>黄嘴美洲鹃</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>African Cuckoo</td><td><a href="species.jsp?avibaseid=66931B3F993D2FCE"><i>Cuculus gularis</i></a></td><td>非洲杜鹃</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Common Cuckoo</td><td><a href="species.jsp?avibaseid=B3D2C3C5B73EC8E8"><i>Cuculus canorus</i></a></td><td>大杜鹃</td><td>稀见/偶见 </td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>CAPRIMULGIFORMES: Caprimulgidae </b></P></td></tr>
+<tr class='highlight1'><td>Common Nighthawk</td><td><a href="species.jsp?avibaseid=24E39ACD5692DA4A"><i>Chordeiles minor</i></a></td><td>美洲夜鹰</td><td></td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>APODIFORMES: Apodidae </b></P></td></tr>
+<tr class='highlight1'><td>Common Swift</td><td><a href="species.jsp?avibaseid=4E6EF3F983079D73"><i>Apus apus</i></a></td><td>普通楼燕</td><td></td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>GRUIFORMES: Rallidae </b></P></td></tr>
+<tr class='highlight1'><td>Paint-billed Crake</td><td><a href="species.jsp?avibaseid=993DE54F66379B72"><i>Mustelirallus erythrops</i></a></td><td>彩喙秧鸡</td><td></td></tr>
+<tr class='highlight1'><td>Tristan Moorhen</td><td><a href="species.jsp?avibaseid=75F403386416287D"><i>Gallinula nesiotis</i></a></td><td>特岛骨顶</td><td><font color=blue>特有的</font> <font color=red><b>已灭绝</b></font></td></tr>
+<tr class='highlight1'><td>Gough Moorhen</td><td><a href="species.jsp?avibaseid=28501BF5D9FB4819"><i>Gallinula comeri</i></a></td><td>果夫岛黑水鸡</td><td><font color=red>易危</font></td></tr>
+<tr class='highlight1'><td>Red-gartered Coot</td><td><a href="species.jsp?avibaseid=92F60241E134C814"><i>Fulica armillata</i></a></td><td>黄腿骨顶</td><td></td></tr>
+<tr class='highlight1'><td>Allen's Gallinule</td><td><a href="species.jsp?avibaseid=53288666B2C70F88"><i>Porphyrio alleni</i></a></td><td>辉青水鸡</td><td></td></tr>
+<tr class='highlight1'><td>Purple Gallinule</td><td><a href="species.jsp?avibaseid=72A4F8EBF168E80D"><i>Porphyrio martinica</i></a></td><td>紫青水鸡</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Spotless Crake</td><td><a href="species.jsp?avibaseid=C15FF1EB625BBFA2"><i>Zapornia tabuensis</i></a></td><td>无斑田鸡</td><td></td></tr>
+<tr class='highlight1'><td>Inaccessible Island Rail</td><td><a href="species.jsp?avibaseid=0712580CA3C4108B"><i>Laterallus rogersi</i></a></td><td>荒岛秧鸡</td><td><font color=red>易危</font></td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>CHARADRIIFORMES: Chionidae </b></P></td></tr>
+<tr class='highlight1'><td>Black-faced Sheathbill</td><td><a href="species.jsp?avibaseid=7C15B681DD3E8B4C"><i>Chionis minor</i></a></td><td>黑脸鞘嘴鸥</td><td><font color=blue>特有的</font> </td></tr>
+<tr class='highlight1'><td>Snowy Sheathbill</td><td><a href="species.jsp?avibaseid=62AC9C19E209962D"><i>Chionis albus</i></a></td><td>白鞘嘴鸥</td><td></td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>CHARADRIIFORMES: Charadriidae </b></P></td></tr>
+<tr class='highlight1'><td>American Golden-Plover</td><td><a href="species.jsp?avibaseid=2143A8526CA7C809"><i>Pluvialis dominica</i></a></td><td>美洲金鸻</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Rufous-chested Dotterel</td><td><a href="species.jsp?avibaseid=42D62A12D4D096BF"><i>Zonibyx modestus</i></a></td><td>棕胸鸻</td><td></td></tr>
+<tr class='highlight1'><td>Common Ringed Plover</td><td><a href="species.jsp?avibaseid=EDA37B7C5D4A25ED"><i>Charadrius hiaticula</i></a></td><td>剑鸻</td><td></td></tr>
+<tr class='highlight1'><td>Three-banded Plover</td><td><a href="species.jsp?avibaseid=8DAF86A1D8B83199"><i>Thinornis tricollaris</i></a></td><td>三色鸻</td><td></td></tr>
+<tr class='highlight1'><td>Blacksmith Lapwing</td><td><a href="species.jsp?avibaseid=2F23EDC6558D31B3"><i>Vanellus armatus</i></a></td><td>黑背麦鸡</td><td>稀见/偶见 </td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>CHARADRIIFORMES: Scolopacidae </b></P></td></tr>
+<tr class='highlight1'><td>Upland Sandpiper</td><td><a href="species.jsp?avibaseid=BF1DA86E0714FD01"><i>Bartramia longicauda</i></a></td><td>高原鹬</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Whimbrel</td><td><a href="species.jsp?avibaseid=F9305BAA638BAEFC"><i>Numenius phaeopus</i></a></td><td>中杓鹬</td><td></td></tr>
+<tr class='highlight1'><td>Bar-tailed Godwit</td><td><a href="species.jsp?avibaseid=9A684C997C1AF1BA"><i>Limosa lapponica</i></a></td><td>斑尾塍鹬</td><td><font color=red>近危</font></td></tr>
+<tr class='highlight1'><td>Wilson's Phalarope</td><td><a href="species.jsp?avibaseid=667C6969D7874433"><i>Phalaropus tricolor</i></a></td><td>细嘴瓣蹼鹬</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Red Phalarope</td><td><a href="species.jsp?avibaseid=18A1938091EEEA73"><i>Phalaropus fulicarius</i></a></td><td>灰瓣蹼鹬</td><td></td></tr>
+<tr class='highlight1'><td>Terek Sandpiper</td><td><a href="species.jsp?avibaseid=6D5992EEE12070E8"><i>Xenus cinereus</i></a></td><td>翘嘴鹬</td><td></td></tr>
+<tr class='highlight1'><td>Common Sandpiper</td><td><a href="species.jsp?avibaseid=8548B07ECA48773F"><i>Actitis hypoleucos</i></a></td><td>矶鹬</td><td></td></tr>
+<tr class='highlight1'><td>Spotted Sandpiper</td><td><a href="species.jsp?avibaseid=0D88C072E71FE4B8"><i>Actitis macularius</i></a></td><td>斑腹矶鹬</td><td></td></tr>
+<tr class='highlight1'><td>Solitary Sandpiper</td><td><a href="species.jsp?avibaseid=D4A73324DB24F142"><i>Tringa solitaria</i></a></td><td>褐腰草鹬</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Gray-tailed Tattler</td><td><a href="species.jsp?avibaseid=29256A389375B43E"><i>Tringa brevipes</i></a></td><td>灰尾漂鹬</td><td></td></tr>
+<tr class='highlight1'><td>Wood Sandpiper</td><td><a href="species.jsp?avibaseid=8E67DC5F68BDF62C"><i>Tringa glareola</i></a></td><td>林鹬</td><td></td></tr>
+<tr class='highlight1'><td>Lesser Yellowlegs</td><td><a href="species.jsp?avibaseid=2C7A2673444BECF0"><i>Tringa flavipes</i></a></td><td>小黄脚鹬</td><td>稀见/偶见 <font color=red>易危</font></td></tr>
+<tr class='highlight1'><td>Common Greenshank</td><td><a href="species.jsp?avibaseid=18B415D28BBF934C"><i>Tringa nebularia</i></a></td><td>青脚鹬</td><td></td></tr>
+<tr class='highlight1'><td>Ruddy Turnstone</td><td><a href="species.jsp?avibaseid=DC3050A9771F2CE9"><i>Arenaria interpres</i></a></td><td>翻石鹬</td><td><font color=red>近危</font></td></tr>
+<tr class='highlight1'><td>Red Knot</td><td><a href="species.jsp?avibaseid=B5CE8FAD18923A94"><i>Calidris canutus</i></a></td><td>红腹滨鹬</td><td><font color=red>近危</font></td></tr>
+<tr class='highlight1'><td>Sharp-tailed Sandpiper</td><td><a href="species.jsp?avibaseid=A0A67A811E53D89F"><i>Calidris acuminata</i></a></td><td>尖尾滨鹬</td><td><font color=red>易危</font></td></tr>
+<tr class='highlight1'><td>Curlew Sandpiper</td><td><a href="species.jsp?avibaseid=143A681C9BCE9A20"><i>Calidris ferruginea</i></a></td><td>弯嘴滨鹬</td><td><font color=red>易危</font></td></tr>
+<tr class='highlight1'><td>Sanderling</td><td><a href="species.jsp?avibaseid=06B9BD243A756B28"><i>Calidris alba</i></a></td><td>三趾滨鹬</td><td></td></tr>
+<tr class='highlight1'><td>Baird's Sandpiper</td><td><a href="species.jsp?avibaseid=1F1AD154DAE2E070"><i>Calidris bairdii</i></a></td><td>黑腰滨鹬</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Little Stint</td><td><a href="species.jsp?avibaseid=9936FF4AFB430504"><i>Calidris minuta</i></a></td><td>小滨鹬</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>White-rumped Sandpiper</td><td><a href="species.jsp?avibaseid=153BA3069DFCDDCA"><i>Calidris fuscicollis</i></a></td><td>白腰滨鹬</td><td>稀见/偶见 <font color=red>易危</font></td></tr>
+<tr class='highlight1'><td>Least Sandpiper</td><td><a href="species.jsp?avibaseid=A47B0BD448AA34E0"><i>Calidris minutilla</i></a></td><td>姬滨鹬</td><td>稀见/偶见 <font color=red>近危</font></td></tr>
+<tr class='highlight1'><td>Pectoral Sandpiper</td><td><a href="species.jsp?avibaseid=ACC99F35F0E8F7EB"><i>Calidris melanotos</i></a></td><td>斑胸滨鹬</td><td></td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>CHARADRIIFORMES: Glareolidae </b></P></td></tr>
+<tr class='highlight1'><td>Black-winged Pratincole</td><td><a href="species.jsp?avibaseid=E1F6A875C32C042D"><i>Glareola nordmanni</i></a></td><td>黑翅燕鸻</td><td>稀见/偶见 <font color=red>近危</font></td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>CHARADRIIFORMES: Stercorariidae </b></P></td></tr>
+<tr class='highlight1'><td>Long-tailed Jaeger</td><td><a href="species.jsp?avibaseid=1D4464402EC9FD21"><i>Stercorarius longicaudus</i></a></td><td>长尾贼鸥</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Parasitic Jaeger</td><td><a href="species.jsp?avibaseid=39086887E9EAFEB3"><i>Stercorarius parasiticus</i></a></td><td>短尾贼鸥</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Pomarine Jaeger</td><td><a href="species.jsp?avibaseid=7CB8F5B711DE64D0"><i>Stercorarius pomarinus</i></a></td><td>中贼鸥</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Chilean Skua</td><td><a href="species.jsp?avibaseid=22214CD3D9C11E84"><i>Stercorarius chilensis</i></a></td><td>智利贼鸥</td><td></td></tr>
+<tr class='highlight1'><td>Brown Skua</td><td><a href="species.jsp?avibaseid=4D5D2BC3F80BD645"><i>Stercorarius antarcticus</i></a></td><td>大贼鸥</td><td></td></tr>
+<tr class='highlight1'><td>South Polar Skua</td><td><a href="species.jsp?avibaseid=7D1A9D5CCCDC597C"><i>Stercorarius maccormicki</i></a></td><td>南极贼鸥</td><td></td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>CHARADRIIFORMES: Laridae </b></P></td></tr>
+<tr class='highlight1'><td>Sabine's Gull</td><td><a href="species.jsp?avibaseid=86182656472B476B"><i>Xema sabini</i></a></td><td>叉尾鸥</td><td></td></tr>
+<tr class='highlight1'><td>Brown-hooded Gull</td><td><a href="species.jsp?avibaseid=F8F183DD629CAF89"><i>Chroicocephalus maculipennis</i></a></td><td>褐头鸥</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Dolphin Gull</td><td><a href="species.jsp?avibaseid=683C03D970C28BB7"><i>Leucophaeus scoresbii</i></a></td><td>豚鸥</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Franklin's Gull</td><td><a href="species.jsp?avibaseid=57C93A74CBC9863F"><i>Leucophaeus pipixcan</i></a></td><td>弗氏鸥</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Olrog's Gull</td><td><a href="species.jsp?avibaseid=E2967A3F5E6702D8"><i>Larus atlanticus</i></a></td><td>大西洋鸥</td><td>稀见/偶见 <font color=red>近危</font></td></tr>
+<tr class='highlight1'><td>Kelp Gull</td><td><a href="species.jsp?avibaseid=E6536E4E904EF414"><i>Larus dominicanus</i></a></td><td>黑背鸥</td><td></td></tr>
+<tr class='highlight1'><td>Lesser Black-backed Gull</td><td><a href="species.jsp?avibaseid=2D52E3A509137804"><i>Larus fuscus</i></a></td><td>小黑背银鸥</td><td></td></tr>
+<tr class='highlight1'><td>Brown Noddy</td><td><a href="species.jsp?avibaseid=A070171E774B95B5"><i>Anous stolidus</i></a></td><td>白顶玄燕鸥</td><td></td></tr>
+<tr class='highlight1'><td>Black Noddy</td><td><a href="species.jsp?avibaseid=C67DCF31BFAC9C63"><i>Anous minutus</i></a></td><td>玄燕鸥</td><td></td></tr>
+<tr class='highlight1'><td>Sooty Tern</td><td><a href="species.jsp?avibaseid=3E7F825D03C0DC3E"><i>Onychoprion fuscatus</i></a></td><td>乌燕鸥</td><td></td></tr>
+<tr class='highlight1'><td>Arctic Tern</td><td><a href="species.jsp?avibaseid=BDC5CF80BE6CFC21"><i>Sterna paradisaea</i></a></td><td>北极燕鸥</td><td></td></tr>
+<tr class='highlight1'><td>Antarctic Tern</td><td><a href="species.jsp?avibaseid=E9C409B5919B2136"><i>Sterna vittata</i></a></td><td>南极燕鸥</td><td></td></tr>
+<tr class='highlight1'><td>Kerguelen Tern</td><td><a href="species.jsp?avibaseid=754993F116B2B2D5"><i>Sterna virgata</i></a></td><td>克岛燕鸥</td><td><font color=red>近危</font></td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>PHAETHONTIFORMES: Phaethontidae </b></P></td></tr>
+<tr class='highlight1'><td>Red-tailed Tropicbird</td><td><a href="species.jsp?avibaseid=C412CD623EDA1B28"><i>Phaethon rubricauda</i></a></td><td>红尾鹲</td><td>稀见/偶见 </td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>SPHENISCIFORMES: Spheniscidae </b></P></td></tr>
+<tr class='highlight1'><td>King Penguin</td><td><a href="species.jsp?avibaseid=827A77C754AB120E"><i>Aptenodytes patagonicus</i></a></td><td>王企鹅</td><td></td></tr>
+<tr class='highlight1'><td>Emperor Penguin</td><td><a href="species.jsp?avibaseid=58848B7175EB4B3C"><i>Aptenodytes forsteri</i></a></td><td>帝企鹅</td><td><font color=red>近危</font></td></tr>
+<tr class='highlight1'><td>Adelie Penguin</td><td><a href="species.jsp?avibaseid=4A947BE7A06E046E"><i>Pygoscelis adeliae</i></a></td><td>阿德利企鹅</td><td></td></tr>
+<tr class='highlight1'><td>Gentoo Penguin</td><td><a href="species.jsp?avibaseid=F2B3BF2A1B6D05F6"><i>Pygoscelis papua</i></a></td><td>白眉企鹅</td><td></td></tr>
+<tr class='highlight1'><td>Chinstrap Penguin</td><td><a href="species.jsp?avibaseid=75B943A302F2CC67"><i>Pygoscelis antarcticus</i></a></td><td>纹颊企鹅</td><td></td></tr>
+<tr class='highlight1'><td>African Penguin</td><td><a href="species.jsp?avibaseid=9B183BDD66511DD8"><i>Spheniscus demersus</i></a></td><td>南非企鹅</td><td><font color=red>极危</font></td></tr>
+<tr class='highlight1'><td>Magellanic Penguin</td><td><a href="species.jsp?avibaseid=3B4B29E097464863"><i>Spheniscus magellanicus</i></a></td><td>南美企鹅</td><td></td></tr>
+<tr class='highlight1'><td>Macaroni Penguin</td><td><a href="species.jsp?avibaseid=2C2BC004781E7F20"><i>Eudyptes chrysolophus</i></a></td><td>长眉企鹅</td><td><font color=red>易危</font></td></tr>
+<tr class='highlight1'><td>Royal Penguin</td><td><a href="species.jsp?avibaseid=01A11B3AEBD2A3BD"><i>Eudyptes schlegeli</i></a></td><td>白颊黄眉企鹅</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Southern Rockhopper Penguin</td><td><a href="species.jsp?avibaseid=4023CC8140910463"><i>Eudyptes chrysocome</i></a></td><td>凤头黄眉企鹅</td><td><font color=red>易危</font></td></tr>
+<tr class='highlight1'><td>Moseley's Rockhopper Penguin</td><td><a href="species.jsp?avibaseid=8722DFC2C9CB07B4"><i>Eudyptes moseleyi</i></a></td><td>北跳岩企鹅</td><td><font color=red>濒危</font></td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>PROCELLARIIFORMES: Diomedeidae </b></P></td></tr>
+<tr class='highlight1'><td>Northern Royal Albatross</td><td><a href="species.jsp?avibaseid=1A5E5AE7E768F447"><i>Diomedea sanfordi</i></a></td><td>北方皇信天翁</td><td><font color=red>濒危</font></td></tr>
+<tr class='highlight1'><td>Southern Royal Albatross</td><td><a href="species.jsp?avibaseid=4D8C9B9731282B9B"><i>Diomedea epomophora</i></a></td><td>皇信天翁</td><td><font color=red>易危</font></td></tr>
+<tr class='highlight1'><td>Snowy Albatross</td><td><a href="species.jsp?avibaseid=A28D8D38F9A022A4"><i>Diomedea exulans</i></a></td><td>漂泊信天翁</td><td><font color=red>易危</font></td></tr>
+<tr class='highlight1'><td>Tristan Albatross</td><td><a href="species.jsp?avibaseid=1048BC8A62BE30C0"><i>Diomedea dabbenena</i></a></td><td>特岛信天翁</td><td><font color=red>极危</font></td></tr>
+<tr class='highlight1'><td>Antipodean Albatross</td><td><a href="species.jsp?avibaseid=89706CA95232FD2D"><i>Diomedea antipodensis</i></a></td><td>安岛信天翁</td><td><font color=red>濒危</font></td></tr>
+<tr class='highlight1'><td>Amsterdam Albatross</td><td><a href="species.jsp?avibaseid=D93548A7551D1A28"><i>Diomedea amsterdamensis</i></a></td><td>阿岛信天翁</td><td><font color=red>濒危</font></td></tr>
+<tr class='highlight1'><td>Sooty Albatross</td><td><a href="species.jsp?avibaseid=4976BF1DECACAB86"><i>Phoebetria fusca</i></a></td><td>乌信天翁</td><td><font color=red>濒危</font></td></tr>
+<tr class='highlight1'><td>Light-mantled Albatross</td><td><a href="species.jsp?avibaseid=1819ECCEFDD89585"><i>Phoebetria palpebrata</i></a></td><td>灰背信天翁</td><td><font color=red>近危</font></td></tr>
+<tr class='highlight1'><td>Atlantic Yellow-nosed Albatross</td><td><a href="species.jsp?avibaseid=EA2FA91827802E23"><i>Thalassarche chlororhynchos</i></a></td><td>黄鼻信天翁</td><td><font color=red>濒危</font></td></tr>
+<tr class='highlight1'><td>Indian Yellow-nosed Albatross</td><td><a href="species.jsp?avibaseid=65882F71A03E58EA"><i>Thalassarche carteri</i></a></td><td>印度洋黄鼻信天翁</td><td><font color=red>濒危</font></td></tr>
+<tr class='highlight1'><td>Gray-headed Albatross</td><td><a href="species.jsp?avibaseid=0E4475F65B2A8060"><i>Thalassarche chrysostoma</i></a></td><td>灰头信天翁</td><td><font color=red>濒危</font></td></tr>
+<tr class='highlight1'><td>Buller's Albatross</td><td><a href="species.jsp?avibaseid=F79F09E14E0CE6E8"><i>Thalassarche bulleri</i></a></td><td>新西兰信天翁</td><td><font color=red>近危</font></td></tr>
+<tr class='highlight1'><td>White-capped Albatross</td><td><a href="species.jsp?avibaseid=87797B4724F5DC9E"><i>Thalassarche cauta</i></a></td><td>白顶信天翁</td><td></td></tr>
+<tr class='highlight1'><td>Salvin's Albatross</td><td><a href="species.jsp?avibaseid=25428EB1370F60E8"><i>Thalassarche salvini</i></a></td><td>萨氏信天翁</td><td><font color=red>易危</font></td></tr>
+<tr class='highlight1'><td>Black-browed Albatross</td><td><a href="species.jsp?avibaseid=F9FCB9FF95FD3440"><i>Thalassarche melanophris</i></a></td><td>黑眉信天翁</td><td></td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>PROCELLARIIFORMES: Oceanitidae </b></P></td></tr>
+<tr class='highlight1'><td>Wilson's Storm-Petrel</td><td><a href="species.jsp?avibaseid=D295D249BDB7E046"><i>Oceanites oceanicus</i></a></td><td>黄蹼洋海燕（烟黑叉尾海燕）</td><td></td></tr>
+<tr class='highlight1'><td>Gray-backed Storm-Petrel</td><td><a href="species.jsp?avibaseid=F5C74C92648DA267"><i>Garrodia nereis</i></a></td><td>灰背海燕</td><td></td></tr>
+<tr class='highlight1'><td>White-faced Storm-Petrel</td><td><a href="species.jsp?avibaseid=E9DF118ED56564A9"><i>Pelagodroma marina</i></a></td><td>白脸海燕</td><td></td></tr>
+<tr class='highlight1'><td>White-bellied Storm-Petrel</td><td><a href="species.jsp?avibaseid=224E1093DDF013E4"><i>Fregetta grallaria</i></a></td><td>白腹舰海燕</td><td></td></tr>
+<tr class='highlight1'><td>Black-bellied Storm-Petrel</td><td><a href="species.jsp?avibaseid=ACE8EADE6CE42400"><i>Fregetta tropica</i></a></td><td>黑腹舰海燕</td><td></td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>PROCELLARIIFORMES: Hydrobatidae </b></P></td></tr>
+<tr class='highlight1'><td>Leach's Storm-Petrel</td><td><a href="species.jsp?avibaseid=C5FB15C6D112FE91"><i>Hydrobates leucorhous</i></a></td><td>白腰叉尾海燕</td><td><font color=red>易危</font></td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>PROCELLARIIFORMES: Procellariidae </b></P></td></tr>
+<tr class='highlight1'><td>Southern Giant-Petrel</td><td><a href="species.jsp?avibaseid=C1706A8B803AD6EF"><i>Macronectes giganteus</i></a></td><td>巨鹱</td><td></td></tr>
+<tr class='highlight1'><td>Northern Giant-Petrel</td><td><a href="species.jsp?avibaseid=F504C8DE4D185454"><i>Macronectes halli</i></a></td><td>霍氏巨鹱</td><td></td></tr>
+<tr class='highlight1'><td>Southern Fulmar</td><td><a href="species.jsp?avibaseid=10C2881A1F9704A0"><i>Fulmarus glacialoides</i></a></td><td>银灰暴风鹱</td><td></td></tr>
+<tr class='highlight1'><td>Antarctic Petrel</td><td><a href="species.jsp?avibaseid=535186178E86447B"><i>Thalassoica antarctica</i></a></td><td>南极鹱</td><td></td></tr>
+<tr class='highlight1'><td>Pintado Petrel</td><td><a href="species.jsp?avibaseid=AAC2D6136C46A743"><i>Daption capense</i></a></td><td>花斑鹱</td><td></td></tr>
+<tr class='highlight1'><td>Snow Petrel</td><td><a href="species.jsp?avibaseid=BB99994354D613F1"><i>Pagodroma nivea</i></a></td><td>雪鹱</td><td></td></tr>
+<tr class='highlight1'><td>Kerguelen Petrel</td><td><a href="species.jsp?avibaseid=62797BD34F3B0FDF"><i>Aphrodroma brevirostris</i></a></td><td>短嘴圆尾鹱</td><td></td></tr>
+<tr class='highlight1'><td>Great-winged Petrel</td><td><a href="species.jsp?avibaseid=508E7E59EF3A45EA"><i>Pterodroma macroptera</i></a></td><td>巨翅圆尾鹱</td><td></td></tr>
+<tr class='highlight1'><td>Gray-faced Petrel</td><td><a href="species.jsp?avibaseid=DF92B7F9C8E55173"><i>Pterodroma gouldi</i></a></td><td>灰脸圆尾鹱</td><td></td></tr>
+<tr class='highlight1'><td>Trindade Petrel</td><td><a href="species.jsp?avibaseid=8116523B40EF3745"><i>Pterodroma arminjoniana</i></a></td><td>特岛圆尾鹱</td><td>稀见/偶见 <font color=red>易危</font></td></tr>
+<tr class='highlight1'><td>Soft-plumaged Petrel</td><td><a href="species.jsp?avibaseid=12286A1E6662F54C"><i>Pterodroma mollis</i></a></td><td>柔羽圆尾鹱</td><td></td></tr>
+<tr class='highlight1'><td>Barau's Petrel</td><td><a href="species.jsp?avibaseid=D956176F1CC0F3AF"><i>Pterodroma baraui</i></a></td><td>留尼汪圆尾鹱</td><td><font color=red>濒危</font></td></tr>
+<tr class='highlight1'><td>White-headed Petrel</td><td><a href="species.jsp?avibaseid=7C787E7D1F9AC15C"><i>Pterodroma lessonii</i></a></td><td>白头圆尾鹱</td><td></td></tr>
+<tr class='highlight1'><td>Mottled Petrel</td><td><a href="species.jsp?avibaseid=B829AC032A70F251"><i>Pterodroma inexpectata</i></a></td><td>鳞斑圆尾鹱</td><td><font color=red>近危</font></td></tr>
+<tr class='highlight1'><td>Juan Fernandez Petrel</td><td><a href="species.jsp?avibaseid=DC2BA23B403BC4D5"><i>Pterodroma externa</i></a></td><td>百颈圆尾鹱</td><td><font color=red>易危</font></td></tr>
+<tr class='highlight1'><td>Atlantic Petrel</td><td><a href="species.jsp?avibaseid=23865D2512972A80"><i>Pterodroma incerta</i></a></td><td>大西洋圆尾鹱</td><td><font color=red>濒危</font></td></tr>
+<tr class='highlight1'><td>Blue Petrel</td><td><a href="species.jsp?avibaseid=68D6A13AE63C762C"><i>Halobaena caerulea</i></a></td><td>蓝鹱</td><td></td></tr>
+<tr class='highlight1'><td>Fairy Prion</td><td><a href="species.jsp?avibaseid=ED1DDABBD5DB8979"><i>Pachyptila turtur</i></a></td><td>仙锯鹱</td><td></td></tr>
+<tr class='highlight1'><td>Broad-billed Prion</td><td><a href="species.jsp?avibaseid=93860B9B0F951405"><i>Pachyptila vittata</i></a></td><td>阔嘴锯鹱</td><td></td></tr>
+<tr class='highlight1'><td>Salvin's Prion</td><td><a href="species.jsp?avibaseid=A819451AEDC32DA9"><i>Pachyptila salvini</i></a></td><td>小锯鹱</td><td></td></tr>
+<tr class='highlight1'><td>MacGillivray's Prion</td><td><a href="species.jsp?avibaseid=A8433A5816DE1A28"><i>Pachyptila macgillivrayi</i></a></td><td>麦氏锯鹱</td><td><font color=red>极危</font></td></tr>
+<tr class='highlight1'><td>Antarctic Prion</td><td><a href="species.jsp?avibaseid=105C306C36627D87"><i>Pachyptila desolata</i></a></td><td>鸽锯鹱</td><td></td></tr>
+<tr class='highlight1'><td>Slender-billed Prion</td><td><a href="species.jsp?avibaseid=0D885A80ADB81674"><i>Pachyptila belcheri</i></a></td><td>细嘴锯鹱</td><td></td></tr>
+<tr class='highlight1'><td>Fulmar Prion</td><td><a href="species.jsp?avibaseid=FF7A685EF977B0CC"><i>Pachyptila crassirostris</i></a></td><td>厚嘴锯鹱</td><td></td></tr>
+<tr class='highlight1'><td>Gray Petrel</td><td><a href="species.jsp?avibaseid=843C1B8689E0935F"><i>Procellaria cinerea</i></a></td><td>灰风鹱</td><td><font color=red>近危</font></td></tr>
+<tr class='highlight1'><td>White-chinned Petrel</td><td><a href="species.jsp?avibaseid=35EB45A0494AEE57"><i>Procellaria aequinoctialis</i></a></td><td>白颏风鹱</td><td><font color=red>易危</font></td></tr>
+<tr class='highlight1'><td>Spectacled Petrel</td><td><a href="species.jsp?avibaseid=F2ED14C98D3AA6B0"><i>Procellaria conspicillata</i></a></td><td>眼镜风鹱</td><td><font color=blue>仅在当地繁育的</font> <font color=red>易危</font></td></tr>
+<tr class='highlight1'><td>Westland Petrel</td><td><a href="species.jsp?avibaseid=9057992B4DEB406A"><i>Procellaria westlandica</i></a></td><td>大黑风鹱</td><td>稀见/偶见 <font color=red>濒危</font></td></tr>
+<tr class='highlight1'><td>Cory's Shearwater</td><td><a href="species.jsp?avibaseid=710BB4E6D1B2E7FF"><i>Calonectris borealis</i></a></td><td>猛鹱</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Scopoli's Shearwater</td><td><a href="species.jsp?avibaseid=CA4D268D439B2832"><i>Calonectris diomedea</i></a></td><td>斯氏鹱</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Flesh-footed Shearwater</td><td><a href="species.jsp?avibaseid=08F22F8404DCC0D2"><i>Ardenna carneipes</i></a></td><td>淡足鹱</td><td><font color=red>近危</font></td></tr>
+<tr class='highlight1'><td>Great Shearwater</td><td><a href="species.jsp?avibaseid=8B879DFA2AFB1481"><i>Ardenna gravis</i></a></td><td>大鹱</td><td></td></tr>
+<tr class='highlight1'><td>Sooty Shearwater</td><td><a href="species.jsp?avibaseid=1725B07D51A40D6A"><i>Ardenna grisea</i></a></td><td>灰鹱</td><td><font color=red>近危</font></td></tr>
+<tr class='highlight1'><td>Short-tailed Shearwater</td><td><a href="species.jsp?avibaseid=60825BF601060350"><i>Ardenna tenuirostris</i></a></td><td>短尾鹱</td><td></td></tr>
+<tr class='highlight1'><td>Manx Shearwater</td><td><a href="species.jsp?avibaseid=5AEDC00231A5201C"><i>Puffinus puffinus</i></a></td><td>大西洋鹱</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Rapa Shearwater</td><td><a href="species.jsp?avibaseid=869D13F7BC3C166A"><i>Puffinus myrtae</i></a></td><td>拉帕鹱</td><td><font color=blue>特有的</font> <font color=red>极危</font></td></tr>
+<tr class='highlight1'><td>Little Shearwater</td><td><a href="species.jsp?avibaseid=0205EDC6B0E54046"><i>Puffinus assimilis</i></a></td><td>小鹱</td><td></td></tr>
+<tr class='highlight1'><td>Subantarctic Shearwater</td><td><a href="species.jsp?avibaseid=6F4BBFE2ABA8D391"><i>Puffinus elegans</i></a></td><td>亚南极鹱</td><td></td></tr>
+<tr class='highlight1'><td>Tropical Shearwater</td><td><a href="species.jsp?avibaseid=6DA05B66DC30A0D9"><i>Puffinus bailloni</i></a></td><td>热带鹱</td><td></td></tr>
+<tr class='highlight1'><td>Common Diving-Petrel</td><td><a href="species.jsp?avibaseid=8A40716AB433FFB2"><i>Pelecanoides urinatrix</i></a></td><td>鹈燕</td><td></td></tr>
+<tr class='highlight1'><td>South Georgia Diving-Petrel</td><td><a href="species.jsp?avibaseid=1838EC86AC1F328C"><i>Pelecanoides georgicus</i></a></td><td>南乔治亚鹈燕</td><td></td></tr>
+<tr class='highlight1'><td>Magellanic Diving-Petrel</td><td><a href="species.jsp?avibaseid=C849C7144BC8F30D"><i>Pelecanoides magellani</i></a></td><td>麦哲伦鹈燕</td><td>稀见/偶见 </td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>CICONIIFORMES: Ciconiidae </b></P></td></tr>
+<tr class='highlight1'><td>White Stork</td><td><a href="species.jsp?avibaseid=28825494A08AFE5A"><i>Ciconia ciconia</i></a></td><td>白鹳</td><td></td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>SULIFORMES: Sulidae </b></P></td></tr>
+<tr class='highlight1'><td>Cape Gannet</td><td><a href="species.jsp?avibaseid=775E93D7FC5685AC"><i>Morus capensis</i></a></td><td>南非鲣鸟</td><td>稀见/偶见 <font color=red>濒危</font></td></tr>
+<tr class='highlight1'><td>Australasian Gannet</td><td><a href="species.jsp?avibaseid=136103448480BB9C"><i>Morus serrator</i></a></td><td>澳洲鲣鸟</td><td></td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>SULIFORMES: Phalacrocoracidae </b></P></td></tr>
+<tr class='highlight1'><td>South Georgia Shag</td><td><a href="species.jsp?avibaseid=1A941EF8FFBC07E9"><i>Leucocarbo georgianus</i></a></td><td>南乔治亚鸬鹚</td><td></td></tr>
+<tr class='highlight1'><td>Imperial Cormorant</td><td><a href="species.jsp?avibaseid=405403BD00323D03"><i>Leucocarbo atriceps</i></a></td><td>蓝眼鸬鹚</td><td></td></tr>
+<tr class='highlight1'><td>Antarctic Shag</td><td><a href="species.jsp?avibaseid=89CBCA28F098E8A5"><i>Leucocarbo bransfieldensis</i></a></td><td>南极鸬鹚</td><td></td></tr>
+<tr class='highlight1'><td>Crozet Shag</td><td><a href="species.jsp?avibaseid=8EAE1D03B36FB54A"><i>Leucocarbo melanogenis</i></a></td><td>科岛鸬鹚</td><td></td></tr>
+<tr class='highlight1'><td>Kerguelen Shag</td><td><a href="species.jsp?avibaseid=C6DA25F49BEAD31C"><i>Leucocarbo verrucosus</i></a></td><td>克岛鸬鹚</td><td></td></tr>
+<tr class='highlight1'><td>Heard Island Shag</td><td><a href="species.jsp?avibaseid=4D7EF67A0ADE0338"><i>Leucocarbo nivalis</i></a></td><td>哈岛鸬鹚</td><td></td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>PELECANIFORMES: Ardeidae </b></P></td></tr>
+<tr class='highlight1'><td>Black-crowned Night Heron</td><td><a href="species.jsp?avibaseid=6BB94D7EA4D041A8"><i>Nycticorax nycticorax</i></a></td><td>夜鹭</td><td></td></tr>
+<tr class='highlight1'><td>Little Blue Heron</td><td><a href="species.jsp?avibaseid=11512CF46992C660"><i>Egretta caerulea</i></a></td><td>小蓝鹭</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Snowy Egret</td><td><a href="species.jsp?avibaseid=AA7901D88E7203E5"><i>Egretta thula</i></a></td><td>雪鹭</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Little Egret</td><td><a href="species.jsp?avibaseid=F2858F9FFB9DFDCF"><i>Egretta garzetta</i></a></td><td>白鹭</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Striated Heron</td><td><a href="species.jsp?avibaseid=36DF115BD3E2C1C1"><i>Butorides striata</i></a></td><td>绿鹭</td><td></td></tr>
+<tr class='highlight1'><td>Western Cattle-Egret</td><td><a href="species.jsp?avibaseid=AB1CB2161CDC177A"><i>Ardea ibis</i></a></td><td>西方牛背鹭</td><td></td></tr>
+<tr class='highlight1'><td>Great Egret</td><td><a href="species.jsp?avibaseid=49D9148A171E7F2E"><i>Ardea alba</i></a></td><td>大白鹭</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Cocoi Heron</td><td><a href="species.jsp?avibaseid=B49AB61348C178BD"><i>Ardea cocoi</i></a></td><td>黑冠白颈鹭</td><td>稀见/偶见 </td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>CATHARTIFORMES: Cathartidae </b></P></td></tr>
+<tr class='highlight1'><td>Turkey Vulture</td><td><a href="species.jsp?avibaseid=36B3872DAFE1EC1C"><i>Cathartes aura</i></a></td><td>红头美洲鹫</td><td>稀见/偶见 </td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>STRIGIFORMES: Tytonidae </b></P></td></tr>
+<tr class='highlight1'><td>American Barn Owl</td><td><a href="species.jsp?avibaseid=6B54759BD35CBE45"><i>Tyto furcata</i></a></td><td>美洲仓鸮</td><td>稀见/偶见 </td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>CORACIIFORMES: Coraciidae </b></P></td></tr>
+<tr class='highlight1'><td>Broad-billed Roller</td><td><a href="species.jsp?avibaseid=4F01F4165EC3954E"><i>Eurystomus glaucurus</i></a></td><td>阔嘴三宝鸟</td><td>稀见/偶见 </td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>FALCONIFORMES: Falconidae </b></P></td></tr>
+<tr class='highlight1'><td>Eleonora's Falcon</td><td><a href="species.jsp?avibaseid=9EA1F12D48EB0120"><i>Falco eleonorae</i></a></td><td>艾氏隼</td><td></td></tr>
+<tr class='highlight1'><td>Peregrine Falcon</td><td><a href="species.jsp?avibaseid=47E5840880DC9FA8"><i>Falco peregrinus</i></a></td><td>游隼</td><td>稀见/偶见 </td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>PASSERIFORMES: Tyrannidae </b></P></td></tr>
+<tr class='highlight1'><td>White-crested Elaenia</td><td><a href="species.jsp?avibaseid=611C997C6976C2E3"><i>Elaenia albiceps</i></a></td><td>白冠拟霸鹟</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Dark-faced Ground-Tyrant</td><td><a href="species.jsp?avibaseid=604FFF1C519070A7"><i>Muscisaxicola maclovianus</i></a></td><td>暗脸地霸鹟</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Eastern Kingbird</td><td><a href="species.jsp?avibaseid=082D833CF61D6360"><i>Tyrannus tyrannus</i></a></td><td>东王霸鹟</td><td>稀见/偶见 </td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>PASSERIFORMES: Laniidae </b></P></td></tr>
+<tr class='highlight1'><td>Red-backed Shrike</td><td><a href="species.jsp?avibaseid=F2CEFD1A4EA5F608"><i>Lanius collurio</i></a></td><td>红背伯劳</td><td></td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>PASSERIFORMES: Acrocephalidae </b></P></td></tr>
+<tr class='highlight1'><td>Great Reed Warbler</td><td><a href="species.jsp?avibaseid=B283E33243C17D97"><i>Acrocephalus arundinaceus</i></a></td><td>大苇莺</td><td>稀见/偶见 </td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>PASSERIFORMES: Hirundinidae </b></P></td></tr>
+<tr class='highlight1'><td>Bank Swallow</td><td><a href="species.jsp?avibaseid=94A1C447583CB6D2"><i>Riparia riparia</i></a></td><td>崖沙燕</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Chilean Swallow</td><td><a href="species.jsp?avibaseid=BCDA59AF198E5F13"><i>Tachycineta leucopyga</i></a></td><td>白臀树燕</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Barn Swallow</td><td><a href="species.jsp?avibaseid=58C502EA7AF3E023"><i>Hirundo rustica</i></a></td><td>家燕</td><td>稀见/偶见 </td></tr>
+<tr class='highlight1'><td>Cliff Swallow</td><td><a href="species.jsp?avibaseid=F5C181CA4478FD86"><i>Petrochelidon pyrrhonota</i></a></td><td>美洲燕</td><td>稀见/偶见 </td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>PASSERIFORMES: Phylloscopidae </b></P></td></tr>
+<tr class='highlight1'><td>Willow Warbler</td><td><a href="species.jsp?avibaseid=88F4B969622B8268"><i>Phylloscopus trochilus</i></a></td><td>欧柳莺</td><td>稀见/偶见 </td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>PASSERIFORMES: Turdidae </b></P></td></tr>
+<tr class='highlight1'><td>Tristan Thrush</td><td><a href="species.jsp?avibaseid=C740512DF96766B1"><i>Turdus eremita</i></a></td><td>特里斯坦鸫</td><td><font color=red>近危</font></td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>PASSERIFORMES: Estrildidae </b></P></td></tr>
+<tr class='highlight1'><td>Common Waxbill</td><td><a href="species.jsp?avibaseid=61CB98C064F82462"><i>Estrilda astrild</i></a></td><td>梅花雀</td><td>外来物种  </td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>PASSERIFORMES: Passeridae </b></P></td></tr>
+<tr class='highlight1'><td>House Sparrow</td><td><a href="species.jsp?avibaseid=240E33900CE34D44"><i>Passer domesticus</i></a></td><td>家麻雀</td><td>外来物种  </td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>PASSERIFORMES: Motacillidae </b></P></td></tr>
+<tr class='highlight1'><td>Western Yellow Wagtail</td><td><a href="species.jsp?avibaseid=5983D6776C4C4F85"><i>Motacilla flava</i></a></td><td>西黄鹡鸰</td><td></td></tr>
+<tr class='highlight1'><td>South Georgia Pipit</td><td><a href="species.jsp?avibaseid=AAA4D21C5E20D407"><i>Anthus antarcticus</i></a></td><td>南极鹨</td><td></td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>PASSERIFORMES: Icteridae </b></P></td></tr>
+<tr class='highlight1'><td>Long-tailed Meadowlark</td><td><a href="species.jsp?avibaseid=116A0791F5DF8424"><i>Leistes loyca</i></a></td><td>长尾草地鹨</td><td>稀见/偶见 </td></tr>
+<tr valign=bottom><td colspan=3><P>&nbsp;<br><b>PASSERIFORMES: Thraupidae </b></P></td></tr>
+<tr class='highlight1'><td>Gough Island Finch</td><td><a href="species.jsp?avibaseid=0147433E62C6E032"><i>Rowettia goughensis</i></a></td><td>高夫岛雀</td><td><font color=red>极危</font></td></tr>
+<tr class='highlight1'><td>Inaccessible Island Finch</td><td><a href="species.jsp?avibaseid=AED9D2203547A2BB"><i>Nesospiza acunhae</i></a></td><td>特岛雀</td><td><font color=red>易危</font></td></tr>
+<tr class='highlight1'><td>Nightingale Island Finch</td><td><a href="species.jsp?avibaseid=4DB8A059218E4311"><i>Nesospiza questi</i></a></td><td>夜莺岛雀</td><td><font color=red>易危</font></td></tr>
+<tr class='highlight1'><td>Wilkins's Finch</td><td><a href="species.jsp?avibaseid=DEF2D6381B57A662"><i>Nesospiza wilkinsi</i></a></td><td>维氏岛雀</td><td><font color=red>极危</font></td></tr>
+
+     </table>
+	 </div>
+
+
+</div>
+
+<P>&nbsp;</P>
+
+<script>
+   $(document).ready(function() {
+     $("#references").load("references_json.jsp", {"region": "ant", "synlang": "ZH", "lang": "ZH", "list": "clements"} );
+   });
+</script>
+
+<div style="font-weight: bold; font-size: 12pt">参考（部分列表）
+<div style="width: 100%; height: 1px; background-color: #000; margin-top: 0px;"></div>
+</div>
+
+<div id="references"></div>
+
+
+
+
+</div>
+	</div>
+
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="text-center" style="padding: 20px;">
+				<P>Avibase已被访问 <b>442,676,061</b> 自2003年6月24日以来. &copy; Denis Lepage |
+				<a href="privacy.jsp">隐私条款</a>
+				提供本页中文翻译的是</P>
+				<center><a target="_blank" href="https://www.birdingtop500.com/"><img id="birdingtop500" src="images/birdingtop500blank.png" border=0></a></center>
+			</div>			
+		</div>
+	</div>
+	
+</div>
+
+</body>
+</html>
+
