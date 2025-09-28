@@ -262,6 +262,7 @@ export default function Dashboard() {
                 <option value="peaceful">平静</option>
                 <option value="scary">害怕</option>
                 <option value="weird">奇怪</option>
+		<option value="annoyed">懊恼</option>
                 <option value="other">其他</option>
               </select>
             </div>

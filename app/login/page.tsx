@@ -25,10 +25,16 @@ export default function LoginPage() {
 
     try {
       if (isSignUp) {
-        // 注册
+        // --- 注册逻辑 (已修改) ---
         const { data, error: signUpError } = await supabase.auth.signUp({
           email,
           password,
+          // ✅ 关键改动：将 username 作为元数据一起提交
+          options: {
+            data: {
+              username: username,
+            },
+          },
         });
 
         if (signUpError) {
@@ -37,23 +43,16 @@ export default function LoginPage() {
           return;
         }
 
-        const userId = data.user?.id;
-        if (userId) {
-          // ✅ 注册时直接插入 profiles
-          const { error: profileError } = await supabase
-            .from("profiles")
-            .insert([{ id: userId, username }]);
-
-          if (profileError) {
-            console.error("创建 profile 失败:", profileError.message);
-          }
-
+        // ✅ 简化逻辑：数据库触发器会自动创建 profile。
+        // 如果 Supabase 设置了邮件验证，data.user 会是 null，直到用户点击邮件链接。
+        if (data.user) {
           router.push("/dashboard");
         } else {
-          setError("注册成功，请去邮箱确认验证链接。");
+          setError("注册成功！请检查你的邮箱，点击验证链接以完成注册。");
         }
+
       } else {
-        // 登录
+        // --- 登录逻辑 (保持不变) ---
         const { error: signInError } = await supabase.auth.signInWithPassword({
           email,
           password,
@@ -130,7 +129,11 @@ export default function LoginPage() {
 
             {error && (
               <Alert variant="destructive" className="mt-4">
-                <AlertDescription>❌ {error}</AlertDescription>
+                <AlertDescription>
+                  {/* 使用 ❌ 或 ✅ 来增加视觉提示 */}
+                  {error.includes("验证") ? "✅ " : "❌ "}
+                  {error}
+                </AlertDescription>
               </Alert>
             )}
 
@@ -138,7 +141,10 @@ export default function LoginPage() {
               {isSignUp ? "已有账号？" : "还没有账号？"}{" "}
               <button
                 type="button"
-                onClick={() => setIsSignUp(!isSignUp)}
+                onClick={() => {
+                  setIsSignUp(!isSignUp);
+                  setError(null); // 切换时清空错误信息
+                }}
                 className="text-blue-600 hover:underline"
               >
                 {isSignUp ? "去登录" : "去注册"}
@@ -158,7 +164,7 @@ export default function LoginPage() {
               可以支持中文/英文/学名的搜索。当然，如果梦见了现实中不存在的鸟种，可以选择“想象鸟种”并且自行命名，并在备注区详细描述。
             </p>
             <p>
-              地点可以描述梦境中看见小鸟的环境。心情目前有5种选择，有更多想说的也可以在备注区写下来！
+              地点可以描述梦境中看见小鸟的环境。心情目前有6种选择，有更多想说的也可以在备注区写下来！
             </p>
             <p>最后点击“添加记录”就上传成功啦~</p>
             <p>
