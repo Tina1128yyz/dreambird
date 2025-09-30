@@ -262,7 +262,7 @@ export default function Dashboard() {
                 <option value="peaceful">平静</option>
                 <option value="scary">害怕</option>
                 <option value="weird">奇怪</option>
-		<option value="annoyed">懊恼</option>
+                <option value="annoyed">懊恼</option>
                 <option value="other">其他</option>
               </select>
             </div>
@@ -341,6 +341,11 @@ export default function Dashboard() {
           )}
         </CardContent>
       </Card>
+      
+      {/* 👇 这里是新添加的底部水印 👇 */}
+      <footer className="w-full text-center py-4 mt-8 text-gray-500 text-sm">
+        &copy; {new Date().getFullYear()} DreamBird by Lei Bao.
+      </footer>
     </main>
   );
 }
