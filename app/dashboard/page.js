@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Link from 'next/link'; // 确保引入 Link
 import AsyncSelect from "react-select/async";
 import { supabase } from "../../lib/supabaseClient";
 import { useRouter } from "next/navigation";
@@ -10,7 +11,7 @@ import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
-import { Trash2 } from "lucide-react"; // ✅ 引入垃圾桶图标
+import { Trash2 } from "lucide-react";
 
 export default function Dashboard() {
   const router = useRouter();
@@ -19,13 +20,17 @@ export default function Dashboard() {
   const [loadingUser, setLoadingUser] = useState(true);
 
   const [sightings, setSightings] = useState([]);
-  const [species, setSpecies] = useState(null);
+  
+  const [realSpeciesList, setRealSpeciesList] = useState([]); 
+  const [dreamSpeciesName, setDreamSpeciesName] = useState("");
+  
   const [location, setLocation] = useState("");
   const [notes, setNotes] = useState("");
   const [happenedOn, setHappenedOn] = useState("");
   const [speciesType, setSpeciesType] = useState("real");
   const [mood, setMood] = useState("peaceful");
   const [loading, setLoading] = useState(false);
+  const [isPublic, setIsPublic] = useState(false); // ✅ “是否公开”的 state
 
   // 🔹 taxonomy
   const [taxonomyData, setTaxonomyData] = useState([]);
@@ -42,16 +47,13 @@ export default function Dashboard() {
         router.push("/login");
         return;
       }
-
       setUser(user);
 
-      // 🔹 获取 username
       const { data: profile } = await supabase
         .from("profiles")
         .select("username")
         .eq("id", user.id)
         .single();
-
       setUsername(profile?.username || null);
       setLoadingUser(false);
 
@@ -66,7 +68,6 @@ export default function Dashboard() {
 
       fetchSightings(user.id);
     }
-
     loadUserAndData();
   }, [router]);
 
@@ -86,12 +87,10 @@ export default function Dashboard() {
         const sci = item.sciName;
         const zh = zhMapping[sci] || null;
         const en = item.comName;
-
         const labelParts = [];
         if (zh) labelParts.push(zh);
         if (en && en !== sci) labelParts.push(en);
         if (sci) labelParts.push(sci);
-
         return {
           label: labelParts.join(" / "),
           value: sci,
@@ -105,12 +104,15 @@ export default function Dashboard() {
 
   // 拉取数据
   async function fetchSightings(userId) {
-    const { data } = await supabase
+    const { data, error } = await supabase
       .from("sightings")
-      .select("*")
+      .select("*, sighting_species(species_name)")
       .eq("user_id", userId)
       .order("created_at", { ascending: false });
-
+    
+    if (error) {
+        console.error("❌ 拉取 sightings 失败:", error.message);
+    }
     setSightings(data || []);
   }
 
@@ -119,33 +121,65 @@ export default function Dashboard() {
     e.preventDefault();
     setLoading(true);
 
-    const speciesName =
-      speciesType === "real"
-        ? species?.value || ""
-        : typeof species === "string"
-        ? species
-        : "";
+    const { data: sightingData, error: sightingError } = await supabase
+      .from("sightings")
+      .insert([
+        {
+          location_text: location,
+          happened_on: happenedOn
+            ? new Date(happenedOn).toISOString()
+            : new Date().toISOString(),
+          description: notes,
+          user_id: user.id,
+          mood: mood,
+          species_type: speciesType,
+          is_public: isPublic, // <-- 添加 is_public
+        },
+      ])
+      .select()
+      .single();
 
-    await supabase.from("sightings").insert([
-      {
-        species_name: speciesName,
-        location_text: location,
-        happened_on: happenedOn
-          ? new Date(happenedOn).toISOString()
-          : new Date().toISOString(),
-        description: notes,
-        user_id: user.id,
-        mood: mood,
-        species_type: speciesType,
-      },
-    ]);
+    if (sightingError) {
+      console.error("❌ 创建 sighting 失败:", sightingError.message);
+      setLoading(false);
+      return;
+    }
 
-    setSpecies(null);
+    const newSightingId = sightingData.id;
+
+    let speciesToInsert = [];
+    if (speciesType === "real") {
+      speciesToInsert = realSpeciesList.map(s => ({
+        sighting_id: newSightingId,
+        species_name: s.value,
+      }));
+    } else {
+      if (dreamSpeciesName) {
+        speciesToInsert = [{
+          sighting_id: newSightingId,
+          species_name: dreamSpeciesName,
+        }];
+      }
+    }
+
+    if (speciesToInsert.length > 0) {
+      const { error: speciesError } = await supabase
+        .from("sighting_species")
+        .insert(speciesToInsert);
+
+      if (speciesError) {
+        console.error("❌ 插入 sighting_species 失败:", speciesError.message);
+      }
+    }
+
+    setRealSpeciesList([]);
+    setDreamSpeciesName("");
     setLocation("");
     setNotes("");
     setHappenedOn("");
     setSpeciesType("real");
     setMood("peaceful");
+    setIsPublic(false); // <-- 重置 isPublic
     fetchSightings(user.id);
 
     setLoading(false);
@@ -171,6 +205,11 @@ export default function Dashboard() {
           <CardTitle className="text-2xl font-bold text-center">
             🐦 DreamBird Dashboard
           </CardTitle>
+          <div className="text-center mt-2">
+            <Link href="/gallery">
+              <Button variant="outline">去大家的梦境展馆看看 →</Button>
+            </Link>
+          </div>
         </CardHeader>
         <CardContent className="text-center">
           欢迎回来，{username ? username : user.email}！
@@ -193,7 +232,8 @@ export default function Dashboard() {
                 value={speciesType}
                 onChange={(e) => {
                   setSpeciesType(e.target.value);
-                  setSpecies(null);
+                  setRealSpeciesList([]);
+                  setDreamSpeciesName("");
                 }}
                 className="w-full rounded-md border p-2"
               >
@@ -205,15 +245,16 @@ export default function Dashboard() {
             {/* 鸟种名 */}
             {speciesType === "real" ? (
               <div>
-                <Label>鸟种名</Label>
+                <Label>鸟种名 (可添加多个)</Label>
                 <AsyncSelect
+                  isMulti
                   cacheOptions
                   defaultOptions
                   loadOptions={searchSpecies}
-                  value={species}
-                  onChange={setSpecies}
+                  value={realSpeciesList}
+                  onChange={setRealSpeciesList}
                   isClearable
-                  placeholder="搜索真实鸟种..."
+                  placeholder="搜索并添加多种真实鸟种..."
                 />
               </div>
             ) : (
@@ -221,8 +262,8 @@ export default function Dashboard() {
                 <Label>鸟种名</Label>
                 <Input
                   type="text"
-                  value={typeof species === "string" ? species : ""}
-                  onChange={(e) => setSpecies(e.target.value)}
+                  value={dreamSpeciesName}
+                  onChange={(e) => setDreamSpeciesName(e.target.value)}
                   placeholder="给自己梦到的奇幻鸟种起个名吧！"
                   required
                 />
@@ -277,6 +318,23 @@ export default function Dashboard() {
               />
             </div>
 
+            {/* 是否公开 Checkbox */}
+            <div className="flex items-center space-x-2 pt-2">
+              <input
+                type="checkbox"
+                id="is-public"
+                checked={isPublic}
+                onChange={(e) => setIsPublic(e.target.checked)}
+                className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
+              />
+              <Label
+                htmlFor="is-public"
+                className="text-sm font-medium text-gray-700 select-none"
+              >
+                公开这条记录？(其他人将能在“展馆”页面看到你的用户名和记录)
+              </Label>
+            </div>
+
             <Button type="submit" className="w-full" disabled={loading}>
               {loading ? "提交中..." : "添加记录"}
             </Button>
@@ -294,20 +352,22 @@ export default function Dashboard() {
             <p className="text-gray-500">暂无记录。</p>
           ) : (
             sightings.map((sighting) => {
-              const sci = sighting.species_name;
-              const tax = taxonomyData.find((t) => t.sciName === sci);
-              const zh = zhMapping[sci] || null;
-              const en = tax?.comName || null;
-
-              const labelParts = [];
-              if (zh) labelParts.push(zh);
-              if (en && en !== sci) labelParts.push(en);
-              if (sci) labelParts.push(sci);
-              const displayName = labelParts.join(" / ");
+              const speciesList = sighting.sighting_species || [];
+              const displayNamesArray = speciesList.map(species => {
+                const sci = species.species_name;
+                const tax = taxonomyData.find((t) => t.sciName === sci);
+                const zh = zhMapping[sci] || null;
+                const en = tax?.comName || null;
+                const labelParts = [];
+                if (zh) labelParts.push(zh);
+                if (en && en !== sci) labelParts.push(en);
+                if (sci) labelParts.push(sci);
+                return labelParts.join(" / ");
+              });
+              const displayName = displayNamesArray.join(", ");
 
               return (
                 <Card key={sighting.id} className="p-4 relative">
-                  {/* 删除按钮 - 换成垃圾桶图标 */}
                   <Button
                     variant="ghost"
                     size="icon"
@@ -316,8 +376,7 @@ export default function Dashboard() {
                   >
                     <Trash2 className="w-5 h-5" />
                   </Button>
-
-                  <h3 className="font-bold">{displayName || "未知鸟种"}</h3>
+                  <h3 className="font-bold pr-10">{displayName || "未知鸟种"}</h3>
                   <p className="text-sm text-gray-600">
                     {sighting.location_text || "未知地点"} ·{" "}
                     {sighting.happened_on
@@ -342,7 +401,6 @@ export default function Dashboard() {
         </CardContent>
       </Card>
       
-      {/* 👇 这里是新添加的底部水印 👇 */}
       <footer className="w-full text-center py-4 mt-8 text-gray-500 text-sm">
         &copy; {new Date().getFullYear()} DreamBird by Lei Bao.
       </footer>
