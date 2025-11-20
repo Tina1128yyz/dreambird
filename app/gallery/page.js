@@ -4,19 +4,32 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 
-export default async function GalleryPage() {
+export default async function GalleryPage({ searchParams }) {
+  // 1. 获取当前页码，默认为第 1 页
+  // searchParams 是 Next.js 页面组件自动接收的参数
+  const params = await searchParams;
+  const currentPage = Number(params?.page) || 1;
+  const ITEMS_PER_PAGE = 10;
+
+  // 2. 计算 Supabase 查询的范围
+  // 例如第1页: 0-9, 第2页: 10-19
+  const from = (currentPage - 1) * ITEMS_PER_PAGE;
+  const to = from + ITEMS_PER_PAGE - 1;
 
   const [sightingsRes, taxonomyRes] = await Promise.all([
     supabase
       .from("sightings")
-      .select("*, sighting_species(species_name), profiles(username)")
+      .select("*, sighting_species(species_name), profiles(username)", { count: 'exact' }) // 添加 count: 'exact' 以获取总数
       .eq('is_public', true)
       .order("created_at", { ascending: false })
-      .limit(20),
+      .range(from, to), // 这里替换了原来的 limit(20)
     fetch(`${process.env.NEXT_PUBLIC_APP_URL}/api/getTaxonomy`, { cache: 'no-store' })
   ]);
 
-  const { data: sightings, error: sightingsError } = sightingsRes;
+  const { data: sightings, count: totalCount, error: sightingsError } = sightingsRes;
+
+  // 计算总页数
+  const totalPages = totalCount ? Math.ceil(totalCount / ITEMS_PER_PAGE) : 1;
 
   let taxonomyData = [];
   let zhMapping = {};
@@ -31,9 +44,9 @@ export default async function GalleryPage() {
   if (sightingsError) {
     console.error("Error fetching public sightings:", sightingsError);
     return (
-        <main className="flex min-h-screen flex-col items-center justify-center p-6">
-            <p className="text-red-500">加载数据失败，请稍后再试。</p>
-        </main>
+      <main className="flex min-h-screen flex-col items-center justify-center p-6">
+        <p className="text-red-500">加载数据失败，请稍后再试。</p>
+      </main>
     );
   }
 
@@ -46,7 +59,6 @@ export default async function GalleryPage() {
           </CardTitle>
           <div className="text-center text-sm text-gray-600 pt-2 space-y-2">
             <p>这里展示了来自所有用户的最新公开记录。</p>
-            {/* ✅ **THIS IS THE CHANGE** ✅ */}
             <Link href="/dashboard">
               <Button variant="outline">回到我的 Dashboard</Button>
             </Link>
@@ -100,12 +112,37 @@ export default async function GalleryPage() {
           })
         ) : (
           <Card className="w-full max-w-3xl shadow-lg text-center p-8">
-            <p className="text-gray-500">还没有人公开分享记录呢，快去成为第一个吧！</p>
+            <p className="text-gray-500">还没有人公开分享记录呢，或者这一页没有数据。</p>
           </Card>
         )}
       </div>
       
-      <footer className="w-full text-center py-4 mt-8 text-gray-500 text-sm">
+      {/* 3. 分页控制按钮区 */}
+      <div className="flex items-center justify-center gap-4 w-full max-w-3xl pt-4 pb-8">
+        {/* 上一页按钮：如果在第1页则禁用 */}
+        {currentPage > 1 ? (
+          <Link href={`/gallery?page=${currentPage - 1}`}>
+            <Button variant="outline">上一页</Button>
+          </Link>
+        ) : (
+          <Button variant="outline" disabled>上一页</Button>
+        )}
+
+        <span className="text-sm text-gray-600">
+           第 {currentPage} 页 / 共 {totalPages} 页
+        </span>
+
+        {/* 下一页按钮：如果是最后一页则禁用 */}
+        {currentPage < totalPages ? (
+          <Link href={`/gallery?page=${currentPage + 1}`}>
+            <Button variant="outline">下一页</Button>
+          </Link>
+        ) : (
+          <Button variant="outline" disabled>下一页</Button>
+        )}
+      </div>
+
+      <footer className="w-full text-center py-4 text-gray-500 text-sm">
         &copy; {new Date().getFullYear()} DreamBird by Lei Bao.
       </footer>
     </main>
