@@ -4,25 +4,35 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 
+// ✅ 1. 引入图标映射
+const CATEGORY_ICONS = {
+  bird: "🐦",
+  plant: "🌿",
+  insect: "🐞",
+  mammal: "🦊",
+  fish: "🐟",
+  other: "🌀"
+};
+
 export default async function GalleryPage({ searchParams }) {
-  // 1. 获取当前页码，默认为第 1 页
-  // searchParams 是 Next.js 页面组件自动接收的参数
+  // 1. 获取当前页码
   const params = await searchParams;
   const currentPage = Number(params?.page) || 1;
   const ITEMS_PER_PAGE = 10;
 
-  // 2. 计算 Supabase 查询的范围
-  // 例如第1页: 0-9, 第2页: 10-19
+  // 2. 计算范围
   const from = (currentPage - 1) * ITEMS_PER_PAGE;
   const to = from + ITEMS_PER_PAGE - 1;
 
+  // 3. 并行获取数据
   const [sightingsRes, taxonomyRes] = await Promise.all([
     supabase
       .from("sightings")
-      .select("*, sighting_species(species_name), profiles(username)", { count: 'exact' }) // 添加 count: 'exact' 以获取总数
+      .select("*, sighting_species(species_name), profiles(username)", { count: 'exact' })
       .eq('is_public', true)
       .order("created_at", { ascending: false })
-      .range(from, to), // 这里替换了原来的 limit(20)
+      .range(from, to),
+    // 获取鸟类字典
     fetch(`${process.env.NEXT_PUBLIC_APP_URL}/api/getTaxonomy`, { cache: 'no-store' })
   ]);
 
@@ -31,6 +41,7 @@ export default async function GalleryPage({ searchParams }) {
   // 计算总页数
   const totalPages = totalCount ? Math.ceil(totalCount / ITEMS_PER_PAGE) : 1;
 
+  // 处理字典数据
   let taxonomyData = [];
   let zhMapping = {};
   if (taxonomyRes.ok) {
@@ -70,40 +81,66 @@ export default async function GalleryPage({ searchParams }) {
         {sightings && sightings.length > 0 ? (
           sightings.map((sighting) => {
             
-            const speciesList = sighting.sighting_species || [];
-            const displayNamesArray = speciesList.map(species => {
-              const sci = species.species_name;
-              const tax = taxonomyData.find((t) => t.sciName === sci);
-              const zh = zhMapping[sci] || null;
-              const en = tax?.comName || null;
+            // ✅ 2. 获取类别图标
+            const cat = sighting.category || 'bird';
+            const icon = CATEGORY_ICONS[cat] || "🌀";
 
-              const labelParts = [];
-              if (zh) labelParts.push(zh);
-              if (en && en !== sci) labelParts.push(en);
-              if (sci) labelParts.push(sci);
-              
-              return labelParts.join(" / ");
+            const speciesList = sighting.sighting_species || [];
+            
+            // ✅ 3. 生成显示名称（区分鸟类和其他）
+            const displayNamesArray = speciesList.map(species => {
+              const nameInDb = species.species_name;
+
+              // 只有是 "bird" 且 taxonomy 有数据时，才去查字典
+              if (cat === 'bird') {
+                const sci = nameInDb;
+                const tax = taxonomyData.find((t) => t.sciName === sci);
+                const zh = zhMapping[sci] || null;
+                const en = tax?.comName || null;
+
+                const labelParts = [];
+                if (zh) labelParts.push(zh);
+                if (en && en !== sci) labelParts.push(en);
+                if (sci) labelParts.push(sci);
+                
+                return labelParts.length > 0 ? labelParts.join(" / ") : sci;
+              } else {
+                // 植物、昆虫等直接显示存入的名字
+                return nameInDb;
+              }
             });
             const displayName = displayNamesArray.join(", ");
 
             return (
-              <Card key={sighting.id} className="p-4">
-                <h3 className="font-bold">{displayName || "未知鸟种"}</h3>
-                <p className="text-sm text-gray-600">
+              <Card key={sighting.id} className="p-4 relative">
+                {/* 标题带上图标 */}
+                <h3 className="font-bold text-lg">
+                  <span className="mr-2">{icon}</span>
+                  {displayName || "未知物种"}
+                </h3>
+                
+                <p className="text-sm text-gray-600 mt-1">
                   {sighting.location_text || "未知地点"} ·{" "}
                   {new Date(sighting.happened_on || sighting.created_at).toLocaleDateString()}
                 </p>
+                
                 <div className="flex gap-2 mt-2">
                   <Badge>
-                    {sighting.species_type === "real" ? "现实鸟种" : "想象鸟种"}
+                     {/* ✅ 4. 文案更新：现实物种 / 想象物种 */}
+                    {sighting.species_type === "real" ? "现实物种" : "想象物种"}
                   </Badge>
                   <Badge variant="secondary">
                     心情：{sighting.mood || "未记录"}
                   </Badge>
                 </div>
+                
                 {sighting.description && (
-                  <p className="mt-2 text-sm">{sighting.description}</p>
+                  <p className="mt-3 text-sm leading-relaxed bg-white/50 p-2 rounded-md">
+                    {sighting.description}
+                  </p>
                 )}
+                
+                {/* ✅ 5. 恢复原本的用户名样式 (去掉了蓝色) */}
                 <p className="text-xs text-right text-gray-500 mt-2">
                   由 {sighting.profiles?.username || '匿名用户'} 发布
                 </p>
@@ -117,9 +154,8 @@ export default async function GalleryPage({ searchParams }) {
         )}
       </div>
       
-      {/* 3. 分页控制按钮区 */}
+      {/* 分页控制 */}
       <div className="flex items-center justify-center gap-4 w-full max-w-3xl pt-4 pb-8">
-        {/* 上一页按钮：如果在第1页则禁用 */}
         {currentPage > 1 ? (
           <Link href={`/gallery?page=${currentPage - 1}`}>
             <Button variant="outline">上一页</Button>
@@ -132,7 +168,6 @@ export default async function GalleryPage({ searchParams }) {
            第 {currentPage} 页 / 共 {totalPages} 页
         </span>
 
-        {/* 下一页按钮：如果是最后一页则禁用 */}
         {currentPage < totalPages ? (
           <Link href={`/gallery?page=${currentPage + 1}`}>
             <Button variant="outline">下一页</Button>

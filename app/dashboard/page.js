@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Link from 'next/link'; // 确保引入 Link
+import Link from 'next/link';
 import AsyncSelect from "react-select/async";
 import { supabase } from "../../lib/supabaseClient";
 import { useRouter } from "next/navigation";
@@ -13,6 +13,16 @@ import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
 import { Trash2 } from "lucide-react";
 
+// 定义图标映射，方便复用
+const CATEGORY_ICONS = {
+  bird: "🐦",
+  plant: "🌿",
+  insect: "🐞",
+  mammal: "🦊",
+  fish: "🐟",
+  other: "🌀"
+};
+
 export default function Dashboard() {
   const router = useRouter();
   const [user, setUser] = useState(null);
@@ -21,8 +31,10 @@ export default function Dashboard() {
 
   const [sightings, setSightings] = useState([]);
   
+  // 表单状态
+  const [category, setCategory] = useState("bird"); // ✅ 生物类别
   const [realSpeciesList, setRealSpeciesList] = useState([]); 
-  const [dreamSpeciesName, setDreamSpeciesName] = useState("");
+  const [dreamSpeciesName, setDreamSpeciesName] = useState(""); // 用于所有“手动输入”的情况
   
   const [location, setLocation] = useState("");
   const [notes, setNotes] = useState("");
@@ -30,7 +42,7 @@ export default function Dashboard() {
   const [speciesType, setSpeciesType] = useState("real");
   const [mood, setMood] = useState("peaceful");
   const [loading, setLoading] = useState(false);
-  const [isPublic, setIsPublic] = useState(false); // ✅ “是否公开”的 state
+  const [isPublic, setIsPublic] = useState(false);
 
   // 🔹 taxonomy
   const [taxonomyData, setTaxonomyData] = useState([]);
@@ -71,7 +83,7 @@ export default function Dashboard() {
     loadUserAndData();
   }, [router]);
 
-  // 🔍 搜索鸟种
+  // 🔍 搜索鸟种 (只有 category 是 bird 时才用)
   const searchSpecies = async (inputValue) => {
     if (!inputValue) return [];
     try {
@@ -126,14 +138,13 @@ export default function Dashboard() {
       .insert([
         {
           location_text: location,
-          happened_on: happenedOn
-            ? new Date(happenedOn).toISOString()
-            : new Date().toISOString(),
+          happened_on: happenedOn ? new Date(happenedOn).toISOString() : new Date().toISOString(),
           description: notes,
           user_id: user.id,
           mood: mood,
           species_type: speciesType,
-          is_public: isPublic, // <-- 添加 is_public
+          is_public: isPublic,
+          category: category, 
         },
       ])
       .select()
@@ -148,16 +159,20 @@ export default function Dashboard() {
     const newSightingId = sightingData.id;
 
     let speciesToInsert = [];
-    if (speciesType === "real") {
+
+    // 逻辑判断：
+    if (category === "bird" && speciesType === "real") {
       speciesToInsert = realSpeciesList.map(s => ({
         sighting_id: newSightingId,
         species_name: s.value,
       }));
     } else {
+      // 处理手动输入的情况
       if (dreamSpeciesName) {
         speciesToInsert = [{
           sighting_id: newSightingId,
-          species_name: dreamSpeciesName,
+          // ✅ 这里的 trim() 顺手加上了，帮你的数据库更干净
+          species_name: dreamSpeciesName.trim(), 
         }];
       }
     }
@@ -172,14 +187,16 @@ export default function Dashboard() {
       }
     }
 
+    // 重置表单
     setRealSpeciesList([]);
     setDreamSpeciesName("");
     setLocation("");
     setNotes("");
     setHappenedOn("");
     setSpeciesType("real");
+    setCategory("bird"); 
     setMood("peaceful");
-    setIsPublic(false); // <-- 重置 isPublic
+    setIsPublic(false);
     fetchSightings(user.id);
 
     setLoading(false);
@@ -220,14 +237,32 @@ export default function Dashboard() {
       <Card className="w-full max-w-3xl shadow-lg">
         <CardHeader>
           <CardTitle className="text-xl font-semibold">
-            ✍️ 添加新的梦境鸟类记录
+            ✍️ 添加新的梦境记录
           </CardTitle>
         </CardHeader>
         <CardContent>
           <form onSubmit={addSighting} className="space-y-4">
-            {/* 鸟种类型 */}
+            
+            {/* 1. 生物类别选择 */}
             <div>
-              <Label>鸟种类型</Label>
+              <Label>这是什么生物？</Label>
+              <select
+                value={category}
+                onChange={(e) => setCategory(e.target.value)}
+                className="w-full rounded-md border p-2 bg-white"
+              >
+                <option value="bird">🐦 鸟类</option>
+                <option value="plant">🌿 植物</option>
+                <option value="insect">🐞 昆虫</option>
+                <option value="mammal">🦊 哺乳动物</option>
+                <option value="fish">🐟 鱼类/水生</option>
+                <option value="other">🌀 其他</option>
+              </select>
+            </div>
+
+            {/* 2. 现实 vs 想象 (文案已修改) */}
+            <div>
+              <Label>类型</Label>
               <select
                 value={speciesType}
                 onChange={(e) => {
@@ -235,15 +270,17 @@ export default function Dashboard() {
                   setRealSpeciesList([]);
                   setDreamSpeciesName("");
                 }}
-                className="w-full rounded-md border p-2"
+                className="w-full rounded-md border p-2 bg-white"
               >
-                <option value="real">现实鸟种</option>
-                <option value="dream">想象鸟种</option>
+                {/* ✅ 修改点在这里 */}
+                <option value="real">现实物种</option>
+                <option value="dream">想象物种</option>
               </select>
             </div>
 
-            {/* 鸟种名 */}
-            {speciesType === "real" ? (
+            {/* 3. 输入框逻辑判断 */}
+            {category === "bird" && speciesType === "real" ? (
+              // 情况 A: 只有是“鸟类”且“现实”，才显示自动补全搜索
               <div>
                 <Label>鸟种名 (可添加多个)</Label>
                 <AsyncSelect
@@ -258,13 +295,18 @@ export default function Dashboard() {
                 />
               </div>
             ) : (
+              // 情况 B: 其他所有情况都显示普通输入框
               <div>
-                <Label>鸟种名</Label>
+                <Label>物种名称</Label>
                 <Input
                   type="text"
                   value={dreamSpeciesName}
                   onChange={(e) => setDreamSpeciesName(e.target.value)}
-                  placeholder="给自己梦到的奇幻鸟种起个名吧！"
+                  placeholder={
+                    category === 'plant' ? "例如：银杏、玫瑰..." :
+                    category === 'bird' ? "给自己梦到的奇幻鸟种起个名吧！" :
+                    "请输入名称..."
+                  }
                   required
                 />
               </div>
@@ -297,7 +339,7 @@ export default function Dashboard() {
               <select
                 value={mood}
                 onChange={(e) => setMood(e.target.value)}
-                className="w-full rounded-md border p-2"
+                className="w-full rounded-md border p-2 bg-white"
               >
                 <option value="happy">开心</option>
                 <option value="peaceful">平静</option>
@@ -318,7 +360,7 @@ export default function Dashboard() {
               />
             </div>
 
-            {/* 是否公开 Checkbox */}
+            {/* 是否公开 */}
             <div className="flex items-center space-x-2 pt-2">
               <input
                 type="checkbox"
@@ -331,7 +373,7 @@ export default function Dashboard() {
                 htmlFor="is-public"
                 className="text-sm font-medium text-gray-700 select-none"
               >
-                公开这条记录？(其他人将能在“展馆”页面看到你的用户名和记录)
+                公开这条记录？
               </Label>
             </div>
 
@@ -342,7 +384,7 @@ export default function Dashboard() {
         </CardContent>
       </Card>
 
-      {/* 我的记录 */}
+      {/* 我的记录展示列表 */}
       <Card className="w-full max-w-3xl shadow-lg">
         <CardHeader>
           <CardTitle className="text-xl font-semibold">📋 我的记录</CardTitle>
@@ -352,17 +394,33 @@ export default function Dashboard() {
             <p className="text-gray-500">暂无记录。</p>
           ) : (
             sightings.map((sighting) => {
+              
+              // 1. 获取类别并确定图标
+              const cat = sighting.category || 'bird';
+              const icon = CATEGORY_ICONS[cat] || "🌀";
+
               const speciesList = sighting.sighting_species || [];
+              
+              // 2. 生成显示名称
               const displayNamesArray = speciesList.map(species => {
-                const sci = species.species_name;
-                const tax = taxonomyData.find((t) => t.sciName === sci);
-                const zh = zhMapping[sci] || null;
-                const en = tax?.comName || null;
-                const labelParts = [];
-                if (zh) labelParts.push(zh);
-                if (en && en !== sci) labelParts.push(en);
-                if (sci) labelParts.push(sci);
-                return labelParts.join(" / ");
+                const nameInDb = species.species_name;
+
+                // 只有 "鸟类" 才去查字典
+                if (cat === 'bird') {
+                   const sci = nameInDb;
+                   const tax = taxonomyData.find((t) => t.sciName === sci);
+                   const zh = zhMapping[sci] || null;
+                   const en = tax?.comName || null;
+                   
+                   const labelParts = [];
+                   if (zh) labelParts.push(zh);
+                   if (en && en !== sci) labelParts.push(en);
+                   if (sci) labelParts.push(sci);
+                   
+                   return labelParts.length > 0 ? labelParts.join(" / ") : sci;
+                } else {
+                   return nameInDb;
+                }
               });
               const displayName = displayNamesArray.join(", ");
 
@@ -376,7 +434,10 @@ export default function Dashboard() {
                   >
                     <Trash2 className="w-5 h-5" />
                   </Button>
-                  <h3 className="font-bold pr-10">{displayName || "未知鸟种"}</h3>
+                  <h3 className="font-bold pr-10">
+                    <span className="mr-2 text-lg">{icon}</span>
+                    {displayName || "未知物种"}
+                  </h3>
                   <p className="text-sm text-gray-600">
                     {sighting.location_text || "未知地点"} ·{" "}
                     {sighting.happened_on
@@ -385,7 +446,8 @@ export default function Dashboard() {
                   </p>
                   <div className="flex gap-2 mt-2">
                     <Badge>
-                      {sighting.species_type === "real" ? "现实鸟种" : "想象鸟种"}
+                      {/* ✅ 这里也同步修改一下显示的文案 */}
+                      {sighting.species_type === "real" ? "现实物种" : "想象物种"}
                     </Badge>
                     <Badge variant="secondary">
                       心情：{sighting.mood || "未记录"}
@@ -407,6 +469,3 @@ export default function Dashboard() {
     </main>
   );
 }
-
-
-

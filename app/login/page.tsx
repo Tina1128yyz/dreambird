@@ -25,11 +25,10 @@ export default function LoginPage() {
 
     try {
       if (isSignUp) {
-        // --- 注册逻辑 (已修改) ---
+        // --- 注册逻辑 ---
         const { data, error: signUpError } = await supabase.auth.signUp({
           email,
           password,
-          // ✅ 关键改动：将 username 作为元数据一起提交
           options: {
             data: {
               username: username,
@@ -43,8 +42,6 @@ export default function LoginPage() {
           return;
         }
 
-        // ✅ 简化逻辑：数据库触发器会自动创建 profile。
-        // 如果 Supabase 设置了邮件验证，data.user 会是 null，直到用户点击邮件链接。
         if (data.user) {
           router.push("/dashboard");
         } else {
@@ -52,7 +49,7 @@ export default function LoginPage() {
         }
 
       } else {
-        // --- 登录逻辑 (保持不变) ---
+        // --- 登录逻辑 ---
         const { error: signInError } = await supabase.auth.signInWithPassword({
           email,
           password,
@@ -130,7 +127,6 @@ export default function LoginPage() {
             {error && (
               <Alert variant="destructive" className="mt-4">
                 <AlertDescription>
-                  {/* 使用 ❌ 或 ✅ 来增加视觉提示 */}
                   {error.includes("验证") ? "✅ " : "❌ "}
                   {error}
                 </AlertDescription>
@@ -143,7 +139,7 @@ export default function LoginPage() {
                 type="button"
                 onClick={() => {
                   setIsSignUp(!isSignUp);
-                  setError(null); // 切换时清空错误信息
+                  setError(null);
                 }}
                 className="text-blue-600 hover:underline"
               >
@@ -153,25 +149,37 @@ export default function LoginPage() {
           </CardContent>
         </Card>
 
+        {/* 👇 更新后的欢迎说明部分：去掉了列表圆点，统一了字号 */}
         <Card className="p-4 shadow-md bg-green-50">
-          <CardContent className="space-y-2 text-sm leading-relaxed">
+          <CardContent className="space-y-3 text-sm leading-relaxed text-gray-700">
             <p className="font-medium">
-              🌿 欢迎来到 DreamBird！你可以在这个平台记录你梦中看见的小鸟。
-            </p>
-            <p>利用邮箱注册登录后，网站会自动跳转到记录提交页面。</p>
-            <p>
-              如果梦见了现实存在的鸟种，就在“鸟种选择”部分选择“现实鸟种”后在搜索栏进行搜索。
-              可以支持中文/英文/学名的搜索。当然，如果梦见了现实中不存在的鸟种，可以选择“想象鸟种”并且自行命名，并在备注区详细描述。
+              🌿 欢迎来到 DreamBird！感谢大家对 1.0 版本的反馈！
             </p>
             <p>
-              地点可以描述梦境中看见小鸟的环境。心情目前有6种选择，有更多想说的也可以在备注区写下来！
+              在这个平台你可以记录梦中见到的各种生物。以下是简单的使用指南：
             </p>
-            <p>最后点击“添加记录”就上传成功啦~</p>
             <p>
-              这是观鸟人第一次尝试搭建网站，有什么反馈和建议欢迎大家提出！
-              （xhs鸭鸭子吃番茄或者邮箱：t10191128@163.com）
+              利用邮箱注册登录后，网站自动跳转到记录页面。
             </p>
-            <p>最后祝大家鸟运昌盛，生活愉快！</p>
+            <p>
+              在“这是什么生物？”中选择种类（共 6 类）。如果是鸟类，现实鸟种可在搜索栏用中文 / 英文 / 学名搜索；梦见现实中不存在的鸟可选择“想象鸟种”，自行命名并在备注中描述。
+            </p>
+            <p>
+              如果是其他生物（植物、哺乳动物、昆虫、水生等），选择现实或想象后，直接输入物种名（暂不支持搜索）。
+            </p>
+            <p>
+              填写梦境地点、做梦日期和心情（5 种可选），有更多想说的也可以在备注区写下来！
+            </p>
+            <p>
+              如果想要分享自己的梦境记录则可以勾选“公开这条记录”。大家可以去“梦境展馆”翻阅他人的梦境，都很有趣呢！最后点击“添加记录”就上传成功啦~
+            </p>
+            <p>
+              这是观鸟人第一次尝试搭建网站，有什么反馈和建议欢迎大家提出！（xhs鸭鸭子吃番茄或者邮箱：t10191128@163.com）
+            </p>
+            {/* ✅ 斜体 + 居中 + 统一字号 + 标准颜色 */}
+            <p className="italic text-sm pt-2">
+              最后祝大家鸟运昌盛，博物运昌盛，生活愉快！
+            </p>
           </CardContent>
         </Card>
       </div>
