@@ -1,10 +1,10 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from 'next/link';
 import { supabase } from "../../lib/supabaseClient";
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+import { Card, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 
@@ -21,7 +21,8 @@ const CATEGORY_ICONS = {
   other: "🌀"
 };
 
-export default function GalleryPage() {
+// 1. 把所有页面逻辑和 useSearchParams 放入内部组件
+function GalleryContent() {
   const { lang, t } = useLanguage();
   const searchParams = useSearchParams();
 
@@ -89,6 +90,7 @@ export default function GalleryPage() {
     }
 
     fetchData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentPage]);
 
   if (error) {
@@ -222,5 +224,20 @@ export default function GalleryPage() {
         &copy; {new Date().getFullYear()} DreamBird by Lei Bao.
       </footer>
     </main>
+  );
+}
+
+// 2. 默认导出的页面组件，增加 Suspense 包裹
+export default function GalleryPage() {
+  return (
+    <Suspense
+      fallback={
+        <main className="flex min-h-screen flex-col items-center justify-center p-6 bg-gradient-to-br from-purple-50 to-indigo-50">
+          <p className="text-gray-500">Loading...</p>
+        </main>
+      }
+    >
+      <GalleryContent />
+    </Suspense>
   );
 }
