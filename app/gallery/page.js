@@ -1,10 +1,17 @@
-import { supabase } from "../../lib/supabaseClient";
+"use client";
+
+import { useEffect, useState } from "react";
+import { useSearchParams } from "next/navigation";
 import Link from 'next/link';
+import { supabase } from "../../lib/supabaseClient";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 
-// ✅ 1. 引入图标映射
+// ✅ 引入语言 Context 和切换按钮
+import { useLanguage } from "@/components/LanguageContext";
+import LanguageToggle from "@/components/LanguageToggle";
+
 const CATEGORY_ICONS = {
   bird: "🐦",
   plant: "🌿",
@@ -14,85 +21,119 @@ const CATEGORY_ICONS = {
   other: "🌀"
 };
 
-export default async function GalleryPage({ searchParams }) {
-  // 1. 获取当前页码
-  const params = await searchParams;
-  const currentPage = Number(params?.page) || 1;
+export default function GalleryPage() {
+  const { lang, t } = useLanguage();
+  const searchParams = useSearchParams();
+
+  const currentPage = Number(searchParams.get("page")) || 1;
   const ITEMS_PER_PAGE = 10;
 
-  // 2. 计算范围
-  const from = (currentPage - 1) * ITEMS_PER_PAGE;
-  const to = from + ITEMS_PER_PAGE - 1;
+  const [sightings, setSightings] = useState([]);
+  const [totalPages, setTotalPages] = useState(1);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
-  // 3. 并行获取数据
-  const [sightingsRes, taxonomyRes] = await Promise.all([
-    supabase
-      .from("sightings")
-      .select("*, sighting_species(species_name), profiles(username)", { count: 'exact' })
-      .eq('is_public', true)
-      .order("created_at", { ascending: false })
-      .range(from, to),
-    // 获取鸟类字典
-    fetch(`${process.env.NEXT_PUBLIC_APP_URL}/api/getTaxonomy`, { cache: 'no-store' })
-  ]);
+  const [taxonomyData, setTaxonomyData] = useState([]);
+  const [zhMapping, setZhMapping] = useState({});
 
-  const { data: sightings, count: totalCount, error: sightingsError } = sightingsRes;
+  // ✅ 心情对应 key 词典映射
+  const MOOD_MAP = {
+    happy: t('moodHappy'),
+    peaceful: t('moodPeaceful'),
+    scary: t('moodScary'),
+    weird: t('moodWeird'),
+    annoyed: t('moodAnnoyed'),
+    other: t('moodOther')
+  };
 
-  // 计算总页数
-  const totalPages = totalCount ? Math.ceil(totalCount / ITEMS_PER_PAGE) : 1;
+  useEffect(() => {
+    async function fetchData() {
+      setLoading(true);
+      setError(null);
 
-  // 处理字典数据
-  let taxonomyData = [];
-  let zhMapping = {};
-  if (taxonomyRes.ok) {
-    const taxonomyJson = await taxonomyRes.json();
-    taxonomyData = taxonomyJson.taxonomy;
-    zhMapping = taxonomyJson.zhMapping;
-  } else {
-    console.error("Failed to fetch taxonomy data on server.");
-  }
+      const from = (currentPage - 1) * ITEMS_PER_PAGE;
+      const to = from + ITEMS_PER_PAGE - 1;
 
-  if (sightingsError) {
-    console.error("Error fetching public sightings:", sightingsError);
+      try {
+        // 并行请求：拉取数据库 + 鸟类字典
+        const [sightingsRes, taxonomyRes] = await Promise.all([
+          supabase
+            .from("sightings")
+            .select("*, sighting_species(species_name), profiles(username)", { count: "exact" })
+            .eq("is_public", true)
+            .order("created_at", { ascending: false })
+            .range(from, to),
+          fetch("/api/getTaxonomy")
+        ]);
+
+        const { data, count, error: sightingsErr } = sightingsRes;
+
+        if (sightingsErr) {
+          throw sightingsErr;
+        }
+
+        setSightings(data || []);
+        setTotalPages(count ? Math.ceil(count / ITEMS_PER_PAGE) : 1);
+
+        if (taxonomyRes.ok) {
+          const taxonomyJson = await taxonomyRes.json();
+          setTaxonomyData(taxonomyJson.taxonomy || []);
+          setZhMapping(taxonomyJson.zhMapping || {});
+        }
+      } catch (err) {
+        console.error("Failed to load gallery data:", err);
+        setError(t('fetchError'));
+      } finally {
+        setLoading(false);
+      }
+    }
+
+    fetchData();
+  }, [currentPage]);
+
+  if (error) {
     return (
-      <main className="flex min-h-screen flex-col items-center justify-center p-6">
-        <p className="text-red-500">加载数据失败，请稍后再试。</p>
+      <main className="flex min-h-screen flex-col items-center justify-center p-6 bg-gradient-to-br from-purple-50 to-indigo-50">
+        <p className="text-red-500">{error}</p>
       </main>
     );
   }
 
   return (
-    <main className="flex min-h-screen flex-col items-center bg-gradient-to-br from-purple-50 to-indigo-50 p-6 space-y-6">
-      <Card className="w-full max-w-3xl shadow-lg">
+    <main className="flex min-h-screen flex-col items-center bg-gradient-to-br from-purple-50 to-indigo-50 p-6 space-y-6 relative">
+      
+      {/* 右上角语言切换按钮 */}
+      <div className="absolute top-4 right-4">
+        <LanguageToggle />
+      </div>
+
+      <Card className="w-full max-w-3xl shadow-lg mt-8">
         <CardHeader>
           <CardTitle className="text-2xl font-bold text-center">
-            🌌 大家的梦境展馆
+            {t('dreamGallery')}
           </CardTitle>
           <div className="text-center text-sm text-gray-600 pt-2 space-y-2">
-            <p>这里展示了来自所有用户的最新公开记录。</p>
+            <p>{t('galleryDesc')}</p>
             <Link href="/dashboard">
-              <Button variant="outline">回到我的 Dashboard</Button>
+              <Button variant="outline">{t('backToDashboard')}</Button>
             </Link>
           </div>
         </CardHeader>
       </Card>
 
       <div className="w-full max-w-3xl space-y-4">
-        {sightings && sightings.length > 0 ? (
+        {loading ? (
+          <p className="text-center text-gray-500 py-8">{t('loading')}</p>
+        ) : sightings && sightings.length > 0 ? (
           sightings.map((sighting) => {
-            
-            // ✅ 2. 获取类别图标
-            const cat = sighting.category || 'bird';
+            const cat = sighting.category || "bird";
             const icon = CATEGORY_ICONS[cat] || "🌀";
-
             const speciesList = sighting.sighting_species || [];
-            
-            // ✅ 3. 生成显示名称（区分鸟类和其他）
-            const displayNamesArray = speciesList.map(species => {
+
+            const displayNamesArray = speciesList.map((species) => {
               const nameInDb = species.species_name;
 
-              // 只有是 "bird" 且 taxonomy 有数据时，才去查字典
-              if (cat === 'bird') {
+              if (cat === "bird") {
                 const sci = nameInDb;
                 const tax = taxonomyData.find((t) => t.sciName === sci);
                 const zh = zhMapping[sci] || null;
@@ -102,78 +143,78 @@ export default async function GalleryPage({ searchParams }) {
                 if (zh) labelParts.push(zh);
                 if (en && en !== sci) labelParts.push(en);
                 if (sci) labelParts.push(sci);
-                
+
                 return labelParts.length > 0 ? labelParts.join(" / ") : sci;
               } else {
-                // 植物、昆虫等直接显示存入的名字
                 return nameInDb;
               }
             });
             const displayName = displayNamesArray.join(", ");
 
+            const authorName = sighting.profiles?.username || t('anonymous');
+
             return (
               <Card key={sighting.id} className="p-4 relative">
-                {/* 标题带上图标 */}
                 <h3 className="font-bold text-lg">
                   <span className="mr-2">{icon}</span>
-                  {displayName || "未知物种"}
+                  {displayName || t('unknownSpecies')}
                 </h3>
-                
+
                 <p className="text-sm text-gray-600 mt-1">
-                  {sighting.location_text || "未知地点"} ·{" "}
-                  {new Date(sighting.happened_on || sighting.created_at).toLocaleDateString()}
+                  {sighting.location_text || t('unknownLocation')} ·{" "}
+                  {sighting.happened_on || sighting.created_at
+                    ? new Date(sighting.happened_on || sighting.created_at).toLocaleDateString()
+                    : t('unknownTime')}
                 </p>
-                
+
                 <div className="flex gap-2 mt-2">
                   <Badge>
-                     {/* ✅ 4. 文案更新：现实物种 / 想象物种 */}
-                    {sighting.species_type === "real" ? "现实物种" : "想象物种"}
+                    {sighting.species_type === "real" ? t('realSpecies') : t('imaginarySpecies')}
                   </Badge>
                   <Badge variant="secondary">
-                    心情：{sighting.mood || "未记录"}
+                    {t('moodLabel')}：{MOOD_MAP[sighting.mood] || sighting.mood || t('unrecorded')}
                   </Badge>
                 </div>
-                
+
                 {sighting.description && (
                   <p className="mt-3 text-sm leading-relaxed bg-white/50 p-2 rounded-md">
                     {sighting.description}
                   </p>
                 )}
-                
-                {/* ✅ 5. 恢复原本的用户名样式 (去掉了蓝色) */}
+
                 <p className="text-xs text-right text-gray-500 mt-2">
-                  由 {sighting.profiles?.username || '匿名用户'} 发布
+                  {t('postedBy', { name: authorName })}
                 </p>
               </Card>
             );
           })
         ) : (
           <Card className="w-full max-w-3xl shadow-lg text-center p-8">
-            <p className="text-gray-500">还没有人公开分享记录呢，或者这一页没有数据。</p>
+            <p className="text-gray-500">{t('emptyGallery')}</p>
           </Card>
         )}
       </div>
-      
+
       {/* 分页控制 */}
       <div className="flex items-center justify-center gap-4 w-full max-w-3xl pt-4 pb-8">
         {currentPage > 1 ? (
           <Link href={`/gallery?page=${currentPage - 1}`}>
-            <Button variant="outline">上一页</Button>
+            <Button variant="outline">{t('prevPage')}</Button>
           </Link>
         ) : (
-          <Button variant="outline" disabled>上一页</Button>
+          <Button variant="outline" disabled>{t('prevPage')}</Button>
         )}
 
         <span className="text-sm text-gray-600">
-           第 {currentPage} 页 / 共 {totalPages} 页
+          {t('pageInfo', { current: currentPage, total: totalPages })}
         </span>
 
         {currentPage < totalPages ? (
           <Link href={`/gallery?page=${currentPage + 1}`}>
-            <Button variant="outline">下一页</Button>
+            <Button variant="outline">{t('nextPage')}</Button>
           </Link>
         ) : (
-          <Button variant="outline" disabled>下一页</Button>
+          <Button variant="outline" disabled>{t('nextPage')}</Button>
         )}
       </div>
 

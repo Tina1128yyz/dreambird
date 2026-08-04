@@ -13,7 +13,15 @@ import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
 import { Trash2 } from "lucide-react";
 
-// 定义图标映射，方便复用
+// ✅ 引入 react-datepicker 和对应的 date-fns 语言包
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+import { enUS, zhCN } from "date-fns/locale";
+
+// ✅ 引入语言 Context 与语言切换按钮
+import { useLanguage } from "@/components/LanguageContext";
+import LanguageToggle from "@/components/LanguageToggle";
+
 const CATEGORY_ICONS = {
   bird: "🐦",
   plant: "🌿",
@@ -25,6 +33,8 @@ const CATEGORY_ICONS = {
 
 export default function Dashboard() {
   const router = useRouter();
+  const { lang, t } = useLanguage();
+
   const [user, setUser] = useState(null);
   const [username, setUsername] = useState(null);
   const [loadingUser, setLoadingUser] = useState(true);
@@ -32,9 +42,9 @@ export default function Dashboard() {
   const [sightings, setSightings] = useState([]);
   
   // 表单状态
-  const [category, setCategory] = useState("bird"); // ✅ 生物类别
+  const [category, setCategory] = useState("bird");
   const [realSpeciesList, setRealSpeciesList] = useState([]); 
-  const [dreamSpeciesName, setDreamSpeciesName] = useState(""); // 用于所有“手动输入”的情况
+  const [dreamSpeciesName, setDreamSpeciesName] = useState("");
   
   const [location, setLocation] = useState("");
   const [notes, setNotes] = useState("");
@@ -44,11 +54,19 @@ export default function Dashboard() {
   const [loading, setLoading] = useState(false);
   const [isPublic, setIsPublic] = useState(false);
 
-  // 🔹 taxonomy
+  // taxonomy
   const [taxonomyData, setTaxonomyData] = useState([]);
   const [zhMapping, setZhMapping] = useState({});
 
-  // ✅ 初始化：获取用户 & taxonomy
+  const MOOD_MAP = {
+    happy: t('moodHappy'),
+    peaceful: t('moodPeaceful'),
+    scary: t('moodScary'),
+    weird: t('moodWeird'),
+    annoyed: t('moodAnnoyed'),
+    other: t('moodOther')
+  };
+
   useEffect(() => {
     async function loadUserAndData() {
       const {
@@ -83,17 +101,16 @@ export default function Dashboard() {
     loadUserAndData();
   }, [router]);
 
-  // 🔍 搜索鸟种 (只有 category 是 bird 时才用)
   const searchSpecies = async (inputValue) => {
     if (!inputValue) return [];
     try {
       const res = await fetch(
         `/api/speciesSearch?q=${encodeURIComponent(inputValue)}`
       );
-      if (!res.ok) return [{ label: "❌ 搜索出错", value: "" }];
+      if (!res.ok) return [{ label: t('searchError'), value: "" }];
       const data = await res.json();
-      if (!Array.isArray(data)) return [{ label: "❌ 数据格式错误", value: "" }];
-      if (data.length === 0) return [{ label: "未找到相关鸟种", value: "" }];
+      if (!Array.isArray(data)) return [{ label: t('searchFormatError'), value: "" }];
+      if (data.length === 0) return [{ label: t('searchNotFound'), value: "" }];
 
       return data.slice(0, 10).map((item) => {
         const sci = item.sciName;
@@ -110,11 +127,10 @@ export default function Dashboard() {
       });
     } catch (err) {
       console.error("searchSpecies 出错:", err);
-      return [{ label: "❌ 网络错误", value: "" }];
+      return [{ label: t('searchNetworkError'), value: "" }];
     }
   };
 
-  // 拉取数据
   async function fetchSightings(userId) {
     const { data, error } = await supabase
       .from("sightings")
@@ -123,12 +139,11 @@ export default function Dashboard() {
       .order("created_at", { ascending: false });
     
     if (error) {
-        console.error("❌ 拉取 sightings 失败:", error.message);
+      console.error("❌ 拉取 sightings 失败:", error.message);
     }
     setSightings(data || []);
   }
 
-  // 提交记录
   async function addSighting(e) {
     e.preventDefault();
     setLoading(true);
@@ -157,21 +172,17 @@ export default function Dashboard() {
     }
 
     const newSightingId = sightingData.id;
-
     let speciesToInsert = [];
 
-    // 逻辑判断：
     if (category === "bird" && speciesType === "real") {
       speciesToInsert = realSpeciesList.map(s => ({
         sighting_id: newSightingId,
         species_name: s.value,
       }));
     } else {
-      // 处理手动输入的情况
       if (dreamSpeciesName) {
         speciesToInsert = [{
           sighting_id: newSightingId,
-          // ✅ 这里的 trim() 顺手加上了，帮你的数据库更干净
           species_name: dreamSpeciesName.trim(), 
         }];
       }
@@ -187,7 +198,6 @@ export default function Dashboard() {
       }
     }
 
-    // 重置表单
     setRealSpeciesList([]);
     setDreamSpeciesName("");
     setLocation("");
@@ -202,7 +212,6 @@ export default function Dashboard() {
     setLoading(false);
   }
 
-  // 删除记录
   async function handleDelete(id) {
     const { error } = await supabase.from("sightings").delete().eq("id", id);
     if (error) {
@@ -212,57 +221,58 @@ export default function Dashboard() {
     }
   }
 
-  if (loadingUser) return <p>加载中...</p>;
+  if (loadingUser) return <p className="p-6 text-center">{t('loading')}</p>;
 
   return (
-    <main className="flex min-h-screen flex-col items-center bg-gradient-to-br from-blue-50 to-green-50 p-6 space-y-6">
-      {/* 顶部欢迎卡片 */}
-      <Card className="w-full max-w-3xl shadow-lg">
+    <main className="flex min-h-screen flex-col items-center bg-gradient-to-br from-blue-50 to-green-50 p-6 space-y-6 relative">
+      
+      <div className="absolute top-4 right-4">
+        <LanguageToggle />
+      </div>
+
+      <Card className="w-full max-w-3xl shadow-lg mt-8">
         <CardHeader>
           <CardTitle className="text-2xl font-bold text-center">
-            🐦 DreamBird Dashboard
+            {t('dashTitle')}
           </CardTitle>
           <div className="text-center mt-2">
             <Link href="/gallery">
-              <Button variant="outline">去大家的梦境展馆看看 →</Button>
+              <Button variant="outline">{t('goToGalleryBtn')}</Button>
             </Link>
           </div>
         </CardHeader>
-        <CardContent className="text-center">
-          欢迎回来，{username ? username : user.email}！
+        <CardContent className="text-center text-gray-700">
+          {t('welcomeUser', { name: username || user.email })}
         </CardContent>
       </Card>
 
-      {/* 添加记录表单 */}
       <Card className="w-full max-w-3xl shadow-lg">
         <CardHeader>
           <CardTitle className="text-xl font-semibold">
-            ✍️ 添加新的梦境记录
+            {t('addNewRecordTitle')}
           </CardTitle>
         </CardHeader>
         <CardContent>
           <form onSubmit={addSighting} className="space-y-4">
             
-            {/* 1. 生物类别选择 */}
             <div>
-              <Label>这是什么生物？</Label>
+              <Label>{t('categoryLabel')}</Label>
               <select
                 value={category}
                 onChange={(e) => setCategory(e.target.value)}
                 className="w-full rounded-md border p-2 bg-white"
               >
-                <option value="bird">🐦 鸟类</option>
-                <option value="plant">🌿 植物</option>
-                <option value="insect">🐞 昆虫</option>
-                <option value="mammal">🦊 哺乳动物</option>
-                <option value="fish">🐟 鱼类/水生</option>
-                <option value="other">🌀 其他</option>
+                <option value="bird">{t('catBird')}</option>
+                <option value="plant">{t('catPlant')}</option>
+                <option value="insect">{t('catInsect')}</option>
+                <option value="mammal">{t('catMammal')}</option>
+                <option value="fish">{t('catFish')}</option>
+                <option value="other">{t('catOther')}</option>
               </select>
             </div>
 
-            {/* 2. 现实 vs 想象 (文案已修改) */}
             <div>
-              <Label>类型</Label>
+              <Label>{t('typeLabel')}</Label>
               <select
                 value={speciesType}
                 onChange={(e) => {
@@ -272,17 +282,14 @@ export default function Dashboard() {
                 }}
                 className="w-full rounded-md border p-2 bg-white"
               >
-                {/* ✅ 修改点在这里 */}
-                <option value="real">现实物种</option>
-                <option value="dream">想象物种</option>
+                <option value="real">{t('typeReal')}</option>
+                <option value="dream">{t('typeImaginary')}</option>
               </select>
             </div>
 
-            {/* 3. 输入框逻辑判断 */}
             {category === "bird" && speciesType === "real" ? (
-              // 情况 A: 只有是“鸟类”且“现实”，才显示自动补全搜索
               <div>
-                <Label>鸟种名 (可添加多个)</Label>
+                <Label>{t('birdSpeciesLabel')}</Label>
                 <AsyncSelect
                   isMulti
                   cacheOptions
@@ -291,76 +298,85 @@ export default function Dashboard() {
                   value={realSpeciesList}
                   onChange={setRealSpeciesList}
                   isClearable
-                  placeholder="搜索并添加多种真实鸟种..."
+                  placeholder={t('birdSearchPlaceholder')}
                 />
               </div>
             ) : (
-              // 情况 B: 其他所有情况都显示普通输入框
               <div>
-                <Label>物种名称</Label>
+                <Label>{t('speciesNameLabel')}</Label>
                 <Input
                   type="text"
                   value={dreamSpeciesName}
                   onChange={(e) => setDreamSpeciesName(e.target.value)}
                   placeholder={
-                    category === 'plant' ? "例如：银杏、玫瑰..." :
-                    category === 'bird' ? "给自己梦到的奇幻鸟种起个名吧！" :
-                    "请输入名称..."
+                    category === 'plant' ? t('placeholderPlant') :
+                    category === 'bird' ? t('placeholderBirdImaginary') :
+                    t('placeholderDefaultSpecies')
                   }
                   required
                 />
               </div>
             )}
 
-            {/* 地点 */}
             <div>
-              <Label>地点</Label>
+              <Label>{t('locationLabel')}</Label>
               <Input
                 type="text"
                 value={location}
                 onChange={(e) => setLocation(e.target.value)}
-                placeholder="请输入梦境中的地点"
+                placeholder={t('locationPlaceholder')}
               />
             </div>
 
-            {/* 日期 */}
+            {/* ✅ 替换为了 react-datepicker，加入本地时间处理以避免时区偏移 */}
             <div>
-              <Label>日期</Label>
-              <Input
-                type="date"
-                value={happenedOn}
-                onChange={(e) => setHappenedOn(e.target.value)}
-              />
+              <Label>{t('dateLabel')}</Label>
+              <div className="relative">
+                <DatePicker
+                  selected={happenedOn ? new Date(happenedOn + "T00:00:00") : null}
+                  onChange={(date) => {
+                    if (date) {
+                      const year = date.getFullYear();
+                      const month = String(date.getMonth() + 1).padStart(2, '0');
+                      const day = String(date.getDate()).padStart(2, '0');
+                      setHappenedOn(`${year}-${month}-${day}`);
+                    } else {
+                      setHappenedOn("");
+                    }
+                  }}
+                  locale={lang === "en" ? enUS : zhCN}
+                  dateFormat={lang === "en" ? "MM/dd/yyyy" : "yyyy/MM/dd"}
+                  placeholderText={lang === "en" ? "Select a date" : "选择日期"}
+                  className="flex h-10 w-full rounded-md border border-slate-200 bg-white px-3 py-2 text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-950 focus-visible:ring-offset-2"
+                />
+              </div>
             </div>
 
-            {/* 心情 */}
             <div>
-              <Label>心情</Label>
+              <Label>{t('moodSelectLabel')}</Label>
               <select
                 value={mood}
                 onChange={(e) => setMood(e.target.value)}
                 className="w-full rounded-md border p-2 bg-white"
               >
-                <option value="happy">开心</option>
-                <option value="peaceful">平静</option>
-                <option value="scary">害怕</option>
-                <option value="weird">奇怪</option>
-                <option value="annoyed">懊恼</option>
-                <option value="other">其他</option>
+                <option value="happy">{t('moodHappy')}</option>
+                <option value="peaceful">{t('moodPeaceful')}</option>
+                <option value="scary">{t('moodScary')}</option>
+                <option value="weird">{t('moodWeird')}</option>
+                <option value="annoyed">{t('moodAnnoyed')}</option>
+                <option value="other">{t('moodOther')}</option>
               </select>
             </div>
 
-            {/* 备注 */}
             <div>
-              <Label>备注</Label>
+              <Label>{t('notesLabel')}</Label>
               <Textarea
                 value={notes}
                 onChange={(e) => setNotes(e.target.value)}
-                placeholder="写下你梦境中的细节..."
+                placeholder={t('notesPlaceholder')}
               />
             </div>
 
-            {/* 是否公开 */}
             <div className="flex items-center space-x-2 pt-2">
               <input
                 type="checkbox"
@@ -373,39 +389,33 @@ export default function Dashboard() {
                 htmlFor="is-public"
                 className="text-sm font-medium text-gray-700 select-none"
               >
-                公开这条记录？
+                {t('isPublicLabel')}
               </Label>
             </div>
 
             <Button type="submit" className="w-full" disabled={loading}>
-              {loading ? "提交中..." : "添加记录"}
+              {loading ? t('submittingBtn') : t('submitRecordBtn')}
             </Button>
           </form>
         </CardContent>
       </Card>
 
-      {/* 我的记录展示列表 */}
       <Card className="w-full max-w-3xl shadow-lg">
         <CardHeader>
-          <CardTitle className="text-xl font-semibold">📋 我的记录</CardTitle>
+          <CardTitle className="text-xl font-semibold">{t('myRecordsTitle')}</CardTitle>
         </CardHeader>
         <CardContent className="space-y-4">
           {sightings.length === 0 ? (
-            <p className="text-gray-500">暂无记录。</p>
+            <p className="text-gray-500">{t('noRecordsText')}</p>
           ) : (
             sightings.map((sighting) => {
-              
-              // 1. 获取类别并确定图标
               const cat = sighting.category || 'bird';
               const icon = CATEGORY_ICONS[cat] || "🌀";
-
               const speciesList = sighting.sighting_species || [];
               
-              // 2. 生成显示名称
               const displayNamesArray = speciesList.map(species => {
                 const nameInDb = species.species_name;
 
-                // 只有 "鸟类" 才去查字典
                 if (cat === 'bird') {
                    const sci = nameInDb;
                    const tax = taxonomyData.find((t) => t.sciName === sci);
@@ -436,21 +446,20 @@ export default function Dashboard() {
                   </Button>
                   <h3 className="font-bold pr-10">
                     <span className="mr-2 text-lg">{icon}</span>
-                    {displayName || "未知物种"}
+                    {displayName || t('unknownSpecies')}
                   </h3>
                   <p className="text-sm text-gray-600">
-                    {sighting.location_text || "未知地点"} ·{" "}
+                    {sighting.location_text || t('unknownLocation')} ·{" "}
                     {sighting.happened_on
                       ? new Date(sighting.happened_on).toLocaleDateString()
-                      : "未知时间"}
+                      : t('unknownTime')}
                   </p>
                   <div className="flex gap-2 mt-2">
                     <Badge>
-                      {/* ✅ 这里也同步修改一下显示的文案 */}
-                      {sighting.species_type === "real" ? "现实物种" : "想象物种"}
+                      {sighting.species_type === "real" ? t('typeReal') : t('typeImaginary')}
                     </Badge>
                     <Badge variant="secondary">
-                      心情：{sighting.mood || "未记录"}
+                      {t('moodLabel')}：{MOOD_MAP[sighting.mood] || sighting.mood || t('unrecorded')}
                     </Badge>
                   </div>
                   {sighting.description && (

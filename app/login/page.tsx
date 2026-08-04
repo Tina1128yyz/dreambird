@@ -9,14 +9,19 @@ import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 
+import { useLanguage } from "@/components/LanguageContext";
+import LanguageToggle from "@/components/LanguageToggle";
+
 export default function LoginPage() {
   const router = useRouter();
+  const { lang, t } = useLanguage();
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [username, setUsername] = useState(""); // ✅ 注册时用
+  const [username, setUsername] = useState(""); 
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [isSignUp, setIsSignUp] = useState(false); // 登录 / 注册切换
+  const [isSignUp, setIsSignUp] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -25,7 +30,6 @@ export default function LoginPage() {
 
     try {
       if (isSignUp) {
-        // --- 注册逻辑 ---
         const { data, error: signUpError } = await supabase.auth.signUp({
           email,
           password,
@@ -45,11 +49,14 @@ export default function LoginPage() {
         if (data.user) {
           router.push("/dashboard");
         } else {
-          setError("注册成功！请检查你的邮箱，点击验证链接以完成注册。");
+          setError(
+            lang === 'zh' 
+              ? "注册成功！请检查你的邮箱，点击验证链接以完成注册。" 
+              : "Registration successful! Please check your email and click the verification link."
+          );
         }
 
       } else {
-        // --- 登录逻辑 ---
         const { error: signInError } = await supabase.auth.signInWithPassword({
           email,
           password,
@@ -65,76 +72,82 @@ export default function LoginPage() {
       }
     } catch (err) {
       console.error("Auth error:", err);
-      setError("未知错误，请稍后再试。");
+      setError(lang === 'zh' ? "未知错误，请稍后再试。" : "Unknown error, please try again later.");
     }
 
     setLoading(false);
   };
 
   return (
-    <main className="flex min-h-screen items-center justify-center bg-gradient-to-br from-blue-50 to-green-50 p-6">
+    <main className="flex min-h-screen items-center justify-center bg-gradient-to-br from-blue-50 to-green-50 p-6 relative">
+      
+      {/* 右上角语言切换 */}
+      <div className="absolute top-4 right-4">
+        <LanguageToggle />
+      </div>
+
       <div className="max-w-2xl w-full space-y-6">
         <Card className="shadow-lg">
           <CardHeader>
             <CardTitle className="text-center text-2xl font-bold">
-              {isSignUp ? "注册新账号" : "登录 DreamBird"}
+              {isSignUp ? t('signupTitle') : t('loginTitle')}
             </CardTitle>
           </CardHeader>
           <CardContent>
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
-                <Label htmlFor="email">邮箱</Label>
+                <Label htmlFor="email">{t('email')}</Label>
                 <Input
                   id="email"
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   required
-                  placeholder="输入邮箱"
+                  placeholder={lang === 'zh' ? "输入邮箱" : "Enter your email"}
                 />
               </div>
               <div>
-                <Label htmlFor="password">密码</Label>
+                <Label htmlFor="password">{t('password')}</Label>
                 <Input
                   id="password"
                   type="password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   required
-                  placeholder="输入密码"
+                  placeholder={lang === 'zh' ? "输入密码" : "Enter your password"}
                 />
               </div>
 
               {isSignUp && (
                 <div>
-                  <Label htmlFor="username">用户名</Label>
+                  <Label htmlFor="username">{t('username')}</Label>
                   <Input
                     id="username"
                     type="text"
                     value={username}
                     onChange={(e) => setUsername(e.target.value)}
                     required
-                    placeholder="给自己取一个昵称"
+                    placeholder={lang === 'zh' ? "给自己取一个昵称" : "Choose a nickname"}
                   />
                 </div>
               )}
 
               <Button type="submit" className="w-full" disabled={loading}>
-                {loading ? "处理中..." : isSignUp ? "注册并登录" : "登录"}
+                {loading ? t('processing') : isSignUp ? t('signupBtn') : t('loginBtn')}
               </Button>
             </form>
 
             {error && (
               <Alert variant="destructive" className="mt-4">
                 <AlertDescription>
-                  {error.includes("验证") ? "✅ " : "❌ "}
+                  {error.includes("验证") || error.includes("successful") ? "✅ " : "❌ "}
                   {error}
                 </AlertDescription>
               </Alert>
             )}
 
             <div className="mt-4 text-center text-sm">
-              {isSignUp ? "已有账号？" : "还没有账号？"}{" "}
+              {isSignUp ? t('hasAccount') : t('noAccount')}{" "}
               <button
                 type="button"
                 onClick={() => {
@@ -143,42 +156,26 @@ export default function LoginPage() {
                 }}
                 className="text-blue-600 hover:underline"
               >
-                {isSignUp ? "去登录" : "去注册"}
+                {isSignUp ? t('goToLogin') : t('goToSignup')}
               </button>
             </div>
           </CardContent>
         </Card>
 
-        {/* 👇 更新后的欢迎说明部分：去掉了列表圆点，统一了字号 */}
+        {/* 欢迎指南卡片 */}
         <Card className="p-4 shadow-md bg-green-50">
           <CardContent className="space-y-3 text-sm leading-relaxed text-gray-700">
-            <p className="font-medium">
-              🌿 欢迎来到 DreamBird！感谢大家对 1.0 版本的反馈！
-            </p>
-            <p>
-              在这个平台你可以记录梦中见到的各种生物。以下是简单的使用指南：
-            </p>
-            <p>
-              利用邮箱注册登录后，网站自动跳转到记录页面。
-            </p>
-            <p>
-              在“这是什么生物？”中选择种类（共 6 类）。如果是鸟类，现实鸟种可在搜索栏用中文 / 英文 / 学名搜索；梦见现实中不存在的鸟可选择“想象鸟种”，自行命名并在备注中描述。
-            </p>
-            <p>
-              如果是其他生物（植物、哺乳动物、昆虫、水生等），选择现实或想象后，直接输入物种名（暂不支持搜索）。
-            </p>
-            <p>
-              填写梦境地点、做梦日期和心情（5 种可选），有更多想说的也可以在备注区写下来！
-            </p>
-            <p>
-              如果想要分享自己的梦境记录则可以勾选“公开这条记录”。大家可以去“梦境展馆”翻阅他人的梦境，都很有趣呢！最后点击“添加记录”就上传成功啦~
-            </p>
-            <p>
-              这是观鸟人第一次尝试搭建网站，有什么反馈和建议欢迎大家提出！（xhs鸭鸭子吃番茄或者邮箱：t10191128@163.com）
-            </p>
-            {/* ✅ 斜体 + 居中 + 统一字号 + 标准颜色 */}
-            <p className="italic text-sm pt-2">
-              最后祝大家鸟运昌盛，博物运昌盛，生活愉快！
+            <p className="font-medium">{t('welcomeTitle')}</p>
+            <p>{t('welcomeGuide')}</p>
+            <p>{t('guide1')}</p>
+            <p>{t('guide2')}</p>
+            <p>{t('guide3')}</p>
+            <p>{t('guide4')}</p>
+            <p>{t('guide5')}</p>
+            <p>{t('feedback')}</p>
+            {/* 斜体居中祝福语 */}
+            <p className="italic text-sm pt-2 text-center font-serif">
+              {t('blessing')}
             </p>
           </CardContent>
         </Card>
